@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.sharedinvestigator.com/ir/schema" xmlns="http://www.sharedinvestigator.com/ir/schema" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:ir="http://www.sharedinvestigator.com/ir/schema"
+    elementFormDefault="qualified" attributeFormDefault="unqualified">
+    
+    <xs:element name="IRData" type="IRData" />
+	
+	<xs:complexType name="IRData">
+		<xs:annotation>
+			<xs:documentation>This XSD is not part of ODM and Not used by member companies. 
+            Used to get curation data from IR for user and facility </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="IRCuratedId"  name="IRCuratedData" minOccurs="0" maxOccurs="unbounded"/>			
+		</xs:sequence>	
+	</xs:complexType>
+	    
+    <xs:complexType name="IRCuratedId">
+       <xs:sequence>
+			<xs:element type="xs:string" name="OldIrId" minOccurs="1"/>
+            <xs:element type="xs:string" name="NewIrId" minOccurs="0"/>
+			<xs:element type="xs:string" name="NewIrIdVpd" minOccurs="0"/>
+            <xs:element type="xs:string" name="IsUser" minOccurs="0"/>
+        </xs:sequence>		
+    </xs:complexType>
+</xs:schema>

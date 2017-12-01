@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:odm="http://www.cdisc.org/ns/odm/v1.3" 
+	xmlns:sip="http://www.sharedinvestigator.com/sip/schema" 
+	targetNamespace="http://www.sharedinvestigator.com/sip/schema" 
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+		
+	<xs:import namespace="http://www.cdisc.org/ns/odm/v1.3" schemaLocation="odm1_3_2/ODM1-3-2.xsd"/>
+	
+	<xs:annotation>
+		<xs:documentation>List of values details</xs:documentation>
+	</xs:annotation>	
+
+	
+	<xs:complexType name="ListOfValueDef" >
+		<xs:annotation>
+			<xs:documentation>List of values details</xs:documentation>
+		</xs:annotation>	
+		<xs:sequence>
+			<xs:element type="odm:text"  	name="BusinessEntity"  minOccurs="1" />
+			<xs:element type="odm:text"  	name="Code"  minOccurs="0" />
+			<xs:element type="odm:text"  	name="Value"  minOccurs="1" />
+			<xs:element type="odm:text"  	name="ParentValue"  minOccurs="0" />
+			<xs:element type="odm:text"  	name="Oldvalue"  minOccurs="0" />
+			<xs:element type="odm:text"  	name="memberCompanyCode"  minOccurs="0" />			
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

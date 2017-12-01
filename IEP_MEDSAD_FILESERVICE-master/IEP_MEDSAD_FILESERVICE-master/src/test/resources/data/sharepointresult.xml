@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<feed xml:base="https://soag-z1-d.am.lilly.com:8443/sites/SolutonServicesECIT/SP_Services/_vti_bin/listdata.svc/" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">FileService_List_DEV</title>
+  <id>https://soag-z1-d.am.lilly.com:8443/sites/SolutonServicesECIT/SP_Services/_vti_bin/listdata.svc/FileService_List_DEV</id>
+  <updated>2017-10-06T07:27:25Z</updated>
+  <link rel="self" title="FileService_List_DEV" href="FileService_List_DEV" />
+  <entry m:etag="W/&quot;3&quot;">
+    <id>https://soag-z1-d.am.lilly.com:8443/sites/SolutonServicesECIT/SP_Services/_vti_bin/listdata.svc/FileService_List_DEV(1)</id>
+    <title type="text"></title>
+    <updated>2017-10-05T10:21:18-04:00</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="FileService_List_DEVItem" href="FileService_List_DEV(1)" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/OutputFileType" type="application/atom+xml;type=entry" title="OutputFileType" href="FileService_List_DEV(1)/OutputFileType" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Delimiter" type="application/atom+xml;type=entry" title="Delimiter" href="FileService_List_DEV(1)/Delimiter" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/CreatedBy" type="application/atom+xml;type=entry" title="CreatedBy" href="FileService_List_DEV(1)/CreatedBy" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/ModifiedBy" type="application/atom+xml;type=entry" title="ModifiedBy" href="FileService_List_DEV(1)/ModifiedBy" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Attachments" type="application/atom+xml;type=feed" title="Attachments" href="FileService_List_DEV(1)/Attachments" />
+    <category term="Microsoft.SharePoint.DataService.FileService_List_DEVItem" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:ContentTypeID>0x0100FEE6FDB2C46DAD4E83CB2F4D77C15CA4</d:ContentTypeID>
+        <d:Title m:null="true" />
+        <d:SubscriptionID>MTM1</d:SubscriptionID>
+        <d:OutputFileTypeValue>.DAT</d:OutputFileTypeValue>
+        <d:DelimiterValue>pipe</d:DelimiterValue>
+        <d:Transformation>N/A</d:Transformation>
+        <d:Delivery>\\mango\IEP_1\FileServices_DEV\MTM\</d:Delivery>
+        <d:SQLQuery>SELECT DISTINCT   RPT_ITEM_STATUS.TRADE_NAME,   RPT_ITEM_STATUS.SBMSN_DT,   RPT_ITEM_STATUS.WITHDRAWAL_DT,   RPT_ITEM_STATUS.MARKET_START_DT,   RPT_ITEM_STATUS.APRVL_DT,   RPT_ITEM_STATUS.COUNTRY_CD,   RPT_INDICATION.RPT_INDICATION_ID FROM   IIP_PRST_OWNER.RPT_ITEM_STATUS,   IIP_PRST_OWNER.RPT_ACTIVITY,   IIP_PRST_OWNER.RPT_ACTIVITY_INDICATION,   IIP_PRST_OWNER.RPT_INDICATION WHERE   RPT_ACTIVITY.ACTVTY_IDNTFCTN        = RPT_ITEM_STATUS.ACTVTY_IDNTFCTN AND RPT_ACTIVITY.ACTVTY_IDNTFCTN      = RPT_ACTIVITY_INDICATION.ACTVTY_IDNTFCTN AND RPT_ACTIVITY_INDICATION.INDCTN_CD = RPT_INDICATION.INDCTN_CD</d:SQLQuery>
+        <d:SchedulingFrequency>0 15 10 ? * *</d:SchedulingFrequency>
+        <d:CreatedById m:type="Edm.Int32">2721</d:CreatedById>
+        <d:ModifiedById m:type="Edm.Int32">2721</d:ModifiedById>
+        <d:Modified m:type="Edm.DateTime">2017-10-05T10:21:18</d:Modified>
+        <d:Created m:type="Edm.DateTime">2017-09-28T04:14:25</d:Created>
+        <d:Id m:type="Edm.Int32">1</d:Id>
+        <d:ContentType>Item</d:ContentType>
+        <d:Owshiddenversion m:type="Edm.Int32">3</d:Owshiddenversion>
+        <d:Version>1.0</d:Version>
+        <d:Path>/sites/SolutonServicesECIT/SP_Services/Lists/FileService_List_DEV</d:Path>
+      </m:properties>
+    </content>
+  </entry>
+</feed>

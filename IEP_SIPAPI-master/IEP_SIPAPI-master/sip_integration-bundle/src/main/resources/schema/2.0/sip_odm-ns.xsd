@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema targetNamespace="http://www.sharedinvestigator.com/sip/schema"
+    xmlns="http://www.w3.org/2001/XMLSchema"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xlink="http://www.w3.org/1999/xlink" 
+    xmlns:odm="http://www.cdisc.org/ns/odm/v1.3"
+    xmlns:sip="http://www.sharedinvestigator.com/sip/schema"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+    > 
+    <!-- simple/complex types -->
+    <!-- attributes -->
+    <!-- elements -->
+    
+    <xs:import namespace="http://www.cdisc.org/ns/odm/v1.3" schemaLocation="odm1_3_2/ODM1-3-2.xsd"/>
+    <xs:include schemaLocation="userprofile.xsd"/>
+    <xs:include schemaLocation="studyprofile.xsd"/>
+    <xs:include schemaLocation="facilityprofile.xsd"/>
+    <xs:include schemaLocation="siteprofile.xsd"/>
+    <xs:include schemaLocation="trainingprofile.xsd"/>
+    <xs:include schemaLocation="address.xsd"/>
+    <xs:include schemaLocation="role.xsd"/>
+    <xs:include schemaLocation="userpermissions.xsd"/>
+    <xs:include schemaLocation="sipresponse.xsd"/>
+    <xs:include schemaLocation="siteadditionalfacilities.xsd"/>
+    <xs:include schemaLocation="listofvalues.xsd"/>
+    <xs:include schemaLocation="contact.xsd"/>
+    <xs:include schemaLocation="locallab.xsd"/>
+    <xs:include schemaLocation="irberbeth.xsd"/>
+    <xs:include schemaLocation="metadata.xsd"/>
+</xs:schema>

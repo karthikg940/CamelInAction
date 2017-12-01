@@ -1,0 +1,14 @@
+<ODM xmlns:ns2="http://www.sharedinvestigator.com/sip/schema" xmlns="http://www.cdisc.org/ns/odm/v1.3" xmlns:ns3="http://www.w3.org/2000/09/xmldsig#">
+    <AdminData>
+        <Location>
+            <LocationElementExtensionContents>
+                <ns2:LocationDetails>
+                    <ns2:SiteID>14060-JP-18</ns2:SiteID>
+                    <ns2:PrimaryFacilityID>DD189234-000</ns2:PrimaryFacilityID>
+                    <ns2:PrincipalInvestigatorID>DD40851</ns2:PrincipalInvestigatorID>
+                    <ns2:StudyID>14060</ns2:StudyID>
+                </ns2:LocationDetails>
+            </LocationElementExtensionContents>
+        </Location>
+    </AdminData>
+</ODM>

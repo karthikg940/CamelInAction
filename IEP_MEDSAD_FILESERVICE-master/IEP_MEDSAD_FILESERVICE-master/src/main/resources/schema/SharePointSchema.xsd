@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xml:base="https://soag-z1-d.am.lilly.com:8443/sites/SolutonServicesECIT/SP_Services/_vti_bin/listdata.svc/"
+	xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+	xmlns="http://www.w3.org/2005/Atom" elementFormDefault="qualified"
+	attributeFormDefault="unqualified"
+	targetNamespace="http://schemas.microsoft.com/ado/2007/08/dataservices">
+	<xs:element name="SubscriptionConfig">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Title" type="xs:string" />
+				<xs:element name="SubscriptionID" type="xs:string"></xs:element>
+				<xs:element name="OutputFileTypeValue" type="xs:string"></xs:element>
+				<xs:element name="DelimiterValue" type="xs:string"></xs:element>
+				<xs:element name="Transformation" type="xs:string"></xs:element>
+				<xs:element name="Delivery" type="xs:string"></xs:element>
+				<xs:element name="SQLQuery" type="xs:string"></xs:element>
+				<xs:element name="SchedulingFrequency" type="xs:string"></xs:element>
+				<xs:element name="ContentType" type="xs:string"></xs:element>
+				<xs:element name="Version" type="xs:int"></xs:element>
+				<xs:element name="Path" type="xs:string"></xs:element>
+				<xs:element name="IncludeHeaderValue" type="xs:string"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

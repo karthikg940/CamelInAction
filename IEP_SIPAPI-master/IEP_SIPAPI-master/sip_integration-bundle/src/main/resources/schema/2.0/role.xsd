@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:odm="http://www.cdisc.org/ns/odm/v1.3" 
+    xmlns:sip="http://www.sharedinvestigator.com/sip/schema" 
+    targetNamespace="http://www.sharedinvestigator.com/sip/schema" 
+    elementFormDefault="qualified" attributeFormDefault="unqualified">
+    
+    <xs:import namespace="http://www.cdisc.org/ns/odm/v1.3" schemaLocation="odm1_3_2/ODM1-3-2.xsd"/>
+
+    <xs:complexType name="RoleDef">
+        <xs:annotation>
+            <xs:documentation> User Role Definition (can be used for assigning Roles to Study, Training etc.)</xs:documentation>
+        </xs:annotation>		
+        <xs:sequence>
+            <xs:element type="odm:oid"  name="RoleID" minOccurs="0"/>
+            <xs:element type="odm:text" name="RoleName" minOccurs="1" />
+            <xs:element type="odm:text" name="RoleType" minOccurs="0"  /> 
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="UserRoleDef">
+        <xs:annotation>
+            <xs:documentation> User Role Definition (can be used for assigning Roles to Study, Training etc.)</xs:documentation>
+        </xs:annotation>		
+        <xs:sequence>
+            <xs:element type="sip:RoleDef"  name="RoleDetails" minOccurs="1"/>
+            <xs:element type="odm:text" name="StudyId" minOccurs="0"  />
+            <xs:element type="odm:text" name="SiteId" minOccurs="0"  />
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

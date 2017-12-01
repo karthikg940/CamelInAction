@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<odm:ODM xmlns:sip="http://www.sharedinvestigator.com/sip/schema" xmlns:odm="http://www.cdisc.org/ns/odm/v1.3" xmlns:ns3="http://www.w3.org/2000/09/xmldsig#">
+    <odm:AdminData>
+        <odm:Location OID="12345-US-03" Name="12345-US-03" LocationType="Other">
+            <odm:MetaDataVersionRef StudyOID="9742" MetaDataVersionOID="NA" EffectiveDate="2017-06-08T09:56:37.618Z"/>
+            <odm:LocationElementExtensionContents>
+                <sip:LocationDetails>
+                    <sip:SiteID>208</sip:SiteID>
+                    <sip:PrimaryFacilityID>24</sip:PrimaryFacilityID>
+                    <sip:PrimaryFacilityIRID>DD201107-000</sip:PrimaryFacilityIRID>
+                    <sip:PrincipalInvestigatorID>snowj_2162</sip:PrincipalInvestigatorID>
+                    <sip:PrincipalInvestigatorIRID>DD1048</sip:PrincipalInvestigatorIRID>
+                    <sip:UniqueSponsorSiteUserID></sip:UniqueSponsorSiteUserID>
+                    <sip:SiteName>12345-US-03</sip:SiteName>
+                    <sip:IsAffiliated>false</sip:IsAffiliated>
+                    <sip:StudyID>9742</sip:StudyID>
+                    <sip:IsActive>true</sip:IsActive>
+                    <sip:InstitutionName>Sutirtha Facility</sip:InstitutionName>
+                    <sip:SiteSelectionDate>2017-05-22Z</sip:SiteSelectionDate>
+                </sip:LocationDetails>
+            </odm:LocationElementExtensionContents>
+        </odm:Location>
+    </odm:AdminData>
+    <odm:ODMElementExtensionContents>
+        <odm:Metadata/>
+    </odm:ODMElementExtensionContents>
+    <odm:ODMElementExtensionContents>
+        <odm:FacilityDetails>
+            <odm:FacilityBasicDetail>
+                <sip:FacilityID>24</sip:FacilityID>
+                <sip:FacilityIRID>DD201107-000</sip:FacilityIRID>
+                <sip:FacilityName>Sutirtha Facility</sip:FacilityName>
+                <sip:ReaserchFacilityType>Academic</sip:ReaserchFacilityType>
+                <odm:Address>
+                    <odm:StreetName>611 CarBray CT</odm:StreetName>
+                    <odm:StreetName>611 CarBray CT</odm:StreetName>
+                    <odm:City>South Plainfield</odm:City>
+                    <odm:StateProv>US-NJ</odm:StateProv>
+                    <odm:Country>US</odm:Country>
+                    <odm:PostalCode>07080</odm:PostalCode>
+                    <odm:AddressElementExtensionContents>
+                        <sip:AddressType>Primary</sip:AddressType>
+                    </odm:AddressElementExtensionContents>
+                </odm:Address>
+                <sip:IsPrimary>true</sip:IsPrimary>
+            </odm:FacilityBasicDetail>
+        </odm:FacilityDetails>
+    </odm:ODMElementExtensionContents>
+</odm:ODM>

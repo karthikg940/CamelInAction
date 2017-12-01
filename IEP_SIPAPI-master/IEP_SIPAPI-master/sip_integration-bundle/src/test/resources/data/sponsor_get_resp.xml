@@ -1,0 +1,10 @@
+<odm:ODM xmlns:sip="http://www.sharedinvestigator.com/sip/schema" xmlns:odm="http://www.cdisc.org/ns/odm/v1.3" xmlns:ns3="http://www.w3.org/2000/09/xmldsig#">
+    <odm:ODMElementExtensionContents>
+        <odm:SIPResponse>
+            <sip:memberCompanyID>lilly-member-id0</sip:memberCompanyID>
+            <sip:status>FAIL</sip:status>
+            <sip:message>No user exists with the SIP user Id: onboardsponsor469@mail.ncom@lilly-member-id0</sip:message>
+            <sip:errorID>GEN_ERR_01</sip:errorID>
+        </odm:SIPResponse>
+    </odm:ODMElementExtensionContents>
+</odm:ODM>

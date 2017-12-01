@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odm:ODM xmlns:odm="http://www.cdisc.org/ns/odm/v1.3"
+    xmlns:sip="http://www.sharedinvestigator.com/sip/schema"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.cdisc.org/ns/odm/v1.3 file:/D:/AKhilesh/Transcelerate/EA_Dev/integ-code/integ-api-xsd/src/main/resources/sip1_0.xsd" Description="Description0" FileType="Snapshot" Granularity="All" Archival="Yes" FileOID="FileOID0" CreationDateTime="2006-05-04T18:13:51.0"
+    PriorFileOID="PriorFileOID0" AsOfDateTime="2006-05-04T18:13:51.0" ODMVersion="1.2" Originator="Originator0"
+    SourceSystem="SourceSystem0" SourceSystemVersion="SourceSystemVersion0" ID="ID000">
+    <odm:ODMElementExtensionContents>
+        <odm:SIPResponse>
+            <sip:memberCompanyID>memberCompanyID3</sip:memberCompanyID>
+            <sip:status>SUCCESS</sip:status>
+            <sip:responseID>
+                <sip:mcInputID>mcInputID6</sip:mcInputID>
+                <sip:sipID>sipID6</sip:sipID>
+            </sip:responseID>
+            <sip:message>message3</sip:message>
+        </odm:SIPResponse>
+    </odm:ODMElementExtensionContents>
+</odm:ODM>

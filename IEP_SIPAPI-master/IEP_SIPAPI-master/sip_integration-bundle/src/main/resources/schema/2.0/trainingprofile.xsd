@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:sip="http://www.sharedinvestigator.com/sip/schema" 
+	xmlns:odm="http://www.cdisc.org/ns/odm/v1.3"
+	targetNamespace="http://www.sharedinvestigator.com/sip/schema" 
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	
+	<xs:include schemaLocation="role.xsd"/>
+	<xs:import namespace="http://www.cdisc.org/ns/odm/v1.3" schemaLocation="odm1_3_2/ODM1-3-2.xsd"/>
+		
+	<xs:complexType name="SIPcomplexTypeDefinition-TrainingDef">
+		<xs:annotation>
+			<xs:documentation>SIPcomplexTypeDefinition-Training for SIP. All attributes are not elaborated here</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="xs:string"    name="CourseName" minOccurs="1"/>
+			<xs:element type="xs:string"    name="CourseId" minOccurs="1"/>
+			<xs:element type="xs:string"    name="CourseDescription" minOccurs="0"/>
+			<xs:element type="xs:string"    name="CourseVersion" minOccurs="0"/>
+			<xs:element type="xs:string"    name="TrainingType" minOccurs="0"/>
+			<xs:element type="xs:string"    name="ApplicableTrainingForCourse" minOccurs="0"/>
+			<xs:element type="xs:boolean"   name="IsMandatory" minOccurs="0"/>
+			<xs:element type="xs:string"    name="EstimatedDuration" minOccurs="0"/>
+			<!--<xs:element type="xs:boolean"   name="HasPreTest" minOccurs="0"/>
+			<xs:element type="xs:boolean"   name="HasPostTest" minOccurs="0"/>
+			<xs:element type="xs:date"      name="EffectiveDate" minOccurs="0"/>-->
+			<xs:element type="xs:date"      name="ExpiryDate" minOccurs="0"/>
+			<xs:element type="xs:date"      name="DueDate" minOccurs="0"/>
+			<xs:element type="xs:string"    name="CourseCategory" minOccurs="0"/>
+			<xs:element type="xs:string"    name="CourseCode" minOccurs="0"/>
+			<xs:element type="xs:string"    name="ProviderName" minOccurs="0"/>
+			<xs:element type="sip:SIPcomplexTypeDefinition-Training-Assignment"  name="TrainingAssignment" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element type="sip:SIPcomplexTypeDefinition-Training-CourseCompletition"  name="TrainingCourseCompletition" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element type="sip:SIPcomplexTypeDefinition-Training-CreditRequest"  name="TrainingCreditRequest" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+		
+	
+	<xs:complexType name="SIPcomplexTypeDefinition-Training-Assignment">
+		<xs:annotation>
+			<xs:documentation>SIPcomplexTypeDefinition-Training Assignments for SIP.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<!-- Assignment -->
+			<xs:element type="xs:string"    name="TrainingID" minOccurs="0"/>
+			<xs:element type="xs:string"    name="UserID"  minOccurs="1"/>  <!-- this is the sip id !-->
+			<xs:element type="xs:string"    name="UserIRID"  minOccurs="1"/>  <!-- this is the IR id !-->
+			<xs:element type="xs:string"    name="StudyID"  minOccurs="0"/>
+			<xs:element type="xs:string"    name="StudySiteID" minOccurs="0"/>
+			<xs:element type="xs:string"    name="Requirement" minOccurs="0"/>
+			<xs:element type="xs:date"      name="AssignedDate" minOccurs="0"/>
+			<xs:element type="xs:string"    name="TrainingURL" minOccurs="0"/>
+			<xs:element type="xs:date"      name="DueDate" minOccurs="0"/>
+			<xs:element type="sip:RoleDef"  name="UserRoleMap" minOccurs="0"/>
+			<xs:element type="xs:string"    name="Status" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>	
+	
+	<xs:complexType name="SIPcomplexTypeDefinition-Training-CourseCompletition">
+		<xs:annotation>
+			<xs:documentation>SIPcomplexTypeDefinition-Training Course Completition for SIP.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<!-- Course Completition -->
+			<xs:element type="xs:string"     name="TrainingID" minOccurs="0"/>
+			<xs:element type="xs:date"    	 name="CompletedOnDate" minOccurs="0"/> 
+			<xs:element type="xs:string"     name="CompletedBy" minOccurs="1"/> <!-- this is the sip id !-->
+			<xs:element type="xs:string"     name="CompletedByIRID" minOccurs="1"/> <!-- this is the IR Id !-->
+			<xs:element type="xs:string"     name="TrainingCertificate"  minOccurs="0"/>
+			<xs:element type="xs:string"     name="TrainingRelaunchURL" minOccurs="0"/>
+			<xs:element type="xs:date"    	 name="AcknowledgedOnDate" minOccurs="0"/>
+			<xs:element type="xs:string"     name="AcknowledgedBy"  minOccurs="0"/>
+			<xs:element type="xs:string"     name="Requirement" minOccurs="0"/>
+			<xs:element type="xs:string"     name="SponsorID"  minOccurs="0"/>
+			<xs:element type="xs:string"     name="Compound"  minOccurs="0"/>
+			<xs:element type="xs:string"     name="Program"  minOccurs="0"/>
+			<xs:element type="xs:string"     name="StudyID"  minOccurs="0"/>
+			<xs:element type="xs:string"     name="Country"  minOccurs="0"/>
+			<xs:element type="xs:string"     name="Region"  minOccurs="0"/>
+			<xs:element type="xs:string"     name="StudySiteID"  minOccurs="0"/>
+			<xs:element type="sip:RoleDef"   name="UserRoleMap" minOccurs="0"/>
+			<xs:element type="xs:string"    name="Status" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="SIPcomplexTypeDefinition-Training-CreditRequest">
+		<xs:annotation>
+			<xs:documentation>SIPcomplexTypeDefinition-Training Credit Request for SIP.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<!-- Credit Request -->
+			<xs:element type="odm:integer"       name="RequestID" minOccurs="0"/>
+			<xs:element type="xs:string"     name="RequestedBy" minOccurs="1"/> <!-- this is the sip id !-->
+			<xs:element type="xs:string"     name="RequestedByIRID" minOccurs="1"/> <!-- this is the IR Id !-->
+			<xs:element type="xs:string"     name="RequestedFor" minOccurs="1"/> <!-- this is the sip id !-->
+			<xs:element type="xs:string"     name="RequestedForIRID" minOccurs="1"/> <!-- this is the IR Id !-->
+			<xs:element type="xs:string"     name="Status"  minOccurs="0"/>
+			<xs:element type="xs:date"    	 name="DateofRequest" minOccurs="0"/>
+			<xs:element type="xs:date"       name="DateofRequestComp"  minOccurs="0"/>
+			<xs:element type="xs:date"       name="DateofTrainingComp"  minOccurs="0"/>
+			<xs:element type="xs:string"     name="Country"  minOccurs="0"/>
+            <xs:element type="xs:string"     name="ReviewedBy"  minOccurs="0"/>
+			<xs:element type="xs:string"     name="ReviewedByIRID"  minOccurs="0"/>
+			<xs:element type="sip:RoleDef"   name="UserRoleMap" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>	
+
+	<!-- Training Profile is the only complex type that is not fitting in the ODM model but is retrofitted with no elements.
+		We can remove this after discussion -->
+	<xs:element name="SIPcomplexTypeDefinition-Training" type="sip:SIPcomplexTypeDefinition-TrainingDef" />
+	
+	
+	<xs:element name="TrainingDef" type="sip:SIPcomplexTypeDefinition-TrainingDef"/> 
+</xs:schema>

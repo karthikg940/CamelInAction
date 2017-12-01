@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:odm="http://www.cdisc.org/ns/odm/v1.3" 
+	xmlns:sip="http://www.sharedinvestigator.com/sip/schema" 
+	targetNamespace="http://www.sharedinvestigator.com/sip/schema" 
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+	<xs:import namespace="http://www.cdisc.org/ns/odm/v1.3" schemaLocation="odm1_3_2/ODM1-3-2.xsd"/>
+	<xs:include schemaLocation="contact.xsd"/>
+	
+	<xs:complexType name="SIPcomplexTypeDefinition-IRB_ERB_ETHDef">
+		<xs:annotation>
+			<xs:documentation>Created a new definition for the Facility IRB_ERB_ETH details</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="odm:text" name="PrimaryFacilityID" minOccurs="0"/>
+			<xs:element type="odm:text" name="PrimaryFacilityIRID" minOccurs="0"/>
+			<xs:element type="odm:text"  name="CentalLocalIRBEC"  minOccurs="0" />
+			<xs:element type="odm:boolean" name="IsRespForEthicsSubmission" minOccurs="0"/>			
+			<xs:element type="odm:text" name="SeptDepartIRBSubmission" minOccurs="0"/>	<!-- R1.1 : modified this tag: Permissible values Y, N, N/A -->
+			<xs:element type="odm:boolean" name="IsInitiateStudyActivityPriorApproval" minOccurs="0"/>		
+			<xs:element type="odm:boolean" name="IsIrbPaymentRequired" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsContactApprovalPriorIRBApproval" minOccurs="0"/>
+			<xs:element type="odm:text" name="AverageStudyStartTime" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsOtherStepsRequired" minOccurs="0"/>
+			<xs:element type="odm:text" name="OtherStepsRequiredText" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsOtherReviewPriorSubmission" minOccurs="0"/>
+			<xs:element type="sip:SIPcomplexTypeDefinition-MeetingFrequency"  name="CommitteeMeetingFrequency" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element type="sip:SIPcomplexTypeDefinition-IRB_ERB_ETHDetail"  name="IRB_ERB_ETHDetail" minOccurs="0" maxOccurs="unbounded"/>
+					
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="SIPcomplexTypeDefinition-MeetingFrequency">
+		<xs:annotation>
+			<xs:documentation>Created a new definition for the Comittee name and frequency</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="odm:text" name="CommitteeName" minOccurs="0"/>
+			<xs:element type="odm:text" name="MeetingFrequency" minOccurs="0"/>
+			
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="SIPcomplexTypeDefinition-IRB_ERB_ETHDetail">
+		<xs:annotation>
+			<xs:documentation>Created a new definition for the local lab details</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="odm:oid"  name="IrbErbFacilityID" minOccurs="0"/>
+			<xs:element type="odm:text" name="IrbErbFacilityIRID" minOccurs="0"/>
+			<xs:element type="odm:text"  name="CommitteeName"  minOccurs="0" />
+			<xs:element type="odm:text"  name="RegistrationNumber"  minOccurs="0" />
+			<xs:element type="odm:text"  name="Type"  minOccurs="0" />
+			<xs:element type="sip:SIPcomplexTypeDefinition-ContactDef"  name="IRBAddress" minOccurs="0"></xs:element>
+			<xs:element type="odm:text"  name="MeetingFrequency"  minOccurs="0" />
+			<xs:element type="odm:text"  name="RequiredPacketSubDt"  minOccurs="0" />
+			<xs:element type="odm:text" name="Status" minOccurs="0"/>	
+		</xs:sequence>
+	</xs:complexType>
+	
+</xs:schema>

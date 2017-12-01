@@ -1,0 +1,63 @@
+<m:properties xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">
+        <d:ContentTypeID xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">0x01007D70AE22282B984FB01B191D5609A606</d:ContentTypeID>
+        <d:ToProcessYN xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">Y</d:ToProcessYN>
+        <d:StudySiteCreation xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">Lilly</d:StudySiteCreation>
+        <d:TrialNumber xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">9742</d:TrialNumber>
+        <d:TherapeuticArea xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">Animal Diseases</d:TherapeuticArea>
+        <d:ProgramId xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">140317</d:ProgramId>
+        <d:ProgramName xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">14Test</d:ProgramName>
+        <d:DiseaseId xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" m:null="true"/>
+        <d:DiseaseName xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" m:null="true"/>
+        <d:IndicationId xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">1403171</d:IndicationId>
+        <d:IndicationName xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">14Ind</d:IndicationName>
+        <d:SponsorFirstName xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">Kelly</d:SponsorFirstName>
+        <d:SponsorLastName xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">Kirsch</d:SponsorLastName>
+        <d:SponsorContactAddress1 xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">1 ABC St</d:SponsorContactAddress1>
+        <d:SponsorContactAddress2 xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" m:null="true"/>
+        <d:Country xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">US</d:Country>
+        <d:City xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">Indianapolis</d:City>
+        <d:Region xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" m:null="true"/>
+        <d:StateProvinceRegion xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">US-NJ</d:StateProvinceRegion>
+        <d:Email xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">kirsch_kelly@lilly.com</d:Email>
+        <d:Phone xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">9087652345</d:Phone>
+        <d:Id xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" m:type="Edm.Int32">2</d:Id>
+        <d:ContentType xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">Item</d:ContentType>
+        <d:Modified xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" m:type="Edm.DateTime">2017-05-09T16:53:03</d:Modified>
+        <d:Created xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" m:type="Edm.DateTime">2017-05-09T16:53:03</d:Created>
+        <d:CreatedById xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" m:type="Edm.Int32">567</d:CreatedById>
+        <d:ModifiedById xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" m:type="Edm.Int32">567</d:ModifiedById>
+        <d:Owshiddenversion xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" m:type="Edm.Int32">1</d:Owshiddenversion>
+        <d:Version xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">1.0</d:Version>
+        <d:Path xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">/sites/LRL-IEP/Lists/Study Details</d:Path>
+<m:properties xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">
+        <d:ContentTypeID xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">0x01007D70AE22282B984FB01B191D5609A606</d:ContentTypeID>
+        <d:ToProcessYN xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">Y</d:ToProcessYN>
+        <d:StudySiteCreation xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">Lilly</d:StudySiteCreation>
+        <d:TrialNumber xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">9742</d:TrialNumber>
+        <d:TherapeuticArea xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">Animal Diseases</d:TherapeuticArea>
+        <d:ProgramId xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">140317</d:ProgramId>
+        <d:ProgramName xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">14Test</d:ProgramName>
+        <d:DiseaseId xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" m:null="true"/>
+        <d:DiseaseName xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" m:null="true"/>
+        <d:IndicationId xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">1403171</d:IndicationId>
+        <d:IndicationName xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">14Ind</d:IndicationName>
+        <d:SponsorFirstName xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">Kelly</d:SponsorFirstName>
+        <d:SponsorLastName xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">Kirsch</d:SponsorLastName>
+        <d:SponsorContactAddress1 xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">1 ABC St</d:SponsorContactAddress1>
+        <d:SponsorContactAddress2 xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" m:null="true"/>
+        <d:Country xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">US</d:Country>
+        <d:City xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">Indianapolis</d:City>
+        <d:Region xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" m:null="true"/>
+        <d:StateProvinceRegion xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">US-NJ</d:StateProvinceRegion>
+        <d:Email xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">kirsch_kelly@lilly.com</d:Email>
+        <d:Phone xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">9087652345</d:Phone>
+        <d:Id xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" m:type="Edm.Int32">2</d:Id>
+        <d:ContentType xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">Item</d:ContentType>
+        <d:Modified xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" m:type="Edm.DateTime">2017-05-09T16:53:03</d:Modified>
+        <d:Created xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" m:type="Edm.DateTime">2017-05-09T16:53:03</d:Created>
+        <d:CreatedById xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" m:type="Edm.Int32">567</d:CreatedById>
+        <d:ModifiedById xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" m:type="Edm.Int32">567</d:ModifiedById>
+        <d:Owshiddenversion xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" m:type="Edm.Int32">1</d:Owshiddenversion>
+        <d:Version xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">1.0</d:Version>
+        <d:Path xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">/sites/LRL-IEP/Lists/Study Details</d:Path>
+      </m:properties></m:properties>

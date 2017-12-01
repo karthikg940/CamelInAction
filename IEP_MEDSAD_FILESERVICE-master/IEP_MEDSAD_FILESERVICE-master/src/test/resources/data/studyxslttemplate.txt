@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet version="1.0"
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:exsl="http://xmlns.opentechnology.org/xslt-extensions/common">
+	<xsl:output method="xml" version="1.0" encoding="utf-8"
+		indent="yes" />
+	<xsl:strip-space elements="*" />
+	<xsl:key name="StudyKey" match="//Elements/Element" use="CLNCL_STUDY_ID" />
+	<xsl:key name="CountryCodeKey" match="//Elements/Element" use="CNTRY_CD" />
+	<xsl:template match="/">
+		<Studies>
+			<xsl:for-each
+				select="//Elements/Element[generate-id() = generate-id( key('StudyKey', CLNCL_STUDY_ID)[1] ) ]">
+				<xsl:call-template name="StudyGroup">
+					<xsl:with-param name="StudyId" select="CLNCL_STUDY_ID" />
+				</xsl:call-template>
+			</xsl:for-each>
+		</Studies>
+	</xsl:template>
+	<xsl:template name="StudyGroup">
+		<xsl:param name="StudyId" />
+		<Study>
+			<xsl:copy-of select="CLNCL_STUDY_ID" />
+			<xsl:copy-of select="STUDY_ALS_CD" />
+			<xsl:copy-of select="STUDY_SHRT_DESC" />
+			<xsl:copy-of select="STUDY_TITLE" />
+			<xsl:copy-of select="STUDY_PHASE_IIP_ID" />
+			<xsl:copy-of select="NMBR_SITE_PLNND" />
+			<xsl:copy-of select="NMBR_SITE_SET_UP" />
+			<xsl:copy-of select="FNCL_MDCL_UNT_DESC" />
+			<xsl:copy-of select="EUDRACT_NO" />
+			<xsl:copy-of select="HLD_FLG" />
+			<xsl:copy-of select="CNCL_STOP_FLG" />
+			<xsl:copy-of select="LATEST_STNDRD_MLSTN_CD" />
+			<xsl:copy-of select="LATEST_STNDRD_MLSTN_DESC" />
+			<xsl:copy-of select="STUDY_PHASE_CD" />
+			<xsl:variable name="current" select="." />
+			<StudyCountries>
+				<xsl:apply-templates
+					select="//Elements/Element[CLNCL_STUDY_ID=$current/CLNCL_STUDY_ID][generate-id()=generate-id(key('CountryCodeKey', CNTRY_CD)[1])]"
+					mode="countryGroup" />
+			</StudyCountries>
+		</Study>
+	</xsl:template>
+	<xsl:template mode="countryGroup" match="Element">
+		<StudyCountry>
+			<xsl:copy-of select="CNTRY_CD" />
+			<xsl:copy-of select="NMBR_SITE_PLNND" />
+			<xsl:copy-of select="NMBR_SITE_SETUP" />
+			<xsl:copy-of select="HLD_FLG" />
+			<xsl:copy-of select="CNCL_STOP_FLG" />
+			<xsl:copy-of select="LATEST_STNDRD_MLSTN_CD" />
+			<xsl:copy-of select="LATEST_STNDRD_MLSTN_ACTL_DT" />
+			<xsl:copy-of select="RGLTRY_APPRVL_TYP" />
+			<xsl:copy-of select="ETHCL_REVIEW_APPRVL_LVL" />
+			<xsl:call-template name="SiteGroup">
+				<xsl:with-param name="CountryCodeId" select="CNTRY_CD" />
+			</xsl:call-template>
+		</StudyCountry>
+	</xsl:template>
+	<xsl:template name="SiteGroup">
+		<xsl:param name="CountryCodeId" />
+		<xsl:for-each select="//Elements/Element[CNTRY_CD = $CountryCodeId]">
+			<StudySites>
+				<StudySite>
+					<xsl:copy-of select="STUDY_SITE_CD" />
+					<xsl:copy-of select="STUDY_SITE_IIP_ID" />
+					<xsl:copy-of select="HLD_FLG" />
+					<xsl:copy-of select="CNCL_STOP_FLG" />
+					<xsl:copy-of select="PRMRY_INVSTGTR_ID" />
+					<xsl:copy-of select="PRMRY_CENTRE" />
+					<xsl:copy-of select="MNGNG_MDCL_UNT_CD" />
+					<xsl:copy-of select="FNCL_MDCL_UNT_DESC" />
+					<xsl:copy-of select="LATEST_STNDRD_MLSTN_CD" />
+					<xsl:copy-of select="LATEST_STNDRD_MLSTN_DESC" />
+					<xsl:copy-of select="SITE_CNFRMD_FLG" />
+					<xsl:copy-of select="LST_UPDTD_DTM" />
+				</StudySite>
+			</StudySites>
+		</xsl:for-each>
+	</xsl:template>
+</xsl:stylesheet>

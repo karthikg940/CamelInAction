@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.sharedinvestigator.com/exostar/schema" xmlns="http://www.sharedinvestigator.com/exostar/schema" 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:exostar="http://www.sharedinvestigator.com/exostar/schema"
+    elementFormDefault="qualified" attributeFormDefault="unqualified">
+    
+    <xs:element name="ExostarData" type="ExostarData" />
+	
+	<xs:complexType name="ExostarData">
+		<xs:annotation>
+			<xs:documentation>This XSD is not part of ODM and Not used by member companies. 
+            Used to get data from Exostar for Logins attempts to SIP and password reset</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="AccessLog"  name="UserAccessLog" minOccurs="0" maxOccurs="unbounded"/>			
+		</xs:sequence>	
+	</xs:complexType>
+	    
+    <xs:complexType name="AccessLog">
+       <xs:sequence>
+			<xs:element type="xs:string" name="EventId" minOccurs="1"/>
+            <xs:element type="xs:string"  name="ResourceAccessed" minOccurs="0"/>
+            <xs:element type="xs:string" name="Timestamp" minOccurs="0"/>
+            <xs:element type="xs:string" name="AccessingUser" minOccurs="0"/>       
+            <xs:element type="xs:string" name="IP" minOccurs="0"/>  			
+            <xs:element type="xs:string" name="Action" minOccurs="0"/>
+        </xs:sequence>		
+    </xs:complexType>
+</xs:schema>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cxf="http://camel.apache.org/schema/blueprint/cxf" xmlns:jaxrs="http://cxf.apache.org/blueprint/jaxrs" xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0" xmlns:ext="http://aries.apache.org/blueprint/xmlns/blueprint-ext/v1.0.0" xsi:schemaLocation="
+        http://www.osgi.org/xmlns/blueprint/v1.0.0
+        http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
+        http://camel.apache.org/schema/blueprint/cxf
+        http://camel.apache.org/schema/blueprint/cxf/camel-cxf.xsd
+        http://cxf.apache.org/blueprint/jaxrs
+        http://cxf.apache.org/schemas/blueprint/jaxrs.xsd
+        http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0
+        http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.1.0.xsd">
+
+	<cm:property-placeholder id="sip-config" persistent-id="${persistent.id}" update-strategy="reload"/>
+
+
+	<!--<cm:property-placeholder id="SIPProperties"
+		persistent-id="SIPConfig" update-strategy="reload">
+		<cm:default-properties>
+			<cm:property name="com.lilly.esb.iep.sip.rs.address"
+				value="/IEP/rest/sip" />
+			<cm:property name="SponserSharePointURL"
+				value="soag-z1-d.am.lilly.com:8443/IEP/odata/v1/ClinicalStudies/MilestoneRef" />
+			<cm:property name="StudySharePointURL"
+				value="soag-z1-d.am.lilly.com:8443/sites/SolutonServicesECIT/SP_Services/_vti_bin/listdata.svc/Dev_ALSCStudies" />
+			<cm:property name="StudyUserName" value="IEP_ESB_SYSTEM_DEV" />
+			<cm:property name="SponserUserName" value="IEPTEST15" />
+			<cm:property name="StudyPassword" value="8j6e7n5n3y0y9!" />
+			<cm:property name="SponserPassword" value="Iep15test.01" />
+		</cm:default-properties>
+	</cm:property-placeholder>-->
+
+	<!--<enc:property-placeholder>
+		<enc:encryptor class="org.jasypt.encryption.pbe.StandardPBEStringEncryptor">
+			<property name="config">
+				<bean class="org.jasypt.encryption.pbe.config.EnvironmentStringPBEConfig">
+					<property name="algorithm" value="PBEWithMD5AndDES" />
+					<property name="passwordEnvName" value="FUSE_ENCRYPTION_PASSWORD" />
+				</bean>
+			</property>
+		</enc:encryptor>
+	</enc:property-placeholder>-->
+
+
+
+	<bean id="jacksonObjectMapper" class="org.codehaus.jackson.map.ObjectMapper" />
+
+	<bean id="sponsorDetailsProcessor" class="com.lilly.esb.iep.sip.processor.SponserProcessor"/>
+
+
+	<!-- Input Queue Connection Components -->
+	<bean id="jasypt"
+		  class="org.apache.camel.component.jasypt.JasyptPropertiesParser">
+		<property name="password" value="test" />
+	</bean>
+
+	<!-- Used to override WMQ connections -->
+	<bean id="activeMQ" class="org.apache.activemq.ActiveMQConnectionFactory">
+		<property name="brokerURL" value="vm://localhost?broker.persistent=false" />
+	</bean>
+
+	<!-- jms configurations -->
+	<bean id="jmsConfig" class="org.apache.camel.component.jms.JmsConfiguration">
+		<property name="connectionFactory" ref="activeMQ" />
+		<property name="transacted" value="false" />
+		<property name="deliveryPersistent" value="false" />
+	</bean>
+
+	<bean id="wmqIn" class="org.apache.activemq.camel.component.ActiveMQComponent">
+		<property name="configuration" ref="jmsConfig" />
+	</bean>
+	<bean id="wmqOut" class="org.apache.activemq.camel.component.ActiveMQComponent">
+		<property name="configuration" ref="jmsConfig" />
+	</bean>
+
+
+	<bean id="trackerProcessor" class="com.lilly.esb.iep.common.processor.IepTrackerProcessor"/>
+
+
+
+	<bean id="defaultExceptionProcessor" class="com.lilly.esb.iep.common.exception.processor.DefaultExceptionProcessor">
+		<property name="logName" value="sip" />
+		<property name="encryptedPassword" value="ENC(oDgkAFLL8V+BzWvNUTz1/eIVv1hT8nC9)" />
+	</bean>
+
+	<bean id="basicAuthHeaderProcessor" class="com.lilly.esb.iep.common.processor.BasicAuthHeaderProcessor">
+		<property name="soagUser" value="IEP_ESB_SYSTEM_DEV" />
+		<property name="soagPwd" value="8j6e7n5n3y0y9!" />
+	</bean>
+
+	<bean id="sipSponsorRouteBuilder" class="com.lilly.esb.iep.sip.routebuilder.SponserRouteBuilder" />
+	 <!--<camel-cxf:rsServer id="cxfRsEndpoint" address="IEP_ESB_SYSTEM_DEV"
+		serviceClass="com.lilly.esb.iep.sip.service.RestfulService" loggingFeatureEnabled="true"> 
+	 </camel-cxf:rsServer>-->
+
+
+
+	<camelContext id="com.lilly.esb.iep.sip-camelContext" xmlns="http://camel.apache.org/schema/blueprint">
+		<propertyPlaceholder location="blueprint:sip-config" propertiesParserRef="jasypt" id="properties"/>
+		<routeBuilder ref="sipSponsorRouteBuilder"/>
+	</camelContext>
+
+</blueprint>
+		

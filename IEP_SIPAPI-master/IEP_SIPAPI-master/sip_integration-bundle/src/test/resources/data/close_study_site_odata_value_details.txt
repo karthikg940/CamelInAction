@@ -1,0 +1,7 @@
+"value":[
+    {
+      "SiteMlstnIipId":"44857998","StudyCntryIipId":"186904","StudySiteIipId":"873147","MlstnCd":"8800","ClnclStudyId":"15780","SiteMlstnBslnDtm":null,"SiteMlstnPlanDtm":null,"SiteMlstnFrcstDtm":null,"SiteMlstnActlDtm":"2015-04-01T00:00:00","CrtdDtm":"2017-01-30T22:01:20","LstUpdtdDtm":"2017-03-16T03:01:26","StudySiteMlstnDsn":"IMPACT"
+    },{
+      "SiteMlstnIipId":"44874247","StudyCntryIipId":"190741","StudySiteIipId":"903268","MlstnCd":"8800","ClnclStudyId":"10900","SiteMlstnBslnDtm":null,"SiteMlstnPlanDtm":null,"SiteMlstnFrcstDtm":null,"SiteMlstnActlDtm":"2008-01-15T00:00:00","CrtdDtm":"2017-01-30T22:01:20","LstUpdtdDtm":"2017-03-16T03:01:26","StudySiteMlstnDsn":"IMPACT"
+    }
+  ]

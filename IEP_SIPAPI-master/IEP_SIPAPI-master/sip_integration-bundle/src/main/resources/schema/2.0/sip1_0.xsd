@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema targetNamespace="http://www.cdisc.org/ns/odm/v1.3" xmlns="http://www.cdisc.org/ns/odm/v1.3" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:sip="http://www.sharedinvestigator.com/sip/schema"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+	<xs:annotation>
+		<xs:documentation>Extention mechanism from base ODM</xs:documentation>
+	</xs:annotation>
+	
+	<!-- Transactional Data Model to Core ODM -->
+	<xs:include schemaLocation="sip_odm-extension.xsd" />
+	
+</xs:schema>

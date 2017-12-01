@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 	
+	xmlns:odm="http://www.cdisc.org/ns/odm/v1.3" 
+	xmlns:sip="http://www.sharedinvestigator.com/sip/schema"  
+	targetNamespace="http://www.sharedinvestigator.com/sip/schema" 
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	
+	<xs:import namespace="http://www.cdisc.org/ns/odm/v1.3" schemaLocation="odm1_3_2/ODM1-3-2.xsd"/>
+	<xs:include schemaLocation="role.xsd"/>
+	
+	<xs:complexType name="SIPcomplexTypeDefinition-UserProfileDef">
+		<xs:annotation>
+			<xs:documentation>Extended from ODMcomplexTypeDefinition-User and attributes for SIP</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="odm:oid"  	name="TCBUID" minOccurs="0" maxOccurs="1"/> <!-- This is the transcelerate id !-->
+			<xs:element type="odm:text"  	name="IRID" minOccurs="0"/>
+			<xs:element type="odm:oid"  	name="SponsorID" minOccurs="0" maxOccurs="1"/> <!-- This is the organization id of the User !-->
+			<xs:element type="odm:text" 	name="OfficialTitle" minOccurs="0" maxOccurs="1"/>
+			<xs:element type="odm:text" 	name="Initials" minOccurs="0" maxOccurs="1"/>
+			<xs:element type="odm:text" 	name="NamePrefix" minOccurs="0" maxOccurs="1"/>
+			<xs:element type="odm:text" 	name="MiddleName" minOccurs="0" maxOccurs="1"/>
+			<xs:element type="odm:text" 	name="NameSuffix" minOccurs="0" maxOccurs="1"/>
+			<xs:element type="odm:text" 	name="UserAffiliation" minOccurs="0" maxOccurs="1"/>
+			<xs:element type="odm:text" 	name="InstitutionName" minOccurs="0" maxOccurs="1"/>
+			<xs:element type="odm:text" 	name="Profession" minOccurs="0" maxOccurs="1"/>
+			<xs:element type="odm:text" 	name="PhoneExtension" minOccurs="0" maxOccurs="1"/>
+			<xs:element type="sip:UserRoleDef"  name="UserRoleMap" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element type="odm:date" 	name="ActivationStartDate" minOccurs="0"/>
+			<xs:element type="odm:text" 	name="TimeZone" minOccurs="0" maxOccurs="1"/>
+			<xs:element type="odm:text" 	name="NotificationConfig" minOccurs="0" maxOccurs="1"/>
+			<!-- 2 fields "IsUserActive", "InActivationDate" need to be addressed as to how these will be exchanged -->
+		</xs:sequence>
+	</xs:complexType>
+	
+</xs:schema>

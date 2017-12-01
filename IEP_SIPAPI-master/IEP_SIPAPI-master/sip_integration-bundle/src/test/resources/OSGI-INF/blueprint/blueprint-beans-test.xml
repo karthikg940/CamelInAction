@@ -1,0 +1,176 @@
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cxf="http://camel.apache.org/schema/blueprint/cxf" xmlns:jaxrs="http://cxf.apache.org/blueprint/jaxrs" xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0" xmlns:ext="http://aries.apache.org/blueprint/xmlns/blueprint-ext/v1.0.0" xsi:schemaLocation="
+        http://www.osgi.org/xmlns/blueprint/v1.0.0
+        http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
+        http://camel.apache.org/schema/blueprint/cxf
+        http://camel.apache.org/schema/blueprint/cxf/camel-cxf.xsd
+        http://cxf.apache.org/blueprint/jaxrs
+        http://cxf.apache.org/schemas/blueprint/jaxrs.xsd
+        http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0
+        http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.1.0.xsd">
+
+	<cm:property-placeholder id="sip-config" persistent-id="${persistent.id}" update-strategy="reload" >
+		 <cm:default-properties>
+		 
+            <!-- sip integration scheduler queue -->
+            <cm:property name="com.lilly.esb.iep.sip.reference.scheduler.queue" value="IEP.CRON.JOB.SIP.STUDYSPONSOR" />
+            
+            <!-- batch control -->
+            <cm:property name="com.lilly.esb.iep.sip.batchcontrol.query.select" value="select CAST(endtime AS TIMESTAMP) AS endtime from iep_owner.iep_batch_control where objecttype = 'sip.study'" />
+            <cm:property name="com.lilly.esb.iep.sip.batchcontrol.query.insert" value="insert into iep_owner.iep_batch_control(impactnumber,querytype,objecttype,starttime,endtime)values('15368','inc','sip.study',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP)" />
+            <cm:property name="com.lilly.esb.iep.sip.batchcontrol.query.update" value="UPDATE iep_owner.iep_batch_control SET endtime=CURRENT_TIMESTAMP WHERE objecttype = 'sip.study'	" />
+                       
+			<!-- share point  -->                      
+            <cm:property name="com.lilly.esb.iep.sip.studylist.site" value="test" />
+            <cm:property name="com.lilly.esb.iep.sip.sponsorlist.site" value="test" />
+            <cm:property name="com.lilly.esb.iep.sip.facilityMappinglist.site" value="test"/>
+            <cm:property name="com.lilly.esb.iep.sip.primaryMappinglist.site" value="test"/>
+            <cm:property name="com.lilly.esb.iep.sip.sharepoint.username" value="test" />
+            <cm:property name="com.lilly.esb.iep.sip.sharepoint.password" value="test" />
+            
+            <!-- odata url queries -->           
+            <cm:property name="com.lilly.esb.iep.sip.createStudySite.odata.url.query" value="SELECT 1 FROM DUAL" />
+            <cm:property name="com.lilly.esb.iep.sip.createStudy.odata.url.query" value="$select=ClinicalStudy/ClinicalStudyStudyDesign/StudyCompound/CmpndNm,ClinicalStudy/ClinicalStudyStudyDesign/StudyCompound/CmpndNmTyp,ClinicalStudy/ClinicalStudyStudyDesign/StudyCompound/SbstncRfrncCd,ClinicalStudy/ClnclStudyId,ClinicalStudy/StudyTitle,ClinicalStudy/StudyShrtDesc,StudyMlstnPlanDtm,StudyMlstnActlDtm,MlstnCd,ClinicalStudy/CnclStopFlg,ClinicalStudy/LatestStndrdMlstnCd,ClinicalStudy/HldCnclStopDt%26$expand=ClinicalStudy,ClinicalStudy/ClinicalStudyStudyDesign/StudyCompound%26$filter=(MlstnCd eq '3200' or MlstnCd eq '3700' or MlstnCd eq '4900' or MlstnCd eq '4814' or MlstnCd eq '4844' or MlstnCd eq '4874' or MlstnCd eq '3918' or MlstnCd eq '3930' or MlstnCd eq '3942' or MlstnCd eq '3664' or MlstnCd eq '4014' or MlstnCd eq '4044' or MlstnCd eq '4074') and ClinicalStudy/ClnclStudyId eq" />
+            <cm:property name="com.lilly.esb.iep.sip.closeStudySite.odata.url.query" value="$select=SiteMlstnActlDtm,MlstnCd,StudySiteIipId%26$filter=(MlstnCd eq '9900' or MlstnCd eq '9190') and round(StudySiteIipId) eq" />
+            <cm:property name="com.lilly.esb.iep.sip.studysite.odata.url.query" value="SELECT 1 FROM DUAL" />
+            <cm:property name="com.lilly.esb.iep.sip.facilityMappinglist.query" value="SELECT 1 FROM DUAL" />
+            <cm:property name="com.lilly.esb.iep.sip.primaryMappinglist.query" value="SELECT 1 FROM DUAL" />
+            
+            <!-- odata  -->           
+            <cm:property name="com.lilly.esb.iep.sip.createStudy.odata.url" value="test" />
+            <cm:property name="com.lilly.esb.iep.sip.createStudySite.odata.url" value="test" />
+            <cm:property name="com.lilly.esb.iep.sip.closeStudySite.odata.url" value="test" />
+            
+            <!-- external api's -->           
+            <cm:property name="com.lilly.esb.iep.sip.createStudy.external.api.url" value="test" />
+            <cm:property name="com.lilly.esb.iep.sip.businessentities.external.api.url" value="test" />
+            <cm:property name="com.lilly.esb.iep.sip.createStudySite.external.api.url" value="test" />
+             <cm:property name="com.lilly.esb.iep.sip.updateStudySite.external.api.url" value="test" />
+            <cm:property name="com.lilly.esb.iep.sip.getStudySite.external.api.url" value="test" />
+            <cm:property name="com.lilly.esb.iep.sip.closeStudy.external.api.url" value="test" />
+            <cm:property name="com.lilly.esb.iep.sip.closeStudySite.external.api.url" value="test" />
+            <cm:property name="com.lilly.esb.iep.sip.getSponsorUser.external.api.url" value="test" />
+            <cm:property name="com.lilly.esb.iep.sip.createSponsorUser.external.api.url" value="test" />
+            <cm:property name="com.lilly.esb.iep.sip.updateSponsorUser.external.api.url" value="test" />
+            <cm:property name="com.lilly.esb.iep.sip.updateSponsorUser.external.api.url" value="test" />
+            <cm:property name="com.lilly.esb.iep.sip.update.businessentities.external.api.url" value="test" />
+            <cm:property name="com.lilly.esb.iep.sip.associateSponsorUser.external.api.url" value="test" />
+            <cm:property name="com.lilly.esb.iep.sip.uniqueSponsorSiteUserID.property" value="test" />
+             
+            
+            <!--  commons dispatch service -->           
+            <cm:property name="com.lilly.esb.iep.sip.encrypt.password" value="test" />
+            
+            <!--  external api proxy url -->            
+            <cm:property name="com.lilly.esb.iep.sip.external.api.proxy.url" value="soag-z1-d.am.lilly.com:8443/IEP/proxy_SIP"/>
+            
+           
+        </cm:default-properties>
+        </cm:property-placeholder>
+
+		<bean id="jacksonDataFormat" class="org.apache.camel.component.jackson.JacksonDataFormat">
+			<property name="unmarshalType" value="java.util.HashMap" />
+		</bean>
+
+		<bean id="jasypt" class="org.apache.camel.component.jasypt.JasyptPropertiesParser">
+			<property name="password" value="test" />
+		</bean>
+		
+		<bean id="triggerValidator" class="com.lilly.esb.iep.sip.beans.TriggerValidator" />
+	<bean id="facilitySharePointBean"
+		class="com.microsoft.schemas.ado._2007._08.dataservices.FacilityMapping" />
+	<bean id="odmPayloadBean" class="com.lilly.esb.iep.sip.beans.ODMPayloadHandler" />
+	<bean id="primaryInvestigatorIDSharePointBean"
+		class="com.microsoft.schemas.ado._2007._08.dataservices.PrimaryInvestigatorMapping" />
+	<bean id="sponsorSharePointBean"
+		class="com.microsoft.schemas.ado._2007._08.dataservices.SponsorDetails" />
+	<bean id="studyCompound" class="com.lilly.esb.iep.sip.beans.StudyCompound" />
+	<bean id="studySharePointBean"
+		class="com.microsoft.schemas.ado._2007._08.dataservices.StudyDetails" />
+	<bean id="trackerProcessor" class="com.lilly.esb.iep.common.processor.IepTrackerProcessor" />
+	<bean id="exchangeProcessor" class="com.lilly.esb.iep.sip.processor.ExchangeProcessor" />
+	<bean id="studyAttributesProcessor"
+		class="com.lilly.esb.iep.sip.processor.StudyAttributesProcessor" />
+	<bean id="studyProcessor" class="com.lilly.esb.iep.sip.processor.StudyProcessor" />
+	<bean id="studySiteHandler" class="com.lilly.esb.iep.sip.beans.StudySiteHandler"/>
+	
+		<bean id="defaultExceptionProcessor" class="com.lilly.esb.iep.common.exception.processor.DefaultExceptionProcessor">
+			<property name="logName" value="sip" />
+			<property name="encryptedPassword" value="ENC(oDgkAFLL8V+BzWvNUTz1/eIVv1hT8nC9)" />
+		</bean>
+
+		<!-- jaxb references -->		
+		<bean id="jaxbDataFormatStudy" class="org.apache.camel.converter.jaxb.JaxbDataFormat">
+			<property name="contextPath" value="com.microsoft.schemas.ado._2007._08.dataservices" />
+			<property name="partClass" value="com.microsoft.schemas.ado._2007._08.dataservices.StudyDetails" />
+		</bean>
+		<bean id="jaxbDataFormatFacility" class="org.apache.camel.converter.jaxb.JaxbDataFormat">
+			<property name="contextPath" value="com.microsoft.schemas.ado._2007._08.dataservices" />
+			<property name="partClass" value="com.microsoft.schemas.ado._2007._08.dataservices.FacilityMapping" />
+		</bean>
+		<bean id="jaxbDataFormatPrimary" class="org.apache.camel.converter.jaxb.JaxbDataFormat">
+			<property name="contextPath" value="com.microsoft.schemas.ado._2007._08.dataservices" />
+			<property name="partClass" value="com.microsoft.schemas.ado._2007._08.dataservices.PrimaryInvestigatorMapping" />
+		</bean>
+		 <bean id="jaxbDataFormatSponser" class="org.apache.camel.converter.jaxb.JaxbDataFormat">
+			<property name="contextPath" value="com.microsoft.schemas.ado._2007._08.dataservices" />
+			<property name="partClass" value="com.microsoft.schemas.ado._2007._08.dataservices.SponsorDetails" />
+		</bean>
+
+	<bean id="jaxbDataFormatOdmSponser" class="org.apache.camel.converter.jaxb.JaxbDataFormat">
+		<property name="contextPath"
+				  value="org.cdisc.ns.odm.v1" />
+		<property name="partClass"
+				  value="org.cdisc.ns.odm.v1.ODM" />
+	</bean>
+	
+		<bean id="sharePointBasicAuthHeaderProcessor" class="com.lilly.esb.iep.common.processor.BasicAuthHeaderProcessor">
+			<property name="soagUser" value="IEP_ESB_SYSTEM_DEV" />
+			<property name="soagPwd" value="8j6e7n5n3y0y9!" />
+		</bean>
+	 
+		<bean id="oDataBasicAuthHeaderProcessor" class="com.lilly.esb.iep.common.processor.BasicAuthHeaderProcessor">
+			<property name="soagUser" value="IEPTEST15" />
+			<property name="soagPwd" value="Iep15test.01" />
+		</bean>
+
+
+		<!-- Used to override WMQ connections -->		
+		<bean id="activeMQ" class="org.apache.activemq.ActiveMQConnectionFactory">
+			<property name="brokerURL" value="vm://localhost?broker.persistent=false" />
+		</bean>
+	
+		<!-- jms configurations -->
+		<bean id="jmsConfig" class="org.apache.camel.component.jms.JmsConfiguration">
+			<property name="connectionFactory" ref="activeMQ" />
+			<property name="transacted" value="false" />
+			<property name="deliveryPersistent" value="false" />
+		</bean>
+		
+		<!-- WMQ configurations -->		
+		<bean id="wmqIn" class="org.apache.activemq.camel.component.ActiveMQComponent">
+			<property name="configuration" ref="jmsConfig" />
+		</bean>
+		<bean id="wmqOut" class="org.apache.activemq.camel.component.ActiveMQComponent">
+			<property name="configuration" ref="jmsConfig" />
+		</bean>
+	
+		<!-- Batch Control -->		
+		<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+			<property name="url" value="jdbc:oracle:thin:@jagxfr.am.lilly.com:1531:DVC4806" />
+			<property name="username" value="IEP_USER" />
+			<property name="password" value="Summer_201415" />
+			<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
+			 
+		</bean>
+	
+
+		<camelContext id="com.lilly.esb.iep.sip-camelContext" xmlns="http://camel.apache.org/schema/blueprint">
+	
+			<packageScan>
+				<package>com.lilly.esb.iep.sip.routebuilder</package>
+			</packageScan>
+	
+		</camelContext>
+
+</blueprint>
+		

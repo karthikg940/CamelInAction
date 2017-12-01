@@ -1,0 +1,280 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.lilly.esb.iep</groupId>
+		<artifactId>sip_integration</artifactId>
+		<version>1.0.17-SNAPSHOT</version>
+	</parent>
+	<artifactId>sip_integration-bundle</artifactId>
+	<name>Fuse-sip_integration-bundle</name>
+	<description>Fuse IEP SIP bundle project</description>
+	<packaging>bundle</packaging>
+
+
+	<dependencies>
+
+		<!-- Lilly -->
+		<dependency>
+			<groupId>com.lilly.esb.util</groupId>
+			<artifactId>commons-util-jar</artifactId>
+			<version>${lilly.fuse.platform.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.lilly.esb.iep</groupId>
+			<artifactId>common-bundle</artifactId>
+			<version>${common.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-core</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jaxb</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jasypt</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jackson</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-blueprint</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-http</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-cxf</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.cxf</groupId>
+					<artifactId>cxf-rt-frontend-jaxws</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<!-- Logging -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+		</dependency>
+
+		<!-- Jackson -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-jaxrs</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>xom</groupId>
+			<artifactId>xom</artifactId>
+			<version>1.2.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-saxon</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.ow2.asm</groupId>
+			<artifactId>asm-all</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-test</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-test-blueprint</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-transports-http-jetty</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.aries.blueprint</groupId>
+			<artifactId>org.apache.aries.blueprint</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.aries</groupId>
+			<artifactId>org.apache.aries.util</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.aries.proxy</groupId>
+			<artifactId>org.apache.aries.proxy</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.lilly.esb</groupId>
+			<artifactId>commons-dispatch-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jvnet.jaxb2_commons</groupId>
+			<artifactId>jaxb2-basics-runtime</artifactId>
+			<version>${jvnet.jaxb2.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpcore-osgi</artifactId>
+			<version>4.4.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient-osgi</artifactId>
+			<version>4.4.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>${mockito.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jdbc</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+		</dependency>
+
+
+	</dependencies>
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+		<testResources>
+			<testResource>
+				<directory>src/test/resources</directory>
+				<filtering>true</filtering>
+			</testResource>
+		</testResources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<configuration>
+					<instructions>
+						<Import-Package>
+							com.lilly.esb.iep.common.exception.processor;version="[${common.version},${common.next})",
+							com.lilly.esb.iep.common.processor;version="[${common.version},${common.next})",
+							com.lilly.esb.iep.common.model;version="[${common.version},${common.next})",
+							com.lilly.esb.iep.common.sharepoint;version="[${common.version},${common.next})",
+							com.lilly.esb.iep.common.sharepoint.filter;version="[${common.version},${common.next})",
+							com.lilly.esb.iep.common.util;version="[${common.version},${common.next})",
+							com.lilly.esb.iep.common.util.camel;version="[${common.version},${common.next})",
+							org.apache.camel.component.jasypt,
+							org.apache.camel.component.jackson,
+							org.apache.karaf.jaas.boot.principal,
+							org.eclipse.jetty.plus.jaas,
+							org.jasypt.encryption.pbe,
+							org.jasypt.encryption.pbe.config,
+							*
+						</Import-Package>
+					</instructions>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>validate</phase>
+						<id>parse-version</id>
+						<goals>
+							<goal>parse-version</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.jvnet.jaxb2.maven2</groupId>
+				<artifactId>maven-jaxb2-plugin</artifactId>
+				<version>${jaxb2.plugin.version}</version>
+				<configuration>
+					<schemaDirectory>${project.basedir}/src/main/resources/schema</schemaDirectory>
+					<schemaIncludes>
+						<include>2.0/*.xsd</include>
+						<include>2.0/*/*.xsd</include>
+						<include>*.xsd</include>
+					</schemaIncludes>
+					<bindingDirectory>${project.basedir}/src/main/resources/schema</bindingDirectory>
+					<verbose>true</verbose>
+					<extension>true</extension>
+					<args>
+						<arg>-Xfluent-api</arg>
+						<arg>-Xvalue-constructor</arg>
+						<arg>-XtoString</arg>
+						<arg>-Xequals</arg>
+						<arg>-XhashCode</arg>
+						<arg>-Xcopyable</arg>
+						<arg>-Xmergeable</arg>
+						<arg>-Xjaxbindex</arg>
+						<arg>-enableIntrospection</arg>
+						<arg>-Xsetters-mode=direct</arg>
+					</args>
+					<plugins>
+						<plugin>
+							<groupId>org.jvnet.jaxb2_commons</groupId>
+							<artifactId>jaxb2-basics</artifactId>
+							<version>0.6.4</version>
+						</plugin>
+						<plugin>
+							<groupId>net.java.dev.jaxb2-commons</groupId>
+							<artifactId>jaxb-fluent-api</artifactId>
+							<version>2.1.8</version>
+						</plugin>
+						<plugin>
+							<groupId>org.jvnet.jaxb2_commons</groupId>
+							<artifactId>jaxb2-value-constructor</artifactId>
+							<version>3.0</version>
+						</plugin>
+					</plugins>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

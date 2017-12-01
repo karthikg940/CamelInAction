@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:odm="http://www.cdisc.org/ns/odm/v1.3" 
+	xmlns:sip="http://www.sharedinvestigator.com/sip/schema" 
+	targetNamespace="http://www.sharedinvestigator.com/sip/schema" 
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+	<xs:import namespace="http://www.cdisc.org/ns/odm/v1.3" schemaLocation="odm1_3_2/ODM1-3-2.xsd"/>
+	<xs:include schemaLocation="contact.xsd"/>
+	
+	<xs:complexType name="SIPcomplexTypeDefinition-BasicFacilityDef">
+		<xs:annotation>
+			<xs:documentation>Created a new definition for the Facility</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="odm:oid"  name="FacilityID" minOccurs="0"/>
+			<!--<xs:element type="odm:oid"  name="ExternalFacilityID" minOccurs="0"/>   R1.1 :Removed-->
+			<xs:element type="odm:text" name="FacilityIRID" minOccurs="0"/>
+			<xs:element type="odm:name" name="FacilityName" minOccurs="0"/>
+			<xs:element type="odm:text"    name="DepartmentID" minOccurs="0"/><!--  added in R1.1 -->
+			<xs:element type="odm:text"    name="DepartmentIRID" minOccurs="0"/><!--  added in R2.0 -->
+			<xs:element type="odm:name" name="DepartmentName" minOccurs="0"/><!--  added in R1.1 -->
+			<xs:element type="odm:name" name="DepartmentType" minOccurs="0"/><!--  added in R1.1 -->
+			<xs:element type="odm:name" name="ReaserchFacilityType" minOccurs="0"/>
+			<xs:element  ref="odm:Address" minOccurs="0"/>
+			<!--<xs:element  ref="odm:Phone" minOccurs="0"/>   R1.1 :Removed-->
+			<xs:element type="odm:boolean" name="IsPrimary" minOccurs="0"/>
+			<xs:element type="odm:name" name="PrimaryFacilityID" minOccurs="0"/>
+			<xs:element type="odm:name" name="PrimaryFacilityIRID" minOccurs="0"/>
+			<xs:element type="odm:name" name="PrimaryFacilityName" minOccurs="0"/>
+			
+			<xs:element type="odm:text" name="GeneralText" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="SIPcomplexTypeDefinition-FacilityTherapeuticAreaDetailDef">
+		<xs:annotation>
+			<xs:documentation>Created a new definition for the Facility TherapeuticArea</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="odm:text"  name="TherapeuticArea" minOccurs="0"/>
+			<xs:element type="odm:text"  name="TherapeuticAreaCode" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="SIPcomplexTypeDefinition-TrialPhaseCapabilitiesDef">
+		<xs:annotation>
+			<xs:documentation>Created a new definition for the Facility TherapeuticArea</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="odm:text"  name="Phase"  minOccurs="0" maxOccurs="unbounded"/> <!-- R1.1 : modified from string to list -->
+			<xs:element type="odm:text" name="OtherAreaOfExpertise" minOccurs="0"/>		<!-- R1.1 :moved here from BasicFacilityDef-->	
+		</xs:sequence>
+	</xs:complexType>
+	
+	
+	<xs:complexType name="SIPcomplexTypeDefinition-OtherSiteDetailsDef">
+		<xs:annotation>
+			<xs:documentation>Created a new definition for the Facility OtherDetail</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="odm:boolean" name="IsAffliatedResearch" minOccurs="0"/>
+			<xs:element type="odm:text"  name="SponsorTypesResearchExperienceName"  minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element type="odm:text"  name="SponsorTypesResearchExperienceText"  minOccurs="0" />
+			<xs:element type="odm:boolean" name="IsHispanicEthnicity" minOccurs="0"/>			
+			<xs:element type="odm:boolean" name="IsAmericanIndianOrAlaskaNativeRace" minOccurs="0"/>			
+			<xs:element type="odm:boolean" name="IsAsianRace" minOccurs="0"/>			
+			<xs:element type="odm:boolean" name="IsBlackORAfricanAmericanRace" minOccurs="0"/>			
+			<xs:element type="odm:boolean" name="IsCaucasianRace" minOccurs="0"/>			
+			<xs:element type="odm:boolean" name="IsNativeHawaiianOrOtherPacificIslander"  minOccurs="0"/>
+			<xs:element type="odm:text"  name="DemographicsOfPatientPopulation"  minOccurs="0" maxOccurs="unbounded"/>			
+			<xs:element type="odm:text"  name="DemographicsOfPatientPopulationOtherComment"  minOccurs="0" />			
+			<xs:element type="odm:boolean"  name="IsGovtAffiliationOrGoveFunded" minOccurs="0"/>
+			<xs:element type="odm:text"  name="IsGovtAffiliationOrGovtText" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="SIPcomplexTypeDefinition-FacilityProfileManager1"><!-- R1.1 : modified this tag -->
+		<xs:annotation>
+			<xs:documentation>Facility Profile Manager 1 details: this will occurs only once</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="sip:SIPcomplexTypeDefinition-ContactDef"  name="FacilityProfileManager1" minOccurs="0" ></xs:element>			
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="SIPcomplexTypeDefinition-FacilityProfileManager2"><!-- R1.1 : modified this tag -->
+		<xs:annotation>
+			<xs:documentation>Facility Profile Manager 2 details. Multiple facility profile manages are allowed here</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="sip:SIPcomplexTypeDefinition-ContactDef"  name="FacilityProfileManager1" minOccurs="0" maxOccurs="unbounded" ></xs:element>			
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="SIPcomplexTypeDefinition-ClinicalTrialContactDef">
+		<xs:annotation>
+			<xs:documentation>Multiple Clinical Trial Contact for facility</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="sip:SIPcomplexTypeDefinition-ContactDef"  name="FacilityProfileManager2" minOccurs="0" maxOccurs="unbounded"></xs:element>	
+		</xs:sequence>
+	</xs:complexType>
+	
+	
+	<xs:complexType name="SIPcomplexTypeDefinition-FacilityConsentTrainingDetailDef">
+		<xs:annotation>
+			<xs:documentation>Created a new definition for the Facility ConsentTraining</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="odm:boolean"  name="IsWrittenSOP" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsMinorAssentPediatric" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsOtherVulnerablePopulations" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsLanguageTranslations" minOccurs="0"/>
+			<xs:element type="odm:text"  name="LanguageText" minOccurs="0" maxOccurs="unbounded"/> <!--  added in R1.1 -->
+			
+			<xs:element type="odm:boolean" name="IsResearchTrainingProgram" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsCourseContentGCP" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsExtProgConduct" minOccurs="0"/>
+			<xs:element type="odm:text" name="ExtProgConductText" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsProgramProvisioned" minOccurs="0"/>
+			<!-- <xs:element type="odm:boolean"  name="IsLanguage" minOccurs="0"/> R1.1 :Removed-->			
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="SIPcomplexTypeDefinition-FacilityEquipmentDetailDef">
+		<xs:annotation>
+			<xs:documentation>Created a new definition for the Facility Equipment</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="odm:boolean"  name="IsEquipCalibrated" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsRecordCalibrationFrequencyAvailable" minOccurs="0"/>
+			<!--<xs:element type="odm:boolean" name="IsNonFrostFreeFreezers" minOccurs="0"/> R1.1 :Removed-->			
+			<xs:element type="odm:text"  name="NonFrostFreeFreezersBioSampleStorage" minOccurs="0"/> <!--  added in R1.1 -->
+			<xs:element type="odm:boolean" name="IsRefrigeratorAvailableFrBioSample" />
+			<xs:element type="odm:boolean" name="IsRefrigeratorTemperatureMonitored" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsFreezerTemperatureMonitored" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsRecordsMaintainedAndAvailable" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsBackupPlanForPowerOutage" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsAlarmedIfOutOfRange" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsEcgAccessible" minOccurs="0"/>
+			<xs:element type="odm:text"  name="ExternalPhone" minOccurs="0"/>
+			<xs:element type="odm:text"  name="InternationalPhone" minOccurs="0"/>
+			<xs:element type="odm:text"  name="Centrifuge" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsRefrigeratedCentrifugeForSamples" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsDedicatedComputer" minOccurs="0"/>
+			<xs:element type="odm:text"  name="BrowserAdobeVersion" minOccurs="0" maxOccurs="unbounded"/> <!-- Concainated with - : example browserName-version-->
+			<xs:element type="odm:text"  name="InternalFirewall" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsHighSpeedInternetCapable" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsWirelessInternetCapable" minOccurs="0"/>
+			<xs:element type="sip:SIPcomplexTypeDefinition-FacilityDigitalDiagnosticDetailDef"  name="DigitalDiagnostic" minOccurs="0"></xs:element>
+			<xs:element type="odm:boolean" name="IsRecordStorageSecure" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsArchivalCapable" minOccurs="0"/>
+			<xs:element type="odm:text"  name="ArchivalOffsiteNameLocationInfo" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsStorageArea" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsPkpdCapable" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsLabHoursAccomodate" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsOpenOnWeekEnds" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsAdmitResearchSubjects" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	
+	<xs:complexType name="SIPcomplexTypeDefinition-InvestigationalProductsDef">
+		<xs:annotation>
+			<xs:documentation>Created a new definition for the Investigational Products </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="sip:SIPcomplexTypeDefinition-ContactDef"  name="ShippingDetails" minOccurs="0"></xs:element> <!--R1.1: dont have provision for "Recipient Name" -->
+			<xs:element type="odm:boolean"  name="IsStorageLocSameAsShippingAdd" minOccurs="0"></xs:element>
+			<xs:element type="sip:SIPcomplexTypeDefinition-ContactDef"  name="StorageDetails" minOccurs="0"></xs:element> <!--R1.1: dont have provision for "Storage Location Name" -->
+			<xs:element type="odm:boolean"  name="IsInfusionCapability" minOccurs="0"></xs:element>
+			<xs:element type="odm:boolean"  name="IsIpStorageSecure" minOccurs="0"/>
+			
+			<xs:element type="odm:boolean"  name="IsRoomTemparatureMonitoringAvailable" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsRefrigeratorTemparatureMonitoringAvailable" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsFreezerTemparatureMonitoringAvailable" minOccurs="0"/>
+			<xs:element type="odm:text"  name="TemperatureDeviceCapabilities" minOccurs="0"/>
+			
+			<xs:element type="odm:boolean"  name="IsTemperatureMonitorAlarmed" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsBackupPowerPlanEquipmentFailure" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsStaffedBlindAndUnblind" minOccurs="0"/>
+			
+			<xs:element type="odm:text"  name="DestroyIPCapable" minOccurs="0"/>
+			<xs:element type="odm:text"  name="SopWrittenForIPDestroy" minOccurs="0"/>
+			
+			<xs:element type="odm:text"  name="DedicatedInventoryPresent" minOccurs="0"/>
+			<xs:element type="odm:text"  name="DrugTransporationProcedurePresent" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+		
+	<xs:complexType name="SIPcomplexTypeDefinition-ControlledSubSrcDoc">
+		<xs:annotation>
+			<xs:documentation>Created a new definition for the Facility DigitalDiagnostic</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="odm:text"  name="RegulatoryLicensePresent" minOccurs="0"/>
+			<xs:element type="odm:text"  name="SecuredStorageCapable" minOccurs="0"/>
+			<xs:element type="odm:text"  name="RadioLabelledIPCapable" minOccurs="0"/>
+			<xs:element type="odm:text"  name="DestroyIPCapableControlledSubstances" minOccurs="0"/>
+			
+			<xs:element type="odm:boolean"  name="IsSourceDocumentTypePaper" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsSourceDocumentTypeElectronic" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsSourceDocumentTypeBoth" minOccurs="0"/>
+			<xs:element type="odm:text"  name="AccessLimitation" minOccurs="0"/>
+			<xs:element type="sip:SIPcomplexTypeDefinition-FacilityMonitoringAccessDetailDef"  name="MonitoringAccess" minOccurs="0"></xs:element>
+			<xs:element type="sip:SIPcomplexTypeDefinition-FacilityEDSDetailDef"  name="Eds" minOccurs="0"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="SIPcomplexTypeDefinition-FacilityMonitoringAccessDetailDef">
+		<xs:annotation>
+			<xs:documentation>Created a new definition for the Facility MonitoringAccess</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="odm:boolean" name="IsPhone" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsFax" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsInternet" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsCopyMachine" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="SIPcomplexTypeDefinition-FacilityDigitalDiagnosticDetailDef">
+		<xs:annotation>
+			<xs:documentation>Created a new definition for the Facility DigitalDiagnostic</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="odm:boolean"  name="IsCt" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsMri" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsPet" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsXray" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsDxa" minOccurs="0"/>
+			<xs:element type="odm:text"  name="OtherDetails" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="SIPcomplexTypeDefinition-FacilityEDSDetailDef">
+		<xs:annotation>
+			<xs:documentation>Created a new definition for the Facility EDS</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="odm:boolean"  name="IsInform" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsMedidataRave" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsOracle" minOccurs="0"/>
+			<xs:element type="odm:text"  name="OtherDetails" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- ajay test <xs:complexType name="SIPcomplexTypeDefinition-FacilityDemographyDetailDef">
+		<xs:annotation>
+			<xs:documentation>Created a new definition for the Facility Demography</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="odm:text" name="OtherDetails" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsPediatric" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsAdult" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType> -->
+	
+	<!-- ajay test <xs:complexType name="SIPcomplexTypeDefinition-FacilityPhaseDetailDef">
+		<xs:annotation>
+			<xs:documentation>Created a new definition for the Facility Phase</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="odm:text"  name="Name" minOccurs="0"/>
+			<xs:element type="odm:text"  name="Type" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType> -->
+		
+	<!-- ajay test <xs:complexType name="SIPcomplexTypeDefinition-FacilityEthinicityPercentageDetailDef">
+		<xs:annotation>
+			<xs:documentation>Created a new definition for the Facility EthinicityPercentage</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="odm:text"  name="Name" minOccurs="0"/>
+			<xs:element type="odm:text"  name="Percentage" minOccurs="0"/>
+			<xs:element type="odm:text" name="IrNumber" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType> -->
+	<!-- ajay test 
+	<xs:complexType name="SIPcomplexTypeDefinition-FacilityIPDetailDef">
+		<xs:annotation>
+			<xs:documentation>Created a new definition for the Facility IP</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="odm:boolean"  name="IsBackupPowerPlanEquipmentFailure" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsDedicatedInventoryPresent" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsDestroyIPCapable" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsDestroyIPCapableControlledSubstances" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsDrugTransporationProcedurePresent" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsInfusionCapable" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsIpStorageSecure" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsRadioLabelledIPCapable" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsRegulatoryLicensePresent" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsSecuredStorageCapable" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsSopWrittenForIPDestroy" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsSourceDocumentTypePaper" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsSourceDocumentTypeElectronic" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsSourceDocumentTypeBoth" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsStaffedBlindAndUnblind" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsStoreLocationSameAsShippingAddress" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsRoomTemparatureMonitoringAvailable" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsRefrigeratorTemparatureMonitoringAvailable" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsFreezerTemparatureMonitoringAvailable" minOccurs="0"/>
+			<xs:element type="odm:boolean"  name="IsTemperatureMonitorAlarmed" minOccurs="0"/>
+			<xs:element type="odm:text"  name="AdditionalInfo" minOccurs="0"/>
+			<xs:element type="odm:text"  name="MonitorAccess" minOccurs="0"/>
+			<xs:element type="odm:text"  name="AccessLimitation" minOccurs="0"/>
+			<xs:element type="odm:text"  name="ElectronicDataStystem" minOccurs="0"/>
+			<xs:element type="odm:text"  name="TemperatureDeviceCapabilities" minOccurs="0"/>
+			<xs:element type="odm:text"  name="StoreLocationName" minOccurs="0"/>
+			<xs:element type="odm:text"  name="Temperature" minOccurs="0"/>
+			<xs:element  ref="odm:Address" maxOccurs="unbounded"></xs:element>	
+		</xs:sequence>
+	</xs:complexType> -->
+		
+</xs:schema>

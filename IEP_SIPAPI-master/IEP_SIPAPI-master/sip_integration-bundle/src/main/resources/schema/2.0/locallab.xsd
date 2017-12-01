@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:odm="http://www.cdisc.org/ns/odm/v1.3" 
+	xmlns:sip="http://www.sharedinvestigator.com/sip/schema" 
+	targetNamespace="http://www.sharedinvestigator.com/sip/schema" 
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+	<xs:import namespace="http://www.cdisc.org/ns/odm/v1.3" schemaLocation="odm1_3_2/ODM1-3-2.xsd"/>
+	<xs:include schemaLocation="contact.xsd"/>
+	
+	<xs:complexType name="SIPcomplexTypeDefinition-LocalLabDef">
+		<xs:annotation>
+			<xs:documentation>Created a new definition for the local lab details</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="odm:oid"  name="LocalLabFacilityID" minOccurs="0"/>
+			<xs:element type="odm:text" name="LocalLabFacilityIRID" minOccurs="0"/>
+			<xs:element type="odm:text" name="PrimaryFacilityID" minOccurs="0"/>
+			<xs:element type="odm:text" name="PrimaryFacilityIRID" minOccurs="0"/>
+			<xs:element type="odm:text"  name="LabName"  minOccurs="0" />
+			<xs:element type="sip:SIPcomplexTypeDefinition-ContactDef"  name="LabAddress" minOccurs="0"></xs:element>
+			<xs:element type="sip:SIPcomplexTypeDefinition-LocalLabAccreditation"  name="LocalLabAccreditation" minOccurs="0"/>
+			<xs:element type="odm:text"  name="StaffTrainedForDangerousTransport"  minOccurs="0" />
+			<xs:element type="odm:text" name="Status" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="SIPcomplexTypeDefinition-LocalLabAccreditation">
+		<xs:annotation>
+			<xs:documentation>Created a new definition for the local lab accreditation</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="odm:boolean" name="IsGLP" minOccurs="0"/>                         
+			<xs:element type="odm:boolean" name="IsCLIA" minOccurs="0"/>                       
+			<xs:element type="odm:boolean" name="IsCAP" minOccurs="0"/>                        
+			<xs:element type="odm:boolean" name="IsISO" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsNone" minOccurs="0"/>
+			<xs:element type="odm:text" name="Others" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	
+</xs:schema>

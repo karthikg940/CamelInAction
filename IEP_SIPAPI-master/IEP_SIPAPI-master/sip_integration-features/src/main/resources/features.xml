@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features name='${project.artifactId}-${project.version}'
+	version='${project.version}'>
+	<repository>mvn:com.oracle/ojdbc6-osgi-features/${oracle.version}/xml/features</repository> 
+ 	<repository>mvn:com.ibm.msg.client/wmq-osgi-features/${wmq.version}/xml/features</repository>
+	<repository>mvn:com.lilly.esb.util/commons-util-features/${lilly.fuse.platform.version}/xml/features</repository>
+	<repository>mvn:com.lilly.esb.iep/common-features/${common.version}/xml/features</repository>
+
+	 <feature name='${project.parent.artifactId}' version='${project.version}' resolver="(obr)">
+         <feature version='${project.version}'>${project.parent.artifactId}-config</feature>
+         <feature version='${lilly.fuse.platform.version}'>commons-util</feature>
+         <feature version='${lilly.fuse.platform.version}'>commons-dispatch-service</feature>
+         <feature version="${common.version}">common-util</feature>
+         <feature>ojdbc6-osgi</feature>
+         <feature>camel-jackson</feature>
+         <feature>camel-jasypt</feature>
+         <feature>wmq-osgi-features</feature>
+         <bundle>mvn:org.codehaus.jackson/jackson-jaxrs/${jackson-jaxrs.version}</bundle>
+         <bundle>mvn:${project.groupId}/${project.parent.artifactId}-bundle/${project.version}</bundle>
+     </feature>
+
+    <feature name='${project.parent.artifactId}-config' version='${project.version}' resolver="(obr)">
+        <configfile finalname='/etc/${persistent.id}.cfg' override='true'>
+            swap:${deploy.config.uri}/${iep.deploy.env}/${persistent.id}.cfg?access_token=${deploy.config.token}
+        </configfile>
+    </feature>
+</features>

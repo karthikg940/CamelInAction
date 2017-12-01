@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<odm:ODM xmlns:ns3="http://www.w3.org/2000/09/xmldsig#" xmlns:odm="http://www.cdisc.org/ns/odm/v1.3" xmlns:sip="http://www.sharedinvestigator.com/sip/schema">
+<odm:ODMElementExtensionContents>
+<odm:SIPResponse>
+<sip:memberCompanyID>memberCompanyID</sip:memberCompanyID>
+<sip:status>SUCCESS</sip:status>
+<sip:responseID>
+<sip:mcInputID>StudyID</sip:mcInputID>
+<sip:sipID>11</sip:sipID>
+</sip:responseID>
+</odm:SIPResponse>
+</odm:ODMElementExtensionContents>
+</odm:ODM>

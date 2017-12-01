@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<odm:ODM xmlns:sip="http://www.sharedinvestigator.com/sip/schema" xmlns:odm="http://www.cdisc.org/ns/odm/v1.3" xmlns:ns3="http://www.w3.org/2000/09/xmldsig#">
+    <odm:Study>
+        <odm:StudyElementExtensionContents>
+            <sip:StudyShortDescription>National Collaborative Study of Girls Prenatally Diagnosed with Turner Syndrome</sip:StudyShortDescription>
+            <sip:StudyLongDescription>Mzjgqazz Uqzzziqrzjgbq Djvkz</sip:StudyLongDescription>
+            <sip:StudyID>9742</sip:StudyID>
+            <sip:Indication>14Ind</sip:Indication>
+            <sip:Compound>Somatropin</sip:Compound>
+            <sip:Program>14Test</sip:Program>
+        </odm:StudyElementExtensionContents>
+    </odm:Study>
+</odm:ODM>

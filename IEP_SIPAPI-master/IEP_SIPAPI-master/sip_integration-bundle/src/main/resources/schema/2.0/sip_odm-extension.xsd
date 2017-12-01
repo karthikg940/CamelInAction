@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema targetNamespace="http://www.cdisc.org/ns/odm/v1.3" 
+	xmlns="http://www.cdisc.org/ns/odm/v1.3" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:sip="http://www.sharedinvestigator.com/sip/schema"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	
+	<xs:import namespace="http://www.sharedinvestigator.com/sip/schema" schemaLocation="sip_odm-ns.xsd"/>
+		
+	<xs:redefine schemaLocation="odm1_3_2/ODM1-3-2-foundation.xsd">
+
+		<xs:group name="ODMElementExtension">
+			<xs:sequence>				
+				<xs:group ref="ODMElementExtension"/>
+				<xs:element ref="ODMElementExtensionContents"/>
+			</xs:sequence>
+		</xs:group>
+		
+		<!-- User Profile for SIP, extended from ODM ODMcomplexTypeDefinition-User -->
+		<xs:group name="UserElementExtension">
+			<xs:sequence>				
+				<xs:group ref="UserElementExtension"/>
+				<xs:element ref="UserElementExtensionContents"/>
+			</xs:sequence>
+		</xs:group>
+		
+		<!-- Address for SIP, extended from ODM ODMcomplexTypeDefinition-Address -->
+		<xs:group name="AddressElementExtension">
+			<xs:sequence>				
+				<xs:group ref="AddressElementExtension"/>
+				<xs:element ref="AddressElementExtensionContents"/>
+			</xs:sequence>
+		</xs:group>	
+
+		<!-- Study for SIP, extended from ODM ODMcomplexTypeDefinition-Study -->
+		<xs:group name="StudyElementExtension">
+			<xs:sequence>				
+				<xs:group ref="StudyElementExtension"/>
+				<xs:element ref="StudyElementExtensionContents"/>				
+			</xs:sequence>
+		</xs:group>	
+		
+		<!-- Facility for SIP, extended from ODM ODMcomplexTypeDefinition-Location -->
+		<xs:group name="LocationElementExtension">
+			<xs:sequence>				
+				<xs:group ref="LocationElementExtension"/>
+				<xs:element ref="LocationElementExtensionContents"/>				
+			</xs:sequence>
+		</xs:group>	
+	
+		<xs:attributeGroup name="ODMAttributeExtension">
+			<xs:attributeGroup ref="ODMAttributeExtension"/>
+			<xs:attributeGroup ref="ODMAttributeExtensionContents"/>
+		</xs:attributeGroup>
+		
+	</xs:redefine>
+	
+	<xs:annotation>
+		<xs:documentation>Reference to the complex data types in individual xsd files as defined</xs:documentation>
+	</xs:annotation>	
+	
+	<xs:element name="AddressElementExtensionContents"  type="sip:AddressDef" />
+	<xs:element name="UserElementExtensionContents" 	type= "sip:SIPcomplexTypeDefinition-UserProfileDef" />
+	<xs:element name="StudyElementExtensionContents" 	type= "sip:SIPcomplexTypeDefinition-StudyProfileDef" />
+	<xs:element name="LocationElementExtensionContents" type= "sip:SIPcomplexTypeDefinition-LocationDef" />
+		
+	<xs:element name="ODMElementExtensionContents" 		type= "SIPcomplexTypeElementDefinition-Def" />
+		
+	<xs:complexType name="SIPcomplexTypeElementDefinition-Def">
+		<xs:annotation>
+			<xs:documentation>Created a new definition for the site</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="FacilityDetails" 	type="FacilityDetailsType" minOccurs="0" maxOccurs="unbounded"/> 
+			<!--<xs:element name="SiteDetails" 		type="SiteDetailsType" minOccurs="0"/> -->
+			<xs:element name="TrainingDetails" 	type="TrainingDetailsType" minOccurs="0"/>
+			<xs:element name="UserPermissions" 	type="sip:UserPermissionsDef" minOccurs="0"	maxOccurs="unbounded"/>
+			<xs:element name="SiteAdditionalFacilities" 	type="sip:SiteAdditionalFacilitiesDef" minOccurs="0"	maxOccurs="unbounded"/>
+			<xs:element name="ListOfValue" 	type="sip:ListOfValueDef" minOccurs="0"	maxOccurs="unbounded"/>		
+			<xs:element name="SIPResponse" 	type="sip:SIPResponseDef" minOccurs="0"	maxOccurs="unbounded"/>
+			<xs:element name="Metadata" 	type="sip:metadata" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="StudyDetailsType">
+		<xs:sequence>
+			<xs:element name="StudyDetail" 	type="ODMcomplexTypeDefinition-Study" 	minOccurs="0" maxOccurs="unbounded"/> 			
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="UserDetailsType">
+		<xs:sequence>
+			<xs:element name="UserDetail" 	type="ODMcomplexTypeDefinition-User" 	minOccurs="0" maxOccurs="unbounded"/> 			
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="FacilityDetailsType">
+		<xs:sequence>
+			<xs:element name="FacilityBasicDetail" 	type="sip:SIPcomplexTypeDefinition-BasicFacilityDef" 	minOccurs="0"/>
+			<xs:element name="FacilityTherapeuticAreaDetail" 	type="sip:SIPcomplexTypeDefinition-FacilityTherapeuticAreaDetailDef" 	minOccurs="0"  maxOccurs="unbounded" />
+			<xs:element name="FacilityTrialPhaseCapabilitiesDetail" 	type="sip:SIPcomplexTypeDefinition-TrialPhaseCapabilitiesDef"  	minOccurs="0"  maxOccurs="unbounded" />
+			<xs:element name="FacilityOtherSiteDetails" 	type="sip:SIPcomplexTypeDefinition-OtherSiteDetailsDef"  	minOccurs="0"  maxOccurs="unbounded" />
+			<xs:element name="FacilityProfileManager1" 	type="sip:SIPcomplexTypeDefinition-FacilityProfileManager1"  minOccurs="0" />
+			<xs:element name="FacilityProfileManagers2" 	type="sip:SIPcomplexTypeDefinition-FacilityProfileManager2"  minOccurs="0" />
+			<xs:element name="ClinicalTrialContacts" 	type="sip:SIPcomplexTypeDefinition-ClinicalTrialContactDef"  minOccurs="0"  />
+			<xs:element name="IRB_ERB_ETHDetails" 	type="sip:SIPcomplexTypeDefinition-IRB_ERB_ETHDef"  minOccurs="0"  />
+			<xs:element name="LocalLabDetails" 	type="sip:SIPcomplexTypeDefinition-LocalLabDef"  minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="FacilityConsentTrainingDetail" 	type="sip:SIPcomplexTypeDefinition-FacilityConsentTrainingDetailDef" 	minOccurs="0" />
+			<xs:element name="FacilityEquipmentDetail" 	type="sip:SIPcomplexTypeDefinition-FacilityEquipmentDetailDef" 	minOccurs="0" />
+			<xs:element name="InvestigationalProducts" 	type="sip:SIPcomplexTypeDefinition-InvestigationalProductsDef" 	minOccurs="0" />
+			<xs:element name="ControlledSubSrcDoc" 	type="sip:SIPcomplexTypeDefinition-ControlledSubSrcDoc" 	minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="TrainingDetailsType">
+		<xs:sequence>
+			<xs:element name="TrainingDetail" 	type="sip:SIPcomplexTypeDefinition-TrainingDef" 	minOccurs="0" maxOccurs="unbounded"/> 			
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:attributeGroup name="ODMAttributeExtensionContents">
+		<xs:attribute name="SipOdmVersion" type="xs:string" use="required" fixed="SIP-1-0-1"/>
+		<xs:attribute name="MemberCompanyId" type="xs:string" use="optional"/>
+		<xs:attribute name="OperationName" type="xs:string" use="optional"/>		
+	</xs:attributeGroup>
+	
+	<!-- Dummy placeholders to generate the XML and validate, can be removed later -->
+	<xs:element name="UserDetails" type="ODMcomplexTypeDefinition-User"/>
+	
+	<!--<xs:element name="test" type="sip:SIPcomplexTypeDefinition-"/> -->
+	
+	
+</xs:schema>

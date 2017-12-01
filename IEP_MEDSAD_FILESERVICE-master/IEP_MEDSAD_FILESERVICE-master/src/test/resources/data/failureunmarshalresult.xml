@@ -1,0 +1,20 @@
+<m:properties xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">
+        #<d:ContentTypeID>0x0100FEE6FDB2C46DAD4E83CB2F4D77C15CA4</d:ContentTypeID>
+        <d:Title m:null="true"/>
+        <d:SubscriptionID>MTM1</d:SubscriptionID>
+        <d:OutputFileTypeValue>.DAT</d:OutputFileTypeValue>
+        <d:DelimiterValue>pipe</d:DelimiterValue>
+        <d:Transformation>N/A</d:Transformation>
+        <d:Delivery>\\mango\IEP_1\FileServices_DEV\MTM\</d:Delivery>
+        <d:SQLQuery>SELECT DISTINCT   RPT_ITEM_STATUS.TRADE_NAME,   RPT_ITEM_STATUS.SBMSN_DT,   RPT_ITEM_STATUS.WITHDRAWAL_DT,   RPT_ITEM_STATUS.MARKET_START_DT,   RPT_ITEM_STATUS.APRVL_DT,   RPT_ITEM_STATUS.COUNTRY_CD,   RPT_INDICATION.RPT_INDICATION_ID FROM   IIP_PRST_OWNER.RPT_ITEM_STATUS,   IIP_PRST_OWNER.RPT_ACTIVITY,   IIP_PRST_OWNER.RPT_ACTIVITY_INDICATION,   IIP_PRST_OWNER.RPT_INDICATION WHERE   RPT_ACTIVITY.ACTVTY_IDNTFCTN        = RPT_ITEM_STATUS.ACTVTY_IDNTFCTN AND RPT_ACTIVITY.ACTVTY_IDNTFCTN      = RPT_ACTIVITY_INDICATION.ACTVTY_IDNTFCTN AND RPT_ACTIVITY_INDICATION.INDCTN_CD = RPT_INDICATION.INDCTN_CD</d:SQLQuery>
+        <d:SchedulingFrequency>0 15 10 ? * *</d:SchedulingFrequency>
+        <d:CreatedById m:type="Edm.Int32">2721</d:CreatedById>
+        <d:ModifiedById m:type="Edm.Int32">2721</d:ModifiedById>
+        <d:Modified m:type="Edm.DateTime">2017-10-05T10:21:18</d:Modified>
+        <d:Created m:type="Edm.DateTime">2017-09-28T04:14:25</d:Created>
+        <d:Id m:type="Edm.Int32">1</d:Id>
+        <d:ContentType>Item</d:ContentType>
+        <d:Owshiddenversion m:type="Edm.Int32">3</d:Owshiddenversion>
+        <d:Version>1.0</d:Version>
+        <d:Path>/sites/SolutonServicesECIT/SP_Services/Lists/FileService_List_DEV</d:Path>
+      </m:properties>

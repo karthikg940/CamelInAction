@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:odm="http://www.cdisc.org/ns/odm/v1.3" 
+	xmlns:sip="http://www.sharedinvestigator.com/sip/schema" 
+	targetNamespace="http://www.sharedinvestigator.com/sip/schema" 
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	
+	<xs:import namespace="http://www.cdisc.org/ns/odm/v1.3" schemaLocation="odm1_3_2/ODM1-3-2.xsd"/>
+	
+	<xs:complexType name="SIPcomplexTypeDefinition-StudyProfileDef">
+		<xs:annotation>
+			<xs:documentation>Extended from ODMcomplexTypeDefinition-Study and attributes for SIP</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="odm:text" name="StudyShortDescription" minOccurs="1"/>
+			<xs:element type="odm:text" name="StudyLongDescription"  minOccurs="1"/>
+			<xs:element type="odm:oid"  name="StudyID"  minOccurs="1"/>
+			<xs:element type="odm:oid"  name="SponsorID"  minOccurs="0"/>		
+			<xs:element type="odm:text" name="CountriesofRecruitment" minOccurs="0"/>
+			<xs:element type="odm:text" name="Indication" minOccurs="0"/>
+			<xs:element type="odm:text" name="Compound" minOccurs="0"/>
+			<xs:element type="sip:OtherCompoundDef" name="OtherCompound" minOccurs="0" maxOccurs="unbounded"/> <!--  added in R2.0  -->
+			<xs:element type="odm:text" name="Program" minOccurs="0"/>
+			<xs:element type="odm:text" name="Interventions" minOccurs="0"/>
+			<xs:element type="odm:text" name="KeyInclusionandExclusionCriteria" minOccurs="0"/>
+			<xs:element type="odm:text" name="StudyType" minOccurs="0"/>
+			<xs:element type="odm:text" name="TargetSampleSize" minOccurs="0"/>
+			<xs:element type="odm:text" name="RecruitmentStatus" minOccurs="0"/>
+			<xs:element type="odm:text" name="PrimaryOutcomes" minOccurs="0"/>
+			<xs:element type="odm:text" name="KeySecondaryOutcomes" minOccurs="0"/>
+			<xs:element type="odm:text" name="TherapeuticArea" minOccurs="0"/>
+			<xs:element type="odm:text" name="Disease" minOccurs="0"/>
+			<xs:element type="odm:text" name="NCTNumber" minOccurs="0"/>
+			<xs:element type="odm:text" name="EUDRACTNumber" minOccurs="0"/>
+			<xs:element type="odm:date" name="StudyOverallStatusStartDate" minOccurs="0"/>
+			<xs:element type="odm:date" name="StudyOverallStatusStopDate" minOccurs="0"/>
+			<xs:element type="odm:text" name="ReasonStudyStoppedCode" minOccurs="0"/>
+			<xs:element type="odm:text" name="OverallStudyStatusDescription" minOccurs="0"/>
+			<xs:element type="odm:text" name="OverallStudyStatusStartCode" minOccurs="0"/>
+			<xs:element type="odm:date" name="TrialCloseoutDate" minOccurs="0"/>
+			<xs:element type="odm:text" name="TrialCloseoutReminderDays" minOccurs="0"/>
+			<xs:element type="odm:text" name="ReasonStudyStopped" minOccurs="0"/>
+			<xs:element type="odm:text" name="StudyRecruitmentStatusCode" minOccurs="0"/>
+			<xs:element type="odm:date" name="StudyRecruitmentStatusDate" minOccurs="0"/>
+			<xs:element type="odm:date" name="PlannedStudyParticipationCompletionDate" minOccurs="0"/>
+			<xs:element type="odm:date" name="ActualStudyParticipationCompletionDate"  minOccurs="0"/>
+			<xs:element type="odm:date" name="PlannedStudyCompletionDate" minOccurs="0"/>
+			<xs:element type="odm:date" name="ActualStudyCompletionDate" minOccurs="0"/>
+			<xs:element type="odm:date" name="AnticipatedStudyCompletionDate" minOccurs="0"/>
+			<xs:element type="odm:date" name="PlannedStudyStartDate" minOccurs="0"/>
+			<xs:element type="odm:text" name="SponsorFirstName" minOccurs="0"/>
+			<xs:element type="odm:text" name="SponsorLastName" minOccurs="0"/>
+			<xs:element type="odm:date" name="ClosureInitiatedDate" minOccurs="0"/>
+			<xs:element type="odm:date" name="RequestedClosureDate" minOccurs="0"/>
+			<xs:element type="odm:date" name="ActualClosureDate" minOccurs="0"/>
+			<xs:element type="odm:date" name="PlannedNextDatabaseLock" minOccurs="0"/> <!--  added in R1.1  -->
+			<xs:element type="odm:date" name="PlannedFinalDatabaseLock" minOccurs="0"/> <!--  added in R1.1  -->
+			<xs:element type="odm:integer" name="PlannedNumberOfSubjects" minOccurs="0"/> <!--  added in R1.1  -->
+			<xs:element type="odm:integer" name="NumberOfSubjectsEnrolled" minOccurs="0"/> <!--  added in R1.1  -->		
+			<xs:element type="sip:PlannedCountryDef" name="PlannedCountry" minOccurs="0" maxOccurs="unbounded"/> <!--  added in R2.0  -->
+			<xs:element type="odm:text" name="DocExSystem" minOccurs="0" />  <!--  added in R2.0  -->
+			<xs:element ref="odm:Address" minOccurs="0"/>		
+			<xs:element ref="odm:Email"  minOccurs="0"/>
+			<xs:element ref="odm:Pager"  minOccurs="0"/>
+			<xs:element ref="odm:Fax" minOccurs="0"/>
+			<xs:element ref="odm:Phone" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	
+	<xs:complexType name="PlannedCountryDef">
+		<xs:annotation>
+			<xs:documentation> Planned countries for Study</xs:documentation>
+		</xs:annotation>		
+		<xs:sequence>
+			<xs:element type="odm:ODMcomplexTypeDefinition-Country" name="CountryCd" minOccurs="1" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="OtherCompoundDef">
+		<xs:annotation>
+			<xs:documentation> Other nn primary compounds</xs:documentation>
+		</xs:annotation>		
+		<xs:sequence>
+			<xs:element type="odm:text" name="CompoundName" minOccurs="1" maxOccurs="unbounded"  />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

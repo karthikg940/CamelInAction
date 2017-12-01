@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:odm="http://www.cdisc.org/ns/odm/v1.3" 
+	xmlns:sip="http://www.sharedinvestigator.com/sip/schema" 
+	targetNamespace="http://www.sharedinvestigator.com/sip/schema" 
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	
+	<xs:import namespace="http://www.cdisc.org/ns/odm/v1.3" schemaLocation="odm1_3_2/ODM1-3-2.xsd"/>
+		
+	<xs:complexType name="SIPcomplexTypeDefinition-LocationDef">
+		<xs:annotation>
+			<xs:documentation>Contains Site attributes for SIP, extended from ODM Location</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="sip:SIPcomplexTypeDefinition-LocationDetails"  name="LocationDetails" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="SIPcomplexTypeDefinition-LocationDetails">
+		<xs:annotation>
+			<xs:documentation> Contains Common Site attributes for SIP, extended from ODM Location</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="odm:oid"     name="SiteID"  minOccurs="0"/>
+			<xs:element type="odm:oid"     name="PrimaryFacilityID"  minOccurs="0"/>
+			<xs:element type="odm:text"    name="PrimaryFacilityIRID" minOccurs="0"/>
+			<xs:element type="odm:text"    name="DepartmentID" minOccurs="0"/> <!--  added in R1.1  -->
+			<xs:element type="odm:text"    name="DepartmentIRID" minOccurs="0"/> <!--  added in R1.1  -->
+			<xs:element type="odm:text"    name="DepartmentName" minOccurs="0"/> <!--  added in R1.1  -->
+			<xs:element type="odm:text"    name="DepartmentType" minOccurs="0"/> <!--  added in R1.1  -->
+			<xs:element type="odm:oid"     name="PrincipalInvestigatorID"  minOccurs="0"/>  <!-- maps to transcelerate user id -->
+			<xs:element type="odm:text"    name="PrincipalInvestigatorIRID" minOccurs="0"/>
+			<xs:element type="odm:text"    name="UniqueSponsorSiteUserID" minOccurs="0"/>
+			<xs:element type="odm:text"    name="SiteName" minOccurs="0"/>
+			<xs:element type="odm:text"    name="SponsorSiteID" minOccurs="0"/> 
+			<xs:element type="odm:text"    name="SiteStatus" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsAffiliated" minOccurs="0"/>
+			<!--<xs:element type="odm:text"    name="StudySiteStatus" minOccurs="0"/> R1.1 :Removed-->
+			<xs:element type="odm:oid"     name="StudyID"  minOccurs="0"/>
+			<!--<xs:element type="odm:text"    name="CTMSSiteNumber" minOccurs="0"/> R1.1 :Removed-->
+			<xs:element type="odm:date"    name="ClosureDate" minOccurs="0"/>
+			<xs:element type="odm:boolean" name="IsActive" minOccurs="0"/>
+			<xs:element type="odm:text"    name="InstitutionName" minOccurs="0"/>
+			<!--<xs:element ref="odm:Address" minOccurs="0"></xs:element> R1.1 :Removed-->
+			<!--<xs:element type="odm:text"    name="PhoneExtension" minOccurs="0"/> R1.1 :Removed-->
+			<xs:element type="odm:date"    name="SiteSelectionDate"  minOccurs="0"/>
+			<xs:element type="odm:date" name="ClosureInitiatedDate" minOccurs="0"/>
+			<xs:element type="odm:date" name="RequestedClosureDate" minOccurs="0"/>
+			<xs:element type="odm:date" name="ActualClosureDate" minOccurs="0"/>
+			<xs:element type="odm:text"    name="RefCode" minOccurs="0"/><!--  added in R2.0 -->
+			<xs:element type="sip:SIPcomplexTypeDefinition-SiteContactAddress"  name="SiteContactAddress" minOccurs="0" maxOccurs="unbounded"/>			
+		</xs:sequence>	
+	</xs:complexType>
+	
+	<xs:complexType name="SIPcomplexTypeDefinition-SiteContactAddress">
+		<xs:annotation>
+			<xs:documentation>Address for site, example:Patient Treatment Address, Investigational Drug Supply Address, Lab Kit Shipment Address </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element type="odm:text" name="ContactID" minOccurs="0"/>
+			<xs:element type="odm:text" name="SiteContactType" minOccurs="0"/>
+			<xs:element type="odm:text" name="FirstName" minOccurs="0"/>
+			<xs:element type="odm:text" name="LastName" minOccurs="0"/>
+			<xs:element ref="odm:Email"></xs:element> 
+			<xs:element ref="odm:Fax"></xs:element> 
+			<xs:element ref="odm:Phone"></xs:element> 
+			<xs:element ref="odm:Address"></xs:element>
+			<xs:element type="odm:text" name="Status" minOccurs="0"/>			
+		</xs:sequence>
+		
+	</xs:complexType>
+	
+	
+</xs:schema>

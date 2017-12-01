@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:camel="http://camel.apache.org/schema/blueprint"
+	xmlns:camel-cxf="http://camel.apache.org/schema/blueprint/cxf"
+	xmlns:cxfcore="http://cxf.apache.org/blueprint/core" xmlns:jaxrs="http://cxf.apache.org/blueprint/jaxrs"
+	xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0"
+	xmlns:ext="http://aries.apache.org/blueprint/xmlns/blueprint-ext/v1.0.0"
+	xmlns:enc="http://karaf.apache.org/xmlns/jasypt/v1.0.0"
+	xsi:schemaLocation="
+   		http://www.osgi.org/xmlns/blueprint/v1.0.0 
+   		http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
+    	http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0 
+    	http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.1.0.xsd
+    	http://camel.apache.org/schema/blueprint/cxf
+		http://camel.apache.org/schema/blueprint/cxf/camel-cxf.xsd
+		http://cxf.apache.org/blueprint/core
+		http://cxf.apache.org/schemas/blueprint/core.xsd
+    	http://cxf.apache.org/blueprint/jaxrs
+		http://cxf.apache.org/schemas/blueprint/jaxrs.xsd
+ 		http://camel.apache.org/schema/blueprint
+		http://camel.apache.org/schema/blueprint/camel-blueprint.xsd">
+
+	<cm:property-placeholder id="sip-config"
+		persistent-id="${persistent.id}" update-strategy="reload">
+	</cm:property-placeholder>
+
+	<enc:property-placeholder>
+		<enc:encryptor class="org.jasypt.encryption.pbe.StandardPBEStringEncryptor">
+			<property name="config">
+				<bean class="org.jasypt.encryption.pbe.config.EnvironmentStringPBEConfig">
+					<property name="algorithm" value="PBEWithMD5AndDES" />
+					<property name="passwordEnvName" value="FUSE_ENCRYPTION_PASSWORD" />
+				</bean>
+			</property>
+		</enc:encryptor>
+	</enc:property-placeholder>
+	<bean id="jasypt"
+		class="org.apache.camel.component.jasypt.JasyptPropertiesParser">
+		<property name="password" value="sysenv:FUSE_ENCRYPTION_PASSWORD" />
+	</bean>
+
+
+	<bean id="triggerValidator" class="com.lilly.esb.iep.sip.beans.TriggerValidator" >
+		<property name="schedulerInterval" value="${com.lilly.esb.iep.sip.scheduler.interval}" />
+	</bean>
+
+	<bean id="facilitySharePointBean"
+		class="com.microsoft.schemas.ado._2007._08.dataservices.FacilityMapping" />
+	<bean id="odmPayloadBean" class="com.lilly.esb.iep.sip.beans.ODMPayloadHandler" />
+	<bean id="primaryInvestigatorIDSharePointBean"
+		class="com.microsoft.schemas.ado._2007._08.dataservices.PrimaryInvestigatorMapping" />
+	<bean id="sponsorSharePointBean"
+		class="com.microsoft.schemas.ado._2007._08.dataservices.SponsorDetails" />
+	<bean id="studyCompound" class="com.lilly.esb.iep.sip.beans.StudyCompound" />
+	<bean id="studySharePointBean"
+		class="com.microsoft.schemas.ado._2007._08.dataservices.StudyDetails" />
+	<bean id="trackerProcessor" class="com.lilly.esb.iep.common.processor.IepTrackerProcessor" />
+	<bean id="exchangeProcessor" class="com.lilly.esb.iep.sip.processor.ExchangeProcessor" />
+	<bean id="studyAttributesProcessor"
+		class="com.lilly.esb.iep.sip.processor.StudyAttributesProcessor" />
+	<bean id="studyProcessor" class="com.lilly.esb.iep.sip.processor.StudyProcessor" />
+	<bean id="studySiteHandler" class="com.lilly.esb.iep.sip.beans.StudySiteHandler"/>
+
+
+	<bean id="jaxbDataFormatSponser" class="org.apache.camel.converter.jaxb.JaxbDataFormat">
+		<property name="contextPath"
+			value="com.microsoft.schemas.ado._2007._08.dataservices" />
+		<property name="partClass"
+			value="com.microsoft.schemas.ado._2007._08.dataservices.SponsorDetails" />
+	</bean>
+	
+	<bean id="jaxbDataFormatOdmSponser" class="org.apache.camel.converter.jaxb.JaxbDataFormat">
+		<property name="contextPath"
+			value="org.cdisc.ns.odm.v1" />
+		<property name="partClass"
+			value="org.cdisc.ns.odm.v1.ODM" />
+	</bean>
+
+	<bean id="jaxbDataFormatStudy" class="org.apache.camel.converter.jaxb.JaxbDataFormat">
+		<property name="contextPath"
+			value="com.microsoft.schemas.ado._2007._08.dataservices" />
+		<property name="partClass"
+			value="com.microsoft.schemas.ado._2007._08.dataservices.StudyDetails" />
+	</bean>
+	<bean id="jaxbDataFormatFacility" class="org.apache.camel.converter.jaxb.JaxbDataFormat">
+		<property name="contextPath"
+			value="com.microsoft.schemas.ado._2007._08.dataservices" />
+		<property name="partClass"
+			value="com.microsoft.schemas.ado._2007._08.dataservices.FacilityMapping" />
+	</bean>
+	<bean id="jaxbDataFormatPrimary" class="org.apache.camel.converter.jaxb.JaxbDataFormat">
+		<property name="contextPath"
+			value="com.microsoft.schemas.ado._2007._08.dataservices" />
+		<property name="partClass"
+			value="com.microsoft.schemas.ado._2007._08.dataservices.PrimaryInvestigatorMapping" />
+	</bean>
+	<bean id="sharePointBasicAuthHeaderProcessor"
+		class="com.lilly.esb.iep.common.processor.BasicAuthHeaderProcessor">
+		<property name="soagUser" value="${com.lilly.esb.iep.sip.sharepoint.username}" />
+		<property name="soagPwd" value="${com.lilly.esb.iep.sip.sharepoint.password}" />
+	</bean>
+
+	<bean id="oDataBasicAuthHeaderProcessor"
+		class="com.lilly.esb.iep.common.processor.BasicAuthHeaderProcessor">
+		<property name="soagUser" value="${com.lilly.esb.iep.sip.odata.url.username}" />
+		<property name="soagPwd" value="${com.lilly.esb.iep.sip.odata.url.password}" />
+	</bean>
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+
+		<property name="url" value="${com.lilly.esb.iep.sip.batchcontrol.db.url}" />
+		<property name="username"
+			value="${com.lilly.esb.iep.sip.batchcontrol.db.username}" />
+		<property name="password"
+			value="${com.lilly.esb.iep.sip.batchcontrol.db.password}" />
+		<property name="driverClassName"
+			value="${com.lilly.esb.iep.sip.batchcontrol.db.driverClassName}" />
+		<property name="initialSize"
+			value="${com.lilly.esb.iep.sip.batchcontrol.db.conn.initialSize}" />
+		<property name="maxIdle"
+			value="${com.lilly.esb.iep.sip.batchcontrol.db.conn.maxIdle}" />
+		<property name="maxActive"
+			value="${com.lilly.esb.iep.sip.batchcontrol.db.conn.maxActive}" />
+
+	</bean>
+
+	<bean id="jacksonDataFormat" class="org.apache.camel.component.jackson.JacksonDataFormat">
+		<property name="unmarshalType" value="java.util.HashMap" />
+	</bean>
+
+	<bean id="defaultExceptionProcessor"
+		class="com.lilly.esb.iep.common.exception.processor.DefaultExceptionProcessor">
+		<property name="logName" value="sip" />
+		<property name="encryptedPassword" value="${com.lilly.esb.iep.sip.encrypt.password}" />
+	</bean>
+
+	 <camel:sslContextParameters id="sslContextParametersIn">
+		<camel:keyManagers keyPassword="{{com.lilly.esb.iep.sip.sslcontext.keyPassword}}">
+			<camel:keyStore resource="{{com.lilly.esb.iep.sip.sslcontext.keyStore}}"
+				password="{{com.lilly.esb.iep.sip.sslcontext.password}}" />
+		</camel:keyManagers>
+	</camel:sslContextParameters>
+
+	<bean id="sslContextIn" class="javax.net.ssl.SSLContext"
+		factory-ref="sslContextParametersIn" factory-method="createSSLContext"
+		depends-on="sslContextParametersIn" />
+
+	<bean id="wmqCFIn" class="com.ibm.mq.jms.MQQueueConnectionFactory">
+		<property name="transportType" value="${com.lilly.esb.iep.sip.wmqIn.transportType}" />
+		<property name="hostName" value="${com.lilly.esb.iep.sip.wmqIn.hostName}" />
+		<property name="queueManager" value="${com.lilly.esb.iep.sip.wmqIn.queuemanager}" />
+		<property name="port" value="${com.lilly.esb.iep.sip.wmqIn.port}" />
+		<property name="channel" value="${com.lilly.esb.iep.sip.wmqIn.channel}" />
+		<property name="useConnectionPooling"
+			value="${com.lilly.esb.iep.sip.wmqIn.useConnectionPooling}" />
+		<property name="SSLSocketFactory">
+			<bean factory-ref="sslContextIn" factory-method="getSocketFactory"
+				depends-on="sslContextParametersIn" />
+		</property>
+		<property name="SSLCipherSuite"
+			value="${com.lilly.esb.iep.sip.wmqIn.sslCipherSuite}" />
+	</bean>
+
+	<bean id="wmqCCFIn"
+		class="org.springframework.jms.connection.CachingConnectionFactory"
+		destroy-method="destroy">
+		<property name="targetConnectionFactory" ref="wmqCFIn" />
+		<property name="cacheConsumers" value="${com.lilly.esb.iep.sip.wmq.cacheConsumers}" />
+		<property name="reconnectOnException"
+			value="${com.lilly.esb.iep.sip.wmq.reconnectOnException}" />
+		<property name="sessionCacheSize"
+			value="${com.lilly.esb.iep.sip.wmq.sessionCacheSize}" />
+	</bean>
+
+	<bean id="wmqIn" class="org.apache.camel.component.jms.JmsComponent">
+		<property name="connectionFactory" ref="wmqCCFIn" />
+		<property name="transacted" value="${com.lilly.esb.iep.sip.wmq.transacted}" />
+		<property name="cacheLevelName" value="${com.lilly.esb.iep.sip.wmq.cacheLevelName}" />
+	</bean>
+
+	<camelContext id="com.lilly.esb.iep.sip-camelContext"
+		xmlns="http://camel.apache.org/schema/blueprint">
+		<camel:propertyPlaceholder location="blueprint:sip-config"
+			propertiesParserRef="jasypt" id="properties" />
+		<camel:package>com.lilly.esb.iep.sip.routebuilder</camel:package>
+	</camelContext>
+
+</blueprint>
+		

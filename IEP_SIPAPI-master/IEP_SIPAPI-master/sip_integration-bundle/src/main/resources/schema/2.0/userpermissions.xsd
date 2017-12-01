@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:odm="http://www.cdisc.org/ns/odm/v1.3" 
+	xmlns:sip="http://www.sharedinvestigator.com/sip/schema" 
+	targetNamespace="http://www.sharedinvestigator.com/sip/schema" 
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	
+	<xs:include schemaLocation="role.xsd"/>
+	<xs:import namespace="http://www.cdisc.org/ns/odm/v1.3" schemaLocation="odm1_3_2/ODM1-3-2.xsd"/>
+	
+	<xs:annotation>
+		<xs:documentation>User Access Modification Details and Permissions</xs:documentation>
+	</xs:annotation>	
+
+	<!-- This is the section for User Permissions  -->
+	<xs:complexType name="UserPermissionsDef">
+		<xs:annotation>
+			<xs:documentation>Integration Scenario for User Access and deactivation</xs:documentation>
+		</xs:annotation>		
+		<xs:sequence>
+			<xs:element name="UserAccessModification" 	type="sip:UserAccessModificationDef" minOccurs="0"	maxOccurs="unbounded"/>
+		    <xs:element name="UserDeActivation" 		type="sip:UserDeActivationDetailsDef"  minOccurs="0"	maxOccurs="unbounded"/>					
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="UserAccessModificationDef">
+		<xs:annotation>
+			<xs:documentation>User Access Modification Details</xs:documentation>
+		</xs:annotation>	
+		<xs:sequence>
+			<xs:element type="odm:oid"  	name="UserID"  minOccurs="0"/> <!-- this is the transcelerate id of either site or sponsor!-->
+			<xs:element type="odm:text"  	name="UserIRID"  minOccurs="0"/>  <!-- this is the IR ID of the User-->
+			<xs:element type="odm:date"  	name="EffectiveDate"  minOccurs="0"/>
+			<xs:element type="odm:oid"  	name="RequestorId"  minOccurs="0"/> <!-- this is the transcelerate id !-->
+			<xs:element type="odm:text"  	name="RequestorIRID"  minOccurs="0"/> <!-- this is the IR ID for the requestor !-->
+			<xs:element type="odm:oid"  	name="StudyID"  maxOccurs="1"/>
+			<xs:element type="sip:RoleDef"  name="OldUserRoleMap"  minOccurs="0"/>
+			<xs:element type="sip:RoleDef"  name="NewUserRoleMap"  minOccurs="0"/>
+			<xs:element type="odm:oid"  	name="StudySiteID"   maxOccurs="1"/>
+			<xs:element type="odm:text"  	name="Country"  minOccurs="0" maxOccurs="1"/>
+			<xs:element type="odm:text"  	name="ReasonForAccessModification"  minOccurs="0"/>	<!-- Incase of deactivation will have reason for deactivation !-->
+			<xs:element type="odm:date"  	name="RoleStartDate"  minOccurs="0"/>	
+			<xs:element type="odm:date"  	name="RoleEndDate"  minOccurs="0"/>
+			<xs:element type="odm:oid"  	name="ReplacingPrincipalInvestigatorID" minOccurs="0" maxOccurs="1"/>
+			<xs:element type="odm:text"  	name="ReplacingPrincipalInvestigatorIRID" minOccurs="0"/>
+			<xs:element type="odm:text"  	name="NatureOfDeactivation"   maxOccurs="1"/>
+			<xs:element type="odm:text"  	name="DeactivationType"  maxOccurs="1"/>
+			
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="UserDeActivationDetailsDef">
+		<xs:annotation>
+			<xs:documentation>User Deactivation Details</xs:documentation>
+		</xs:annotation>	
+		<xs:sequence>
+			<xs:element type="odm:oid"  	name="SponsorUserID" minOccurs="0" maxOccurs="1"/>
+			<xs:element type="odm:oid"  	name="SiteUserID" minOccurs="0" maxOccurs="1"/>
+			<xs:element type="odm:text"  	name="SiteUserIRID"  minOccurs="0" maxOccurs="1"/>
+			<xs:element type="odm:oid"  	name="RequestorID"  maxOccurs="1"/>
+			<xs:element type="odm:text"  	name="RequestorIRID"  minOccurs="0"/>
+			<xs:element type="odm:oid"  	name="ReplacingPrincipalInvestigatorID" minOccurs="0" maxOccurs="1"/>
+			<xs:element type="odm:text"  	name="ReplacingPrincipalInvestigatorIRID" minOccurs="0"/>
+			<xs:element type="odm:text"  	name="NatureOfDeactivation"   minOccurs="0"/>
+			<xs:element type="odm:text"  	name="DeactivationType"  minOccurs="0"/>
+			<!--<xs:element type="odm:oid"  	name="StudyID"  minOccurs="0"/>-->
+			<xs:element type="sip:UserRoleDef"  name="UserRoleMap" minOccurs="1" />
+			<xs:element type="odm:text"  	name="Country" minOccurs="0" maxOccurs="1"/>
+			<!--<xs:element type="odm:oid"  	name="StudySiteID"  minOccurs="0"/>-->
+			<xs:element type="odm:text"  	name="ReasonForDeactivation"  minOccurs="0"/>
+			<xs:element type="odm:date"  	name="EffectiveDate"  minOccurs="0"/>		
+			<xs:element type="odm:date"  	name="RoleStartDate"  minOccurs="0"/>	
+			<xs:element type="odm:date"  	name="RoleEndDate"  minOccurs="0"/>	
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

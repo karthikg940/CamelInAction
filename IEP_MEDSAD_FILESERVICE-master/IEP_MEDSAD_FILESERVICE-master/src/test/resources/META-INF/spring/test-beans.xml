@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:camel="http://camel.apache.org/schema/spring" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://camel.apache.org/schema/spring
+    http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+	<!-- Properties configuration -->
+	<bean id="bridgePropertyPlaceholder"
+		class="org.apache.camel.spring.spi.BridgePropertyPlaceholderConfigurer">
+		<property name="location" value="classpath:config/test.project.properties" />
+	</bean>
+	
+	<!-- DB configutaion -->
+  	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="url" value="${url}" />
+        <property name="username" value="${username}" />
+        <property name="password" value="${password}" />
+        <property name="driverClassName" value="${driver}" />
+        <property name="initialSize" value="${initialSize}" />
+        <property name="maxIdle" value="${maxIdle}" />
+        <property name="maxActive" value="${maxActive}" />
+        <property name="validationQuery" value="${validationQuery}" />
+    </bean>  
+    
+    
+    
+     <!-- bean for handling headers from initial request -->
+    <bean id="restRequestProcessor" class="com.lilly.esb.iep.fileservices.processor.RestRequestProcessor"/>
+    
+    <!-- bean for storing subscription's data in properties-->
+    <bean id="subscriptionConfig" class="com.microsoft.schemas.ado._2007._08.dataservices.SubscriptionConfig"/>
+    
+    <!-- bean for storing subscription's data in properties-->
+    <bean id="restResponseProcessor"
+		class="com.lilly.esb.iep.fileservices.processor.RestResponseProcessor" parent="dispatchServiceProcessor"/>
+		
+	<!-- bean for storing required properties for logging milestones in denodo-->
+	<bean id="dispatcherProperties" class="com.lilly.esb.iep.fileservices.beans.DispatcherProperties"/>
+	
+	<!-- bean for storing subscription properties-->
+	<bean id="subscriptionProperties" class="com.lilly.esb.iep.fileservices.beans.SubscriptionProperties"/>
+	
+	<!-- bean for XSLT transformation-->
+	<bean id="transformer" class="com.lilly.esb.iep.fileservices.processor.XMLTransformationProcessor"/>
+	
+	
+    <!-- basic authentication -->
+    
+     <bean id="sharePointBasicAuthHeaderProcessor" 
+ 		class="com.lilly.iep.common.processor.BasicAuthHeaderProcessor">
+ 		<property name="soagUser" value="${com.lilly.esb.iep.fs.sharepoint.username}" />
+ 		<property name="soagPwd" value="${com.lilly.esb.iep.fs.sharepoint.password}" /> 
+ 	</bean> 
+ 	
+ 	 
+ 	<!-- Jaxb -->
+ 	
+	  <bean id="jaxbDataFormat" class="org.apache.camel.converter.jaxb.JaxbDataFormat">
+		<property name="contextPath"
+			value="com.microsoft.schemas.ado._2007._08.dataservices" />
+		<property name="partClass"
+			value="com.microsoft.schemas.ado._2007._08.dataservices.SubscriptionConfig" />
+	</bean>  
+	 
+	
+	<!-- Hibernate data source -->
+	
+	<bean id="hibernateDataSourceProcessor"
+		class="com.lilly.esb.iep.fileservices.processor.DataSourceProcessor">
+		<property name="hibernateTemplate" ref="hibernateTemplate" />
+	</bean>
+	
+	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+		<property name="sessionFactory">
+			<ref bean="hibernateSessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="hibernateSessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		  <property name="dataSource" ref="dataSource" />  
+		<!-- <property name="packagesToScan" value="com.lilly.esb.iep.fileservices.processor" /> -->
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.hbm2ddl.auto">${com.lilly.esb.fs.hibernate.hbm2ddl.auto}</prop>
+				<prop key="hibernate.dialect">${com.lilly.esb.fs.hibernate.dialect}</prop>
+				<!-- <prop key="hibernate.show_sql">${hibernate.show_sql}</prop> -->
+				<prop key="hibernate.current_session_context_class">${com.lilly.esb.fs.hibernate.current_session_context_class}</prop>
+				<prop key="hibernate.format_sql">${com.lilly.esb.fs.hibernate.format_sql}</prop>
+				<prop key="hibernate.jdbc.batch_size">${com.lilly.esb.fs.hibernate.jdbc.batch_size}</prop>
+				<prop key="hibernate.jdbc.fetch_size">${com.lilly.esb.fs.hibernate.jdbc.fetch_size}</prop>
+			</props>
+		</property>
+	</bean>
+	 
+	<!-- bean for handling exceptions -->
+	<bean id="defaultExceptionProcessor"
+		class="com.lilly.iep.common.exception.processor.DefaultExceptionProcessor" parent="dispatchServiceProcessor">
+		<property name="logName" value="fs" />
+	</bean>
+
+	<!-- bean for logging milestones in denodo -->
+	<bean id="dispatchServiceProcessor" class="com.lilly.iep.common.exception.processor.DispatchServiceProcessor"> 
+		<property name="soagUser" value="${com.lilly.esb.iep.fs.soag.username}" />
+        <property name="soagPwd" value="${com.lilly.esb.iep.fs.soag.password}" />
+        <property name="dispatchEndpoint" value="${dispatcher.url}"/>
+	</bean>
+	
+	
+	<!-- route -->
+	<camel:camelContext id="routeBuilder">
+		<camel:package>com.lilly.esb.iep.fileservices</camel:package>
+	</camel:camelContext>
+
+</beans>

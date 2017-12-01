@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<feed xml:base="https://soag-z1-d.am.lilly.com:8443/sites/LRL-IEP/_vti_bin/listdata.svc/" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">StudyDetails</title>
+  <id>https://soag-z1-d.am.lilly.com:8443/sites/LRL-IEP/_vti_bin/listdata.svc/StudyDetails/</id>
+  <updated>2017-05-30T06:03:22Z</updated>
+  <link rel="self" title="StudyDetails" href="StudyDetails" />
+  <entry m:etag="W/&quot;1&quot;">
+    <id>https://soag-z1-d.am.lilly.com:8443/sites/LRL-IEP/_vti_bin/listdata.svc/StudyDetails(2)</id>
+    <title type="text">Y</title>
+    <updated>2017-05-09T16:53:03-04:00</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="StudyDetailsItem" href="StudyDetails(2)" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/CreatedBy" type="application/atom+xml;type=entry" title="CreatedBy" href="StudyDetails(2)/CreatedBy" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/ModifiedBy" type="application/atom+xml;type=entry" title="ModifiedBy" href="StudyDetails(2)/ModifiedBy" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Attachments" type="application/atom+xml;type=feed" title="Attachments" href="StudyDetails(2)/Attachments" />
+    <category term="Microsoft.SharePoint.DataService.StudyDetailsItem" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:ContentTypeID>0x01007D70AE22282B984FB01B191D5609A606</d:ContentTypeID>
+        <d:ToProcessYN>Y</d:ToProcessYN>
+        <d:StudySiteCreation>Lilly</d:StudySiteCreation>
+        <d:TrialNumber>9742</d:TrialNumber>
+        <d:TherapeuticArea>Animal Diseases</d:TherapeuticArea>
+        <d:ProgramId>140317</d:ProgramId>
+        <d:ProgramName>14Test</d:ProgramName>
+        <d:DiseaseId m:null="true" />
+        <d:DiseaseName m:null="true" />
+        <d:IndicationId>1403171</d:IndicationId>
+        <d:IndicationName>14Ind</d:IndicationName>
+        <d:SponsorFirstName>Kelly</d:SponsorFirstName>
+        <d:SponsorLastName>Kirsch</d:SponsorLastName>
+        <d:SponsorContactAddress1>1 ABC St</d:SponsorContactAddress1>
+        <d:SponsorContactAddress2 m:null="true" />
+        <d:Country>US</d:Country>
+        <d:City>Indianapolis</d:City>
+        <d:Region m:null="true" />
+        <d:StateProvinceRegion>US-NJ</d:StateProvinceRegion>
+        <d:Email>kirsch_kelly@lilly.com</d:Email>
+        <d:Phone>9087652345</d:Phone>
+        <d:Id m:type="Edm.Int32">2</d:Id>
+        <d:ContentType>Item</d:ContentType>
+        <d:Modified m:type="Edm.DateTime">2017-05-09T16:53:03</d:Modified>
+        <d:Created m:type="Edm.DateTime">2017-05-09T16:53:03</d:Created>
+        <d:CreatedById m:type="Edm.Int32">567</d:CreatedById>
+        <d:ModifiedById m:type="Edm.Int32">567</d:ModifiedById>
+        <d:Owshiddenversion m:type="Edm.Int32">1</d:Owshiddenversion>
+        <d:Version>1.0</d:Version>
+        <d:Path>/sites/LRL-IEP/Lists/Study Details</d:Path>
+      </m:properties>
+    </content>
+  </entry>
+  <entry m:etag="W/&quot;1&quot;">
+    <id>https://soag-z1-d.am.lilly.com:8443/sites/LRL-IEP/_vti_bin/listdata.svc/StudyDetails(3)</id>
+    <title type="text">N</title>
+    <updated>2017-05-10T15:04:47-04:00</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="StudyDetailsItem" href="StudyDetails(3)" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/CreatedBy" type="application/atom+xml;type=entry" title="CreatedBy" href="StudyDetails(3)/CreatedBy" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/ModifiedBy" type="application/atom+xml;type=entry" title="ModifiedBy" href="StudyDetails(3)/ModifiedBy" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Attachments" type="application/atom+xml;type=feed" title="Attachments" href="StudyDetails(3)/Attachments" />
+    <category term="Microsoft.SharePoint.DataService.StudyDetailsItem" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:ContentTypeID>0x01007D70AE22282B984FB01B191D5609A606</d:ContentTypeID>
+        <d:ToProcessYN>N</d:ToProcessYN>
+        <d:StudySiteCreation>Lilly</d:StudySiteCreation>
+        <d:TrialNumber>14218</d:TrialNumber>
+        <d:TherapeuticArea>Occupational Diseases</d:TherapeuticArea>
+        <d:ProgramId>2017</d:ProgramId>
+        <d:ProgramName>Lilly Test</d:ProgramName>
+        <d:DiseaseId m:null="true" />
+        <d:DiseaseName m:null="true" />
+        <d:IndicationId>2016</d:IndicationId>
+        <d:IndicationName>Indication Test</d:IndicationName>
+        <d:SponsorFirstName>Kelly</d:SponsorFirstName>
+        <d:SponsorLastName>Kirsch</d:SponsorLastName>
+        <d:SponsorContactAddress1>1 ABC St</d:SponsorContactAddress1>
+        <d:SponsorContactAddress2 m:null="true" />
+        <d:Country>US</d:Country>
+        <d:City>Indianapolis</d:City>
+        <d:Region m:null="true" />
+        <d:StateProvinceRegion>US-NJ</d:StateProvinceRegion>
+        <d:Email>kirsch_kelly@lilly.com</d:Email>
+        <d:Phone>9087652345</d:Phone>
+        <d:Id m:type="Edm.Int32">3</d:Id>
+        <d:ContentType>Item</d:ContentType>
+        <d:Modified m:type="Edm.DateTime">2017-05-10T15:04:47</d:Modified>
+        <d:Created m:type="Edm.DateTime">2017-05-10T15:04:47</d:Created>
+        <d:CreatedById m:type="Edm.Int32">567</d:CreatedById>
+        <d:ModifiedById m:type="Edm.Int32">567</d:ModifiedById>
+        <d:Owshiddenversion m:type="Edm.Int32">1</d:Owshiddenversion>
+        <d:Version>1.0</d:Version>
+        <d:Path>/sites/LRL-IEP/Lists/Study Details</d:Path>
+      </m:properties>
+    </content>
+  </entry>
+  <entry m:etag="W/&quot;1&quot;">
+    <id>https://soag-z1-d.am.lilly.com:8443/sites/LRL-IEP/_vti_bin/listdata.svc/StudyDetails(4)</id>
+    <title type="text">N</title>
+    <updated>2017-05-10T15:04:47-04:00</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="StudyDetailsItem" href="StudyDetails(4)" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/CreatedBy" type="application/atom+xml;type=entry" title="CreatedBy" href="StudyDetails(4)/CreatedBy" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/ModifiedBy" type="application/atom+xml;type=entry" title="ModifiedBy" href="StudyDetails(4)/ModifiedBy" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Attachments" type="application/atom+xml;type=feed" title="Attachments" href="StudyDetails(4)/Attachments" />
+    <category term="Microsoft.SharePoint.DataService.StudyDetailsItem" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:ContentTypeID>0x01007D70AE22282B984FB01B191D5609A606</d:ContentTypeID>
+        <d:ToProcessYN>N</d:ToProcessYN>
+        <d:StudySiteCreation>Lilly</d:StudySiteCreation>
+        <d:TrialNumber>13199</d:TrialNumber>
+        <d:TherapeuticArea>Bacterial Infections and Mycoses</d:TherapeuticArea>
+        <d:ProgramId>2017</d:ProgramId>
+        <d:ProgramName>Lilly Test</d:ProgramName>
+        <d:DiseaseId m:null="true" />
+        <d:DiseaseName m:null="true" />
+        <d:IndicationId>2016</d:IndicationId>
+        <d:IndicationName>Indication Test</d:IndicationName>
+        <d:SponsorFirstName>Kelly</d:SponsorFirstName>
+        <d:SponsorLastName>Kirsch</d:SponsorLastName>
+        <d:SponsorContactAddress1>2 ABC St</d:SponsorContactAddress1>
+        <d:SponsorContactAddress2 m:null="true" />
+        <d:Country>US</d:Country>
+        <d:City>Indianapolis</d:City>
+        <d:Region m:null="true" />
+        <d:StateProvinceRegion>US-NJ</d:StateProvinceRegion>
+        <d:Email>kirsch_kelly@lilly.com</d:Email>
+        <d:Phone>9087652346</d:Phone>
+        <d:Id m:type="Edm.Int32">4</d:Id>
+        <d:ContentType>Item</d:ContentType>
+        <d:Modified m:type="Edm.DateTime">2017-05-10T15:04:47</d:Modified>
+        <d:Created m:type="Edm.DateTime">2017-05-10T15:04:47</d:Created>
+        <d:CreatedById m:type="Edm.Int32">567</d:CreatedById>
+        <d:ModifiedById m:type="Edm.Int32">567</d:ModifiedById>
+        <d:Owshiddenversion m:type="Edm.Int32">1</d:Owshiddenversion>
+        <d:Version>1.0</d:Version>
+        <d:Path>/sites/LRL-IEP/Lists/Study Details</d:Path>
+      </m:properties>
+    </content>
+  </entry>
+  <entry m:etag="W/&quot;1&quot;">
+    <id>https://soag-z1-d.am.lilly.com:8443/sites/LRL-IEP/_vti_bin/listdata.svc/StudyDetails(5)</id>
+    <title type="text">N</title>
+    <updated>2017-05-10T15:04:47-04:00</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="StudyDetailsItem" href="StudyDetails(5)" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/CreatedBy" type="application/atom+xml;type=entry" title="CreatedBy" href="StudyDetails(5)/CreatedBy" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/ModifiedBy" type="application/atom+xml;type=entry" title="ModifiedBy" href="StudyDetails(5)/ModifiedBy" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Attachments" type="application/atom+xml;type=feed" title="Attachments" href="StudyDetails(5)/Attachments" />
+    <category term="Microsoft.SharePoint.DataService.StudyDetailsItem" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:ContentTypeID>0x01007D70AE22282B984FB01B191D5609A606</d:ContentTypeID>
+        <d:ToProcessYN>N</d:ToProcessYN>
+        <d:StudySiteCreation>Lilly</d:StudySiteCreation>
+        <d:TrialNumber>10876</d:TrialNumber>
+        <d:TherapeuticArea>Endocrine System Diseases</d:TherapeuticArea>
+        <d:ProgramId>140317</d:ProgramId>
+        <d:ProgramName>14Test</d:ProgramName>
+        <d:DiseaseId m:null="true" />
+        <d:DiseaseName m:null="true" />
+        <d:IndicationId>1403171</d:IndicationId>
+        <d:IndicationName>14Ind</d:IndicationName>
+        <d:SponsorFirstName>Kelly</d:SponsorFirstName>
+        <d:SponsorLastName>Kirsch</d:SponsorLastName>
+        <d:SponsorContactAddress1>3 ABC St</d:SponsorContactAddress1>
+        <d:SponsorContactAddress2 m:null="true" />
+        <d:Country>US</d:Country>
+        <d:City>Indianapolis</d:City>
+        <d:Region m:null="true" />
+        <d:StateProvinceRegion>US-NJ</d:StateProvinceRegion>
+        <d:Email>kirsch_kelly@lilly.com</d:Email>
+        <d:Phone>9087652347</d:Phone>
+        <d:Id m:type="Edm.Int32">5</d:Id>
+        <d:ContentType>Item</d:ContentType>
+        <d:Modified m:type="Edm.DateTime">2017-05-10T15:04:47</d:Modified>
+        <d:Created m:type="Edm.DateTime">2017-05-10T15:04:47</d:Created>
+        <d:CreatedById m:type="Edm.Int32">567</d:CreatedById>
+        <d:ModifiedById m:type="Edm.Int32">567</d:ModifiedById>
+        <d:Owshiddenversion m:type="Edm.Int32">1</d:Owshiddenversion>
+        <d:Version>1.0</d:Version>
+        <d:Path>/sites/LRL-IEP/Lists/Study Details</d:Path>
+      </m:properties>
+    </content>
+  </entry>
+  <entry m:etag="W/&quot;1&quot;">
+    <id>https://soag-z1-d.am.lilly.com:8443/sites/LRL-IEP/_vti_bin/listdata.svc/StudyDetails(6)</id>
+    <title type="text">N</title>
+    <updated>2017-05-10T15:04:47-04:00</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="StudyDetailsItem" href="StudyDetails(6)" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/CreatedBy" type="application/atom+xml;type=entry" title="CreatedBy" href="StudyDetails(6)/CreatedBy" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/ModifiedBy" type="application/atom+xml;type=entry" title="ModifiedBy" href="StudyDetails(6)/ModifiedBy" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Attachments" type="application/atom+xml;type=feed" title="Attachments" href="StudyDetails(6)/Attachments" />
+    <category term="Microsoft.SharePoint.DataService.StudyDetailsItem" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:ContentTypeID>0x01007D70AE22282B984FB01B191D5609A606</d:ContentTypeID>
+        <d:ToProcessYN>N</d:ToProcessYN>
+        <d:StudySiteCreation>SIP</d:StudySiteCreation>
+        <d:TrialNumber>13383</d:TrialNumber>
+        <d:TherapeuticArea>Nervous System Diseases</d:TherapeuticArea>
+        <d:ProgramId>3</d:ProgramId>
+        <d:ProgramName>JDM's Program</d:ProgramName>
+        <d:DiseaseId m:null="true" />
+        <d:DiseaseName m:null="true" />
+        <d:IndicationId>30015</d:IndicationId>
+        <d:IndicationName>JDM�s Disease</d:IndicationName>
+        <d:SponsorFirstName>Kelly</d:SponsorFirstName>
+        <d:SponsorLastName>Kirsch</d:SponsorLastName>
+        <d:SponsorContactAddress1>4 ABC St</d:SponsorContactAddress1>
+        <d:SponsorContactAddress2 m:null="true" />
+        <d:Country>US</d:Country>
+        <d:City>Indianapolis</d:City>
+        <d:Region m:null="true" />
+        <d:StateProvinceRegion>US-NJ</d:StateProvinceRegion>
+        <d:Email>kirsch_kelly@lilly.com</d:Email>
+        <d:Phone>9087652348</d:Phone>
+        <d:Id m:type="Edm.Int32">6</d:Id>
+        <d:ContentType>Item</d:ContentType>
+        <d:Modified m:type="Edm.DateTime">2017-05-10T15:04:47</d:Modified>
+        <d:Created m:type="Edm.DateTime">2017-05-10T15:04:47</d:Created>
+        <d:CreatedById m:type="Edm.Int32">567</d:CreatedById>
+        <d:ModifiedById m:type="Edm.Int32">567</d:ModifiedById>
+        <d:Owshiddenversion m:type="Edm.Int32">1</d:Owshiddenversion>
+        <d:Version>1.0</d:Version>
+        <d:Path>/sites/LRL-IEP/Lists/Study Details</d:Path>
+      </m:properties>
+    </content>
+  </entry>
+  <entry m:etag="W/&quot;1&quot;">
+    <id>https://soag-z1-d.am.lilly.com:8443/sites/LRL-IEP/_vti_bin/listdata.svc/StudyDetails(7)</id>
+    <title type="text">N</title>
+    <updated>2017-05-10T15:04:47-04:00</updated>
+    <author>
+      <name />
+    </author>
+    <link rel="edit" title="StudyDetailsItem" href="StudyDetails(7)" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/CreatedBy" type="application/atom+xml;type=entry" title="CreatedBy" href="StudyDetails(7)/CreatedBy" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/ModifiedBy" type="application/atom+xml;type=entry" title="ModifiedBy" href="StudyDetails(7)/ModifiedBy" />
+    <link rel="http://schemas.microsoft.com/ado/2007/08/dataservices/related/Attachments" type="application/atom+xml;type=feed" title="Attachments" href="StudyDetails(7)/Attachments" />
+    <category term="Microsoft.SharePoint.DataService.StudyDetailsItem" scheme="http://schemas.microsoft.com/ado/2007/08/dataservices/scheme" />
+    <content type="application/xml">
+      <m:properties>
+        <d:ContentTypeID>0x01007D70AE22282B984FB01B191D5609A606</d:ContentTypeID>
+        <d:ToProcessYN>N</d:ToProcessYN>
+        <d:StudySiteCreation>Lilly</d:StudySiteCreation>
+        <d:TrialNumber>11764</d:TrialNumber>
+        <d:TherapeuticArea>Otorhinolaryngologic Diseases</d:TherapeuticArea>
+        <d:ProgramId>140317</d:ProgramId>
+        <d:ProgramName>14Test</d:ProgramName>
+        <d:DiseaseId m:null="true" />
+        <d:DiseaseName m:null="true" />
+        <d:IndicationId>1403171</d:IndicationId>
+        <d:IndicationName>14Ind</d:IndicationName>
+        <d:SponsorFirstName>Kelly</d:SponsorFirstName>
+        <d:SponsorLastName>Kirsch</d:SponsorLastName>
+        <d:SponsorContactAddress1>3 ABC St</d:SponsorContactAddress1>
+        <d:SponsorContactAddress2 m:null="true" />
+        <d:Country>US</d:Country>
+        <d:City>Indianapolis</d:City>
+        <d:Region m:null="true" />
+        <d:StateProvinceRegion>US-NJ</d:StateProvinceRegion>
+        <d:Email>kirsch_kelly@lilly.com</d:Email>
+        <d:Phone>9087652347</d:Phone>
+        <d:Id m:type="Edm.Int32">7</d:Id>
+        <d:ContentType>Item</d:ContentType>
+        <d:Modified m:type="Edm.DateTime">2017-05-10T15:04:47</d:Modified>
+        <d:Created m:type="Edm.DateTime">2017-05-10T15:04:47</d:Created>
+        <d:CreatedById m:type="Edm.Int32">567</d:CreatedById>
+        <d:ModifiedById m:type="Edm.Int32">567</d:ModifiedById>
+        <d:Owshiddenversion m:type="Edm.Int32">1</d:Owshiddenversion>
+        <d:Version>1.0</d:Version>
+        <d:Path>/sites/LRL-IEP/Lists/Study Details</d:Path>
+      </m:properties>
+    </content>
+  </entry>
+</feed>

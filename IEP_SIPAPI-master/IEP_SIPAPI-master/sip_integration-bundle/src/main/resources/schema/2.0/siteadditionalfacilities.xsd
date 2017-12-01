@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:odm="http://www.cdisc.org/ns/odm/v1.3" 
+	xmlns:sip="http://www.sharedinvestigator.com/sip/schema" 
+	targetNamespace="http://www.sharedinvestigator.com/sip/schema" 
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	
+	<xs:include schemaLocation="locallab.xsd"/>
+	<xs:include schemaLocation="irberbeth.xsd"/>
+	<xs:import namespace="http://www.cdisc.org/ns/odm/v1.3" schemaLocation="odm1_3_2/ODM1-3-2.xsd"/>
+	
+	<xs:annotation>
+		<xs:documentation>Site Additional Facility details</xs:documentation>
+	</xs:annotation>	
+
+	<!-- This section is for additional facility details of site -->
+	<xs:complexType name="SiteAdditionalFacilitiesDef">
+		<xs:annotation>
+			<xs:documentation>Site Additional Facility details</xs:documentation>
+		</xs:annotation>	
+		<xs:sequence>
+			<xs:element type="sip:SIPcomplexTypeDefinition-LocalLabDef"  name="LocalLab" minOccurs="0" ></xs:element>	
+			<xs:element type="sip:SIPcomplexTypeDefinition-IRB_ERB_ETHDef"  name="IrbErbEthCommittee" minOccurs="0" ></xs:element>	
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

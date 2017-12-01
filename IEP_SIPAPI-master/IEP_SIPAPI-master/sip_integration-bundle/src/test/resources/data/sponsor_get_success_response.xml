@@ -1,0 +1,30 @@
+<odm:ODM xmlns:sip="http://www.sharedinvestigator.com/sip/schema" xmlns:odm="http://www.cdisc.org/ns/odm/v1.3" xmlns:ns3="http://www.w3.org/2000/09/xmldsig#">
+   <odm:AdminData>
+      <odm:User OID="onboardsponsor469@mail.com">
+         <odm:FirstName>Onboard-11</odm:FirstName>
+         <odm:LastName>Use-22r</odm:LastName>
+         <odm:Address>
+            <odm:StreetName>StreetName1</odm:StreetName>
+            <odm:StreetName>StreetName2</odm:StreetName>
+            <odm:StreetName>StreetName3</odm:StreetName>
+            <odm:City>NYC</odm:City>
+            <odm:StateProv>US-NJ</odm:StateProv>
+            <odm:Country>US</odm:Country>
+            <odm:PostalCode>12345</odm:PostalCode>
+         </odm:Address>
+         <odm:Email>onboardsponsor469@mail.com</odm:Email>
+         <odm:Fax>111-222-3334</odm:Fax>
+         <odm:Phone>111-222-3000</odm:Phone>
+         <odm:UserElementExtensionContents>
+            <sip:TCBUID>onboardsponsor469@mail.com</sip:TCBUID>
+            <sip:NamePrefix>NamePrefix</sip:NamePrefix>
+            <sip:MiddleName>Sponsor</sip:MiddleName>
+            <sip:NameSuffix>NameSuffix</sip:NameSuffix>
+            <sip:UserRoleMap>
+               <sip:RoleName>Study Oversight Lead</sip:RoleName>
+            </sip:UserRoleMap>
+            <sip:ActivationStartDate>2006-05-04Z</sip:ActivationStartDate>
+         </odm:UserElementExtensionContents>
+      </odm:User>
+   </odm:AdminData>
+</odm:ODM>

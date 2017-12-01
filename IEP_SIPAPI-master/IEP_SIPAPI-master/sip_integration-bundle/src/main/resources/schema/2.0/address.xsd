@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    xmlns:odm="http://www.cdisc.org/ns/odm/v1.3" 
+    xmlns:sip="http://www.sharedinvestigator.com/sip/schema" 
+    targetNamespace="http://www.sharedinvestigator.com/sip/schema" 
+    elementFormDefault="qualified" attributeFormDefault="unqualified">
+    
+    <xs:import namespace="http://www.cdisc.org/ns/odm/v1.3" schemaLocation="odm1_3_2/ODM1-3-2.xsd"/>
+
+    <xs:complexType name="AddressDef">
+        <xs:annotation>
+            <xs:documentation> Contains Region Code necessary for SIP, extended from ODM ODMcomplexTypeDefinition-Address</xs:documentation>
+        </xs:annotation>		
+        <xs:sequence>
+			<xs:element type="odm:text" name="AddressType" minOccurs="0" maxOccurs="1"/>
+            <xs:element type="odm:text" name="Region" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

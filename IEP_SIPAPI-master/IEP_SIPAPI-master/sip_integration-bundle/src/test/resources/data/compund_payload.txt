@@ -1,0 +1,1 @@
+ [{StudyCompound=[{CmpndNm=atients originating in Studies JADV, JADX, or JADW, and as failure to reach CDAI 10 for patients ori, CmpndNmTyp=Common, SbstncRfrncCd=LY3009104}]}, {StudyCompound=[{CmpndNm=Baricitinib, CmpndNmTyp=Common, SbstncRfrncCd=LY3009104}]}, {StudyCompound=[{CmpndNm=Lilly Demo Drug, CmpndNmTyp=Generic, SbstncRfrncCd=-1}]}]

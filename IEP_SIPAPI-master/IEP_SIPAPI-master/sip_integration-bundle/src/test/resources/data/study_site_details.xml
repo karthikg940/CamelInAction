@@ -1,0 +1,9 @@
+"odata.metadata":"https://soag-z1-d.am.lilly.com:8443/IEP/odata/v1/ClinicalStudies/$metadata#StudySite&$select=StudySiteIipId,StudySiteCd,StudyPrmrySiteRefId,PrmryInvstgtrId,PrmryCentre,CnclStopFlg,HldCnclStopDt,LatestStndrdMlstnCd","value":[
+    {
+      "StudySiteIipId":"852061","StudySiteCd":"18~JP","StudyPrmrySiteRefId":"360","PrmryInvstgtrId":"768540","PrmryCentre":"17933","CnclStopFlg":"N","HldCnclStopDt":null,"LatestStndrdMlstnCd":"9600"
+    },{
+      "StudySiteIipId":"852062","StudySiteCd":"27~IN","StudyPrmrySiteRefId":"927","PrmryInvstgtrId":"765950","PrmryCentre":"31561","CnclStopFlg":"N","HldCnclStopDt":null,"LatestStndrdMlstnCd":"9600"
+    } 
+  ],"odata.nextLink":"https://soag-z1-d.am.lilly.com:8443/IEP/odata/v1/ClinicalStudies/StudySite?$filter=StudySubject%2Fany%28x%3A%20x%2FClinicalStudy%2FClnclStudyId%20eq%20%2714060%27%29&$select=StudySiteIipId%2CStudySiteCd%2CStudyPrmrySiteRefId%2CPrmryInvstgtrId%2CPrmryCentre%2CCnclStopFlg%2CHldCnclStopDt%2CLatestStndrdMlstnCd&$skip=100"
+}
+

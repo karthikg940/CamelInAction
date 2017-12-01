@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.lilly.esb.iep</groupId>
+	<artifactId>fileservices</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>Fuse - fileservices</name>
+	<description>Fuse - fileservices - 1.0.0-SNAPSHOT</description>
+
+	<properties>
+		<config.version>${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}</config.version>
+		<persistent.id>${project.parent.groupId}.${project.parent.artifactId}.${config.version}</persistent.id>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<oracle.version>11.2.0.3</oracle.version>
+		<wmq.version>7.1.0.5</wmq.version>
+		<camel.version>2.19.3</camel.version>
+		<jetty.version>9.4.6.v20170531</jetty.version>
+		<fabric.version>2.2.0.redhat-079</fabric.version>
+		<build-helper-maven-plugin.version>1.10</build-helper-maven-plugin.version>
+		<javax.ws.rs-api.version>2.0.1</javax.ws.rs-api.version>
+		<spring-ldap-core.version>2.3.1.RELEASE</spring-ldap-core.version>
+		<iep_utils.version>2.0.7-SNAPSHOT</iep_utils.version>
+		<jersey.version>2.11</jersey.version>
+		<com-sun-jersey.version>1.19.4</com-sun-jersey.version>
+		<mockito.version>1.9.5</mockito.version>
+		<wmq.version>7.1.0.5</wmq.version>
+		<oracle.version>11.2.0.3</oracle.version>
+		<ftp.version>2.19.3</ftp.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- Camel BOM -->
+			<dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-parent</artifactId>
+				<version>${camel.version}</version>
+				<scope>import</scope>
+				<type>pom</type>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<!-- IEP Utils -->
+		<dependency>
+			<groupId>com.lilly.iep</groupId>
+			<artifactId>utils</artifactId>
+			<version>${iep_utils.version}</version>
+		</dependency>
+
+		<!-- Camel -->
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-http4</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.camel/camel-ftp -->
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-ftp</artifactId>
+			<version>${ftp.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-spring</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jetty</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jasypt</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jms</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-swagger-java</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-csv</artifactId>
+		</dependency>
+		<!-- Spring -->
+		<dependency>
+			<groupId>org.springframework.ldap</groupId>
+			<artifactId>spring-ldap-core</artifactId>
+			<version>${spring-ldap-core.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>4.0.2.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>3.6.0.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>5.2.4.Final</version>
+		</dependency>
+		<!-- Commons -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.6</version>
+		</dependency>
+
+		<!-- logging -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j-impl</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+		</dependency>
+
+		<!-- Jetty -->
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-spring</artifactId>
+			<version>${jetty.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-servlet</artifactId>
+			<version>${jetty.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-plus</artifactId>
+			<version>${jetty.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-security</artifactId>
+			<version>${jetty.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-util</artifactId>
+			<version>${jetty.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jackson</artifactId>
+		</dependency>
+		<!-- Oracle -->
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>${oracle.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.servicemix.bundles</groupId>
+			<artifactId>org.apache.servicemix.bundles.commons-dbcp</artifactId>
+			<version>1.4_3</version>
+		</dependency>
+
+		<!-- WMQ -->
+		<dependency>
+			<groupId>com.ibm</groupId>
+			<artifactId>com.ibm.mq</artifactId>
+			<version>${wmq.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ibm</groupId>
+			<artifactId>com.ibm.mqjms</artifactId>
+			<version>${wmq.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ibm</groupId>
+			<artifactId>com.ibm.mq.headers</artifactId>
+			<version>${wmq.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ibm</groupId>
+			<artifactId>com.ibm.mq.jmqi</artifactId>
+			<version>${wmq.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ibm</groupId>
+			<artifactId>com.ibm.disthub2.dhbcore</artifactId>
+			<version>${wmq.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.jms</groupId>
+			<artifactId>javax.jms-api</artifactId>
+			<version>2.0</version>
+		</dependency>
+
+		<!-- Testing -->
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-test-spring</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- <dependency> <groupId>org.apache.camel</groupId> <artifactId>camel-http4</artifactId> 
+			<scope>test</scope> </dependency> -->
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-camel</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>${mockito.version}</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-test</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.camel/camel-jaxb -->
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-jaxb</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.camel</groupId>
+			<artifactId>camel-ftp</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jvnet.jaxb2_commons</groupId>
+			<artifactId>jaxb2-basics-runtime</artifactId>
+			<version>0.11.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.json/json -->
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20160810</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.beanio/beanio -->
+		<dependency>
+			<groupId>org.beanio</groupId>
+			<artifactId>beanio</artifactId>
+			<version>2.1.0.M1</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<defaultGoal>install</defaultGoal>
+
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>${build-helper-maven-plugin.version}</version>
+				<executions>
+					<execution>
+						<phase>validate</phase>
+						<id>parse-version</id>
+						<goals>
+							<goal>parse-version</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.6.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.0.2</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+
+			<!-- allows the route to be run via 'mvn camel:run' -->
+			<plugin>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-maven-plugin</artifactId>
+				<version>${camel.version}</version>
+			</plugin>
+
+			<plugin>
+				<groupId>io.fabric8</groupId>
+				<artifactId>hawt-app-maven-plugin</artifactId>
+				<version>${fabric.version}</version>
+				<executions>
+					<execution>
+						<id>hawt-app</id>
+						<goals>
+							<goal>build</goal>
+						</goals>
+						<configuration>
+							<javaMainClass>org.apache.camel.spring.Main</javaMainClass>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.jvnet.jaxb2.maven2</groupId>
+				<artifactId>maven-jaxb2-plugin</artifactId>
+				<!-- <version>${jaxb2.plugin.version}</version> -->
+				<configuration>
+					<schemaDirectory>${project.basedir}/src/main/resources/schema</schemaDirectory>
+					<schemaIncludes>
+						<include>*.xsd</include>
+					</schemaIncludes>
+					<bindingDirectory>${project.basedir}/src/main/resources/schema</bindingDirectory>
+					<verbose>true</verbose>
+					<extension>true</extension>
+					<args>
+						<arg>-Xfluent-api</arg>
+						<arg>-Xvalue-constructor</arg>
+						<arg>-XtoString</arg>
+						<arg>-Xequals</arg>
+						<arg>-XhashCode</arg>
+						<arg>-Xcopyable</arg>
+						<arg>-Xmergeable</arg>
+						<arg>-Xjaxbindex</arg>
+						<arg>-enableIntrospection</arg>
+						<arg>-Xsetters-mode=direct</arg>
+					</args>
+					<plugins>
+						<plugin>
+							<groupId>org.jvnet.jaxb2_commons</groupId>
+							<artifactId>jaxb2-basics</artifactId>
+							<version>0.6.4</version>
+						</plugin>
+						<plugin>
+							<groupId>net.java.dev.jaxb2-commons</groupId>
+							<artifactId>jaxb-fluent-api</artifactId>
+							<version>2.1.8</version>
+						</plugin>
+						<plugin>
+							<groupId>org.jvnet.jaxb2_commons</groupId>
+							<artifactId>jaxb2-value-constructor</artifactId>
+							<version>3.0</version>
+						</plugin>
+					</plugins>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

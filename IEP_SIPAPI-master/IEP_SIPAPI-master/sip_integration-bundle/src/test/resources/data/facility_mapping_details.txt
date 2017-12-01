@@ -1,0 +1,4 @@
+<m:properties xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+        <d:Person_Golden_ID xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">DD40019</d:Person_Golden_ID>
+        <d:Person_Member_ID xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices">75712</d:Person_Member_ID>
+</m:properties>

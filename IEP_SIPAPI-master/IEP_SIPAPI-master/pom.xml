@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.lilly.esb</groupId>
+		<artifactId>fuse-parent</artifactId>
+		<version>6.1.0.redhat-379.01</version>
+	</parent>
+
+	<groupId>com.lilly.esb.iep</groupId>
+	<artifactId>sip_integration</artifactId>
+	<version>1.0.17-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>Fuse - sip_integration - Parent</name>
+
+	<properties>
+		<config.version>${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}</config.version>
+		<persistent.id>${project.parent.groupId}.${project.parent.artifactId}.${config.version}</persistent.id>
+		
+		<common.version>3.3.0</common.version>
+		<common.next>3.4.0</common.next>
+
+		<jvnet.jaxb2.version>0.6.4</jvnet.jaxb2.version>
+		<jaxb2.plugin.version>0.8.3</jaxb2.plugin.version>
+		<mockito.version>1.9.5</mockito.version>
+		<wmq.version>7.1.0.5</wmq.version>
+		<oracle.version>11.2.0.3</oracle.version>
+		<jackson-jaxrs.version>1.9.12</jackson-jaxrs.version>
+
+	</properties>
+
+	<scm>
+		<developerConnection>scm:git:https://github.com/EliLillyCo/IEP_SIPAPI</developerConnection>
+	  <tag>1.0.2</tag>
+  </scm>
+
+	<modules>
+		<module>sip_integration-features</module>
+		<module>sip_integration-bundle</module>
+	</modules>
+	<description>Fuse IEP SIP Integration Parent Project</description>
+</project>

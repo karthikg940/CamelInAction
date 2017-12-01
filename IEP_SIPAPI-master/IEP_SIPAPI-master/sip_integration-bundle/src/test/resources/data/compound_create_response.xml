@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<odm:ODM xmlns:sip="http://www.sharedinvestigator.com/sip/schema" xmlns:odm="http://www.cdisc.org/ns/odm/v1.3" xmlns:ns3="http://www.w3.org/2000/09/xmldsig#">
+    <odm:ODMElementExtensionContents>
+        <odm:SIPResponse>
+            <sip:memberCompanyID>lilly-member-id0</sip:memberCompanyID>
+            <sip:responseID>
+                <sip:sipID>73</sip:sipID>
+            </sip:responseID>
+            <sip:message>List of values created successfully</sip:message>
+        </odm:SIPResponse>
+    </odm:ODMElementExtensionContents>
+</odm:ODM>
