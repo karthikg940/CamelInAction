@@ -1,0 +1,1163 @@
+{
+  "results": [
+    {
+      "studyId": 76000000000001,
+      "studyNo": "",
+      "deleted": "Y",
+      "studyType": "",
+      "date": "Jul 16,2015 21:49:40",
+      "patient": {
+        "id": "5588",
+        "mrnno": "5588",
+        "prefix": "",
+        "firstName": "Mary",
+        "middleName": "",
+        "lastName": "Green"
+      },
+      "modality": [
+        "SA1"
+      ],
+      "examType": "Unspecified",
+      "tags": [
+        ""
+      ],
+      "requestingphysician": {
+        "id": 76000000000001,
+        "prefix": "",
+        "firstName": "John",
+        "middleName": "",
+        "lastName": "William"
+      },
+      "referringphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "status": [
+        "New"
+      ],
+      "assignedUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "studyUid": "1.2.840.114302.2886735114.259.1437101350134.10002",
+      "qaUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "attendingUser": {
+        "id": "1002",
+        "prefix": "Dr.",
+        "firstName": "Cris",
+        "middleName": "",
+        "lastName": "Renella"
+      }
+    },
+    {
+      "studyId": 76000000000002,
+      "studyNo": "iViz Study 6",
+      "deleted": "Y",
+      "studyType": "",
+      "date": "Jan 28,2017 13:14:39",
+      "patient": {
+        "id": "Temp101816130426",
+        "mrnno": "Temp101816130426",
+        "prefix": "",
+        "firstName": "Test",
+        "middleName": "Car",
+        "lastName": "M2"
+      },
+      "modality": [
+        "US"
+      ],
+      "examType": "Unspecified",
+      "tags": [
+        ""
+      ],
+      "requestingphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "referringphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "status": [
+        "New"
+      ],
+      "assignedUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "studyUid": "1.2.276.0.7230010.3.1.2.0.1200.1476796015.510870",
+      "qaUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "attendingUser": {
+        "id": "1002",
+        "prefix": "Dr.",
+        "firstName": "Cris",
+        "middleName": "",
+        "lastName": "Renella"
+      }
+    },
+    {
+      "studyId": 76000000000003,
+      "studyNo": "iViz Study 5",
+      "deleted": "Y",
+      "studyType": "",
+      "date": "Jan 28,2017 15:32:13",
+      "patient": {
+        "id": "ID4655",
+        "mrnno": "ID4655",
+        "prefix": "",
+        "firstName": "Test",
+        "middleName": "Adb",
+        "lastName": "M1"
+      },
+      "modality": [
+        "US"
+      ],
+      "examType": "Unspecified",
+      "tags": [
+        ""
+      ],
+      "requestingphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "referringphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "status": [
+        "New"
+      ],
+      "assignedUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "studyUid": "1.2.276.0.7230010.3.1.2.0.1200.1476794030.510858",
+      "qaUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "attendingUser": {
+        "id": "1002",
+        "prefix": "Dr.",
+        "firstName": "Cris",
+        "middleName": "",
+        "lastName": "Renella"
+      }
+    },
+    {
+      "studyId": 76000000000004,
+      "studyNo": "iViz Study 9",
+      "deleted": "Y",
+      "studyType": "",
+      "date": "Jan 28,2017 16:56:02",
+      "patient": {
+        "id": "Temp101816133124",
+        "mrnno": "Temp101816133124",
+        "prefix": "",
+        "firstName": "Test",
+        "middleName": "AV",
+        "lastName": "M5"
+      },
+      "modality": [
+        "US"
+      ],
+      "examType": "Unspecified",
+      "tags": [
+        ""
+      ],
+      "requestingphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "referringphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "status": [
+        "New"
+      ],
+      "assignedUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "studyUid": "1.2.276.0.7230010.3.1.2.0.1207.1476799077.119986",
+      "qaUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "attendingUser": {
+        "id": "1002",
+        "prefix": "Dr.",
+        "firstName": "Cris",
+        "middleName": "",
+        "lastName": "Renella"
+      }
+    },
+    {
+      "studyId": 76000000000005,
+      "studyNo": "iViz Study 3",
+      "deleted": "Y",
+      "studyType": "",
+      "date": "Jan 30,2017 12:12:02",
+      "patient": {
+        "id": "Temp012517115701",
+        "mrnno": "Temp012517115701",
+        "prefix": "",
+        "firstName": "Clip1",
+        "middleName": "",
+        "lastName": "Test"
+      },
+      "modality": [
+        "US"
+      ],
+      "examType": "Unspecified",
+      "tags": [
+        ""
+      ],
+      "requestingphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "referringphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "status": [
+        "New"
+      ],
+      "assignedUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "studyUid": "1.2.276.0.7230010.3.1.2.0.1210.1485346345.467804",
+      "qaUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "attendingUser": {
+        "id": "1002",
+        "prefix": "Dr.",
+        "firstName": "Cris",
+        "middleName": "",
+        "lastName": "Renella"
+      }
+    },
+    {
+      "studyId": 76000000000006,
+      "studyNo": null,
+      "deleted": "Y",
+      "studyType": "",
+      "date": "Jan 31,2017 11:24:28",
+      "patient": {
+        "id": "UNK76000000010015",
+        "mrnno": "UNK76000000010015",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": "Anonymized"
+      },
+      "modality": [
+        "US"
+      ],
+      "examType": "Unspecified",
+      "tags": [
+        ""
+      ],
+      "requestingphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "referringphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "status": [
+        "New"
+      ],
+      "assignedUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "studyUid": "999.999.2.19941105.134500",
+      "qaUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "attendingUser": {
+        "id": "1002",
+        "prefix": "Dr.",
+        "firstName": "Cris",
+        "middleName": "",
+        "lastName": "Renella"
+      }
+    },
+    {
+      "studyId": 76000000000007,
+      "studyNo": null,
+      "deleted": "Y",
+      "studyType": "",
+      "date": "Jan 31,2017 11:24:37",
+      "patient": {
+        "id": "UNK76000000010016",
+        "mrnno": "UNK76000000010016",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": "Anonymized"
+      },
+      "modality": [
+        "US"
+      ],
+      "examType": "Unspecified",
+      "tags": [
+        ""
+      ],
+      "requestingphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "referringphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "status": [
+        "New"
+      ],
+      "assignedUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "studyUid": "999.999.3859744",
+      "qaUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "attendingUser": {
+        "id": "1002",
+        "prefix": "Dr.",
+        "firstName": "Cris",
+        "middleName": "",
+        "lastName": "Renella"
+      }
+    },
+    {
+      "studyId": 76000000000008,
+      "studyNo": null,
+      "deleted": "Y",
+      "studyType": "",
+      "date": "Jan 31,2017 13:39:24",
+      "patient": {
+        "id": "UNK76000000010017",
+        "mrnno": "UNK76000000010017",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": "Anonymized"
+      },
+      "modality": [
+        "US"
+      ],
+      "examType": "Unspecified",
+      "tags": [
+        ""
+      ],
+      "requestingphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "referringphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "status": [
+        "New"
+      ],
+      "assignedUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "studyUid": "999.999.2.19941105.112000",
+      "qaUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "attendingUser": {
+        "id": "1002",
+        "prefix": "Dr.",
+        "firstName": "Cris",
+        "middleName": "",
+        "lastName": "Renella"
+      }
+    },
+    {
+      "studyId": 76000000000009,
+      "studyNo": null,
+      "deleted": "Y",
+      "studyType": "",
+      "date": "Jan 31,2017 13:39:28",
+      "patient": {
+        "id": "UNK76000000010018",
+        "mrnno": "UNK76000000010018",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": "Anonymized"
+      },
+      "modality": [
+        "US"
+      ],
+      "examType": "Unspecified",
+      "tags": [
+        ""
+      ],
+      "requestingphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "referringphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "status": [
+        "New"
+      ],
+      "assignedUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "studyUid": "1.2.840.113619.2.21.848.246800003.0.1952805748.3",
+      "qaUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "attendingUser": {
+        "id": "1002",
+        "prefix": "Dr.",
+        "firstName": "Cris",
+        "middleName": "",
+        "lastName": "Renella"
+      }
+    },
+    {
+      "studyId": 76000000010008,
+      "studyNo": "iViz Study 4",
+      "deleted": "Y",
+      "studyType": "",
+      "date": "Jan 31,2017 18:05:10",
+      "patient": {
+        "id": "Temp012517120351",
+        "mrnno": "Temp012517120351",
+        "prefix": "",
+        "firstName": "First Name",
+        "middleName": "",
+        "lastName": "Last Name"
+      },
+      "modality": [
+        "US"
+      ],
+      "examType": "Unspecified",
+      "tags": [
+        ""
+      ],
+      "requestingphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "referringphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "status": [
+        "New"
+      ],
+      "assignedUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "studyUid": "1.2.276.0.7230010.3.1.2.0.1210.1485346406.467808",
+      "qaUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "attendingUser": {
+        "id": "1002",
+        "prefix": "Dr.",
+        "firstName": "Cris",
+        "middleName": "",
+        "lastName": "Renella"
+      }
+    },
+    {
+      "studyId": 76000000010010,
+      "studyNo": "iViz Study 1",
+      "deleted": "Y",
+      "studyType": "",
+      "date": "Jan 31,2017 18:17:13",
+      "patient": {
+        "id": "Temp011217152836",
+        "mrnno": "Temp011217152836",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "modality": [
+        "US"
+      ],
+      "examType": "Unspecified",
+      "tags": [
+        ""
+      ],
+      "requestingphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "referringphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "status": [
+        "New"
+      ],
+      "assignedUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "studyUid": "1.2.276.0.7230010.3.1.2.0.1221.1484235049.877069",
+      "qaUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "attendingUser": {
+        "id": "1002",
+        "prefix": "Dr.",
+        "firstName": "Cris",
+        "middleName": "",
+        "lastName": "Renella"
+      }
+    },
+    {
+      "studyId": 76000000010011,
+      "studyNo": "iViz Study 10",
+      "deleted": "Y",
+      "studyType": "",
+      "date": "Jan 31,2017 20:45:37",
+      "patient": {
+        "id": "Temp012717072815",
+        "mrnno": "Temp012717072815",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "modality": [
+        "US"
+      ],
+      "examType": "Unspecified",
+      "tags": [
+        ""
+      ],
+      "requestingphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "referringphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "status": [
+        "New"
+      ],
+      "assignedUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "studyUid": "1.2.276.0.7230010.3.1.2.0.1215.1485502206.642829",
+      "qaUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "attendingUser": {
+        "id": "1002",
+        "prefix": "Dr.",
+        "firstName": "Cris",
+        "middleName": "",
+        "lastName": "Renella"
+      }
+    },
+    {
+      "studyId": 76000000010012,
+      "studyNo": "iViz Study 19",
+      "deleted": "Y",
+      "studyType": "",
+      "date": "Jan 31,2017 20:47:56",
+      "patient": {
+        "id": "Temp012417113648",
+        "mrnno": "Temp012417113648",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "modality": [
+        "US"
+      ],
+      "examType": "Unspecified",
+      "tags": [
+        ""
+      ],
+      "requestingphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "referringphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "status": [
+        "New"
+      ],
+      "assignedUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "studyUid": "1.2.276.0.7230010.3.1.2.0.1204.1485258011.492713",
+      "qaUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "attendingUser": {
+        "id": "1002",
+        "prefix": "Dr.",
+        "firstName": "Cris",
+        "middleName": "",
+        "lastName": "Renella"
+      }
+    },
+    {
+      "studyId": 76000000010013,
+      "studyNo": "iViz Study 2",
+      "deleted": "Y",
+      "studyType": "",
+      "date": "Jan 31,2017 20:50:12",
+      "patient": {
+        "id": "Temp012517090536",
+        "mrnno": "Temp012517090536",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "modality": [
+        "US"
+      ],
+      "examType": "Unspecified",
+      "tags": [
+        ""
+      ],
+      "requestingphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "referringphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "status": [
+        "New"
+      ],
+      "assignedUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "studyUid": "1.2.276.0.7230010.3.1.2.0.1232.1485335509.299607",
+      "qaUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "attendingUser": {
+        "id": "1002",
+        "prefix": "Dr.",
+        "firstName": "Cris",
+        "middleName": "",
+        "lastName": "Renella"
+      }
+    },
+    {
+      "studyId": 76000000010014,
+      "studyNo": "iViz Study 1",
+      "deleted": "Y",
+      "studyType": "",
+      "date": "Feb 01,2017 12:03:54",
+      "patient": {
+        "id": "Temp012717062759",
+        "mrnno": "Temp012717062759",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "modality": [
+        "US"
+      ],
+      "examType": "Unspecified",
+      "tags": [
+        ""
+      ],
+      "requestingphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "referringphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "status": [
+        "New"
+      ],
+      "assignedUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "studyUid": "1.2.276.0.7230010.3.1.2.0.1220.1485499951.839959",
+      "qaUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "attendingUser": {
+        "id": "1002",
+        "prefix": "Dr.",
+        "firstName": "Cris",
+        "middleName": "",
+        "lastName": "Renella"
+      }
+    },
+    {
+      "studyId": 76000000010015,
+      "studyNo": "iViz Study 2",
+      "deleted": "Y",
+      "studyType": "",
+      "date": "Feb 09,2017 14:41:40",
+      "patient": {
+        "id": "Temp011117085144",
+        "mrnno": "Temp011117085144",
+        "prefix": "Mr",
+        "firstName": "Mark",
+        "middleName": "Twain",
+        "lastName": "Zuckerberg"
+      },
+      "modality": [
+        "US"
+      ],
+      "examType": "Unspecified",
+      "tags": [
+        ""
+      ],
+      "requestingphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "referringphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "status": [
+        "New"
+      ],
+      "assignedUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "studyUid": "1.2.276.0.7230010.3.1.2.0.1211.1484124776.573766",
+      "qaUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "attendingUser": {
+        "id": "1002",
+        "prefix": "Dr.",
+        "firstName": "Cris",
+        "middleName": "",
+        "lastName": "Renella"
+      }
+    },
+    {
+      "studyId": 76000000010016,
+      "studyNo": "iViz Study 3",
+      "deleted": "Y",
+      "studyType": "",
+      "date": "Feb 20,2017 15:19:44",
+      "patient": {
+        "id": "Temp123016080027",
+        "mrnno": "Temp123016080027",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "modality": [
+        "US"
+      ],
+      "examType": "Unspecified",
+      "tags": [
+        ""
+      ],
+      "requestingphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "referringphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "status": [
+        "New"
+      ],
+      "assignedUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "studyUid": "1.2.276.0.7230010.3.1.2.0.1187.1483084978.880959",
+      "qaUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "attendingUser": {
+        "id": "1002",
+        "prefix": "Dr.",
+        "firstName": "Cris",
+        "middleName": "",
+        "lastName": "Renella"
+      }
+    },
+    {
+      "studyId": 76000000010019,
+      "studyNo": null,
+      "deleted": "Y",
+      "studyType": "",
+      "date": "Feb 21,2017 16:45:09",
+      "patient": {
+        "id": "Temp123016080027",
+        "mrnno": "Temp123016080027",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "modality": [
+        "All"
+      ],
+      "examType": "Unspecified",
+      "tags": [
+        ""
+      ],
+      "requestingphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "referringphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "status": [
+        "New"
+      ],
+      "assignedUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "studyUid": "1.2.276.0.7230010.3.1.2.0.1187.1483084978.887959",
+      "qaUser": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "attendingUser": {
+        "id": "1002",
+        "prefix": "Dr.",
+        "firstName": "Cris",
+        "middleName": "",
+        "lastName": "Renella"
+      }
+    },
+    {
+      "studyId": 76000000010020,
+      "studyNo": "iViz Study 2",
+      "deleted": "Y",
+      "studyType": "",
+      "date": "Feb 21,2017 17:57:23",
+      "patient": {
+        "id": "Id123",
+        "mrnno": "Id123",
+        "prefix": "",
+        "firstName": "1",
+        "middleName": "",
+        "lastName": "Test"
+      },
+      "modality": [
+        "US"
+      ],
+      "examType": "Unspecified",
+      "tags": [
+        ""
+      ],
+      "requestingphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "referringphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "status": [
+        "QAAssigned"
+      ],
+      "assignedUser": {
+        "id": "1001",
+        "prefix": "Dr.",
+        "firstName": "John",
+        "middleName": "",
+        "lastName": "Williams"
+      },
+      "studyUid": "1.2.276.0.7230010.3.1.2.0.1209.1483961695.257413",
+      "qaUser": {
+        "id": "1002",
+        "prefix": "Dr.",
+        "firstName": "Cris",
+        "middleName": "",
+        "lastName": "Renella"
+      },
+      "attendingUser": {
+        "id": "1002",
+        "prefix": "Dr.",
+        "firstName": "Cris",
+        "middleName": "",
+        "lastName": "Renella"
+      }
+    }
+  ]
+}

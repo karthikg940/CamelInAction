@@ -1,0 +1,245 @@
+2017-11-28 11:51:08,172 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property 
+2017-11-28 11:51:08,737 [main] INFO  c.f.d.a.AnalyticsApplication - The following profiles are active: prod 
+2017-11-28 11:51:10,462 [main] WARN  o.s.c.a.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'. 
+2017-11-28 11:51:13,184 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:51:13,365 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:51:13,368 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:51:13,370 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:51:13,373 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:51:13,376 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:51:13,379 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:51:13,381 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:51:13,384 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:51:13,387 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:51:14,922 [main] WARN  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory 
+2017-11-28 11:51:14,944 [main] ERROR o.s.boot.SpringApplication - Application startup failed 
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaAutoConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1076)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:851)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:369)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1185)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1174)
+	at org.springframework.boot.SpringApplication$run.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:133)
+	at com.ffss.datax.analytics.AnalyticsApplication.main(AnalyticsApplication.groovy:22)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.persistenceException(EntityManagerFactoryBuilderImpl.java:954)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:882)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:60)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:338)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:373)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:362)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	... 20 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing table [capability]
+	at org.hibernate.tool.schema.internal.SchemaValidatorImpl.validateTable(SchemaValidatorImpl.java:67)
+	at org.hibernate.tool.schema.internal.SchemaValidatorImpl.doValidation(SchemaValidatorImpl.java:50)
+	at org.hibernate.tool.hbm2ddl.SchemaValidator.validate(SchemaValidator.java:91)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:473)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:444)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:879)
+	... 26 common frames omitted
+2017-11-28 11:51:47,017 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property 
+2017-11-28 11:51:48,315 [main] INFO  c.f.d.a.AnalyticsApplication - The following profiles are active: prod 
+2017-11-28 11:51:50,110 [main] WARN  o.s.c.a.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'. 
+2017-11-28 11:51:53,004 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:51:53,193 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:51:53,197 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:51:53,200 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:51:53,204 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:51:53,208 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:51:53,210 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:51:53,214 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:51:53,217 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:51:53,219 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:52:13,887 [main] WARN  c.n.c.s.URLConfigurationSource - No URLs will be polled as dynamic configuration sources. 
+2017-11-28 11:52:13,894 [main] WARN  c.n.c.s.URLConfigurationSource - No URLs will be polled as dynamic configuration sources. 
+2017-11-28 11:52:14,585 [main] INFO  c.s.j.spi.service.ServiceFinder - Running in a non-OSGi environment 
+2017-11-28 11:52:14,599 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface com.sun.jersey.client.proxy.ViewProxyProvider 
+2017-11-28 11:52:14,601 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface com.sun.jersey.spi.inject.InjectableProvider 
+2017-11-28 11:52:14,605 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.SAXParserContextProvider 
+2017-11-28 11:52:14,605 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.XMLStreamReaderContextProvider 
+2017-11-28 11:52:14,605 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.DocumentBuilderFactoryProvider 
+2017-11-28 11:52:14,605 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.TransformerFactoryProvider 
+2017-11-28 11:52:14,645 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface javax.ws.rs.ext.MessageBodyReader 
+2017-11-28 11:52:14,657 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.StringProvider 
+2017-11-28 11:52:14,657 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ByteArrayProvider 
+2017-11-28 11:52:14,657 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FileProvider 
+2017-11-28 11:52:14,657 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.InputStreamProvider 
+2017-11-28 11:52:14,657 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DataSourceProvider 
+2017-11-28 11:52:14,657 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.RenderedImageProvider 
+2017-11-28 11:52:14,657 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider 
+2017-11-28 11:52:14,657 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormProvider 
+2017-11-28 11:52:14,657 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider 
+2017-11-28 11:52:14,657 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App 
+2017-11-28 11:52:14,657 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text 
+2017-11-28 11:52:14,657 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General 
+2017-11-28 11:52:14,658 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App 
+2017-11-28 11:52:14,658 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text 
+2017-11-28 11:52:14,658 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General 
+2017-11-28 11:52:14,658 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App 
+2017-11-28 11:52:14,659 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text 
+2017-11-28 11:52:14,659 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General 
+2017-11-28 11:52:14,659 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ReaderProvider 
+2017-11-28 11:52:14,659 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DocumentProvider 
+2017-11-28 11:52:14,659 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$StreamSourceReader 
+2017-11-28 11:52:14,659 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$SAXSourceReader 
+2017-11-28 11:52:14,659 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$DOMSourceReader 
+2017-11-28 11:52:14,659 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$App 
+2017-11-28 11:52:14,659 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$Text 
+2017-11-28 11:52:14,659 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$General 
+2017-11-28 11:52:14,659 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.EntityHolderReader 
+2017-11-28 11:52:14,669 [main] INFO  c.s.j.c.s.component.ProviderFactory - A dependent class, javax/mail/MessagingException, of the component class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider is not found. The component is ignored. 
+2017-11-28 11:52:14,711 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface javax.ws.rs.ext.MessageBodyWriter 
+2017-11-28 11:52:14,713 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.StringProvider 
+2017-11-28 11:52:14,713 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ByteArrayProvider 
+2017-11-28 11:52:14,713 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FileProvider 
+2017-11-28 11:52:14,713 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.InputStreamProvider 
+2017-11-28 11:52:14,713 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DataSourceProvider 
+2017-11-28 11:52:14,713 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.RenderedImageProvider 
+2017-11-28 11:52:14,713 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider 
+2017-11-28 11:52:14,713 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormProvider 
+2017-11-28 11:52:14,713 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider 
+2017-11-28 11:52:14,713 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App 
+2017-11-28 11:52:14,713 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text 
+2017-11-28 11:52:14,713 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General 
+2017-11-28 11:52:14,713 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App 
+2017-11-28 11:52:14,713 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text 
+2017-11-28 11:52:14,713 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General 
+2017-11-28 11:52:14,713 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App 
+2017-11-28 11:52:14,713 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text 
+2017-11-28 11:52:14,713 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General 
+2017-11-28 11:52:14,713 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ReaderProvider 
+2017-11-28 11:52:14,713 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DocumentProvider 
+2017-11-28 11:52:14,713 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.StreamingOutputProvider 
+2017-11-28 11:52:14,713 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$SourceWriter 
+2017-11-28 11:52:14,714 [main] INFO  c.s.j.c.s.component.ProviderFactory - A dependent class, javax/mail/MessagingException, of the component class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider is not found. The component is ignored. 
+2017-11-28 11:52:16,010 [main] INFO  c.f.d.a.AnalyticsApplication - Started AnalyticsApplication in 30.745 seconds (JVM running for 31.982) 
+2017-11-28 12:19:40,318 [http-nio-7092-exec-2] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-28 12:19:40,318 [http-nio-7092-exec-1] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-28 12:19:46,716 [http-nio-7092-exec-2] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-28 12:19:46,716 [http-nio-7092-exec-1] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-28 12:19:46,775 [http-nio-7092-exec-2] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-28 12:19:46,802 [http-nio-7092-exec-1] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-28 12:19:46,861 [http-nio-7092-exec-2] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-28 12:19:46,862 [http-nio-7092-exec-1] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-28 14:52:16,035 [http-nio-7092-exec-5] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-28 14:52:16,083 [http-nio-7092-exec-5] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-28 14:52:16,142 [http-nio-7092-exec-5] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-28 14:52:16,158 [http-nio-7092-exec-5] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-28 14:57:41,699 [http-nio-7092-exec-7] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-28 14:57:41,729 [http-nio-7092-exec-7] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-28 14:57:41,734 [http-nio-7092-exec-7] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-28 14:57:41,770 [http-nio-7092-exec-7] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-28 14:57:57,769 [http-nio-7092-exec-8] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-28 14:57:57,831 [http-nio-7092-exec-8] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-28 14:57:57,834 [http-nio-7092-exec-8] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-28 14:57:57,837 [http-nio-7092-exec-8] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-28 15:00:25,704 [http-nio-7092-exec-10] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-28 15:00:25,778 [http-nio-7092-exec-10] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-28 15:00:25,783 [http-nio-7092-exec-10] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-28 15:00:25,799 [http-nio-7092-exec-10] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-28 15:00:48,695 [http-nio-7092-exec-2] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-28 15:00:48,699 [http-nio-7092-exec-2] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-28 15:00:48,739 [http-nio-7092-exec-2] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-28 15:00:48,750 [http-nio-7092-exec-2] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-28 15:03:41,970 [http-nio-7092-exec-4] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-28 15:03:42,050 [http-nio-7092-exec-4] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-28 15:03:42,067 [http-nio-7092-exec-4] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-28 15:03:42,131 [http-nio-7092-exec-4] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-28 15:03:53,376 [http-nio-7092-exec-3] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-28 15:03:53,410 [http-nio-7092-exec-3] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-28 15:03:53,413 [http-nio-7092-exec-3] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-28 15:03:53,415 [http-nio-7092-exec-3] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-28 15:05:59,121 [http-nio-7092-exec-6] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-28 15:05:59,163 [http-nio-7092-exec-6] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-28 15:05:59,165 [http-nio-7092-exec-6] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-28 15:05:59,197 [http-nio-7092-exec-6] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-28 15:22:04,082 [http-nio-7092-exec-8] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-28 15:22:04,217 [http-nio-7092-exec-8] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-28 15:22:04,220 [http-nio-7092-exec-8] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-28 15:22:04,233 [http-nio-7092-exec-8] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-28 15:24:15,730 [http-nio-7092-exec-10] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-28 15:24:15,794 [http-nio-7092-exec-10] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-28 15:24:15,831 [http-nio-7092-exec-10] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-28 15:24:15,836 [http-nio-7092-exec-10] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-28 15:24:51,655 [http-nio-7092-exec-1] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-28 15:24:51,688 [http-nio-7092-exec-1] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-28 15:24:51,693 [http-nio-7092-exec-1] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-28 15:24:51,724 [http-nio-7092-exec-1] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-28 15:25:19,848 [http-nio-7092-exec-4] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-28 15:25:19,863 [http-nio-7092-exec-4] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-28 15:25:19,865 [http-nio-7092-exec-4] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-28 15:25:19,895 [http-nio-7092-exec-4] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-28 15:26:20,415 [http-nio-7092-exec-5] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-28 15:26:20,451 [http-nio-7092-exec-5] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-28 15:26:20,466 [http-nio-7092-exec-5] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-28 15:26:20,484 [http-nio-7092-exec-5] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-28 15:29:06,635 [http-nio-7092-exec-7] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-28 15:29:06,658 [http-nio-7092-exec-7] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-28 15:29:06,663 [http-nio-7092-exec-7] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-28 15:29:06,689 [http-nio-7092-exec-7] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-28 15:31:49,306 [http-nio-7092-exec-9] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-28 15:31:49,309 [http-nio-7092-exec-9] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-28 15:31:49,338 [http-nio-7092-exec-9] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-28 15:31:49,339 [http-nio-7092-exec-9] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-28 15:33:44,714 [http-nio-7092-exec-2] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-28 15:33:44,717 [http-nio-7092-exec-2] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-28 15:33:44,755 [http-nio-7092-exec-2] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-28 15:33:44,758 [http-nio-7092-exec-2] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-28 15:34:17,889 [http-nio-7092-exec-4] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-28 15:34:17,902 [http-nio-7092-exec-4] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-28 15:34:17,926 [http-nio-7092-exec-4] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-28 15:34:17,942 [http-nio-7092-exec-4] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-28 15:37:10,611 [http-nio-7092-exec-5] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-28 15:37:10,650 [http-nio-7092-exec-5] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-28 15:37:10,696 [http-nio-7092-exec-5] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-28 15:37:10,715 [http-nio-7092-exec-5] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-28 15:40:16,973 [http-nio-7092-exec-7] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-28 15:40:16,995 [http-nio-7092-exec-7] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-28 15:40:17,011 [http-nio-7092-exec-7] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-28 15:40:17,013 [http-nio-7092-exec-7] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-28 15:44:33,203 [http-nio-7092-exec-9] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-28 15:44:33,307 [http-nio-7092-exec-9] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-28 15:44:33,310 [http-nio-7092-exec-9] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-28 15:44:33,323 [http-nio-7092-exec-9] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-28 16:18:07,207 [http-nio-7092-exec-2] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-28 16:18:07,210 [http-nio-7092-exec-2] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-28 16:18:07,212 [http-nio-7092-exec-2] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-28 16:18:07,214 [http-nio-7092-exec-2] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-28 16:18:15,647 [http-nio-7092-exec-1] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-28 16:18:15,734 [http-nio-7092-exec-1] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-28 16:18:15,764 [http-nio-7092-exec-1] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-28 16:18:15,783 [http-nio-7092-exec-1] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-28 16:33:02,366 [http-nio-7092-exec-3] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-28 16:33:02,400 [http-nio-7092-exec-3] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-28 16:33:02,402 [http-nio-7092-exec-3] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-28 16:33:02,404 [http-nio-7092-exec-3] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-28 16:33:07,246 [http-nio-7092-exec-5] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-28 16:33:07,275 [http-nio-7092-exec-5] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-28 16:33:07,280 [http-nio-7092-exec-5] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-28 16:33:07,299 [http-nio-7092-exec-5] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-28 16:33:22,843 [http-nio-7092-exec-6] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-28 16:33:22,864 [http-nio-7092-exec-6] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-28 16:33:22,891 [http-nio-7092-exec-6] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-28 16:33:22,910 [http-nio-7092-exec-6] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-28 16:40:56,613 [http-nio-7092-exec-8] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-28 16:40:56,695 [http-nio-7092-exec-8] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-28 16:40:56,731 [http-nio-7092-exec-8] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-28 16:40:56,736 [http-nio-7092-exec-8] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-29 14:38:51,552 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property 
+2017-11-29 14:38:52,427 [main] INFO  c.f.d.a.t.w.r.ReportGenerationSpec - The following profiles are active: prod 

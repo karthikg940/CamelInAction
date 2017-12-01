@@ -1,0 +1,17 @@
+<div class="row m-y-10">
+    <div class="col-md-12"><label *ngIf="name!=='' &&  type !== 'text' && type !== 'text-number' " class="fw-15">{{name}}:</label></div>
+    <div class="col-md-12">
+        <option-single-select *ngIf="type == 'single-select'" [qasign]="qasign" [id]="id" [data]="data.value" [columnLayout]="columnLayout" [options]="options" (onUpdate)="onChildChange($event);"></option-single-select>
+        <option-multi-select *ngIf="type == 'multi-select'" [qasign]="qasign" [id]="id" [data]="data.value" [columnLayout]="columnLayout" [options]="options" (onUpdate)="onChildChange($event);"></option-multi-select>
+        <option-text *ngIf="type == 'text'" [qasign]="qasign" [id]="id" [data]="data.value" [label]="name" (onUpdate)="onChildChange($event);"></option-text>
+        <option-text-number *ngIf="type == 'text-number'" [qasign]="qasign" [id]="id" [data]="data.value" [label]="name" (onUpdate)="onChildChange($event);"></option-text-number>
+    </div>
+    <div class="m-l-15">
+        <worksheet-topic *ngFor="let subtopic of topics"
+        [qasign]="qasign" [id]="subtopic.id" [name]="subtopic.name"
+        [type]="subtopic.type" [data]="data[subtopic.id]"
+        [topics]="subtopic.topics" [columnLayout]="subtopic.columnLayout"
+        [options]="subtopic.options" (onUpdate)="onChildChange($event)">
+      </worksheet-topic>
+    </div>
+</div>

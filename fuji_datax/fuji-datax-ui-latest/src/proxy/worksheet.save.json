@@ -1,0 +1,49 @@
+{
+  "study": {
+    "id": 2001
+  },
+  "examType": {
+    "id": 10002
+  },
+  "template": {
+    "id": 7002
+  },
+  "assignToUserId": {
+    "id": 2001
+  },
+  "content": {
+    "wrk1": {
+      "indications": {
+        "default": {
+          "value": {
+            "dyspnea": true
+          }
+        }
+      },
+      "views": {
+        "right-anterior-superior-thorax": {
+          "value": {
+            "right-anterior-superior-thorax": "adequate"
+          }
+        }
+      },
+      "findings": {
+        "right-thorax": {
+          "lung-sliding": {
+            "value": {
+              "present": true
+            }
+          }
+        }
+      },
+      "interpretations": {
+        "standard": {
+          "value": {
+            "acute-pulmonary-disease": true
+          }
+        }
+      }
+    }
+  }
+}
+

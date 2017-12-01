@@ -1,0 +1,247 @@
+<modal #userAddedPopup [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Add User</h4>
+  </modal-header>
+  <modal-body>
+      User added successfully
+  </modal-body>
+</modal>
+
+<modal #cancelUserPopup [keyboard]="false" [backdrop]="'static'">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Cancel user profile</h4>
+  </modal-header>
+  <modal-body>
+    Please Confirm Cancellation
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="cancelUser()">No</button>
+    <button type="button" class="btn btn-primary" (click)="confirmUserCancel()">Yes</button>
+  </modal-footer>
+</modal>
+
+<modal #userUpdatePopup [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Update User</h4>
+  </modal-header>
+  <modal-body>
+      Changes saved successfully
+  </modal-body>
+</modal>
+
+<modal #userModifyPopup [keyboard]="false" [backdrop]="'static'">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Cancel update user profile</h4>
+  </modal-header>
+  <modal-body>
+    There may be unsaved data. Please confirm to save changes before navigating
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="cancelchanges()">No</button>
+    <button type="button" class="btn btn-primary" (click)="updatechanges()">Yes</button>
+  </modal-footer>
+</modal>
+
+<!-- User Creation Page -->
+
+<div class="contentpage m-l-65">
+<div class="m-r-10">
+  <!-- Breadcrumbs -->
+  <div class="row m-x-0 bg-ssblue">
+    <div class="col-xs-12 col-sm-6 p-l-15">
+      <div class="pull-left color-white">
+        <h2 class="m-y-10">User Profile</h2>
+      </div>
+      <ol class="breadcrumb bg-ssblue pull-left fw-15 m-b-0 m-t-10 p-l-15">
+        <li><i class="fa fa-lg fa-user-circle color-white"></i></li>
+        <li class="color-white"><a routerLink="/userlist" class="color-white">User Profiles</a></li>
+        <li *ngIf="formState == 'Add'" class="color-white">New Profile</li>
+        <li *ngIf="formState == 'Modify'" class="color-white">View or Modify Profile</li>
+      </ol>
+    </div>
+  </div>
+  <!-- Breadcrumbs Ends -->
+
+  <div class="row m-t-15 m-x-0">
+  <div class="col-xs-12">
+    <form novalidate  #createUserForm="ngForm" novalidate>
+    <div class="col-md-offset-2 col-md-8 b-1-lightgray bg-white">
+    <div class="row m-x-0">
+    <div class="col-xs-12">
+    <h3 *ngIf="formState == 'Add'">New Profile</h3>
+    <h3 *ngIf="formState == 'Modify'">View or Modify Profile</h3>
+    </div>
+    </div>
+    <div class="row m-x-0 m-t-5">
+    <div class="col-sm-offset-2 col-md-offset-2 col-xs-12 col-sm-8 p-10">
+    <!--div class="col-xs-12 col-sm-3 col-md-2 p-x-0">
+    <span class="newuser-avatar"><img src="/assets/images/default-user-image.png"></span>
+    </div>
+    <div class="col-xs-12 col-md-10 p-x-0">
+    <div class="row m-x-0"><h3 class="m-y-0">Upload Avatar</h3></row></div>
+    <div class="row m-x-0"><span>Drag the image file here or Browse for the image</span></row></div>
+    </div-->
+    <!--div class="col-sm-offset-4 col-xs-12 col-sm-3 col-md-2 p-x-0 align-center">
+    <span class="newuser-avatar"><img src="/assets/images/default-user-image.png"></span>
+    </div-->
+    </div>
+    </div>
+    <div class="row m-x-0 m-t-5">
+    <div class="col-sm-offset-2 col-md-offset-2 col-xs-12 col-sm-8 p-10">
+    <div class="col-xs-12 p-x-0">
+    <div class="col-xs-12 form-group">
+    <div class="col-xs-6 col-md-3">
+    <label>Title <span class="color-red">*</span></label>
+    </div>
+    <div class="col-xs-6 col-md-6">
+
+    <select class="form-control" id="title" required [(ngModel)]="user.title" name="title" #title="ngModel" (change)="onChange($event)">
+    <option *ngFor="let item of selectOption" [value]="item.value" [disabled]="item.value=='Select'">{{item.value}}</option>
+    </select>
+    <div [hidden]="titleExists" class="alert alert-danger alertRequired">Title required</div>
+    </div>
+    </div>
+    </div>
+    <div class="col-xs-12 p-x-0">
+    <div class="col-xs-12 form-group">
+    <div class="col-xs-6 col-md-3">
+    <label>Prefix</label>
+    </div>
+    <div class="col-xs-6 col-md-6">
+    <select class="form-control" id="prefix" name="prefix"  [(ngModel)]="user.prefix">
+    <option *ngFor="let item of selectOptionPrefix" [value]="item.value" [disabled]="item.value=='Select'">{{item.value}}</option>
+    </select>
+    </div>
+    </div>
+    </div>
+    <div class="col-xs-12 p-x-0">
+    <div class="col-xs-12 form-group">
+    <div class="col-xs-6 col-md-3">
+    <label>First Name <span class="color-red">*</span></label>
+    </div>
+    <div class="col-xs-6 col-md-6">
+    <input type="text" class="form-control" (keypress)="validateAlpha($event);" id="firstName" required [(ngModel)]="user.firstName"
+    name="firstName" #firstName="ngModel" maxlength="25">
+    <div [hidden]="firstName.valid || (!createUserForm.submitted)" class="alert alert-danger alertRequired ">First Name required
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col-xs-12 p-x-0">
+    <div class="col-xs-12 form-group">
+    <div class="col-xs-6 col-md-3">
+    <label>Last Name <span class="color-red">*</span></label>
+    </div>
+    <div class="col-xs-6 col-md-6">
+    <input type="text" class="form-control" (keypress)="validateAlpha($event);" id="lastName" required [(ngModel)]="user.lastName" name="lastName" #lastName="ngModel" maxlength="35">
+    <div [hidden]="lastName.valid || (!createUserForm.submitted)" class="alert alert-danger alertRequired">Last Name required
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col-xs-12 p-x-0">
+    <div class="col-xs-12 form-group">
+    <div class="col-xs-6 col-md-3">
+    <label>Username <span class="color-red">*</span></label>
+    </div>
+    <div class="col-xs-6 col-md-6">
+    <input type="text" class="form-control" id="userName" required [(ngModel)]="user.userName" name="userName" #userName="ngModel" maxlength="20" (blur) = "formState == 'Modify'?true:getUser(userName.value)" [readonly] = "formState == 'Modify'?true:false" (focus)="removeUserNameError()">
+
+    <div [hidden]="userName.valid || (!createUserForm.submitted)" class="alert alert-danger alertRequired">
+    User Name required
+    </div>
+    <div [hidden]="!userExists || !userName.valid" class="alert alert-danger ">
+    User with this username already available in system. Please provide a different username
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col-xs-12 p-x-0">
+    <div class="col-xs-12 form-group">
+    <div class="col-xs-6 col-md-3">
+    <label>Mobile Number</label>
+    </div>
+    <div class="col-xs-6 col-md-6 clearfix">
+    <input type="text" class="form-control pull-left" (keypress)="validateNum($event);" id="phoneCountryCode" [(ngModel)]="user.phoneCountryCode" name="phoneCountryCode" #phoneCountryCode="ngModel" maxlength="3">
+    <input type="text" class="form-control pull-left m-l-5" (keypress)="validateNum($event);" id="phoneStateCode" [(ngModel)]="user.phoneStateCode" name="phoneStateCode" #phoneStateCode="ngModel" maxlength="3"><span id="spanHifen" class="pull-left m-x-3"> - </span>
+    <input type="text" class="form-control pull-left" (keypress)="validateNum($event);" id="phone" [(ngModel)]="user.phone" name="phone" #phone="ngModel" maxlength="7">
+    </div>
+    </div>
+    </div>
+    <div class="col-xs-12 p-x-0">
+    <div class="col-xs-12 form-group">
+    <div class="col-xs-6 col-md-3">
+    <label>Email<span class="color-red">*</span></label>
+    </div>
+    <div class="col-xs-6 col-md-6">
+    <input type="text" class="form-control" id="email" required [(ngModel)]="user.email" name="email" #email="ngModel" maxlength="100" (blur) = getEmailCheck(email.value) (focus)="removeAlert()">
+    <div [hidden]="!invalidEmail" class="alert alert-danger">
+    Please enter a valid Email ID
+    </div>
+    <div [hidden]="!email.valid || !emailExists" class="alert alert-danger">
+    User with this email ID already available in system. Please provide a different email ID
+    </div>
+    <div [hidden]="email.valid || (!createUserForm.submitted)" class="alert alert-danger alertRequired">Email required
+    </div>
+    </div>
+    </div>
+    </div>
+
+      <div class="col-xs-12 p-x-0">
+        <div class="col-xs-12 form-group">
+          <div class="col-xs-6 col-md-3">
+            <label>Privileges</label>
+          </div>
+          <div class="col-xs-6 col-md-6 clearfix">
+            <ng-select id="privileges" name="privileges" [multiple]="true" [items]="userPrivilegeList"
+            [active]="user.activePrivilegeList"  (data)="refreshPrivilege($event)"  ngDefaultControl></ng-select>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 p-x-0">
+        <div class="col-xs-12 form-group">
+          <div class="col-xs-6 col-md-3">
+            <label>Roles</label>
+          </div>
+          <div class="col-xs-6 col-md-6 clearfix">
+            <ng-select id="roles" name="roles" [multiple]="true" [items]="userRoleList"
+            [active]="user.activeRoleList" (data)="refreshRole($event)"></ng-select>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 p-x-0">
+        <div class="col-xs-12 form-group">
+          <div class="col-xs-6 col-md-3">
+            <label>User Group</label>
+          </div>
+          <div class="col-xs-6 col-md-6 clearfix">
+            <ng-select id="usergroup" name="usergroup" [multiple]="true" [items]="userGroupList"
+            [active]="user.activeGroupList" (data)="refreshUserGroup($event)"></ng-select>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 p-x-0">
+        <div class="col-xs-12 form-group">
+          <div class="col-xs-6 col-md-3">
+            <label>Org Level</label>
+          </div>
+          <div class="col-xs-6 col-md-6 clearfix">
+            <ng-select id="organizations" name="organizations" [multiple]="true" [items]="orgList"
+            [active]="user.activeOrgList" (data)="refreshOrgValue($event)"></ng-select>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 m-b-10 p-x-0">
+        <div class="col-xs-offset-4 col-md-offset-4">
+          <button type="button" class="btn btn-primary m-l-10" (click)="cancelPopup()">Cancel</button>
+          <button type="submit" class="btn btn-primary" (click)="doSave(createUserForm.value,createUserForm.valid,false)">Save</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    </form>
+  </div>
+  </div>
+</div>
+</div>

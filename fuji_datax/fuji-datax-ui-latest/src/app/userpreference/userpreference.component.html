@@ -1,0 +1,86 @@
+<div class="contentpage m-l-65">
+	<div class="">
+		<!-- Breadcrumbs -->
+		<div class="row m-x-0 bg-ssblue">
+			<div class="col-xs-12 col-sm-6 p-l-15">
+				<div class="pull-left color-white">
+					<h2 class="m-y-10">User Preference</h2>
+				</div>
+				<!-- <ol class="breadcrumb bg-ssblue pull-left fw-15 m-b-0 m-t-10 p-l-15">
+					<li><a href="#" class="color-white"><i
+							class="fa fa-lg fa-cog"></i></a></li>
+					<li class="color-white">System Configuration</li>
+					<li class="color-white">Login Security Policy</li>
+				</ol> -->
+			</div>
+		</div>
+		<!-- Breadcrumbs Ends -->
+
+		<!--userpreference Configuration-->
+
+		<div class="row m-t-15 m-x-0">
+			<div class="col-xs-12">
+				<form #userpreference="ngForm" novalidate>
+					<div class="col-md-offset-2 col-md-8 b-1-lightgray bg-white">
+						<div class="row m-x-0">
+							<div class="col-xs-12">
+								<h3>User Preference Configuration</h3>
+							</div>
+						</div>
+						<div class="row m-x-0 m-t-5">
+							<div
+								class="col-xs-12 col-sm-12 p-10 bg-lightgray fw-15"> Study Management </div>
+						</div>
+						<div class="row m-x-0 m-t-5">
+							<div class="col-xs-12 col-sm-10 p-10">
+							
+								<div class="col-xs-12 p-x-0">
+									<div class="col-xs-12 form-group">
+										<div class="col-xs-8 col-md-8">
+											<label>Manage Personal tags</label>
+										</div>
+										<div class="col-xs-4 col-md-4 p-x-0">
+										 	<div class="col-xs-12 col-md-12">
+								              <div class="col-xs-10 col-md-10 p-x-0">
+								                <input type="text"  class="form-control" [(ngModel)]="newPersonalTag" name="newPersonalTag" #title="ngModel" />
+								              </div>
+								              <div class="col-xs-2 col-md-2 p-r-10">
+								                <i class="fa fa-plus-circle color-primary fw-20 m-t-5 fa-close" aria-hidden="true" (click)="addType()"></i>
+								              </div>
+								            </div>
+								            <div class="col-xs-12 p-x-0">
+								              <div class="col-xs-12 form-group p-x-0 p-t-10">
+								                <div class="col-xs-12 col-md-8"></div>
+								                <div class="col-xs-12 col-md-12" >
+								                  <ul class="form-control fa-border"> <li *ngFor="let tag of personalTagsList; let i = tag" [attr.data]="i">
+								                  <span class="fa fa-times color-primary fa-close" aria-hidden="true" (click)="deleteType(tag)"></span><span>{{tag.name}}</span></li></ul>
+								                </div>
+								              </div>
+								            </div>
+										</div>
+									</div>
+								</div>
+								
+								 <div class="col-xs-12 m-b-10 p-x-0">
+									<div class="col-xs-offset-4 col-md-offset-5">
+										<button type="button" class="btn btn-primary" (click) = "clearAll()">Clear All</button>
+										<button type="button" class="btn btn-primary" (click)="savePersonalTags()">Save</button>
+									</div>
+								</div> 
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<modal #infoPopUp [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">{{titleMsg}}</h4>
+  </modal-header>
+  <modal-body>
+   {{subMsg}}
+  </modal-body>
+</modal>
+

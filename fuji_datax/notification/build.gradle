@@ -1,0 +1,16 @@
+jar {
+	baseName = 'notification'
+	version = '0.0.2-SNAPSHOT'
+}
+
+dependencies {
+	compile group: 'com.github.fernandospr', name: 'javapns-jdk16', version: '2.4.0'
+	compile('org.springframework.boot:spring-boot-starter-mail')
+	compile group: 'com.mitchellbosecke', name: 'pebble-spring-boot-starter', version: '2.3.0'
+	
+	testRuntime('cglib:cglib-nodep:3.2.4')
+	
+	compile project(':common')
+	compile project(':security')
+	
+}

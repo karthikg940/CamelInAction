@@ -1,0 +1,575 @@
+2017-11-23 12:39:45,167 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property 
+2017-11-23 12:39:45,558 [main] INFO  c.f.d.a.AuthenticationApplication - The following profiles are active: prod 
+2017-11-23 12:39:47,118 [main] WARN  o.s.c.a.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'. 
+2017-11-23 12:39:49,084 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 12:39:49,351 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 12:39:49,382 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 12:39:49,460 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 12:39:49,585 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 12:39:49,600 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 12:39:49,647 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 12:39:49,678 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 12:39:49,694 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 12:39:49,709 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 12:39:50,417 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd 
+2017-11-23 12:39:50,417 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd is liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-23 12:39:50,417 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-23 12:39:50,449 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd 
+2017-11-23 12:39:50,449 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd is liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-23 12:39:50,449 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-23 12:39:50,542 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd 
+2017-11-23 12:39:50,542 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd is liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-23 12:39:50,542 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-23 12:40:06,512 [main] WARN  c.n.c.s.URLConfigurationSource - No URLs will be polled as dynamic configuration sources. 
+2017-11-23 12:40:06,528 [main] WARN  c.n.c.s.URLConfigurationSource - No URLs will be polled as dynamic configuration sources. 
+2017-11-23 12:40:07,324 [main] INFO  c.s.j.spi.service.ServiceFinder - Running in a non-OSGi environment 
+2017-11-23 12:40:07,324 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface com.sun.jersey.client.proxy.ViewProxyProvider 
+2017-11-23 12:40:07,324 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface com.sun.jersey.spi.inject.InjectableProvider 
+2017-11-23 12:40:07,324 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.SAXParserContextProvider 
+2017-11-23 12:40:07,324 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.XMLStreamReaderContextProvider 
+2017-11-23 12:40:07,324 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.DocumentBuilderFactoryProvider 
+2017-11-23 12:40:07,324 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.TransformerFactoryProvider 
+2017-11-23 12:40:07,371 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface javax.ws.rs.ext.MessageBodyReader 
+2017-11-23 12:40:07,387 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.StringProvider 
+2017-11-23 12:40:07,387 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ByteArrayProvider 
+2017-11-23 12:40:07,387 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FileProvider 
+2017-11-23 12:40:07,387 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.InputStreamProvider 
+2017-11-23 12:40:07,387 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DataSourceProvider 
+2017-11-23 12:40:07,387 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.RenderedImageProvider 
+2017-11-23 12:40:07,387 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider 
+2017-11-23 12:40:07,387 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormProvider 
+2017-11-23 12:40:07,387 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider 
+2017-11-23 12:40:07,387 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App 
+2017-11-23 12:40:07,387 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text 
+2017-11-23 12:40:07,387 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General 
+2017-11-23 12:40:07,387 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App 
+2017-11-23 12:40:07,387 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text 
+2017-11-23 12:40:07,387 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General 
+2017-11-23 12:40:07,387 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App 
+2017-11-23 12:40:07,387 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text 
+2017-11-23 12:40:07,387 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General 
+2017-11-23 12:40:07,387 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ReaderProvider 
+2017-11-23 12:40:07,387 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DocumentProvider 
+2017-11-23 12:40:07,387 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$StreamSourceReader 
+2017-11-23 12:40:07,387 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$SAXSourceReader 
+2017-11-23 12:40:07,387 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$DOMSourceReader 
+2017-11-23 12:40:07,387 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$App 
+2017-11-23 12:40:07,387 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$Text 
+2017-11-23 12:40:07,387 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$General 
+2017-11-23 12:40:07,387 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.EntityHolderReader 
+2017-11-23 12:40:07,418 [main] INFO  c.s.j.c.s.component.ProviderFactory - A dependent class, javax/mail/MessagingException, of the component class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider is not found. The component is ignored. 
+2017-11-23 12:40:07,449 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface javax.ws.rs.ext.MessageBodyWriter 
+2017-11-23 12:40:07,449 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.StringProvider 
+2017-11-23 12:40:07,449 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ByteArrayProvider 
+2017-11-23 12:40:07,449 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FileProvider 
+2017-11-23 12:40:07,449 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.InputStreamProvider 
+2017-11-23 12:40:07,449 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DataSourceProvider 
+2017-11-23 12:40:07,449 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.RenderedImageProvider 
+2017-11-23 12:40:07,449 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider 
+2017-11-23 12:40:07,449 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormProvider 
+2017-11-23 12:40:07,449 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider 
+2017-11-23 12:40:07,449 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App 
+2017-11-23 12:40:07,449 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text 
+2017-11-23 12:40:07,449 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General 
+2017-11-23 12:40:07,449 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App 
+2017-11-23 12:40:07,449 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text 
+2017-11-23 12:40:07,449 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General 
+2017-11-23 12:40:07,449 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App 
+2017-11-23 12:40:07,449 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text 
+2017-11-23 12:40:07,449 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General 
+2017-11-23 12:40:07,449 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ReaderProvider 
+2017-11-23 12:40:07,449 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DocumentProvider 
+2017-11-23 12:40:07,449 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.StreamingOutputProvider 
+2017-11-23 12:40:07,449 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$SourceWriter 
+2017-11-23 12:40:07,449 [main] INFO  c.s.j.c.s.component.ProviderFactory - A dependent class, javax/mail/MessagingException, of the component class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider is not found. The component is ignored. 
+2017-11-23 12:40:08,088 [main] INFO  c.f.d.a.AuthenticationApplication - Started AuthenticationApplication in 24.122 seconds (JVM running for 24.932) 
+2017-11-23 13:08:50,126 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property 
+2017-11-23 13:08:50,548 [main] INFO  c.f.d.a.AuthenticationApplication - The following profiles are active: prod 
+2017-11-23 13:08:51,952 [main] WARN  o.s.c.a.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'. 
+2017-11-23 13:08:54,480 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 13:08:54,714 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 13:08:54,761 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 13:08:54,823 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 13:08:54,839 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 13:08:54,870 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 13:08:54,870 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 13:08:54,886 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 13:08:54,934 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 13:08:54,980 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 13:08:55,844 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd 
+2017-11-23 13:08:55,844 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd is liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-23 13:08:55,844 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-23 13:08:55,877 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd 
+2017-11-23 13:08:55,877 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd is liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-23 13:08:55,877 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-23 13:08:56,017 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd 
+2017-11-23 13:08:56,017 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd is liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-23 13:08:56,017 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-23 13:09:15,767 [main] WARN  c.n.c.s.URLConfigurationSource - No URLs will be polled as dynamic configuration sources. 
+2017-11-23 13:09:15,767 [main] WARN  c.n.c.s.URLConfigurationSource - No URLs will be polled as dynamic configuration sources. 
+2017-11-23 13:09:17,640 [main] INFO  c.s.j.spi.service.ServiceFinder - Running in a non-OSGi environment 
+2017-11-23 13:09:17,656 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface com.sun.jersey.client.proxy.ViewProxyProvider 
+2017-11-23 13:09:17,656 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface com.sun.jersey.spi.inject.InjectableProvider 
+2017-11-23 13:09:17,656 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.SAXParserContextProvider 
+2017-11-23 13:09:17,656 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.XMLStreamReaderContextProvider 
+2017-11-23 13:09:17,656 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.DocumentBuilderFactoryProvider 
+2017-11-23 13:09:17,656 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.TransformerFactoryProvider 
+2017-11-23 13:09:17,673 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface javax.ws.rs.ext.MessageBodyReader 
+2017-11-23 13:09:17,704 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.StringProvider 
+2017-11-23 13:09:17,704 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ByteArrayProvider 
+2017-11-23 13:09:17,704 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FileProvider 
+2017-11-23 13:09:17,704 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.InputStreamProvider 
+2017-11-23 13:09:17,704 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DataSourceProvider 
+2017-11-23 13:09:17,704 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.RenderedImageProvider 
+2017-11-23 13:09:17,704 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider 
+2017-11-23 13:09:17,704 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormProvider 
+2017-11-23 13:09:17,704 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider 
+2017-11-23 13:09:17,704 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App 
+2017-11-23 13:09:17,704 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text 
+2017-11-23 13:09:17,704 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General 
+2017-11-23 13:09:17,704 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App 
+2017-11-23 13:09:17,704 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text 
+2017-11-23 13:09:17,704 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General 
+2017-11-23 13:09:17,704 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App 
+2017-11-23 13:09:17,704 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text 
+2017-11-23 13:09:17,704 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General 
+2017-11-23 13:09:17,704 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ReaderProvider 
+2017-11-23 13:09:17,704 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DocumentProvider 
+2017-11-23 13:09:17,704 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$StreamSourceReader 
+2017-11-23 13:09:17,704 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$SAXSourceReader 
+2017-11-23 13:09:17,704 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$DOMSourceReader 
+2017-11-23 13:09:17,704 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$App 
+2017-11-23 13:09:17,704 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$Text 
+2017-11-23 13:09:17,704 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$General 
+2017-11-23 13:09:17,704 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.EntityHolderReader 
+2017-11-23 13:09:17,719 [main] INFO  c.s.j.c.s.component.ProviderFactory - A dependent class, javax/mail/MessagingException, of the component class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider is not found. The component is ignored. 
+2017-11-23 13:09:17,751 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface javax.ws.rs.ext.MessageBodyWriter 
+2017-11-23 13:09:17,751 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.StringProvider 
+2017-11-23 13:09:17,751 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ByteArrayProvider 
+2017-11-23 13:09:17,751 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FileProvider 
+2017-11-23 13:09:17,751 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.InputStreamProvider 
+2017-11-23 13:09:17,751 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DataSourceProvider 
+2017-11-23 13:09:17,751 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.RenderedImageProvider 
+2017-11-23 13:09:17,751 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider 
+2017-11-23 13:09:17,751 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormProvider 
+2017-11-23 13:09:17,751 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider 
+2017-11-23 13:09:17,751 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App 
+2017-11-23 13:09:17,751 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text 
+2017-11-23 13:09:17,751 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General 
+2017-11-23 13:09:17,751 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App 
+2017-11-23 13:09:17,751 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text 
+2017-11-23 13:09:17,751 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General 
+2017-11-23 13:09:17,751 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App 
+2017-11-23 13:09:17,751 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text 
+2017-11-23 13:09:17,751 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General 
+2017-11-23 13:09:17,751 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ReaderProvider 
+2017-11-23 13:09:17,751 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DocumentProvider 
+2017-11-23 13:09:17,751 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.StreamingOutputProvider 
+2017-11-23 13:09:17,751 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$SourceWriter 
+2017-11-23 13:09:17,751 [main] INFO  c.s.j.c.s.component.ProviderFactory - A dependent class, javax/mail/MessagingException, of the component class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider is not found. The component is ignored. 
+2017-11-23 13:09:18,109 [main] INFO  c.f.d.a.AuthenticationApplication - Started AuthenticationApplication in 29.184 seconds (JVM running for 29.993) 
+2017-11-23 13:22:15,183 [DiscoveryClient-HeartbeatExecutor-0] ERROR c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error 
+com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.put(WebResource.java:529)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:102)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:119)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:832)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1396)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:160)
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:84)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:273)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:261)
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:283)
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:251)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:223)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:272)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:124)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:882)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:117)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 26 common frames omitted
+2017-11-23 13:22:15,417 [DiscoveryClient-HeartbeatExecutor-0] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failure 
+2017-11-23 14:35:30,343 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property 
+2017-11-23 14:35:30,799 [main] INFO  c.f.d.a.AuthenticationApplication - The following profiles are active: prod 
+2017-11-23 14:35:32,857 [main] WARN  o.s.c.a.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'. 
+2017-11-23 14:35:35,225 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 14:35:35,686 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 14:35:35,764 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 14:35:35,912 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 14:35:35,953 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 14:35:35,995 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 14:35:36,045 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 14:35:36,100 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 14:35:36,134 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 14:35:36,209 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-23 14:35:38,730 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd 
+2017-11-23 14:35:38,730 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd is liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-23 14:35:38,731 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-23 14:35:38,936 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd 
+2017-11-23 14:35:38,937 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd is liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-23 14:35:38,937 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-23 14:35:39,074 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd 
+2017-11-23 14:35:39,074 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd is liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-23 14:35:39,074 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-23 14:36:05,813 [main] WARN  c.n.c.s.URLConfigurationSource - No URLs will be polled as dynamic configuration sources. 
+2017-11-23 14:36:05,818 [main] WARN  c.n.c.s.URLConfigurationSource - No URLs will be polled as dynamic configuration sources. 
+2017-11-23 14:36:08,863 [main] INFO  c.s.j.spi.service.ServiceFinder - Running in a non-OSGi environment 
+2017-11-23 14:36:08,869 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface com.sun.jersey.client.proxy.ViewProxyProvider 
+2017-11-23 14:36:08,871 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface com.sun.jersey.spi.inject.InjectableProvider 
+2017-11-23 14:36:08,874 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.SAXParserContextProvider 
+2017-11-23 14:36:08,874 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.XMLStreamReaderContextProvider 
+2017-11-23 14:36:08,874 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.DocumentBuilderFactoryProvider 
+2017-11-23 14:36:08,874 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.TransformerFactoryProvider 
+2017-11-23 14:36:08,935 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface javax.ws.rs.ext.MessageBodyReader 
+2017-11-23 14:36:08,946 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.StringProvider 
+2017-11-23 14:36:08,946 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ByteArrayProvider 
+2017-11-23 14:36:08,947 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FileProvider 
+2017-11-23 14:36:08,947 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.InputStreamProvider 
+2017-11-23 14:36:08,947 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DataSourceProvider 
+2017-11-23 14:36:08,947 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.RenderedImageProvider 
+2017-11-23 14:36:08,947 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider 
+2017-11-23 14:36:08,947 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormProvider 
+2017-11-23 14:36:08,947 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider 
+2017-11-23 14:36:08,947 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App 
+2017-11-23 14:36:08,947 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text 
+2017-11-23 14:36:08,947 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General 
+2017-11-23 14:36:08,947 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App 
+2017-11-23 14:36:08,947 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text 
+2017-11-23 14:36:08,947 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General 
+2017-11-23 14:36:08,947 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App 
+2017-11-23 14:36:08,947 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text 
+2017-11-23 14:36:08,947 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General 
+2017-11-23 14:36:08,948 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ReaderProvider 
+2017-11-23 14:36:08,948 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DocumentProvider 
+2017-11-23 14:36:08,948 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$StreamSourceReader 
+2017-11-23 14:36:08,948 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$SAXSourceReader 
+2017-11-23 14:36:08,948 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$DOMSourceReader 
+2017-11-23 14:36:08,948 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$App 
+2017-11-23 14:36:08,948 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$Text 
+2017-11-23 14:36:08,948 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$General 
+2017-11-23 14:36:08,948 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.EntityHolderReader 
+2017-11-23 14:36:09,043 [main] INFO  c.s.j.c.s.component.ProviderFactory - A dependent class, javax/mail/MessagingException, of the component class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider is not found. The component is ignored. 
+2017-11-23 14:36:09,094 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface javax.ws.rs.ext.MessageBodyWriter 
+2017-11-23 14:36:09,096 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.StringProvider 
+2017-11-23 14:36:09,096 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ByteArrayProvider 
+2017-11-23 14:36:09,096 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FileProvider 
+2017-11-23 14:36:09,096 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.InputStreamProvider 
+2017-11-23 14:36:09,096 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DataSourceProvider 
+2017-11-23 14:36:09,096 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.RenderedImageProvider 
+2017-11-23 14:36:09,096 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider 
+2017-11-23 14:36:09,096 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormProvider 
+2017-11-23 14:36:09,096 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider 
+2017-11-23 14:36:09,096 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App 
+2017-11-23 14:36:09,096 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text 
+2017-11-23 14:36:09,096 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General 
+2017-11-23 14:36:09,097 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App 
+2017-11-23 14:36:09,097 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text 
+2017-11-23 14:36:09,097 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General 
+2017-11-23 14:36:09,097 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App 
+2017-11-23 14:36:09,097 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text 
+2017-11-23 14:36:09,097 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General 
+2017-11-23 14:36:09,097 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ReaderProvider 
+2017-11-23 14:36:09,097 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DocumentProvider 
+2017-11-23 14:36:09,097 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.StreamingOutputProvider 
+2017-11-23 14:36:09,097 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$SourceWriter 
+2017-11-23 14:36:09,098 [main] INFO  c.s.j.c.s.component.ProviderFactory - A dependent class, javax/mail/MessagingException, of the component class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider is not found. The component is ignored. 
+2017-11-23 14:36:11,073 [main] INFO  c.f.d.a.AuthenticationApplication - Started AuthenticationApplication in 42.328 seconds (JVM running for 43.173) 
+2017-11-23 14:41:51,896 [DiscoveryClient-HeartbeatExecutor-0] ERROR c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error 
+com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.put(WebResource.java:529)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:102)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:119)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:832)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1396)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:160)
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:84)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:273)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:261)
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:283)
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:251)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:223)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:272)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:124)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:882)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:117)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 26 common frames omitted
+2017-11-23 14:41:51,896 [DiscoveryClient-CacheRefreshExecutor-0] ERROR c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error 
+com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.get(WebResource.java:509)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplicationsInternal(AbstractJerseyEurekaHttpClient.java:194)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getDelta(AbstractJerseyEurekaHttpClient.java:170)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:119)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1064)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:946)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1468)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1435)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:160)
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:84)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:273)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:261)
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:283)
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:251)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:223)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:272)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:124)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:882)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:117)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 29 common frames omitted
+2017-11-23 14:41:51,897 [DiscoveryClient-HeartbeatExecutor-0] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failure 
+2017-11-23 14:41:53,602 [DiscoveryClient-CacheRefreshExecutor-0] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failure 
+2017-11-23 14:42:01,605 [DiscoveryClient-HeartbeatExecutor-0] ERROR c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error 
+com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.put(WebResource.java:529)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:102)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:119)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:832)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1396)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:160)
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:84)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:273)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:261)
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:283)
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:251)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:223)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:272)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:124)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:882)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:117)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 27 common frames omitted
+2017-11-23 14:42:01,605 [DiscoveryClient-CacheRefreshExecutor-0] ERROR c.n.d.s.t.d.RedirectingEurekaHttpClient - Request execution error 
+com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187)
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123)
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27)
+	at com.sun.jersey.api.client.Client.handle(Client.java:652)
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
+	at com.sun.jersey.api.client.WebResource$Builder.get(WebResource.java:509)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplicationsInternal(AbstractJerseyEurekaHttpClient.java:194)
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getDelta(AbstractJerseyEurekaHttpClient.java:170)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:118)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:79)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:119)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1064)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:946)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1468)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1435)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:160)
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:84)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:273)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:261)
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:283)
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:251)
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:223)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:272)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:124)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:882)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:117)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173)
+	... 30 common frames omitted
+2017-11-23 14:42:01,605 [DiscoveryClient-HeartbeatExecutor-0] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failure 
+2017-11-23 14:42:01,605 [DiscoveryClient-CacheRefreshExecutor-0] WARN  c.n.d.s.t.d.RetryableEurekaHttpClient - Request execution failure 
+2017-11-23 14:42:01,606 [DiscoveryClient-HeartbeatExecutor-0] ERROR c.netflix.discovery.DiscoveryClient - DiscoveryClient_AUTH/CNDKARTHIKG.Virtusa.com:auth:7084 - was unable to send heartbeat! 
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:111)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89)
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:832)
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1396)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-23 14:42:01,607 [DiscoveryClient-CacheRefreshExecutor-0] ERROR c.netflix.discovery.DiscoveryClient - DiscoveryClient_AUTH/CNDKARTHIKG.Virtusa.com:auth:7084 - was unable to refresh its cache! status = Cannot execute request on any known server 
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:111)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149)
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1064)
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:946)
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1468)
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1435)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+2017-11-23 14:58:23,099 [http-nio-7084-exec-2] INFO  c.f.d.a.service.UserPasswordService -  --->> Password will expire in 7023.2791088889 hours 
+2017-11-23 14:58:24,975 [http-nio-7084-exec-3] INFO  c.f.d.a.service.UserPasswordService -  --->> Password will expire in 7023.278340555555 hours 
+2017-11-23 16:09:51,945 [http-nio-7084-exec-9] INFO  c.f.d.a.service.UserPasswordService -  --->> Password will expire in 7022.0875152778 hours 
+2017-11-23 16:37:48,062 [http-nio-7084-exec-3] INFO  c.f.d.a.service.UserPasswordService -  --->> Password will expire in 7021.6219272222 hours 
+2017-11-23 16:39:03,258 [http-nio-7084-exec-5] INFO  c.f.d.a.service.UserPasswordService -  --->> Password will expire in 7021.6010397222 hours 
+2017-11-23 16:46:57,703 [http-nio-7084-exec-8] INFO  c.f.d.a.service.UserPasswordService -  --->> Password will expire in 7021.4692491667 hours 
+2017-11-23 16:51:10,028 [http-nio-7084-exec-1] INFO  c.f.d.a.service.UserPasswordService -  --->> Password will expire in 7021.399161944445 hours 
+2017-11-23 16:56:15,860 [http-nio-7084-exec-3] INFO  c.f.d.a.service.UserPasswordService -  --->> Password will expire in 7021.3142558333 hours 
+2017-11-23 17:10:08,393 [http-nio-7084-exec-5] INFO  c.f.d.a.service.UserPasswordService -  --->> Password will expire in 7021.0829463889 hours 
+2017-11-23 17:14:26,862 [http-nio-7084-exec-2] INFO  c.f.d.a.service.UserPasswordService -  --->> Password will expire in 7021.0111566667 hours 
+2017-11-23 17:53:40,796 [http-nio-7084-exec-10] INFO  c.f.d.a.service.UserPasswordService -  --->> Password will expire in 7020.3572791667 hours 
+2017-11-23 17:53:41,087 [http-nio-7084-exec-7] INFO  c.f.d.a.service.UserPasswordService -  --->> Password will expire in 7020.3572013889 hours 
+2017-11-23 17:53:41,175 [http-nio-7084-exec-3] INFO  c.f.d.a.service.UserPasswordService -  --->> Password will expire in 7020.3571808333 hours 
+2017-11-23 17:53:41,664 [http-nio-7084-exec-1] INFO  c.f.d.a.service.UserPasswordService -  --->> Password will expire in 7020.3570477778 hours 
+2017-11-23 17:54:18,375 [http-nio-7084-exec-6] INFO  c.f.d.a.service.UserPasswordService -  --->> Password will expire in 7020.346840555555 hours 
+2017-11-23 18:12:19,732 [http-nio-7084-exec-7] INFO  c.f.d.a.service.UserPasswordService -  --->> Password will expire in 7020.0464911111 hours 
+2017-11-23 18:19:31,197 [http-nio-7084-exec-6] INFO  c.f.d.a.service.UserPasswordService -  --->> Password will expire in 7019.9266122222 hours 

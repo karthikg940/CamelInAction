@@ -1,0 +1,548 @@
+2017-11-21 10:53:05,654 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property 
+2017-11-21 10:53:06,077 [main] INFO  c.f.d.c.t.w.r.ConfigurationSpec - The following profiles are active: prod 
+2017-11-21 10:53:14,096 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property 
+2017-11-21 10:53:14,492 [main] INFO  c.f.d.c.ConfigurationApplication - The following profiles are active: test 
+2017-11-21 10:53:16,694 [main] WARN  o.s.c.a.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'. 
+2017-11-21 10:53:18,814 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 10:53:19,231 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 10:53:19,408 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 10:53:19,799 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 10:53:19,854 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 10:53:19,941 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 10:53:19,950 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 10:53:19,990 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 10:53:20,016 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 10:53:20,139 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 10:53:21,223 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd 
+2017-11-21 10:53:21,223 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd is liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-21 10:53:21,223 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-21 10:53:21,255 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd 
+2017-11-21 10:53:21,255 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd is liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-21 10:53:21,256 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-21 10:53:21,339 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd 
+2017-11-21 10:53:21,339 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd is liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-21 10:53:21,340 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-21 10:53:21,428 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd 
+2017-11-21 10:53:21,429 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd is liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-21 10:53:21,429 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-21 10:53:22,154 [main] WARN  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.MigrationFailedException: Migration failed for change set classpath:config/liquibase/changelog/dataxdata_test.xml::20170118100578::virtusapolaris:
+     Reason: liquibase.exception.DatabaseException: Duplicate entry '1' for key 'PRIMARY' [Failed SQL: INSERT INTO datax.audit_event_type (EVENT_TYPE_PK, EVENT_CODE, EVENT_CODE_DESCRIPTION, CREATED_DATE_TIME, UPDATED_DATE_TIME) VALUES ('1', '100', 'Login to the application', now(), now())] 
+2017-11-21 10:53:22,196 [main] ERROR o.s.boot.SpringApplication - Application startup failed 
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.MigrationFailedException: Migration failed for change set classpath:config/liquibase/changelog/dataxdata_test.xml::20170118100578::virtusapolaris:
+     Reason: liquibase.exception.DatabaseException: Duplicate entry '1' for key 'PRIMARY' [Failed SQL: INSERT INTO datax.audit_event_type (EVENT_TYPE_PK, EVENT_CODE, EVENT_CODE_DESCRIPTION, CREATED_DATE_TIME, UPDATED_DATE_TIME) VALUES ('1', '100', 'Login to the application', now(), now())]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1076)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:851)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:369)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1185)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1174)
+	at org.springframework.boot.SpringApplication$run.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:133)
+	at com.ffss.datax.configuration.ConfigurationApplication.main(ConfigurationApplication.groovy:20)
+Caused by: liquibase.exception.MigrationFailedException: Migration failed for change set classpath:config/liquibase/changelog/dataxdata_test.xml::20170118100578::virtusapolaris:
+     Reason: liquibase.exception.DatabaseException: Duplicate entry '1' for key 'PRIMARY' [Failed SQL: INSERT INTO datax.audit_event_type (EVENT_TYPE_PK, EVENT_CODE, EVENT_CODE_DESCRIPTION, CREATED_DATE_TIME, UPDATED_DATE_TIME) VALUES ('1', '100', 'Login to the application', now(), now())]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:605)
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:51)
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:79)
+	at liquibase.Liquibase.update(Liquibase.java:214)
+	at liquibase.Liquibase.update(Liquibase.java:192)
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:434)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:391)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	... 22 common frames omitted
+Caused by: liquibase.exception.DatabaseException: Duplicate entry '1' for key 'PRIMARY' [Failed SQL: INSERT INTO datax.audit_event_type (EVENT_TYPE_PK, EVENT_CODE, EVENT_CODE_DESCRIPTION, CREATED_DATE_TIME, UPDATED_DATE_TIME) VALUES ('1', '100', 'Login to the application', now(), now())]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:301)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:55)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:107)
+	at liquibase.database.AbstractJdbcDatabase.execute(AbstractJdbcDatabase.java:1273)
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1255)
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:568)
+	... 30 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1' for key 'PRIMARY'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:934)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3966)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3902)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2526)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2673)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2545)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2503)
+	at com.mysql.jdbc.StatementImpl.executeInternal(StatementImpl.java:839)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:739)
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:299)
+	... 35 common frames omitted
+2017-11-21 10:56:15,615 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property 
+2017-11-21 10:56:15,992 [main] INFO  c.f.d.c.ConfigurationApplication - The following profiles are active: test 
+2017-11-21 10:56:17,975 [main] WARN  o.s.c.a.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'. 
+2017-11-21 10:56:20,255 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 10:56:20,509 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 10:56:20,556 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 10:56:20,583 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 10:56:20,620 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 10:56:20,645 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 10:56:20,672 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 10:56:20,681 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 10:56:20,702 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 10:56:20,735 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 10:56:21,403 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd 
+2017-11-21 10:56:21,403 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd is liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-21 10:56:21,404 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-21 10:56:21,437 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd 
+2017-11-21 10:56:21,437 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd is liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-21 10:56:21,437 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-21 10:56:21,525 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd 
+2017-11-21 10:56:21,525 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd is liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-21 10:56:21,525 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-21 10:56:21,614 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd 
+2017-11-21 10:56:21,614 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd is liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-21 10:56:21,615 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-21 10:56:22,043 [main] WARN  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.MigrationFailedException: Migration failed for change set classpath:config/liquibase/changelog/dataxdata_test.xml::20170118100578::virtusapolaris:
+     Reason: liquibase.exception.DatabaseException: Duplicate entry '1' for key 'PRIMARY' [Failed SQL: INSERT INTO datax.audit_event_type (EVENT_TYPE_PK, EVENT_CODE, EVENT_CODE_DESCRIPTION, CREATED_DATE_TIME, UPDATED_DATE_TIME) VALUES ('1', '100', 'Login to the application', now(), now())] 
+2017-11-21 10:56:22,065 [main] ERROR o.s.boot.SpringApplication - Application startup failed 
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.MigrationFailedException: Migration failed for change set classpath:config/liquibase/changelog/dataxdata_test.xml::20170118100578::virtusapolaris:
+     Reason: liquibase.exception.DatabaseException: Duplicate entry '1' for key 'PRIMARY' [Failed SQL: INSERT INTO datax.audit_event_type (EVENT_TYPE_PK, EVENT_CODE, EVENT_CODE_DESCRIPTION, CREATED_DATE_TIME, UPDATED_DATE_TIME) VALUES ('1', '100', 'Login to the application', now(), now())]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1076)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:851)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:369)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1185)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1174)
+	at org.springframework.boot.SpringApplication$run.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:133)
+	at com.ffss.datax.configuration.ConfigurationApplication.main(ConfigurationApplication.groovy:20)
+Caused by: liquibase.exception.MigrationFailedException: Migration failed for change set classpath:config/liquibase/changelog/dataxdata_test.xml::20170118100578::virtusapolaris:
+     Reason: liquibase.exception.DatabaseException: Duplicate entry '1' for key 'PRIMARY' [Failed SQL: INSERT INTO datax.audit_event_type (EVENT_TYPE_PK, EVENT_CODE, EVENT_CODE_DESCRIPTION, CREATED_DATE_TIME, UPDATED_DATE_TIME) VALUES ('1', '100', 'Login to the application', now(), now())]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:605)
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:51)
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:79)
+	at liquibase.Liquibase.update(Liquibase.java:214)
+	at liquibase.Liquibase.update(Liquibase.java:192)
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:434)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:391)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	... 22 common frames omitted
+Caused by: liquibase.exception.DatabaseException: Duplicate entry '1' for key 'PRIMARY' [Failed SQL: INSERT INTO datax.audit_event_type (EVENT_TYPE_PK, EVENT_CODE, EVENT_CODE_DESCRIPTION, CREATED_DATE_TIME, UPDATED_DATE_TIME) VALUES ('1', '100', 'Login to the application', now(), now())]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:301)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:55)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:107)
+	at liquibase.database.AbstractJdbcDatabase.execute(AbstractJdbcDatabase.java:1273)
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1255)
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:568)
+	... 30 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1' for key 'PRIMARY'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:934)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3966)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3902)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2526)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2673)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2545)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2503)
+	at com.mysql.jdbc.StatementImpl.executeInternal(StatementImpl.java:839)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:739)
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:299)
+	... 35 common frames omitted
+2017-11-21 13:52:02,088 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property 
+2017-11-21 13:52:02,517 [main] INFO  c.f.d.c.ConfigurationApplication - The following profiles are active: test 
+2017-11-21 13:52:04,553 [main] WARN  o.s.c.a.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'. 
+2017-11-21 13:52:06,587 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:52:06,802 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:52:06,815 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:52:06,831 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:52:06,834 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:52:06,854 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:52:06,857 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:52:06,889 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:52:06,892 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:52:06,896 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:52:07,528 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd 
+2017-11-21 13:52:07,528 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd is liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-21 13:52:07,529 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-21 13:52:07,565 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd 
+2017-11-21 13:52:07,565 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd is liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-21 13:52:07,565 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-21 13:52:07,713 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd 
+2017-11-21 13:52:07,713 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd is liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-21 13:52:07,713 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-21 13:52:07,802 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd 
+2017-11-21 13:52:07,802 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd is liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-21 13:52:07,802 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-21 13:52:08,199 [main] WARN  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.MigrationFailedException: Migration failed for change set classpath:config/liquibase/changelog/dataxdata_test.xml::20170118100578::virtusapolaris:
+     Reason: liquibase.exception.DatabaseException: Duplicate entry '1' for key 'PRIMARY' [Failed SQL: INSERT INTO datax.audit_event_type (EVENT_TYPE_PK, EVENT_CODE, EVENT_CODE_DESCRIPTION, CREATED_DATE_TIME, UPDATED_DATE_TIME) VALUES ('1', '100', 'Login to the application', now(), now())] 
+2017-11-21 13:52:08,260 [main] ERROR o.s.boot.SpringApplication - Application startup failed 
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.MigrationFailedException: Migration failed for change set classpath:config/liquibase/changelog/dataxdata_test.xml::20170118100578::virtusapolaris:
+     Reason: liquibase.exception.DatabaseException: Duplicate entry '1' for key 'PRIMARY' [Failed SQL: INSERT INTO datax.audit_event_type (EVENT_TYPE_PK, EVENT_CODE, EVENT_CODE_DESCRIPTION, CREATED_DATE_TIME, UPDATED_DATE_TIME) VALUES ('1', '100', 'Login to the application', now(), now())]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1076)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:851)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:369)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1185)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1174)
+	at org.springframework.boot.SpringApplication$run.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:133)
+	at com.ffss.datax.configuration.ConfigurationApplication.main(ConfigurationApplication.groovy:20)
+Caused by: liquibase.exception.MigrationFailedException: Migration failed for change set classpath:config/liquibase/changelog/dataxdata_test.xml::20170118100578::virtusapolaris:
+     Reason: liquibase.exception.DatabaseException: Duplicate entry '1' for key 'PRIMARY' [Failed SQL: INSERT INTO datax.audit_event_type (EVENT_TYPE_PK, EVENT_CODE, EVENT_CODE_DESCRIPTION, CREATED_DATE_TIME, UPDATED_DATE_TIME) VALUES ('1', '100', 'Login to the application', now(), now())]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:605)
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:51)
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:79)
+	at liquibase.Liquibase.update(Liquibase.java:214)
+	at liquibase.Liquibase.update(Liquibase.java:192)
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:434)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:391)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	... 22 common frames omitted
+Caused by: liquibase.exception.DatabaseException: Duplicate entry '1' for key 'PRIMARY' [Failed SQL: INSERT INTO datax.audit_event_type (EVENT_TYPE_PK, EVENT_CODE, EVENT_CODE_DESCRIPTION, CREATED_DATE_TIME, UPDATED_DATE_TIME) VALUES ('1', '100', 'Login to the application', now(), now())]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:301)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:55)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:107)
+	at liquibase.database.AbstractJdbcDatabase.execute(AbstractJdbcDatabase.java:1273)
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1255)
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:568)
+	... 30 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1' for key 'PRIMARY'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:934)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3966)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3902)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2526)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2673)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2545)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2503)
+	at com.mysql.jdbc.StatementImpl.executeInternal(StatementImpl.java:839)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:739)
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:299)
+	... 35 common frames omitted
+2017-11-21 13:56:19,400 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property 
+2017-11-21 13:56:19,754 [main] INFO  c.f.d.c.ConfigurationApplication - The following profiles are active: test 
+2017-11-21 13:56:21,732 [main] WARN  o.s.c.a.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'. 
+2017-11-21 13:56:23,672 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:56:23,860 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:56:23,871 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:56:23,875 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:56:23,913 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:56:23,916 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:56:23,920 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:56:23,923 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:56:23,926 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:56:23,953 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:56:24,566 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd 
+2017-11-21 13:56:24,566 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd is liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-21 13:56:24,566 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-21 13:56:24,599 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd 
+2017-11-21 13:56:24,599 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd is liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-21 13:56:24,599 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-21 13:56:24,684 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd 
+2017-11-21 13:56:24,684 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd is liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-21 13:56:24,684 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-21 13:56:24,763 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd 
+2017-11-21 13:56:24,763 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd is liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-21 13:56:24,764 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-21 13:56:25,046 [main] WARN  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.MigrationFailedException: Migration failed for change set classpath:config/liquibase/changelog/dataxdata_test.xml::20170118100578::virtusapolaris:
+     Reason: liquibase.exception.DatabaseException: Duplicate entry '1' for key 'PRIMARY' [Failed SQL: INSERT INTO datax.audit_event_type (EVENT_TYPE_PK, EVENT_CODE, EVENT_CODE_DESCRIPTION, CREATED_DATE_TIME, UPDATED_DATE_TIME) VALUES ('1', '100', 'Login to the application', now(), now())] 
+2017-11-21 13:56:25,068 [main] ERROR o.s.boot.SpringApplication - Application startup failed 
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.MigrationFailedException: Migration failed for change set classpath:config/liquibase/changelog/dataxdata_test.xml::20170118100578::virtusapolaris:
+     Reason: liquibase.exception.DatabaseException: Duplicate entry '1' for key 'PRIMARY' [Failed SQL: INSERT INTO datax.audit_event_type (EVENT_TYPE_PK, EVENT_CODE, EVENT_CODE_DESCRIPTION, CREATED_DATE_TIME, UPDATED_DATE_TIME) VALUES ('1', '100', 'Login to the application', now(), now())]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1076)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:851)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:369)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1185)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1174)
+	at org.springframework.boot.SpringApplication$run.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:133)
+	at com.ffss.datax.configuration.ConfigurationApplication.main(ConfigurationApplication.groovy:20)
+Caused by: liquibase.exception.MigrationFailedException: Migration failed for change set classpath:config/liquibase/changelog/dataxdata_test.xml::20170118100578::virtusapolaris:
+     Reason: liquibase.exception.DatabaseException: Duplicate entry '1' for key 'PRIMARY' [Failed SQL: INSERT INTO datax.audit_event_type (EVENT_TYPE_PK, EVENT_CODE, EVENT_CODE_DESCRIPTION, CREATED_DATE_TIME, UPDATED_DATE_TIME) VALUES ('1', '100', 'Login to the application', now(), now())]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:605)
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:51)
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:79)
+	at liquibase.Liquibase.update(Liquibase.java:214)
+	at liquibase.Liquibase.update(Liquibase.java:192)
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:434)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:391)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	... 22 common frames omitted
+Caused by: liquibase.exception.DatabaseException: Duplicate entry '1' for key 'PRIMARY' [Failed SQL: INSERT INTO datax.audit_event_type (EVENT_TYPE_PK, EVENT_CODE, EVENT_CODE_DESCRIPTION, CREATED_DATE_TIME, UPDATED_DATE_TIME) VALUES ('1', '100', 'Login to the application', now(), now())]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:301)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:55)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:107)
+	at liquibase.database.AbstractJdbcDatabase.execute(AbstractJdbcDatabase.java:1273)
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1255)
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:568)
+	... 30 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1' for key 'PRIMARY'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:934)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3966)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3902)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2526)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2673)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2545)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2503)
+	at com.mysql.jdbc.StatementImpl.executeInternal(StatementImpl.java:839)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:739)
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:299)
+	... 35 common frames omitted
+2017-11-21 13:59:34,447 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property 
+2017-11-21 13:59:35,397 [main] INFO  c.f.d.c.ConfigurationApplication - The following profiles are active: test 
+2017-11-21 13:59:38,078 [main] WARN  o.s.c.a.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'. 
+2017-11-21 13:59:40,979 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:59:41,203 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:59:41,301 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:59:41,343 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:59:41,349 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:59:41,385 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:59:41,391 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:59:41,398 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:59:41,402 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:59:41,415 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 13:59:42,183 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd 
+2017-11-21 13:59:42,183 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd is liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-21 13:59:42,184 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-21 13:59:42,244 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd 
+2017-11-21 13:59:42,244 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd is liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-21 13:59:42,245 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-21 13:59:42,492 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd 
+2017-11-21 13:59:42,493 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd is liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-21 13:59:42,493 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-21 13:59:42,624 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd 
+2017-11-21 13:59:42,624 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd is liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-21 13:59:42,624 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-21 13:59:43,149 [main] WARN  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.MigrationFailedException: Migration failed for change set classpath:config/liquibase/changelog/dataxdata_test.xml::20170118100578::virtusapolaris:
+     Reason: liquibase.exception.DatabaseException: Duplicate entry '1' for key 'PRIMARY' [Failed SQL: INSERT INTO datax.audit_event_type (EVENT_TYPE_PK, EVENT_CODE, EVENT_CODE_DESCRIPTION, CREATED_DATE_TIME, UPDATED_DATE_TIME) VALUES ('1', '100', 'Login to the application', now(), now())] 
+2017-11-21 13:59:43,180 [main] ERROR o.s.boot.SpringApplication - Application startup failed 
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.MigrationFailedException: Migration failed for change set classpath:config/liquibase/changelog/dataxdata_test.xml::20170118100578::virtusapolaris:
+     Reason: liquibase.exception.DatabaseException: Duplicate entry '1' for key 'PRIMARY' [Failed SQL: INSERT INTO datax.audit_event_type (EVENT_TYPE_PK, EVENT_CODE, EVENT_CODE_DESCRIPTION, CREATED_DATE_TIME, UPDATED_DATE_TIME) VALUES ('1', '100', 'Login to the application', now(), now())]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1076)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:851)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:369)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1185)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1174)
+	at org.springframework.boot.SpringApplication$run.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:133)
+	at com.ffss.datax.configuration.ConfigurationApplication.main(ConfigurationApplication.groovy:20)
+Caused by: liquibase.exception.MigrationFailedException: Migration failed for change set classpath:config/liquibase/changelog/dataxdata_test.xml::20170118100578::virtusapolaris:
+     Reason: liquibase.exception.DatabaseException: Duplicate entry '1' for key 'PRIMARY' [Failed SQL: INSERT INTO datax.audit_event_type (EVENT_TYPE_PK, EVENT_CODE, EVENT_CODE_DESCRIPTION, CREATED_DATE_TIME, UPDATED_DATE_TIME) VALUES ('1', '100', 'Login to the application', now(), now())]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:605)
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:51)
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:79)
+	at liquibase.Liquibase.update(Liquibase.java:214)
+	at liquibase.Liquibase.update(Liquibase.java:192)
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:434)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:391)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	... 22 common frames omitted
+Caused by: liquibase.exception.DatabaseException: Duplicate entry '1' for key 'PRIMARY' [Failed SQL: INSERT INTO datax.audit_event_type (EVENT_TYPE_PK, EVENT_CODE, EVENT_CODE_DESCRIPTION, CREATED_DATE_TIME, UPDATED_DATE_TIME) VALUES ('1', '100', 'Login to the application', now(), now())]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:301)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:55)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:107)
+	at liquibase.database.AbstractJdbcDatabase.execute(AbstractJdbcDatabase.java:1273)
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1255)
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:568)
+	... 30 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1' for key 'PRIMARY'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:934)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3966)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3902)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2526)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2673)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2545)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2503)
+	at com.mysql.jdbc.StatementImpl.executeInternal(StatementImpl.java:839)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:739)
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:299)
+	... 35 common frames omitted
+2017-11-21 21:14:43,651 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property 
+2017-11-21 21:14:44,074 [main] INFO  c.f.d.c.ConfigurationApplication - The following profiles are active: test 
+2017-11-21 21:14:46,556 [main] WARN  o.s.c.a.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'. 
+2017-11-21 21:14:48,581 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 21:14:48,779 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 21:14:48,816 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 21:14:48,847 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 21:14:48,850 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 21:14:48,877 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 21:14:48,931 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 21:14:48,934 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 21:14:48,939 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 21:14:48,976 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-21 21:14:49,685 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd 
+2017-11-21 21:14:49,685 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd is liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-21 21:14:49,686 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-21 21:14:49,720 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd 
+2017-11-21 21:14:49,720 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd is liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-21 21:14:49,720 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-21 21:14:49,801 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd 
+2017-11-21 21:14:49,801 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd is liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-21 21:14:49,802 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-21 21:14:49,878 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd 
+2017-11-21 21:14:49,878 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd is liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-21 21:14:49,878 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-21 21:14:50,224 [main] WARN  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.MigrationFailedException: Migration failed for change set classpath:config/liquibase/changelog/dataxdata_test.xml::20170118100578::virtusapolaris:
+     Reason: liquibase.exception.DatabaseException: Duplicate entry '1' for key 'PRIMARY' [Failed SQL: INSERT INTO datax.audit_event_type (EVENT_TYPE_PK, EVENT_CODE, EVENT_CODE_DESCRIPTION, CREATED_DATE_TIME, UPDATED_DATE_TIME) VALUES ('1', '100', 'Login to the application', now(), now())] 
+2017-11-21 21:14:50,266 [main] ERROR o.s.boot.SpringApplication - Application startup failed 
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'liquibase' defined in class path resource [org/springframework/boot/autoconfigure/liquibase/LiquibaseAutoConfiguration$LiquibaseConfiguration.class]: Invocation of init method failed; nested exception is liquibase.exception.MigrationFailedException: Migration failed for change set classpath:config/liquibase/changelog/dataxdata_test.xml::20170118100578::virtusapolaris:
+     Reason: liquibase.exception.DatabaseException: Duplicate entry '1' for key 'PRIMARY' [Failed SQL: INSERT INTO datax.audit_event_type (EVENT_TYPE_PK, EVENT_CODE, EVENT_CODE_DESCRIPTION, CREATED_DATE_TIME, UPDATED_DATE_TIME) VALUES ('1', '100', 'Login to the application', now(), now())]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:296)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1076)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:851)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:369)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1185)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1174)
+	at org.springframework.boot.SpringApplication$run.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:133)
+	at com.ffss.datax.configuration.ConfigurationApplication.main(ConfigurationApplication.groovy:20)
+Caused by: liquibase.exception.MigrationFailedException: Migration failed for change set classpath:config/liquibase/changelog/dataxdata_test.xml::20170118100578::virtusapolaris:
+     Reason: liquibase.exception.DatabaseException: Duplicate entry '1' for key 'PRIMARY' [Failed SQL: INSERT INTO datax.audit_event_type (EVENT_TYPE_PK, EVENT_CODE, EVENT_CODE_DESCRIPTION, CREATED_DATE_TIME, UPDATED_DATE_TIME) VALUES ('1', '100', 'Login to the application', now(), now())]
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:605)
+	at liquibase.changelog.visitor.UpdateVisitor.visit(UpdateVisitor.java:51)
+	at liquibase.changelog.ChangeLogIterator.run(ChangeLogIterator.java:79)
+	at liquibase.Liquibase.update(Liquibase.java:214)
+	at liquibase.Liquibase.update(Liquibase.java:192)
+	at liquibase.integration.spring.SpringLiquibase.performUpdate(SpringLiquibase.java:434)
+	at liquibase.integration.spring.SpringLiquibase.afterPropertiesSet(SpringLiquibase.java:391)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	... 22 common frames omitted
+Caused by: liquibase.exception.DatabaseException: Duplicate entry '1' for key 'PRIMARY' [Failed SQL: INSERT INTO datax.audit_event_type (EVENT_TYPE_PK, EVENT_CODE, EVENT_CODE_DESCRIPTION, CREATED_DATE_TIME, UPDATED_DATE_TIME) VALUES ('1', '100', 'Login to the application', now(), now())]
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:301)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:55)
+	at liquibase.executor.jvm.JdbcExecutor.execute(JdbcExecutor.java:107)
+	at liquibase.database.AbstractJdbcDatabase.execute(AbstractJdbcDatabase.java:1273)
+	at liquibase.database.AbstractJdbcDatabase.executeStatements(AbstractJdbcDatabase.java:1255)
+	at liquibase.changelog.ChangeSet.execute(ChangeSet.java:568)
+	... 30 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Duplicate entry '1' for key 'PRIMARY'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:934)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3966)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3902)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2526)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2673)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2545)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2503)
+	at com.mysql.jdbc.StatementImpl.executeInternal(StatementImpl.java:839)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:739)
+	at liquibase.executor.jvm.JdbcExecutor$ExecuteStatementCallback.doInStatement(JdbcExecutor.java:299)
+	... 35 common frames omitted

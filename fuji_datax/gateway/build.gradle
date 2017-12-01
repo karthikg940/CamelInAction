@@ -1,0 +1,21 @@
+
+apply plugin: 'war'
+
+war {
+	baseName = 'gateway'
+	version = '0.0.2-SNAPSHOT'
+}
+
+configurations {
+	all*.exclude group: 'org.springframework.boot', module: 'spring-boot-starter-data-jpa'
+}
+
+
+dependencies {
+	compile('org.springframework.cloud:spring-cloud-starter-hystrix')
+	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+	compile('org.springframework.cloud:spring-cloud-starter-ribbon')
+	compile('org.springframework.cloud:spring-cloud-starter-zuul')
+
+	compile project(':security')
+}

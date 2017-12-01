@@ -1,0 +1,152 @@
+2017-11-28 11:54:43,863 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property 
+2017-11-28 11:54:44,253 [main] INFO  c.f.d.study.StudyListApplication - The following profiles are active: prod 
+2017-11-28 11:54:48,678 [main] WARN  o.s.c.a.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'. 
+2017-11-28 11:54:51,101 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:54:51,287 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:54:51,290 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:54:51,293 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:54:51,297 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:54:51,299 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:54:51,303 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:54:51,306 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:54:51,309 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:54:51,312 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 11:55:07,309 [main] WARN  c.n.c.s.URLConfigurationSource - No URLs will be polled as dynamic configuration sources. 
+2017-11-28 11:55:07,316 [main] WARN  c.n.c.s.URLConfigurationSource - No URLs will be polled as dynamic configuration sources. 
+2017-11-28 11:55:10,384 [main] INFO  c.s.j.spi.service.ServiceFinder - Running in a non-OSGi environment 
+2017-11-28 11:55:10,389 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface com.sun.jersey.client.proxy.ViewProxyProvider 
+2017-11-28 11:55:10,391 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface com.sun.jersey.spi.inject.InjectableProvider 
+2017-11-28 11:55:10,394 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.SAXParserContextProvider 
+2017-11-28 11:55:10,394 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.XMLStreamReaderContextProvider 
+2017-11-28 11:55:10,394 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.DocumentBuilderFactoryProvider 
+2017-11-28 11:55:10,394 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.TransformerFactoryProvider 
+2017-11-28 11:55:10,427 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface javax.ws.rs.ext.MessageBodyReader 
+2017-11-28 11:55:10,436 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.StringProvider 
+2017-11-28 11:55:10,436 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ByteArrayProvider 
+2017-11-28 11:55:10,437 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FileProvider 
+2017-11-28 11:55:10,437 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.InputStreamProvider 
+2017-11-28 11:55:10,437 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DataSourceProvider 
+2017-11-28 11:55:10,437 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.RenderedImageProvider 
+2017-11-28 11:55:10,437 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider 
+2017-11-28 11:55:10,437 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormProvider 
+2017-11-28 11:55:10,437 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider 
+2017-11-28 11:55:10,437 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App 
+2017-11-28 11:55:10,437 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text 
+2017-11-28 11:55:10,437 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General 
+2017-11-28 11:55:10,437 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App 
+2017-11-28 11:55:10,437 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text 
+2017-11-28 11:55:10,437 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General 
+2017-11-28 11:55:10,438 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App 
+2017-11-28 11:55:10,438 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text 
+2017-11-28 11:55:10,438 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General 
+2017-11-28 11:55:10,438 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ReaderProvider 
+2017-11-28 11:55:10,438 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DocumentProvider 
+2017-11-28 11:55:10,438 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$StreamSourceReader 
+2017-11-28 11:55:10,438 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$SAXSourceReader 
+2017-11-28 11:55:10,438 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$DOMSourceReader 
+2017-11-28 11:55:10,438 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$App 
+2017-11-28 11:55:10,439 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$Text 
+2017-11-28 11:55:10,439 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$General 
+2017-11-28 11:55:10,439 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.EntityHolderReader 
+2017-11-28 11:55:10,480 [main] INFO  c.s.j.c.s.component.ProviderFactory - A dependent class, javax/mail/MessagingException, of the component class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider is not found. The component is ignored. 
+2017-11-28 11:55:10,514 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface javax.ws.rs.ext.MessageBodyWriter 
+2017-11-28 11:55:10,515 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.StringProvider 
+2017-11-28 11:55:10,515 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ByteArrayProvider 
+2017-11-28 11:55:10,515 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FileProvider 
+2017-11-28 11:55:10,515 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.InputStreamProvider 
+2017-11-28 11:55:10,515 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DataSourceProvider 
+2017-11-28 11:55:10,515 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.RenderedImageProvider 
+2017-11-28 11:55:10,516 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider 
+2017-11-28 11:55:10,516 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormProvider 
+2017-11-28 11:55:10,516 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider 
+2017-11-28 11:55:10,516 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App 
+2017-11-28 11:55:10,516 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text 
+2017-11-28 11:55:10,516 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General 
+2017-11-28 11:55:10,516 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App 
+2017-11-28 11:55:10,516 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text 
+2017-11-28 11:55:10,516 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General 
+2017-11-28 11:55:10,516 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App 
+2017-11-28 11:55:10,516 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text 
+2017-11-28 11:55:10,516 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General 
+2017-11-28 11:55:10,516 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ReaderProvider 
+2017-11-28 11:55:10,516 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DocumentProvider 
+2017-11-28 11:55:10,516 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.StreamingOutputProvider 
+2017-11-28 11:55:10,516 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$SourceWriter 
+2017-11-28 11:55:10,517 [main] INFO  c.s.j.c.s.component.ProviderFactory - A dependent class, javax/mail/MessagingException, of the component class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider is not found. The component is ignored. 
+2017-11-28 11:55:11,002 [main] INFO  c.f.d.study.StudyListApplication - Started StudyListApplication in 28.584 seconds (JVM running for 29.412) 
+2017-11-28 12:11:21,072 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property 
+2017-11-28 12:11:21,490 [main] INFO  c.f.d.study.StudyListApplication - The following profiles are active: prod 
+2017-11-28 12:11:25,468 [main] WARN  o.s.c.a.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'. 
+2017-11-28 12:11:27,735 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 12:11:27,914 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 12:11:27,917 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 12:11:27,921 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 12:11:27,925 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 12:11:27,944 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 12:11:27,947 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 12:11:27,950 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 12:11:27,953 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 12:11:27,984 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-28 12:11:46,047 [main] WARN  c.n.c.s.URLConfigurationSource - No URLs will be polled as dynamic configuration sources. 
+2017-11-28 12:11:46,053 [main] WARN  c.n.c.s.URLConfigurationSource - No URLs will be polled as dynamic configuration sources. 
+2017-11-28 12:11:46,839 [main] INFO  c.s.j.spi.service.ServiceFinder - Running in a non-OSGi environment 
+2017-11-28 12:11:46,845 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface com.sun.jersey.client.proxy.ViewProxyProvider 
+2017-11-28 12:11:46,847 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface com.sun.jersey.spi.inject.InjectableProvider 
+2017-11-28 12:11:46,850 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.SAXParserContextProvider 
+2017-11-28 12:11:46,850 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.XMLStreamReaderContextProvider 
+2017-11-28 12:11:46,850 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.DocumentBuilderFactoryProvider 
+2017-11-28 12:11:46,850 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.TransformerFactoryProvider 
+2017-11-28 12:11:46,885 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface javax.ws.rs.ext.MessageBodyReader 
+2017-11-28 12:11:46,895 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.StringProvider 
+2017-11-28 12:11:46,895 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ByteArrayProvider 
+2017-11-28 12:11:46,896 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FileProvider 
+2017-11-28 12:11:46,896 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.InputStreamProvider 
+2017-11-28 12:11:46,896 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DataSourceProvider 
+2017-11-28 12:11:46,896 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.RenderedImageProvider 
+2017-11-28 12:11:46,896 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider 
+2017-11-28 12:11:46,896 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormProvider 
+2017-11-28 12:11:46,896 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider 
+2017-11-28 12:11:46,896 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App 
+2017-11-28 12:11:46,896 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text 
+2017-11-28 12:11:46,896 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General 
+2017-11-28 12:11:46,896 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App 
+2017-11-28 12:11:46,896 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text 
+2017-11-28 12:11:46,896 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General 
+2017-11-28 12:11:46,896 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App 
+2017-11-28 12:11:46,896 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text 
+2017-11-28 12:11:46,897 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General 
+2017-11-28 12:11:46,897 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ReaderProvider 
+2017-11-28 12:11:46,897 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DocumentProvider 
+2017-11-28 12:11:46,897 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$StreamSourceReader 
+2017-11-28 12:11:46,897 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$SAXSourceReader 
+2017-11-28 12:11:46,897 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$DOMSourceReader 
+2017-11-28 12:11:46,897 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$App 
+2017-11-28 12:11:46,897 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$Text 
+2017-11-28 12:11:46,897 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$General 
+2017-11-28 12:11:46,897 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.EntityHolderReader 
+2017-11-28 12:11:46,925 [main] INFO  c.s.j.c.s.component.ProviderFactory - A dependent class, javax/mail/MessagingException, of the component class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider is not found. The component is ignored. 
+2017-11-28 12:11:46,957 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface javax.ws.rs.ext.MessageBodyWriter 
+2017-11-28 12:11:46,959 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.StringProvider 
+2017-11-28 12:11:46,959 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ByteArrayProvider 
+2017-11-28 12:11:46,959 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FileProvider 
+2017-11-28 12:11:46,959 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.InputStreamProvider 
+2017-11-28 12:11:46,959 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DataSourceProvider 
+2017-11-28 12:11:46,959 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.RenderedImageProvider 
+2017-11-28 12:11:46,959 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider 
+2017-11-28 12:11:46,959 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormProvider 
+2017-11-28 12:11:46,959 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider 
+2017-11-28 12:11:46,959 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App 
+2017-11-28 12:11:46,959 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text 
+2017-11-28 12:11:46,959 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General 
+2017-11-28 12:11:46,959 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App 
+2017-11-28 12:11:46,959 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text 
+2017-11-28 12:11:46,959 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General 
+2017-11-28 12:11:46,959 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App 
+2017-11-28 12:11:46,959 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text 
+2017-11-28 12:11:46,959 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General 
+2017-11-28 12:11:46,959 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ReaderProvider 
+2017-11-28 12:11:46,959 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DocumentProvider 
+2017-11-28 12:11:46,959 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.StreamingOutputProvider 
+2017-11-28 12:11:46,959 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$SourceWriter 
+2017-11-28 12:11:46,960 [main] INFO  c.s.j.c.s.component.ProviderFactory - A dependent class, javax/mail/MessagingException, of the component class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider is not found. The component is ignored. 
+2017-11-28 12:11:47,351 [main] INFO  c.f.d.study.StudyListApplication - Started StudyListApplication in 27.647 seconds (JVM running for 28.493) 

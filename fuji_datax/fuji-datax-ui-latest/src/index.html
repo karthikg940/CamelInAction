@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html 🆖>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title><%= htmlWebpackPlugin.options.title %></title>
+
+  <meta name="description" content="<%= htmlWebpackPlugin.options.title %>">
+	<link rel="stylesheet" href="assets/css/inputTag.css"></link>
+  <% if (webpackConfig.htmlElements.headTags) { %>
+  <!-- Configured Head Tags  -->
+  <%= webpackConfig.htmlElements.headTags %>
+  <% } %>
+
+  <!-- base url -->
+  <base href="<%= htmlWebpackPlugin.options.metadata.baseUrl %>">
+
+
+</head>
+
+<body class="bg-pagebg">
+
+  <app>
+    Loading...
+  </app>
+
+
+  <script>
+    window.bearer = "1234";
+    /* window.bearer = "$(block)"; */
+
+  </script>
+
+  <% if (htmlWebpackPlugin.options.metadata.isDevServer && htmlWebpackPlugin.options.metadata.HMR !== true) { %>
+  <!-- Webpack Dev Server reload -->
+  <script src="/webpack-dev-server.js"></script>
+  <% } %>
+	<!-- <input id="ms1"  type="text" name="ms1"/> -->
+	<script src='assets/js/jquery.min.js'></script>
+    <script  src="assets/js/inputTag.js"></script>
+	<script>var $j = jQuery.noConflict(true);</script>
+</body>
+</html>

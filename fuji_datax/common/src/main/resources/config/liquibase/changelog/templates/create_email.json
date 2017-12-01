@@ -1,0 +1,10 @@
+{  
+   "orgId":1,
+   "notification":
+   {  
+   		"data":{"password":"xxxxxxxx"},
+		"eventId":102,
+		"template":"resetPassword",
+		"to":["psam@sonosite.com"]
+   }
+}

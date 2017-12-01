@@ -1,0 +1,561 @@
+{
+	"id": "wrk1",
+	"sections": [
+		{
+			"id": "indications",
+			"name": "Indications for Exam",
+			"required": true,
+			"topics": [
+				{
+					"id": "default",
+					"name": "",
+					"type": "multi-select",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "swelling",
+							"name": "Swelling"
+						},
+						{
+							"id": "mass",
+							"name": "Mass"
+						},
+						{
+							"id": "decreased-range-of-motion",
+							"name": "Decreased Range of Motion"
+						},
+						{
+							"id": "redness",
+							"name": "Redness"
+						},
+						{
+							"id": "fever",
+							"name": "Fever"
+						},
+						{
+							"id": "deformity",
+							"name": "Deformity"
+						},
+						{
+							"id": "pain",
+							"name": "Pain"
+						},
+						{
+							"id": "foreign-body",
+							"name": "Foreign Body"
+						},
+						{
+							"id": "educational",
+							"name": "Educational"
+						}
+					]
+				},
+				{
+					"id": "others",
+					"name": "Other",
+					"type": "text"
+				}
+			]
+		},
+		{
+			"id": "views",
+			"name": "Views",
+			"required": true,
+			"topics": [
+				{
+					"id": "skin-subcutaneous-tissue:",
+					"name": "Skin and subcutaneous tissue",
+					"type": "single-select",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "adequate",
+							"name": "Adequate"
+						},
+						{
+							"id": "limited",
+							"name": "Limited"
+						},
+						{
+							"id": "not-obtained",
+							"name": "Not Obtained"
+						}
+					]
+				},
+				{
+					"id": "muscle",
+					"name": "Muscle",
+					"type": "single-select",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "adequate",
+							"name": "Adequate"
+						},
+						{
+							"id": "limited",
+							"name": "Limited"
+						},
+						{
+							"id": "not-obtained",
+							"name": "Not Obtained"
+						}
+					]
+				},
+				{
+					"id": "tendon",
+					"name": "Tendon",
+					"type": "single-select",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "adequate",
+							"name": "Adequate"
+						},
+						{
+							"id": "limited",
+							"name": "Limited"
+						},
+						{
+							"id": "not-obtained",
+							"name": "Not Obtained"
+						}
+					]
+				},
+				{
+					"id": "joint",
+					"name": "Joint",
+					"type": "single-select",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "adequate",
+							"name": "Adequate"
+						},
+						{
+							"id": "limited",
+							"name": "Limited"
+						},
+						{
+							"id": "not-obtained",
+							"name": "Not Obtained"
+						}
+					]
+				},
+				{
+					"id": "bone",
+					"name": "Bone",
+					"type": "single-select",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "adequate",
+							"name": "Adequate"
+						},
+						{
+							"id": "limited",
+							"name": "Limited"
+						},
+						{
+							"id": "not-obtained",
+							"name": "Not Obtained"
+						}
+					]
+				},
+				{
+					"id": "others",
+					"name": "Other",
+					"type": "text"
+				}
+			]
+		},
+		{
+			"id": "findings",
+			"name": "Findings",
+			"required": true,
+			"topics": [
+				{
+					"id": "skin-subcutaneous-tissue",
+					"name": "Skin and subcutaneous tissue:",
+					"topics": [
+						{
+							"id": "tissue-thickness",
+							"name": "Tissue thickness",
+							"type": "single-select",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "normal",
+									"name": "Normal"
+								},
+								{
+									"id": "thickened",
+									"name": "Thickened"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate",
+									"topics": [
+										{
+											"id": "thickness",
+											"name": "Thickness(mm)",
+											"type": "text-number"
+										}
+									]
+								}
+							]
+						},
+						{
+							"id": "tissue-echogenicity",
+							"name": "Tissue Echogenicity",
+							"type": "single-select",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "normal",
+									"name": "Normal"
+								},
+								{
+									"id": "increased",
+									"name": "Increased"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate"
+								}
+							]
+						},
+						{
+							"id": "cobblestoning",
+							"name": "Cobblestoning",
+							"type": "single-select",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "normal",
+									"name": "Normal"
+								},
+								{
+									"id": "increased",
+									"name": "Increased"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate"
+								}
+							]
+						},
+						{
+							"id": "subcutaneous-collection",
+							"name": "Subcutaneous Collection",
+							"type": "single-select",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "present",
+									"name": "Present"
+								},
+								{
+									"id": "absent",
+									"name": "Absent"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate"
+								}
+							],
+							"topics": [
+								{
+									"id": "if-present",
+									"name": "If Present"
+								},
+								{
+									"id": "diameter",
+									"name": "Diameter(mm):",
+									"type": "text-number"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "muscle",
+					"name": "Muscle",
+					"topics": [
+						{
+							"id": "appearance",
+							"name": "Appearance",
+							"type": "single-select",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "normal",
+									"name": "Normal"
+								},
+								{
+									"id": "irregular",
+									"name": "Irregular"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate"
+								}
+							]
+						},
+						{
+							"id": "echogenicity",
+							"name": "Echogenicity",
+							"type": "single-select",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "normal",
+									"name": "Normal"
+								},
+								{
+									"id": "increased",
+									"name": "increased"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate"
+								}
+							]
+						},
+						{
+							"id": "echogenicity",
+							"name": "Collection",
+							"type": "single-select",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "present",
+									"name": "Present"
+								},
+								{
+									"id": "absent",
+									"name": "Absent"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "tendon",
+					"name": "Tendon",
+					"topics": [
+						{
+							"id": "appearance",
+							"name": "Appearance",
+							"type": "single-select",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "normal",
+									"name": "Normal"
+								},
+								{
+									"id": "irregular",
+									"name": "Irregular"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate"
+								}
+							]
+						},
+						{
+							"id": "defect",
+							"name": "Defect",
+							"type": "single-select",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "present",
+									"name": "Present"
+								},
+								{
+									"id": "absent",
+									"name": "Absent"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "joint",
+					"name": "Joint",
+					"type": "single-select",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "fluid",
+							"name": "Fluid"
+						},
+						{
+							"id": "no fluid",
+							"name": "No fluid"
+						},
+						{
+							"id": "indeterminate",
+							"name": "Indeterminate"
+						}
+					]
+				},
+				{
+					"id": "bone",
+					"name": "Bone",
+					"topics": [
+						{
+							"id": "cortex-appearance",
+							"name": "Cortex Appearance",
+							"type": "single-select",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "normal",
+									"name": "Normal"
+								},
+								{
+									"id": "irregular",
+									"name": "Irregular"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate"
+								}
+							]
+						},
+						{
+							"id": "If irregular",
+							"name": "If irregular",
+							"type": "single-select",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "aligned",
+									"name": "aligned"
+								},
+								{
+									"id": "angulated/misaligned",
+									"name": "angulated/misaligned"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "others",
+					"name": "Other",
+					"type": "text"
+				}
+			]
+		},
+		{
+			"id": "interpretations",
+			"name": "Interpretations",
+			"required": true,
+			"topics": [
+				{
+					"id": "standard",
+					"name": "",
+					"type": "multi-select",
+					"columnLayout": 1,
+					"options": [
+						{
+							"id": "soft-tissue-abnormality",
+							"name": "No sonographic evidence of soft tissue abnormality"
+						},
+						{
+							"id": "musculoskeletal-abnormality",
+							"name": "No sonographic evidence of musculoskeletal abnormality"
+						},
+						{
+							"id": "cellulitis",
+							"name": "Cellulitis",
+							"topics": [
+								{
+									"id": "cellulitis-location",
+									"name": "location",
+									"type": "text"
+								}
+							]
+						},
+						{
+							"id": "abscess",
+							"name": "Abscess",
+							"topics": [
+								{
+									"id": "abscess-location",
+									"name": "location",
+									"type": "text"
+								}
+							]
+						},
+						{
+							"id": "joint-effusion",
+							"name": "Joint Effusion",
+							"topics": [
+								{
+									"id": "joint-effusion-location",
+									"name": "location",
+									"type": "text"
+								}
+							]
+						},
+						{
+							"id": "tendon-injury",
+							"name": "Tendon Injury",
+							"topics": [
+								{	
+									"id": "tendon-injury",
+									"name": "",
+									"type": "single-select",
+									"columnLayout": 3,
+									"options": [
+										{
+											"id": "complete",
+											"name": "Complete"
+										},
+										{
+											"id": "partial",
+											"name": "Partial"
+										},
+										{
+											"id": "indeterminate",
+											"name": "Indeterminate"
+										}
+									]
+								}
+							]
+						},
+						{
+							"id": "fractured-bone",
+							"name": "Fractured Bone",
+							"topics": [
+								{
+									"id": "fractured-bone-location",
+									"name": "location",
+									"type": "text"
+								}
+							]
+						}
+					]
+				},
+				{
+					"id": "others",
+					"name": "Other",
+					"type": "text"
+				}
+			]
+		}
+	]
+}

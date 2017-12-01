@@ -1,0 +1,290 @@
+2017-11-22 18:24:33,219 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property 
+2017-11-22 18:24:33,656 [main] INFO  c.f.d.workflow.WorkflowApplication - The following profiles are active: prod 
+2017-11-22 18:24:35,669 [main] WARN  o.s.c.a.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'. 
+2017-11-22 18:24:38,244 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-22 18:24:38,613 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-22 18:24:38,707 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-22 18:24:38,738 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-22 18:24:38,769 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-22 18:24:38,847 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-22 18:24:38,878 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-22 18:24:38,878 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-22 18:24:38,894 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-22 18:24:38,909 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-22 18:24:56,641 [main] WARN  c.n.c.s.URLConfigurationSource - No URLs will be polled as dynamic configuration sources. 
+2017-11-22 18:24:56,641 [main] WARN  c.n.c.s.URLConfigurationSource - No URLs will be polled as dynamic configuration sources. 
+2017-11-22 18:24:57,689 [main] INFO  c.s.j.spi.service.ServiceFinder - Running in a non-OSGi environment 
+2017-11-22 18:24:57,689 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface com.sun.jersey.client.proxy.ViewProxyProvider 
+2017-11-22 18:24:57,689 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface com.sun.jersey.spi.inject.InjectableProvider 
+2017-11-22 18:24:57,689 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.SAXParserContextProvider 
+2017-11-22 18:24:57,689 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.XMLStreamReaderContextProvider 
+2017-11-22 18:24:57,689 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.DocumentBuilderFactoryProvider 
+2017-11-22 18:24:57,689 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.TransformerFactoryProvider 
+2017-11-22 18:24:57,716 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface javax.ws.rs.ext.MessageBodyReader 
+2017-11-22 18:24:57,750 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.StringProvider 
+2017-11-22 18:24:57,750 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ByteArrayProvider 
+2017-11-22 18:24:57,750 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FileProvider 
+2017-11-22 18:24:57,750 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.InputStreamProvider 
+2017-11-22 18:24:57,750 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DataSourceProvider 
+2017-11-22 18:24:57,750 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.RenderedImageProvider 
+2017-11-22 18:24:57,750 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider 
+2017-11-22 18:24:57,750 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormProvider 
+2017-11-22 18:24:57,750 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider 
+2017-11-22 18:24:57,750 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App 
+2017-11-22 18:24:57,750 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text 
+2017-11-22 18:24:57,750 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General 
+2017-11-22 18:24:57,750 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App 
+2017-11-22 18:24:57,750 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text 
+2017-11-22 18:24:57,750 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General 
+2017-11-22 18:24:57,750 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App 
+2017-11-22 18:24:57,750 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text 
+2017-11-22 18:24:57,750 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General 
+2017-11-22 18:24:57,750 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ReaderProvider 
+2017-11-22 18:24:57,750 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DocumentProvider 
+2017-11-22 18:24:57,750 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$StreamSourceReader 
+2017-11-22 18:24:57,750 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$SAXSourceReader 
+2017-11-22 18:24:57,750 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$DOMSourceReader 
+2017-11-22 18:24:57,750 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$App 
+2017-11-22 18:24:57,750 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$Text 
+2017-11-22 18:24:57,750 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$General 
+2017-11-22 18:24:57,750 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.EntityHolderReader 
+2017-11-22 18:24:59,367 [main] INFO  c.s.j.c.s.component.ProviderFactory - A dependent class, javax/mail/MessagingException, of the component class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider is not found. The component is ignored. 
+2017-11-22 18:24:59,634 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface javax.ws.rs.ext.MessageBodyWriter 
+2017-11-22 18:24:59,634 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.StringProvider 
+2017-11-22 18:24:59,634 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ByteArrayProvider 
+2017-11-22 18:24:59,634 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FileProvider 
+2017-11-22 18:24:59,634 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.InputStreamProvider 
+2017-11-22 18:24:59,634 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DataSourceProvider 
+2017-11-22 18:24:59,634 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.RenderedImageProvider 
+2017-11-22 18:24:59,634 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider 
+2017-11-22 18:24:59,634 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormProvider 
+2017-11-22 18:24:59,634 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider 
+2017-11-22 18:24:59,634 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App 
+2017-11-22 18:24:59,634 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text 
+2017-11-22 18:24:59,634 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General 
+2017-11-22 18:24:59,634 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App 
+2017-11-22 18:24:59,634 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text 
+2017-11-22 18:24:59,634 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General 
+2017-11-22 18:24:59,634 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App 
+2017-11-22 18:24:59,634 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text 
+2017-11-22 18:24:59,634 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General 
+2017-11-22 18:24:59,634 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ReaderProvider 
+2017-11-22 18:24:59,634 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DocumentProvider 
+2017-11-22 18:24:59,634 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.StreamingOutputProvider 
+2017-11-22 18:24:59,634 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$SourceWriter 
+2017-11-22 18:24:59,634 [main] INFO  c.s.j.c.s.component.ProviderFactory - A dependent class, javax/mail/MessagingException, of the component class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider is not found. The component is ignored. 
+2017-11-22 18:25:00,515 [main] INFO  c.f.d.workflow.WorkflowApplication - Started WorkflowApplication in 28.482 seconds (JVM running for 29.432) 
+2017-11-22 18:25:31,886 [http-nio-7079-exec-1] INFO  c.f.d.w.service.PreferenceService - preference is - [qaEnabled:false, attestationEnabled:false, pocQaAttending:false, submitOnSign:false] 
+2017-11-22 18:25:32,012 [http-nio-7079-exec-2] INFO  c.f.d.w.service.PreferenceService - preference is - [qaEnabled:false, attestationEnabled:false, pocQaAttending:false, submitOnSign:false] 
+2017-11-22 18:25:47,939 [http-nio-7079-exec-3] INFO  c.f.d.w.service.PreferenceService - preference is - [qaEnabled:false, attestationEnabled:false, pocQaAttending:false, submitOnSign:false] 
+2017-11-22 18:25:48,041 [http-nio-7079-exec-4] INFO  c.f.d.w.service.PreferenceService - preference is - [qaEnabled:false, attestationEnabled:false, pocQaAttending:false, submitOnSign:false] 
+2017-11-22 18:31:08,886 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property 
+2017-11-22 18:31:09,277 [main] INFO  c.f.d.workflow.WorkflowApplication - The following profiles are active: test 
+2017-11-22 18:31:11,664 [main] WARN  o.s.c.a.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'. 
+2017-11-22 18:31:18,732 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-22 18:31:19,373 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-22 18:31:24,085 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-22 18:31:24,460 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-22 18:31:24,569 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-22 18:31:24,694 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-22 18:31:25,224 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-22 18:31:26,785 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-22 18:31:33,822 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-22 18:31:35,835 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-22 18:32:10,652 [main] WARN  c.n.c.s.URLConfigurationSource - No URLs will be polled as dynamic configuration sources. 
+2017-11-22 18:32:10,652 [main] WARN  c.n.c.s.URLConfigurationSource - No URLs will be polled as dynamic configuration sources. 
+2017-11-22 18:32:16,285 [main] INFO  c.s.j.spi.service.ServiceFinder - Running in a non-OSGi environment 
+2017-11-22 18:32:16,301 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface com.sun.jersey.client.proxy.ViewProxyProvider 
+2017-11-22 18:32:16,301 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface com.sun.jersey.spi.inject.InjectableProvider 
+2017-11-22 18:32:16,301 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.SAXParserContextProvider 
+2017-11-22 18:32:16,301 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.XMLStreamReaderContextProvider 
+2017-11-22 18:32:16,301 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.DocumentBuilderFactoryProvider 
+2017-11-22 18:32:16,301 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.TransformerFactoryProvider 
+2017-11-22 18:32:16,380 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface javax.ws.rs.ext.MessageBodyReader 
+2017-11-22 18:32:16,380 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.StringProvider 
+2017-11-22 18:32:16,380 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ByteArrayProvider 
+2017-11-22 18:32:16,380 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FileProvider 
+2017-11-22 18:32:16,380 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.InputStreamProvider 
+2017-11-22 18:32:16,380 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DataSourceProvider 
+2017-11-22 18:32:16,380 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.RenderedImageProvider 
+2017-11-22 18:32:16,380 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider 
+2017-11-22 18:32:16,380 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormProvider 
+2017-11-22 18:32:16,380 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider 
+2017-11-22 18:32:16,380 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App 
+2017-11-22 18:32:16,380 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text 
+2017-11-22 18:32:16,380 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General 
+2017-11-22 18:32:16,380 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App 
+2017-11-22 18:32:16,380 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text 
+2017-11-22 18:32:16,380 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General 
+2017-11-22 18:32:16,395 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App 
+2017-11-22 18:32:16,395 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text 
+2017-11-22 18:32:16,395 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General 
+2017-11-22 18:32:16,395 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ReaderProvider 
+2017-11-22 18:32:16,395 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DocumentProvider 
+2017-11-22 18:32:16,395 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$StreamSourceReader 
+2017-11-22 18:32:16,395 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$SAXSourceReader 
+2017-11-22 18:32:16,395 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$DOMSourceReader 
+2017-11-22 18:32:16,395 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$App 
+2017-11-22 18:32:16,395 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$Text 
+2017-11-22 18:32:16,395 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$General 
+2017-11-22 18:32:16,395 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.EntityHolderReader 
+2017-11-22 18:32:16,520 [main] INFO  c.s.j.c.s.component.ProviderFactory - A dependent class, javax/mail/MessagingException, of the component class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider is not found. The component is ignored. 
+2017-11-22 18:32:16,801 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface javax.ws.rs.ext.MessageBodyWriter 
+2017-11-22 18:32:16,801 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.StringProvider 
+2017-11-22 18:32:16,801 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ByteArrayProvider 
+2017-11-22 18:32:16,801 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FileProvider 
+2017-11-22 18:32:16,801 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.InputStreamProvider 
+2017-11-22 18:32:16,801 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DataSourceProvider 
+2017-11-22 18:32:16,801 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.RenderedImageProvider 
+2017-11-22 18:32:16,801 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider 
+2017-11-22 18:32:16,801 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormProvider 
+2017-11-22 18:32:16,801 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider 
+2017-11-22 18:32:16,801 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App 
+2017-11-22 18:32:16,801 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text 
+2017-11-22 18:32:16,801 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General 
+2017-11-22 18:32:16,801 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App 
+2017-11-22 18:32:16,801 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text 
+2017-11-22 18:32:16,801 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General 
+2017-11-22 18:32:16,801 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App 
+2017-11-22 18:32:16,801 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text 
+2017-11-22 18:32:16,801 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General 
+2017-11-22 18:32:16,801 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ReaderProvider 
+2017-11-22 18:32:16,801 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DocumentProvider 
+2017-11-22 18:32:16,801 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.StreamingOutputProvider 
+2017-11-22 18:32:16,801 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$SourceWriter 
+2017-11-22 18:32:16,801 [main] INFO  c.s.j.c.s.component.ProviderFactory - A dependent class, javax/mail/MessagingException, of the component class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider is not found. The component is ignored. 
+2017-11-22 18:32:19,174 [main] ERROR o.a.coyote.http11.Http11NioProtocol - Failed to start end point associated with ProtocolHandler [http-nio-7079] 
+java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:229)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:874)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:573)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1035)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:152)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:234)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:179)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:544)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:369)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1185)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1174)
+	at org.springframework.boot.SpringApplication$run.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:133)
+	at com.ffss.datax.workflow.WorkflowApplication.main(WorkflowApplication.groovy:23)
+2017-11-22 18:32:19,269 [main] ERROR o.a.catalina.core.StandardService - Failed to start connector [Connector[HTTP/1.1-7079]] 
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-7079]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:158)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.addPreviouslyRemovedConnectors(TomcatEmbeddedServletContainer.java:234)
+	at org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainer.start(TomcatEmbeddedServletContainer.java:179)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.startEmbeddedServletContainer(EmbeddedWebApplicationContext.java:297)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.finishRefresh(EmbeddedWebApplicationContext.java:145)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:544)
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:369)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:313)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1185)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1174)
+	at org.springframework.boot.SpringApplication$run.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:133)
+	at com.ffss.datax.workflow.WorkflowApplication.main(WorkflowApplication.groovy:23)
+Caused by: org.apache.catalina.LifecycleException: service.getName(): "Tomcat";  Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1042)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:152)
+	... 17 common frames omitted
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:229)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:874)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:573)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1035)
+	... 18 common frames omitted
+2017-11-22 18:32:20,065 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Embedded servlet container failed to start. Port 7079 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 7079 or configure this application to listen on another port.
+ 
+2017-11-22 18:32:20,080 [main] WARN  c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1511355740080, current=DOWN, previous=UP] 
+2017-11-22 18:32:23,702 [main] WARN  o.s.c.a.AnnotationConfigApplicationContext - Exception thrown from ApplicationListener handling ContextClosedEvent 
+org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'org.springframework.cloud.netflix.eureka.EurekaDiscoveryClientConfiguration': Singleton bean creation not allowed while the singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:216)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1076)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.getTargetBean(ApplicationListenerMethodAdapter.java:253)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.doInvoke(ApplicationListenerMethodAdapter.java:223)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.processEvent(ApplicationListenerMethodAdapter.java:143)
+	at org.springframework.context.event.ApplicationListenerMethodAdapter.onApplicationEvent(ApplicationListenerMethodAdapter.java:105)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:166)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:382)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:388)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:336)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:989)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:956)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:70)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:272)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:578)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:554)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:976)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:523)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:983)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1028)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1004)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:956)
+	at org.springframework.boot.SpringApplication.handleRunFailure(SpringApplication.java:815)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:324)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1185)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1174)
+	at org.springframework.boot.SpringApplication$run.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:133)
+	at com.ffss.datax.workflow.WorkflowApplication.main(WorkflowApplication.groovy:23)
+2017-11-22 18:57:47,442 [http-nio-7079-exec-6] INFO  c.f.d.w.service.PreferenceService - preference is - [qaEnabled:false, attestationEnabled:false, pocQaAttending:false, submitOnSign:false] 
+2017-11-22 18:57:47,484 [http-nio-7079-exec-7] INFO  c.f.d.w.service.PreferenceService - preference is - [qaEnabled:false, attestationEnabled:false, pocQaAttending:false, submitOnSign:false] 
+2017-11-22 19:20:58,328 [http-nio-7079-exec-9] INFO  c.f.d.w.service.PreferenceService - preference is - [qaEnabled:false, attestationEnabled:false, pocQaAttending:false, submitOnSign:false] 
+2017-11-22 19:20:58,489 [http-nio-7079-exec-10] INFO  c.f.d.w.service.PreferenceService - preference is - [qaEnabled:false, attestationEnabled:false, pocQaAttending:false, submitOnSign:false] 
+2017-11-22 19:30:24,667 [http-nio-7079-exec-2] INFO  c.f.d.w.service.PreferenceService - preference is - [qaEnabled:false, attestationEnabled:false, pocQaAttending:false, submitOnSign:false] 
+2017-11-22 19:30:25,195 [http-nio-7079-exec-3] INFO  c.f.d.w.service.PreferenceService - preference is - [qaEnabled:false, attestationEnabled:false, pocQaAttending:false, submitOnSign:false] 
+2017-11-22 19:39:53,918 [http-nio-7079-exec-5] INFO  c.f.d.w.service.PreferenceService - preference is - [qaEnabled:false, attestationEnabled:false, pocQaAttending:false, submitOnSign:false] 
+2017-11-22 19:39:54,160 [http-nio-7079-exec-6] INFO  c.f.d.w.service.PreferenceService - preference is - [qaEnabled:false, attestationEnabled:false, pocQaAttending:false, submitOnSign:false] 
+2017-11-22 19:48:15,804 [http-nio-7079-exec-8] INFO  c.f.d.w.service.PreferenceService - preference is - [qaEnabled:false, attestationEnabled:false, pocQaAttending:false, submitOnSign:false] 
+2017-11-22 19:48:22,936 [http-nio-7079-exec-9] INFO  c.f.d.w.service.PreferenceService - preference is - [qaEnabled:false, attestationEnabled:false, pocQaAttending:false, submitOnSign:false] 
+2017-11-22 19:48:26,933 [http-nio-7079-exec-10] INFO  c.f.d.w.service.PreferenceService - preference is - [qaEnabled:false, attestationEnabled:false, pocQaAttending:false, submitOnSign:false] 
+2017-11-22 19:48:28,065 [http-nio-7079-exec-1] INFO  c.f.d.w.service.PreferenceService - preference is - [qaEnabled:false, attestationEnabled:false, pocQaAttending:false, submitOnSign:false] 
+2017-11-22 19:51:13,061 [http-nio-7079-exec-4] INFO  c.f.d.w.service.PreferenceService - preference is - [qaEnabled:false, attestationEnabled:false, pocQaAttending:false, submitOnSign:false] 
+2017-11-22 19:51:13,556 [http-nio-7079-exec-5] INFO  c.f.d.w.service.PreferenceService - preference is - [qaEnabled:false, attestationEnabled:false, pocQaAttending:false, submitOnSign:false] 
+2017-11-22 19:53:44,560 [http-nio-7079-exec-8] INFO  c.f.d.w.service.PreferenceService - preference is - [qaEnabled:false, attestationEnabled:false, pocQaAttending:false, submitOnSign:false] 
+2017-11-22 19:53:46,804 [http-nio-7079-exec-9] INFO  c.f.d.w.service.PreferenceService - preference is - [qaEnabled:false, attestationEnabled:false, pocQaAttending:false, submitOnSign:false] 
+2017-11-22 19:57:17,072 [http-nio-7079-exec-1] INFO  c.f.d.w.service.PreferenceService - preference is - [qaEnabled:false, attestationEnabled:false, pocQaAttending:false, submitOnSign:false] 
+2017-11-22 19:57:18,149 [http-nio-7079-exec-3] INFO  c.f.d.w.service.PreferenceService - preference is - [qaEnabled:false, attestationEnabled:false, pocQaAttending:false, submitOnSign:false] 
+2017-11-22 19:58:33,271 [http-nio-7079-exec-4] INFO  c.f.d.w.service.PreferenceService - preference is - [qaEnabled:false, attestationEnabled:false, pocQaAttending:false, submitOnSign:false] 
+2017-11-22 19:58:33,623 [http-nio-7079-exec-5] INFO  c.f.d.w.service.PreferenceService - preference is - [qaEnabled:false, attestationEnabled:false, pocQaAttending:false, submitOnSign:false] 

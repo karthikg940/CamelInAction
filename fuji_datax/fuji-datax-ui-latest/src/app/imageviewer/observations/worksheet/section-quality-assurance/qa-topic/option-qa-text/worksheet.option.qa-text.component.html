@@ -1,0 +1,12 @@
+<div class="col-md-12 input group pull-left lh-30">
+    <div class="col-md-3 p-x-0">
+        <span><label class="pull-left label-fw-13">{{qaLabel}}: </label></span>
+    </div>
+    <div class="col-md-9 p-x-0">
+        <input class="pull-left form-control" [disableOn]="'studyStatus == \'Attested\' ||
+        studyStatus == \'SubmittedForAttestation\'||
+        studyStatus == \'Submitted\' ||
+        qaSigned == true || (loggedInUser!==currentUser)'" [ngModel]="qaData" (ngModelChange)="onQAChange($event)"/>
+    </div>
+</div>
+

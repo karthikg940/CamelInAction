@@ -1,0 +1,14 @@
+
+jar {
+	baseName = 'configuration'
+	version = '0.0.2-SNAPSHOT'
+}
+
+
+dependencies {
+	compile project(':common')
+	compile project(':security')
+	
+	compile group: 'org.springframework.security', name: 'spring-security-ldap', version: '4.2.2.RELEASE'
+	compile("org.springframework.ldap:spring-ldap-core")
+}

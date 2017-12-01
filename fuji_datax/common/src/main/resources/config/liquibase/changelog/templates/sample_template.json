@@ -1,0 +1,24 @@
+{
+	"Sections":[
+		{
+			"heading":"Ostagar",
+			"questions":[
+				{	
+					"id":1,"text":"Was Loghain right in retreating?",
+					"allowMultiple":false,
+					"choices":[{"id":1,"text":"Yes"},{"id":2,"text":"No"},{"id":3,"text":"Cannot Say"}]
+				}
+			]
+		},
+		{
+			"heading":"Citadel",
+			"questions":[
+				{	
+					"id":3,"text":"Was Shephard correct in punching Khalisa-Al-Jilani?",
+					"allowMultiple":false,
+					"choices":[{"id":4,"text":"Yes"},{"id":5,"text":"No"},{"id":3,"text":"Cannot Say"}]
+				}
+			]
+		}
+	]
+}

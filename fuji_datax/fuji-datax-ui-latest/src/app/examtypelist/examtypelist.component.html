@@ -1,0 +1,72 @@
+<modal #confirmDelete [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Delete exam Type</h4>
+  </modal-header>
+  <modal-body>
+    Are you sure you want to delete this exam type?
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-primary" (click)="cancelDelete()">No</button>
+    <button type="button" class="btn btn-default" (click)="confirmDeleteExamType()">Yes</button>
+  </modal-footer>
+</modal>
+
+<modal #enableExamtypePopup [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Enable exam type</h4>
+  </modal-header>
+  <modal-body>
+    Are you sure you want to Enable this exam type?
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="cancelEnable()">No</button>
+    <button type="button" class="btn btn-primary" (click)="confirmEnable()">Yes</button>
+  </modal-footer>
+</modal>
+
+<modal #disableExamtypePopup [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Disable exam type</h4>
+  </modal-header>
+  <modal-body>
+    Are you sure you want to disable this exam type?
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="cancelDisable()">No</button>
+    <button type="button" class="btn btn-primary" (click)="confirmDisable()">Yes</button>
+  </modal-footer>
+</modal>
+
+<!-- User List Page -->
+
+<div class="contentpage m-l-65">
+<div class="m-r-15">
+<!-- Breadcrumbs -->
+  <div class="row m-x-0 bg-ssblue">
+    <div class="col-xs-12 col-sm-6 p-l-15">
+      <div class="pull-left color-white">
+        <h2 class="m-y-10">Admin</h2>
+      </div>
+      <ol class="breadcrumb bg-ssblue pull-left fw-15 m-b-0 m-t-10 p-l-15">
+        <li><i class="fa fa-lg fa-list-alt fa-fw color-white"></i></li>
+        <li class="color-white"><a routerLink="/examtypelist" class="color-white">Exam types</a></li>
+      </ol>
+    </div>
+  </div>
+  <!-- Breadcrumbs Ends -->
+
+  <div class="row m-t-15 m-x-0">
+    <div class="col-xs-12">
+      <table id="tableExamTypeList" class="display table">
+        <thead>
+          <tr>
+            <th>Exam Type Name</th>
+            <th>Exam Type Description</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+</div>
+</div>

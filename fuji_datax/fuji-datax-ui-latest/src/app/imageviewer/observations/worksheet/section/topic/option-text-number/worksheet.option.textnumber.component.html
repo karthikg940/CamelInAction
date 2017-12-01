@@ -1,0 +1,12 @@
+<div class="col-md-12 input group pull-left p-x-0 lh-30">
+    <div class="col-md-10 p-x-0 pull-right">
+        <span><label class="pull-left label-fw-13">{{label}}: </label>
+        <input class="m-l-10 pull-left txtNumber form-control"
+        [disableOn]="'studyStatus == \'Submitted\' ||
+        studyStatus == \'Signed\' ||
+        studyStatus == \'QAUnassigned\' ||
+        studyStatus == \'Attested\' ||
+        studyStatus == \'SubmittedForAttestation\'||
+        qaSigned == true || (loggedInUser!==currentUser)'" [ngModel]="data" (ngModelChange)="onChange($event)"></span>
+    </div>
+</div>

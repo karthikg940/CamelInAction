@@ -1,0 +1,12 @@
+<div id="{{id}}" class="wrkshtpanelhead panel-heading clearfix">
+  <h4 class="m-y-0 pull-left">{{name}}</h4>
+  <span *ngIf="required" class="pull-right"><span><i class="fa fa-chevron-down"></i></span></span>
+</div>
+<div id="panel-{{id}}" class="wrkshtpanelbody panel panel-default panel-body scroll-400 custom-scrollbar">
+  <div *ngFor="let topic of topics; let last = last;">
+    <worksheet-topic [qasign]="qasign" [id]="topic.id" [name]="topic.name" [type]="topic.type" [data]="data[topic.id]" [topics]="topic.topics" [columnLayout]="topic.columnLayout" [options]="topic.options" (onUpdate)="onChildChange($event)">
+    </worksheet-topic>
+    <hr *ngIf="!last" class="wrkshtHr m-y-0">
+  </div>
+</div>
+<hr class="m-y-0">

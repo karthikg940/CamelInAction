@@ -1,0 +1,211 @@
+<modal #examTypeCreatedPopUp [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Save ExamType</h4>
+  </modal-header>
+  <modal-body>
+    Exam added successfully
+  </modal-body>
+</modal>
+
+<modal #cancelExamPopUp [keyboard]="false" [backdrop]="'static'">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Cancel Create ExamType</h4>
+  </modal-header>
+  <modal-body>
+    Please Confirm Cancellation
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="cancelExamType()">No</button>
+    <button type="button" class="btn btn-primary" (click)="confirmExamType()">Yes</button>
+  </modal-footer>
+</modal>
+
+<modal #examTypeModifyPopup [keyboard]="false" [backdrop]="'static'">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Cancel update ExamType</h4>
+  </modal-header>
+  <modal-body>
+    There may be unsaved data. Please confirm to save changes before navigating
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="cancelExamType()">No</button>
+    <button type="button" class="btn btn-primary" (click)="confirmExamType()">Yes</button>
+  </modal-footer>
+</modal>
+
+<modal #examTypeModifyToast [keyboard]="false" [backdrop]="'static'">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Update ExamType</h4>
+  </modal-header>
+  <modal-body>
+    Changes saved successfully
+  </modal-body>
+</modal>
+
+<!--Create Exam Type Page -->
+
+<div class="contentpage m-l-65">
+<div class="m-r-15">
+  <!-- Breadcrumbs -->
+  <div class="row m-x-0 bg-ssblue">
+    <div class="col-xs-12 col-sm-6 p-l-15">
+      <div class="pull-left color-white">
+        <h2 class="m-y-10">Admin</h2>
+      </div>
+      <ol class="breadcrumb bg-ssblue pull-left fw-15 m-b-0 m-t-10 p-l-15">
+        <li><i class="fa fa-lg fa-list-alt fa-fw color-white"></i></li>
+        <li class="color-white"><a routerLink="/examtypelist" class="color-white">Exam Types</a></li>
+        <li class="color-white" *ngIf="formState == 'Modify'">Modify Exam Type</li>
+        <li class="color-white" *ngIf="formState == 'Add'">Create New Exam type</li>
+      </ol>
+    </div>
+  </div>
+  <!-- Breadcrumbs Ends -->
+
+  <div class="row m-t-15 m-x-0">
+  <div class="col-xs-12">
+    <form #createExamType="ngForm" novalidate>
+    <div class="col-md-offset-2 col-md-8 b-1-lightgray bg-white">
+      <div class="row m-x-0">
+        <div class="col-xs-6 col-md-3">
+          <h3 *ngIf="formState == 'Add'">New Exam Type</h3>
+          <h3 *ngIf="formState == 'Modify'">Modify Exam Type</h3>
+        </div>
+      </div>
+      <div class="row m-x-0 m-t-5">
+      <div class="col-sm-offset-2 col-md-offset-2 col-xs-12 col-sm-8 p-10">
+        <div class="col-xs-12 p-x-0">
+          <div class="col-xs-12 form-group">
+            <div class="col-xs-6 col-md-4">
+              <label>Exam Type Name<span class="color-red">*</span></label>
+            </div>
+            <div class="col-xs-6 col-md-6">
+              <input type="text" class="form-control" (keypress)="validateAlpha($event);" oncopy="return false" onpaste="return false"  [(ngModel)]="examTypeName" name="examTypeName" maxlength="50" (focus)="removeExamtypeNameError()" (blur) = "formState == 'Modify'?true:getExamtypeName()" [readonly] = "formState == 'Modify'?true:false">
+              <div [hidden]="!examTypeRequired" class="alert alert-danger alertRequired">Exam type name required
+              </div>
+              <div [hidden]="!examTypePresent" class="alert alert-danger">
+              Exam type already exists
+              </div>
+              <div [hidden]="!examTypeError" class="alert alert-danger">
+              Exam type already exists
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 p-x-0">
+          <div class="col-xs-12 form-group">
+            <div class="col-xs-6 col-md-4">
+              <label>Exam Type Description</label>
+            </div>
+            <div class="col-xs-6 col-md-6">
+              <textarea class="form-control" [(ngModel)]="examTypeDesc" name="examTypeDesc" maxlength="100"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 p-x-0">
+          <div class="col-xs-12 form-group">
+            <div class="col-xs-6 col-md-4">
+              <label>Exam name from modality</label>
+            </div>
+            <div class="col-xs-6 col-md-6">
+              <div class="col-xs-10 col-md-10 p-x-0">
+                <input type="text"  class="form-control" [(ngModel)]="examTypeAlias" name="examTypeAlias" #title="ngModel" />
+              </div>
+              <div class="col-xs-2 col-md-2 p-r-10">
+                <i class="fa fa-plus-circle color-primary fw-20 m-t-5 fa-close" aria-hidden="true" (click)="addType()"></i>
+              </div>
+            </div>
+            <div class="col-xs-12 p-x-0">
+              <div class="col-xs-12 form-group p-x-0 p-t-10">
+                <div class="col-xs-6 col-md-4"></div>
+                <div class="col-xs-6 col-md-6" >
+                  <ul class="form-control fa-border"> <li *ngFor="let examname of examAliasNames; let i = examname" [attr.data]="i">
+                  <span class="fa fa-times color-primary fa-close" aria-hidden="true" (click)="deleteType(examname)"></span><span>{{examname}}</span></li></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 p-x-0">
+          <div class="col-xs-12 form-group">
+            <div class="col-xs-6 col-md-4">
+              <label>Tags for exam type</label>
+            </div>
+            <div class="col-xs-6 col-md-6">
+              <div class="col-xs-10 col-md-10 p-x-0">
+                <input type="text"  class="form-control" [(ngModel)]="tagNames" name="tagNames" #title="ngModel" />
+              </div>
+              <div class="col-xs-2 col-md-2 p-r-10">
+                <i class="fa fa-plus-circle color-primary fw-20 m-t-5 fa-close" aria-hidden="true" (click)="addTag()"></i>
+              </div>
+            </div>
+            <div class="col-xs-12 p-x-0">
+              <div class="col-xs-12 form-group p-x-0 p-t-10">
+                <div class="col-xs-6 col-md-4"></div>
+                <div class="col-xs-6 col-md-6" >
+                  <ul class="form-control fa-border"> <li  *ngFor="let tag of tags; let i = tag" [attr.data]="i">
+                  <i aria-hidden="true"></i><span >{{tag}}</span></li></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 p-x-0">
+          <div class="col-xs-12 form-group">
+            <div class="col-xs-6 col-md-4">
+              <label>Worksheets</label>
+            </div>
+            <div class="col-xs-6 col-md-6">
+              <ng-select [(ngModel)]="worksheets" [items]="templateitems" [active]="examtype.worksheets" id="worksheets" name="worksheets"
+              [multiple]="true"
+              (data) = "refreshValue($event)"
+              (selected)="selected($event)"
+              (removed)="removed($event)"
+              ngDefaultControl></ng-select>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 p-x-0">
+          <div class="col-xs-12 form-group">
+            <div class="col-xs-6 col-md-4">
+              <label>CPT Codes (Mandatory)</label>
+            </div>
+            <div class="col-xs-6 col-md-6">
+              <ng-select [(ngModel)]="manCptCodes" [items]="cptManCode" [active]="examtype.manCptCode" id="manCptCode" name="manCptCode"
+              [multiple]="true"
+              (data)="refreshCptManValue($event)"
+              (selected)="selected($event)"
+              (removed)="removed($event)"
+              ngDefaultControl ></ng-select>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 p-x-0">
+          <div class="col-xs-12 form-group">
+            <div class="col-xs-6 col-md-4">
+              <label>CPT Codes (Optional)</label>
+            </div>
+            <div class="col-xs-6 col-md-6" >
+              <ng-select [(ngModel)]="optCptCodes" [items]="cptManCode" [active] = "examtype.optCptCode"id="optCptCode" name="optCptCode"
+              [multiple]="true" (data)="refreshCptOptValue($event)"
+              (selected)="selected($event)"
+              (removed)="removed($event)"
+              ngDefaultControl></ng-select>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 m-b-10 p-x-0">
+          <div class="col-xs-offset-3 col-md-offset-4">
+            <button class="btn btn-primary m-l-10" (click)="cancelExamTypePopup()">Cancel</button>
+            <button type="submit" (click)="doSave(createExamType.value)"class="btn btn-primary" *ngIf="formState == 'Add'">Save</button>
+            <button type="submit" (click)="doSave(createExamType.value)"class="btn btn-primary" *ngIf="formState == 'Modify'">Modify</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    </form>
+  </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,23 @@
+{
+    "patientName" : "Dermatology",
+    "patientId" : "922746522",
+    "studyDate" : "20010109",
+    "modality" : "DERM",
+    "studyDescription" :"Skin Rash",
+    "numImages" : 2,
+    "studyId" : "dermatology",
+    "seriesList" : [
+        {
+            "seriesDescription": "Back",
+            "seriesNumber" : "28858",
+            "instanceList" : [
+                {
+					"imageId": "172.25.242.25/wado/?requestType=WADO&studyUID=1.2.276.0.7230010.3.1.2.0.1200.1476796015.510870&seriesUID=1.2.276.0.7230010.3.1.3.0.1200.1476796015.510871&objectUID=1.2.276.0.7230010.3.1.4.0.1200.1476796015.510872"
+				},
+				{
+					"imageId": "172.25.242.25/wado/?requestType=WADO&studyUID=1.2.276.0.7230010.3.1.2.0.1200.1476796015.510870&seriesUID=1.2.276.0.7230010.3.1.3.0.1200.1476796015.510871&objectUID=1.2.276.0.7230010.3.1.4.0.1200.1476796017.510873"
+				}
+            ]
+        }
+    ]
+}

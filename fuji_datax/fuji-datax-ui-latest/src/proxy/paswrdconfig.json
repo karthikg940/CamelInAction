@@ -1,0 +1,25 @@
+{
+	"results": [
+		{
+		"accntlockmax":5,
+		"hispwdreuse":6,
+		"isDefault":"Y",
+		 "pwdminlen":8,
+		  "sysgenpwd":3,
+		  "tmplock":5,
+		   "userdfndpwdexp":60
+		  },
+		{
+		"accntlockmax":5,
+		"hispwdreuse":6, 
+		"isDefault":"N",
+		"pwdminlen":8,
+		"sysgenpwd":3,
+		"tmplock":5,
+		"userdfndpwdexp":80
+		}
+	]
+}
+
+
+

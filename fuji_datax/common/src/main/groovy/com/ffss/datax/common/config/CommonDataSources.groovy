@@ -1,0 +1,32 @@
+package com.ffss.datax.common.config
+
+import javax.sql.DataSource
+
+import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder
+import org.springframework.boot.context.properties.ConfigurationProperties
+import org.springframework.context.annotation.Bean
+import org.springframework.context.annotation.Configuration
+import org.springframework.context.annotation.Primary
+import org.springframework.context.annotation.Profile
+
+/**
+ * 
+ * @author Virtusa|Polaris
+ *
+ */
+@Configuration
+class CommonDataSources {
+
+	@Primary
+	@Bean
+	@ConfigurationProperties(prefix='spring.datasources.dbdatax')
+	DataSource dataxDataSource() {
+		DataSourceBuilder.create().build()
+	}
+
+	@Bean
+	@ConfigurationProperties(prefix='spring.datasources.dbvna')
+	DataSource vnaDataSource() {
+		DataSourceBuilder.create().build()
+	}
+}

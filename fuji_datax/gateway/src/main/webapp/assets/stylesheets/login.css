@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+  overflow-x:hidden;
+}
+.clearfix:after,.clearfix:before{
+    content:" ";
+    display:table
+}
+.clearfix:after{
+    clear:both
+}
+body{
+    font-size:14px;
+    font-family: "Calibri";
+    color: #333;
+}
+a{
+    text-decoration: none !important;
+    color:#333;
+}
+a:hover{
+    color:#333;
+}
+.align-center{
+    text-align: center;
+}
+.panel-default>.panel-heading{
+    background-color: #fafafa !important;
+}
+.btnLogin{
+    background-color:#00539c !important;
+}
+.btnLogin:hover{
+    background-color:#00539c !important;
+}
+
+#bgVideo {
+  position: fixed; // Play the video in full screen mode
+  top:0px; 
+  left: 0px; 
+  min-width: 100%; 
+  min-height: 100%;
+  width:auto;
+  height:auto;
+}
+.hide{
+    display:none !important
+}
+.show{
+    display:block !important
+}
+.short{
+font-weight:bold;
+color:#FF0000;
+font-size:larger;
+}
+.weak{
+font-weight:bold;
+color:orange;
+font-size:larger;
+}
+.good{
+font-weight:bold;
+color:#2D98F3;
+font-size:larger;
+}
+.strong{
+font-weight:bold;
+color: limegreen;
+font-size:larger;
+}
+.m-a-0{
+    margin:0px;
+}
+.m-t-70{
+    margin-top: 70px;
+}
+.m-t-3{
+    margin-top:3rem;
+}
+.m-b-10{
+    margin-bottom:10px;
+}
+.m-b-3{
+    margin-bottom:3rem;
+}
+.m-l-2{
+    margin-left:2rem;
+}
+.p-a-1{
+    padding:1rem;
+}
+.p-r-1{
+	padding-right:1rem;
+}
+.p-t-1{
+	padding-top:1rem;
+}
+.h-20{
+    height:20px;
+}
+.color-dataX{
+    color:#00539c
+}
+.color-red{
+    color:#ff0000
+}
+.color-green{
+    color:#008000
+}
+.fw-300{
+    font-weight: 300;
+}
+.fw-15{
+    font-size: 15px;
+}
+.fw-14{
+	font-size: 14px;
+}
+.fw-12{
+	font-size: 12px;
+}
+.fw-10{
+	font-size: 10px;
+}
+.p-l-10{
+	padding:10px;
+}
+.b-1-lightergray{
+    border:1px solid #ddd;
+}
+.color-dark-gray{
+    color:#404040
+}
+.errorDivOrange{
+    color: #ff9800;
+    font-size: 15px;
+    border : 1px solid #ff9800;
+}
+.errorDivRed{
+    color: #ff0000;
+    font-size: 15px;
+    border : 1px solid #ff0000;
+}
+.pwdUnmatchWarn{
+	color: #ff9800;
+    font-size: 15px;
+    border : 1px solid #ff9800;
+}
+
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #5882FA;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 42%;
+    top: 30px;
+    font-size: 17px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {top: 0; opacity: 0;} 
+    to {top: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {top: 30px; opacity: 1;} 
+    to {top: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {top: 30px; opacity: 1;}
+    to {top: 0; opacity: 0;}
+}
+

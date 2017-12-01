@@ -1,0 +1,16 @@
+{% extends "UserLogin/base" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+    <h4> Dear DataX User,</h4>
+    <p>Welcome to DataX. Please find your Username below. The password for your account will be communicated in a separate Email.<br>
+Your Username : 
+    {{ email.data.username  }}</p><br>
+    
+    <p>Please follow the following link to access the application.</p><br>
+    <a href={{url}}>DataX Login page Url</a>
+    
+{% endblock %}
+
+{% block footer %}Regards,<br></br>DataX{% endblock %}

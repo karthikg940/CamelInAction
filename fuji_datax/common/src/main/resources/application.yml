@@ -1,0 +1,43 @@
+schema:
+   name: EVERCORE.dbo.
+vna:
+   directory: Z:/
+file:
+   handlerConfig: smb
+spring:
+  profiles:
+        active: prod
+  application:
+    name: vnasync
+  datasources:
+    dbvna:
+      driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      url: jdbc:sqlserver://${DB_URL:172.25.242.25}:${DB_PORT:1433}
+      databaseName: ${DB_NAME:EVERCORE}
+      serverName: null
+      username: ${DB_USERNAME:sa}
+      password: ${DB_PASSWORD:sa}
+    dbdatax:
+      dataSourceClassName: com.mysql.jdbc.jdbc2.optional.MysqlDataSource
+      url: jdbc:mysql://${DB_URL:localhost}:${DB_PORT:3306}/datax
+      databaseName: ${DB_NAME:datax}
+      serverName: null
+      username: ${DB_USERNAME:root}
+      password: ${DB_PASSWORD:}
+   
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLInnoDBDialect
+    database: MYSQL
+    openInView: true
+    show_sql: true
+    generate-ddl: false
+    hibernate:
+      ddl-auto: validate
+      naming-strategy: org.hibernate.cfg.EJB3NamingStrategy
+      connection:
+        zeroDateTimeBehavior: convertToNull
+    properties:
+      hibernate.cache.use_second_level_cache: false
+      hibernate.cache.use_query_cache: false
+      hibernate.generate_statistics: true
+      hibernate.hbm2ddl.auto: validate

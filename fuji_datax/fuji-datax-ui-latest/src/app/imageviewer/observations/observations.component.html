@@ -1,0 +1,365 @@
+
+<modal #choosePdfPopup [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Choose Worksheet</h4>
+  </modal-header>
+  <modal-body>
+    <div class="color">Select the worksheet to view pdf</div>
+    <input type="radio" value="worksheetPdfId" name ="pdfreport" [ngModel]="pdfreport" (ngModelChange)="onChangeWorksheetPdf('worksheetPdfId',$event)"> Procedure Report<br><br>
+    <input type="radio" value="qaPdfId" name ="pdfreport" [ngModel]="pdfreport" (ngModelChange)="onChangeWorksheetPdf('qaPdfId',$event)"> QA Report
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="cancelGeneratePDF()">Cancel</button>
+    <button type="button" class="btn btn-primary" (click)="confirmGeneratePDF()">Ok</button>
+  </modal-footer>
+</modal>
+
+<modal #assignstudytoattendingPopup [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Choose Attending</h4>
+  </modal-header>
+  <modal-body>
+    <div class="color">Select attending doctor for the study</div>
+    <ng-select [allowClear]="true"
+    [items]="userNamesItems"
+    [disabled]="disabled"
+    (data)="refreshValue($event)"
+    (selected)="selected($event)"
+    (typed)="typed($event)"
+    (removed)="removed($event)">
+    </ng-select>
+    <div [hidden]="userNameExists" class="alert alert-danger alertRequired">Please select a proper Username</div>
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="cancelAssignToAttend()">Cancel</button>
+    <button type="button" class="btn btn-primary" (click)="confirmAssignToAttend()">Ok</button>
+  </modal-footer>
+</modal>
+
+<modal #associateWorksheetPopup [keyboard]="false" [backdrop]="'static'">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Replace worksheet</h4>
+  </modal-header>
+  <modal-body>
+    The current worksheet data will be lost. Do you want to replace the worksheet?
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="confirmAssociation()">Yes</button>
+    <button type="button" class="btn btn-primary" (click)="cancelAssociation()">No</button>
+  </modal-footer>
+</modal>
+
+<modal #submitToEMR [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Submit to EMR</h4>
+  </modal-header>
+  <modal-body>{{statusMsg}}
+   <!--Study successfully submitted to EMR  -->
+  </modal-body>
+</modal>
+<modal #createOrderPopUp [keyboard]="false" [backdrop]="'static'">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Order Reconciliation</h4>
+  </modal-header>
+  <modal-body>
+    No order associated with study. Do you want to create order?
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="confirmCreateOrder()">Yes</button>
+    <button type="button" class="btn btn-primary" (click)="cancelCreateOrder()">No</button>
+  </modal-footer>
+</modal>
+<modal #createOrderSuccessToast [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Order Reconciliation </h4>
+  </modal-header>
+  <modal-body>
+    New order created Successfully!
+  </modal-body>
+</modal>
+
+<modal #cancelOrderToast [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Order Reconciliation </h4>
+  </modal-header>
+  <modal-body>
+    Mismatch in order associated with study. Cancelling the existing Order and Create new Order
+  </modal-body>
+</modal>
+
+<modal #submitForAttestationToast [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Submit for Attestation</h4>
+  </modal-header>
+  <modal-body>
+    Study successfully submitted for Attestation
+  </modal-body>
+</modal>
+
+<modal #newAssociationWrksht [keyboard]="false" [backdrop]="'static'">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Associate worksheet</h4>
+  </modal-header>
+  <modal-body>
+    Please confirm to associate worksheet to study
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="confirmAssociation()">Ok</button>
+    <button type="button" class="btn btn-primary" (click)="cancelAssociation()">Cancel</button>
+  </modal-footer>
+</modal>
+
+<modal #worksheetValidationPopup [keyboard]="false" [backdrop]="'static'">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Worksheet Validation</h4>
+  </modal-header>
+  <modal-body>
+    Please provide all the minimum required details before signing the worksheet/study
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="validateWorksheet()">Ok</button>
+  </modal-footer>
+</modal>
+
+<modal #resetPopup [keyboard]="false" [backdrop]="'static'">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Reset worksheet</h4>
+  </modal-header>
+  <modal-body>
+    Data entered will be lost.Continue Reset?
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="cancelReset()">Cancel</button>
+    <button type="button" class="btn btn-primary" (click)="confirmReset()">Reset</button>
+  </modal-footer>
+</modal>
+
+<modal #saveSuccessPopup [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Save worksheet</h4>
+  </modal-header>
+  <modal-body>
+    Saved Successfully!
+  </modal-body>
+</modal>
+
+<modal #saveSignaturePopUp [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Save worksheet and signature</h4>
+  </modal-header>
+  <modal-body>
+    Worksheet saved and signed Successfully. To make further changes kindly remove your signature.
+  </modal-body>
+</modal>
+
+<modal #saveAttestedSignaturePopUp [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Save worksheet and attested signature</h4>
+  </modal-header>
+  <modal-body>
+    Worksheet auto attested. To make further changes kindly remove your signature.
+  </modal-body>
+</modal>
+
+<modal #examTypeChangePopup [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Save changes</h4>
+  </modal-header>
+  <modal-body>
+    Do you want to save changes for current Worksheet?
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="cancelChanges()">No</button>
+    <button type="button" class="btn btn-primary" (click)="confirmChanges()">Yes</button>
+  </modal-footer>
+</modal>
+
+<modal #cancelPopup [keyboard]="false" [backdrop]="'static'">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Cancel worksheet</h4>
+  </modal-header>
+  <modal-body>
+    Unsaved data will be lost.Are you sure to cancel worksheet?
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="cancelCancel()">No</button>
+    <button type="button" class="btn btn-primary" (click)="confirmCancel()">Yes</button>
+  </modal-footer>
+</modal>
+
+<modal #worksheetChangePopup [keyboard]="false" [backdrop]="'static'">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">New worksheet</h4>
+  </modal-header>
+    <modal-body>
+  Current worksheet will be lost.Are you sure you want to replace?
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="cancelWorksheetChange()">No</button>
+    <button type="button" class="btn btn-primary" (click)="confirmWorksheetChange()">Yes</button>
+  </modal-footer>
+</modal>
+
+<modal #submitWorksheetPopup [keyboard]="false" [backdrop]="'static'">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Submit worksheet</h4>
+  </modal-header>
+  <modal-body>
+    Please confirm to submit worksheet to complete study
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="cancelSubmitChange()">Cancel</button>
+    <button type="button" class="btn btn-primary" (click)="confirmSubmitChange()">Ok</button>
+  </modal-footer>
+</modal>
+
+<modal #userlistAndGrouplistPopup [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Assign to QA</h4>
+  </modal-header>
+  <modal-body>
+    <div class="color">Please choose user/group for QA</div>
+    <ng-select [allowClear]="true"
+    [items]="items"
+    [disabled]="disabled"
+    (data)="refreshValue($event)"
+    (selected)="selected($event)"
+    (typed)="typed($event)"
+    (removed)="removed($event)"
+    placeholder="Select QA">
+    </ng-select>
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="cancelUserorGroup()">Cancel</button>
+    <button type="button" class="btn btn-primary" (click)="selectUserorGroup()">Ok</button>
+  </modal-footer>
+</modal>
+
+<modal #examTypeslistPopup [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Choose ExamType</h4>
+  </modal-header>
+  <modal-body>
+    <div class="color">Please choose ExamType</div>
+    <ng-select [allowClear]="true"
+    [items]="examTypesList"
+    (selected)="selectedExamTypes($event)"
+    [active]='examTypeslistPopup.visible?null:""'
+    (typed)="typed($event)"
+    (removed)="removed($event)"
+    placeholder="Select ExamType">
+    </ng-select>
+    <div [hidden]="examTypeExists" class="alert alert-danger alertRequired">Please select ExamType</div>
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="cancelExamType()">Cancel</button>
+    <button type="button" class="btn btn-primary" (click)="confirmExamType()">Ok</button>
+  </modal-footer>
+</modal>
+
+<modal #submitToReviewToast [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Submit for Review</h4>
+  </modal-header>
+  <modal-body>
+    Study submitted for QA Review
+  </modal-body>
+</modal>
+
+
+<div class="worksheet">
+<div class="panel panel-default">
+  <div class="panel-heading bg-ssblue color-white clearfix p-5">
+    <div class="col-xs-2 p-x-0">
+      <span href="javascript:void(0)" class="btnWorksheet img-vie-right-menu btn btn-default "><i class="fa fa-list"></i></span>
+    </div>
+    <div class="col-xs-10 p-x-0 lh-30">
+      <span class="color-white fw-15 m-l-10">Worksheet</span>
+    </div>
+  </div>
+  <observations-tabs>
+    <observations-tab tabTitle="Demographics">
+      <div class="panel-body fw-15">
+        <div class="row">
+        <div class="col-md-9">
+          <div class="row m-x-0">
+            {{patientDetails?.patient.firstName}}
+            {{patientDetails?.patient.middleName}}
+            {{patientDetails?.patient.lastName}}
+          </div>
+          <div class="row m-x-0 clearfix m-t-5">
+            <span class="pull-left label bg-ssblue b-1-ssblue">{{patientDetails?.patient.gender}}</span>
+            <div class="pull-left m-l-10">
+              <span class="label bg-gray b-1-gray">{{patientDetails?.patient.dob}}</span>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="row m-y-10">
+          <div class="col-md-12">
+            <label>MR Number: <span>{{patientDetails?.patient.mrnno}}</span></label>
+          </div>
+        </div>
+        <hr class="m-y-0">
+      </div>
+    </observations-tab>
+
+    <observations-tab tabTitle="Exam Report">
+      <div class="panel-body fw-15">
+        <div>
+          <span *ngFor="let exam of examType"><span  class="label bg-examtype m-r-5" >{{exam[0].examtype}}</span></span>
+        </div>
+        <div class="row">
+          <div class="ddWorksheet dropdown m-t-10 col-md-12">
+                                    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                                                <div class="moreClose btn-group" role="group">
+                                                            <button class="btn btn-default dropdown-toggle"
+                                                            [disableOn]="'studyStatusNum >= StudyStatusEnum.Signed || (loggedInUser != currentUser)'"
+                                                            type="button" data-toggle="dropdown">{{(selectedTemplateName)?selectedTemplateName :'Choose Worksheet' }}
+                                                            <span class="caret"></span></button>
+<ul class="dropdown-menu">
+                                                              <li *ngFor="let worksheet of worksheets" (click)="onWorksheetSelection(worksheet.id, worksheet.name); onDropDownSelection(worksheet.name)" ><a href="javascript:void(0)">{{worksheet.name}}</a></li>
+                                                            </ul>
+                                                </div>
+                                                 <button type="button" class="btn btn-primary fontSize h-34" data-toggle="button" aria-pressed="false" autocomplete="off"  [disabled]="isValid" (click)="loadWorksheetList('viewmore')" >View More</button>
+                                    </div>
+                          </div>
+        </div>
+        <div class="row">
+          <div class="ddWorksheet dropdown m-t-10 col-md-14">
+			<button class="btn btn-primary m-l-5 m-r-3 pull-right" [disableOn]="'studyStatus == \'New\''" (click)="generateSRReport()">View SR</button>
+            <button class="btn btn-primary m-l-5 pull-right" [disableOn]="'studyStatus != \'Submitted\''" (click)="generatePdf()">View PDF</button>
+            <button class="btn btn-primary m-l-5 pull-right"
+            [hideOn]="'!qaEnabled || studyStatusNum > StudyStatusEnum.Signed || (submitOnSign)'"
+            [disableOn]="'(loggedInUser != currentUser) || studyStatusNum < StudyStatusEnum.Signed'"
+            (click)="submitforQA()">Submit for QA</button>
+            <button class="btn btn-primary m-l-3 pull-right"
+            [hideOn]="'(studyStatusNum < StudyStatusEnum.SubmittedForAttestation && attestationEnabled) || (studyStatusNum < StudyStatusEnum.QAUnassigned && qaEnabled) || (submitOnSign)'"
+            [disableOn]="'(loggedInUser !== currentUser) || (studyStatusNum === StudyStatusEnum.Submitted) || (attestationEnabled && studyStatusNum !== StudyStatusEnum.Attested) || (qaEnabled && !qaSigned) ||(!qaEnabled && !attestationEnabled && studyStatusNum < StudyStatusEnum.Signed)'"
+            (click)="submitWorksheetbtn()">Submit to EMR</button>
+            <button class="btn btn-primary m-l-3 pull-right"
+            [hideOn]="'!attestationEnabled || (qaEnabled && studyStatusNum < StudyStatusEnum.QAUnassigned) || (studyStatusNum >= StudyStatusEnum.SubmittedForAttestation) || (submitOnSign)'"
+            [disableOn]="'(loggedInUser != currentUser) || (!qaSigned && qaEnabled) || (!qaEnabled && studyStatusNum !== StudyStatusEnum.Signed)' "
+            (click)="submitForAttending()">Submit for Attending</button>
+          </div>
+        </div>
+      </div>
+      <worksheet *ngIf="template" [template]="template" [sdata]="sdata"
+      [data]="data[template.id]" [id]="template.id"
+      (onUpdate)="onWorksheetUpdate($event)"
+      [studyId]="studyId" [examType]="examType"
+      [selectedExamTypeId]="selectedExamTypeId"
+      (onInprogress)="onWorksheetUpdate($event)"
+      [workflowStatus]="workflowStatus"
+      [attendingWorkflowStatus]="attendingWorkflowStatus"
+      [status]="status"
+      [disableQaSign]="disableQaSign"
+      [qasign]="qasign"
+      [tagList]="tagsList"
+      [activeTagList]="activeTagList"
+      [qaUser]="qaUser"  [assignedUser]="assignedUser"
+      [attendingUser]="attendingUser" [loginUserId]="loginUserId" [submitOnSignFlag]="submitOnSignFlag"></worksheet>
+    </observations-tab>
+  </observations-tabs>
+</div>
+</div>

@@ -1,0 +1,165 @@
+
+server:
+    port: 8080
+
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/
+
+liquibase:
+  enabled: false
+ 
+zuul:
+    ignoredServices: '*'
+    routes:
+        study: 
+            path: /api/study/**
+            serviceId: study
+            sensitiveHeaders:
+            stripPrefix: false
+        examtype: 
+            path: /api/examtype/**
+            serviceId: study
+            sensitiveHeaders:
+            stripPrefix: false
+        examtypeconfig:
+            path: /api/exam/**
+            serviceId: configuration
+            sensitiveHeaders:
+            stripPrefix: false
+        ldapconfig:
+            path: /api/ldapconfig/**
+            serviceId: configuration
+            sensitiveHeaders:
+            stripPrefix: false
+        dashboard: 
+            path: /api/analytics/**
+            serviceId: analytics
+            sensitiveHeaders:
+            stripPrefix: false
+        studylist: 
+            path: /api/studylist/**
+            serviceId: study
+            sensitiveHeaders:
+            stripPrefix: false
+        template: 
+            path: /api/template/**
+            serviceId: worksheet
+            sensitiveHeaders:
+            stripPrefix: false
+        worksheet: 
+            path: /api/worksheet/**
+            serviceId: worksheet
+            sensitiveHeaders:
+            stripPrefix: false
+        user:
+            path: /api/user/**
+            serviceId: configuration
+            sensitiveHeaders:
+            stripPrefix: false
+            
+        userlist:
+            path: /api/userlist/**
+            serviceId: configuration
+            sensitiveHeaders:
+            stripPrefix: false
+            
+        config: 
+            path: /api/userprofile/**
+            serviceId: configuration
+            sensitiveHeaders:
+            stripPrefix: false
+        
+        usergroup:
+            path: /api/usergroup/**
+            serviceId: configuration
+            sensitiveHeaders:
+            stripPrefix: false
+        
+        role:
+            path: /api/role/**
+            serviceId: configuration
+            sensitiveHeaders:
+            stripPrefix: false
+            
+        organization:
+            path: /api/organization/**
+            serviceId: configuration
+            sensitiveHeaders:
+            stripPrefix: false
+        
+        permission:
+            path: /api/permissions/**
+            serviceId: configuration
+            sensitiveHeaders:
+            stripPrefix: false
+            
+            
+        auditlog:
+            path: /api/auditlog/**
+            serviceId: auditlog
+            sensitiveHeaders:
+            stripPrefix: false
+            
+        preference:
+            path: /api/preference/**
+            serviceId: workflow
+            sensitiveHeaders:
+            stripPrefix: false
+        reportgeneration:
+            path: /api/export/**
+            serviceId: analytics
+            sensitiveHeaders:
+            stripPrefix: false
+        systemconfig:
+            path: /api/config/**
+            serviceId: configuration
+            sensitiveHeaders:
+            stripPrefix: false   
+        notification:
+            path: /api/notification/**
+            serviceId: notification
+            sensitiveHeaders:
+            stripPrefix: false
+        tags:
+            path: /api/tag/**
+            serviceId: configuration
+            sensitiveHeaders:
+            stripPrefix: false
+        smtp:
+            path: /api/configuration/**
+            serviceId: configuration
+            sensitiveHeaders:
+            stripPrefix: false
+        authunlock:
+            path: /api/account/**
+            serviceId: auth
+            sensitiveHeaders:
+            stripPrefix: false
+        userTag:
+             path: /api/userTag/**
+             serviceId: configuration
+             sensitiveHeaders:
+             stripPrefix: false
+        studyTag:
+             path: /api/studyTag/**
+             serviceId: configuration
+             sensitiveHeaders:
+             stripPrefix: false     
+hystrix: 
+    command.default.execution.isolation.strategy: THREAD
+    command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
+    command.default.execution.timeout.enabled: false
+    command.default.fallback.enabled: false
+    threadpool.default.coreSize: 20
+
+ribbon:
+    ReadTimeout: 100000
+
+spring:
+    application:
+        name: gateway
+auth:
+    secret:
+        joanshephard

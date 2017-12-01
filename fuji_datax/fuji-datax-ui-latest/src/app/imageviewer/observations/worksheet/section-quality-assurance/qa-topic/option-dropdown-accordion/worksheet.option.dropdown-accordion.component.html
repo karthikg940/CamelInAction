@@ -1,0 +1,12 @@
+<div class="col-md-{{12/qaColumnLayout}} input group pull-left p-x-0">
+
+  <div class="col-md-12">
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle label-fw-13 align-left" [disabled]="disableQAWorksheet" type="button" data-toggle="dropdown" style="width:100%">{{(qaData.qaOption)?qaData.qaOption :'Choose Grade Scale' }}
+            <span class="caret"></span></button>
+        <ul class="dropdown-menu" style="width:100%">
+            <li *ngFor="let qaOption of qaOptions" (click)="onQAChange(qaOption, 'qaOption')"><a href="javascript:void(0)" class="label-fw-13">{{qaOption}}</a></li>
+        </ul>
+    </div>
+  </div>
+</div>

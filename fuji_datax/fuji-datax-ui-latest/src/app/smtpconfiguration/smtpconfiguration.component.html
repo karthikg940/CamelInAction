@@ -1,0 +1,116 @@
+
+<div class="contentpage m-l-65">
+<div class="">
+  <!-- Breadcrumbs -->
+  <div class="row m-x-0 bg-ssblue">
+    <div class="col-xs-12 col-sm-6 p-l-15">
+      <div class="pull-left color-white">
+        <h2 class="m-y-10">Administrator</h2>
+      </div>
+      <ol class="breadcrumb bg-ssblue pull-left fw-15 m-b-0 m-t-10 p-l-15">
+        <li><a href="#" class="color-white"><i class="fa fa-lg fa-cog"></i></a></li>
+        <li class="color-white">System Configuration</li>
+        <li class="color-white">SMTP</li>
+      </ol>
+    </div>
+  </div>
+  <!-- Breadcrumbs Ends -->
+
+  <!--Smtp Configuration-->
+
+  <div class="row m-t-15 m-x-0">
+  <div class="col-xs-12">
+    <form novalidate  #smtpConfigForm="ngForm" >
+    <div class="col-md-offset-2 col-md-8 b-1-lightgray bg-white">
+      <div class="row m-x-0">
+        <div class="col-xs-12">
+          <h3>SMTP Configuration</h3>
+        </div>
+      </div>
+      <div class="row m-x-0 m-t-5">
+        <div class="col-sm-offset-2 col-md-offset-2 col-xs-12 col-sm-8 p-10"></div>
+      </div>
+      <div class="row m-x-0 m-t-5">
+        <div class="col-sm-offset-2 col-md-offset-2 col-xs-12 col-sm-8 p-10">
+          <div class="col-xs-12 p-x-0">
+            <div class="col-xs-12 form-group">
+              <div class="col-xs-6 col-md-4">
+                <label>SMTP Server</label>
+              </div>
+              <div class="col-xs-6 col-md-6">
+                <input type="text" class="form-control" required [(ngModel)]="smtpConfig.server" (keypress)="validateAlpha($event);" name="server" id="server" #server="ngModel" maxlength="50">
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 p-x-0">
+            <div class="col-xs-12 form-group">
+              <div class="col-xs-6 col-md-4">
+                <label>SMTP Port</label>
+              </div>
+              <div class="col-xs-6 col-md-6">
+                <input type="text" class="form-control" required [(ngModel)]="smtpConfig.port"  (keypress)="validateNum($event)"name="port" id="port" #port="ngModel" maxlength="5">
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 p-x-0">
+            <div class="col-xs-12 form-group">
+              <div class="col-xs-6 col-md-4">
+                <label>From Address</label>
+              </div>
+              <div class="col-xs-6 col-md-6">
+                <input type="text" class="form-control" required [(ngModel)]="smtpConfig.defaultEmail" name="defaultEmail" id="defaultEmail" #defaultEmail="ngModel" maxlength="100" (focus)="removeEmailError()">
+
+                <div [hidden]="invalidEmail" class="alert alert-danger">Please enter a valid Email ID</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 p-x-0">
+            <div class="col-xs-12 form-group">
+              <div class="col-xs-6 col-md-4">
+                <label>Enable Authentication</label>
+              </div>
+              <div class="col-xs-6 col-md-6">
+                <select class="form-control" id="isAuth" name="isAuth"  [(ngModel)]="smtpConfig.isAuth" (change)="getText($event)">
+                  <option *ngFor="let item of selectOption" [value]="item.value" [disabled]="item.value=='Select'" >{{item.value}}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 p-x-0">
+            <div class="col-xs-12 form-group">
+              <div class="col-xs-6 col-md-4">
+                <label>Authenticate Username</label>
+              </div>
+              <div class="col-xs-6 col-md-6">
+                <input type="text" class="form-control" [(ngModel)]="smtpConfig.userName" id="userName" name="userName" #userName="ngModel" (focus)="removeUserNameError()" [readonly]="disableUserName">
+                <div [hidden]="userNameError" class="alert alert-danger alertRequired">Please provide user name
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 p-x-0">
+            <div class="col-xs-12 form-group">
+              <div class="col-xs-6 col-md-4">
+                <label>Authenticate Password</label>
+              </div>
+              <div class="col-xs-6 col-md-6">
+                <input type="password" class="form-control" [(ngModel)]="smtpConfig.password" id="password" name="password" #password="ngModel" (focus)="removePasswordError()" [readonly]="disablePassword">
+                <div [hidden]="passwordError" class="alert alert-danger alertRequired">Please provide password
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 m-b-10 p-x-0">
+            <div class="col-xs-offset-5 col-md-offset-5">
+              <button class="btn btn-primary" (click)="resetForm()">Reset</button>
+              <button type="submit" class="btn btn-primary" [disabled]= "!smtpConfigForm.form.valid" (click)="saveSmtpConfiguration(smtpConfigForm.value,smtpConfigForm.valid)">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </form>
+  </div>
+  </div>
+</div>
+</div>

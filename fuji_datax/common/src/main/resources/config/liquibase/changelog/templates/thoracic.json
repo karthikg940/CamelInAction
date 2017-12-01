@@ -1,0 +1,930 @@
+{
+	"id": "wrk1",
+	"sections": [
+		{
+			"id": "indications",
+			"name": "Indications for Exam",
+			"title": "Indications Summary:",
+			"sectionNum": 1,
+			"required": true,
+			"topics": [
+				{
+					"id": "default",
+					"name": "",
+					"type": "multi-select",
+					"dataFormat": "Options",
+					"columnLayout": 2,
+					"options": [
+						{
+							"id": "dyspnea",
+							"name": "Dyspnea",
+							"valueType": "positive"
+						},
+						{
+							"id": "hypotension",
+							"name": "Hypotension",
+							"valueType": "positive"
+						},
+						{
+							"id": "chest pain",
+							"name": "Chest pain",
+							"valueType": "positive"
+						},
+						{
+							"id": "blunt thoracic trauma",
+							"name": "Blunt thoracic trauma",
+							"valueType": "positive"
+						},
+						{
+							"id": "pleurisy",
+							"name": "Pleurisy",
+							"valueType": "positive"
+						},
+						{
+							"id": "penetrating thoracic trauma",
+							"name": "Penetrating thoracic trauma",
+							"valueType": "positive"
+						},
+						{
+							"id": "hypoxia",
+							"name": "Hypoxia",
+							"valueType": "positive"
+						},
+						{
+							"id": "educational",
+							"name": "Educational",
+							"valueType": "positive"
+						}
+					],
+					"positive": "~Patient shows indications of ${values}",
+					"negative": "",
+					"noSelection": "~No selective indications found"
+				},
+				{
+					"id": "others",
+					"name": "Other",
+					"type": "text",
+					"dataFormat": "Text",
+					"narration": "~Comments: ${values}"
+				}
+			],
+			"noSectionFound": "~No Indications Found"
+		},
+		{
+			"id": "views",
+			"name": "Views",
+			"title": "~Views Summary:",
+			"sectionNum": 2,
+			"required": true,
+			"topics": [
+				{
+					"id": "right-anterior-superior-thorax",
+					"name": "Right anterior/ superior thorax",
+					"type": "single-select",
+					"dataFormat": "Options",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "adequate",
+							"name": "Adequate",
+							"valueType": "positive"
+						},
+						{
+							"id": "limited",
+							"name": "Limited",
+							"valueType": "positive"
+						},
+						{
+							"id": "not-obtained",
+							"name": "Not Obtained",
+							"valueType": "negative"
+						}
+					],
+					"positive": "~${name} views of ${values} is obtained",
+					"negative": "~Views not obtained for ${values}",
+					"noSelections": "~No selective views are found"
+				},
+				{
+					"id": "right-lateral-inferior-thorax",
+					"name": "Right lateral/ inferior thorax",
+					"type": "single-select",
+					"dataFormat": "Options",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "adequate",
+							"name": "Adequate",
+							"valueType": "positive"
+						},
+						{
+							"id": "limited",
+							"name": "Limited",
+							"valueType": "positive"
+						},
+						{
+							"id": "not-obtained",
+							"name": "Not Obtained",
+							"valueType": "negative"
+						}
+					],
+					"positive": "~${name} views of ${values} is obtained",
+					"negative": "~Views not obtained for ${values}",
+					"noSelections": "~No selective views are found"
+				},
+				{
+					"id": "left-anterior-superior-thorax",
+					"name": "Left anterior/ superior thorax",
+					"type": "single-select",
+					"dataFormat": "Options",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "adequate",
+							"name": "Adequate",
+							"valueType": "positive"
+						},
+						{
+							"id": "limited",
+							"name": "Limited",
+							"valueType": "positive"
+						},
+						{
+							"id": "not-obtained",
+							"name": "Not Obtained",
+							"valueType": "negative"
+						}
+					],
+					"positive": "~${name} views of ${values} is obtained",
+					"negative": "~Views not obtained for ${values}",
+					"noSelections": "~No selective views are found"
+				},
+				{
+					"id": "left-lateral-inferior-thorax",
+					"name": "Left lateral/ inferior thorax",
+					"type": "single-select",
+					"dataFormat": "Options",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "adequate",
+							"name": "Adequate",
+							"valueType": "positive"
+						},
+						{
+							"id": "limited",
+							"name": "Limited",
+							"valueType": "positive"
+						},
+						{
+							"id": "not-obtained",
+							"name": "Not Obtained",
+							"valueType": "negative"
+						}
+					],
+					"positive": "~${name} views of ${values} is obtained",
+					"negative": "~Views not obtained for ${values}",
+					"noSelections": "~No selective views are found"
+				},
+				{
+					"id": "others",
+					"name": "Other",
+					"type": "text",
+					"dataFormat": "Text",
+					"narration": "~Comments: ${values}"
+				}
+			],
+			"noSectionFound": "~No Views obtained"
+		},
+		{
+			"id": "findings",
+			"name": "Findings",
+			"title": "~Findings Summary:",
+			"sectionNum": 3,
+			"required": true,
+			"topics": [
+				{
+					"id": "right-thorax",
+					"name": "Right thorax",
+					"dataFormat": "Options",
+					"topics": [
+						{
+							"id": "lung-sliding",
+							"name": "Lung sliding",
+							"type": "multi-select",
+							"dataFormat": "Options",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "present",
+									"name": "Present",
+									"valueType": "positive"
+								},
+								{
+									"id": "absent",
+									"name": "Absent",
+									"valueType": "negative"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate",
+									"valueType": "negative"
+								}
+							],
+							"positive": "~Lung sliding(right-thorax) is ${name}",
+							"negative": "~Lung sliding(right-thorax) is ${name}",
+							"noSelections": "~No selective findings obtained"
+						},
+						{
+							"id": "lung-point-sign",
+							"name": "Lung point sign",
+							"type": "single-select",
+							"dataFormat": "Options",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "present",
+									"name": "Present",
+									"valueType": "positive"
+								},
+								{
+									"id": "absent",
+									"name": "Absent",
+									"valueType": "negative"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate",
+									"valueType": "negative"
+								}
+							],
+							"positive": "~${values}(right-thorax) is ${name}",
+							"negative": "~${values}(right-thorax) is ${name}",
+							"noSelections": "~No selective findings obtained"
+						},
+						{
+							"id": "interstitium",
+							"name": "Interstitium",
+							"dataFormat": "Options",
+							"topics": [
+								{
+									"id": "a-lines",
+									"name": "a-lines",
+									"type": "multi-select",
+									"dataFormat": "Options",
+									"columnLayout": 3,
+									"options": [
+										{
+											"id": "present",
+											"name": "Present",
+											"valueType": "positive"
+										},
+										{
+											"id": "absent",
+											"name": "Absent",
+											"valueType": "negative"
+										},
+										{
+											"id": "indeterminate",
+											"name": "Indeterminate",
+											"valueType": "negative"
+										}
+									],
+									"positive": "~a-lines(interstitium) are ${name}",
+									"negative": "~a-lines(interstitium) are ${name}",
+									"noSelections": "~No selective findings obtained"
+								},
+								{
+									"id": "b-lines",
+									"name": "b-lines",
+									"type": "single-select",
+									"dataFormat": "Options",
+									"columnLayout": 3,
+									"options": [
+										{
+											"id": "present",
+											"name": "Present",
+											"valueType": "positive"
+										},
+										{
+											"id": "absent",
+											"name": "Absent",
+											"valueType": "negative"
+										},
+										{
+											"id": "indeterminate",
+											"name": "Indeterminate",
+											"valueType": "negative"
+										}
+									],
+									"positive": "~${values}(interstitium) are ${name}",
+									"negative": "~${values}(interstitium) are ${name}",
+									"noSelections": "~No selective findings obtained"
+								}
+							]
+						},
+						{
+							"id": "anterior-superior-region",
+							"name": "Anterior/ superior region",
+							"type": "single-select",
+							"dataFormat": "Options",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "present",
+									"name": "present (greater than 3 per view)",
+									"valueType": "positive"
+								},
+								{
+									"id": "absent",
+									"name": "Absent",
+									"valueType": "negative"
+								}
+							],
+							"positive": "~${values} is ${name}",
+							"negative": "~${values} is ${name}",
+							"noSelections": "~No selective findings obtained"
+						},
+						{
+							"id": "inferior-lateral-region",
+							"name": "Inferior/ lateral region",
+							"type": "single-select",
+							"dataFormat": "Options",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "present",
+									"name": "present (greater than 3 per view)",
+									"valueType": "positive"
+								},
+								{
+									"id": "absent",
+									"name": "Absent",
+									"valueType": "negative"
+								}
+							],
+							"positive": "~${values} is ${name}",
+							"negative": "~${values} is ${name}",
+							"noSelections": "~No selective findings obtained"
+						},
+						{
+							"id": "pleural-effusion",
+							"name": "pleural effusion",
+							"type": "single-select",
+							"dataFormat": "Options",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "present",
+									"name": "Present",
+									"valueType": "positive"
+								},
+								{
+									"id": "absent",
+									"name": "Absent",
+									"valueType": "negative"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate",
+									"valueType": "negative"
+								}
+							],
+							"positive": "~${values} is ${name}",
+							"negative": "~${values} is ${name}",
+							"noSelections": "~No selective findings obtained",
+							"topics": [
+								{
+									"id": "if-present",
+									"name": "If Present",
+									"type": "single-select",
+									"dataFormat": "Options",
+									"columnLayout": 2,
+									"options": [
+										{
+											"id": "small",
+											"name": "Small",
+											"valueType": "positive"
+										},
+										{
+											"id": "large",
+											"name": "Large",
+											"valueType": "positive"
+										},
+										{
+											"id": "anechoic",
+											"name": "Anechoic",
+											"valueType": "positive"
+										},
+										{
+											"id": "complex",
+											"name": "Complex",
+											"valueType": "positive"
+										}
+									],
+									"positive": "~pleural effusion size is ${name}",
+									"negative": "~pleural effusion size is ${name}",
+									"noSelections": "~No selective findings obtained"
+								}
+							]
+						},
+						{
+							"id": "lung-consolidation",
+							"name": "Lung consolidation",
+							"type": "single-select",
+							"dataFormat": "Options",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "present",
+									"name": "Present",
+									"valueType": "positive"
+								},
+								{
+									"id": "absent",
+									"name": "Absent",
+									"valueType": "negative"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate",
+									"valueType": "negative"
+								}
+							],
+							"positive": "~${values} is ${name}",
+							"negative": "~${values} is ${name}",
+							"noSelections": "~No selective findings obtained"
+						},
+						{
+							"id": "air-bronchograms",
+							"name": "air bronchograms",
+							"type": "single-select",
+							"dataFormat": "Options",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "present",
+									"name": "Present",
+									"valueType": "positive"
+								},
+								{
+									"id": "absent",
+									"name": "Absent",
+									"valueType": "negative"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate",
+									"valueType": "negative"
+								}
+							],
+							"positive": "~${values} is ${name}",
+							"negative": "~${values} is ${name}",
+							"noSelections": "~No selective findings obtained"
+						},
+						{
+							"id": "others",
+							"name": "Other",
+							"type": "text",
+							"dataFormat": "Text",
+							"narration": "~Comments:${values}"
+						}
+					]
+				},
+				{
+					"id": "left-thorax",
+					"name": "Left thorax",
+					"dataFormat": "Options",
+					"topics": [
+						{
+							"id": "lung-sliding",
+							"name": "Lung sliding",
+							"type": "multi-select",
+							"dataFormat": "Options",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "present",
+									"name": "Present",
+									"valueType": "positive"
+								},
+								{
+									"id": "absent",
+									"name": "Absent",
+									"valueType": "negative"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate",
+									"valueType": "negative"
+								}
+							],
+							"positive": "~Lung sliding(left-thorax) is ${name}",
+							"negative": "~Lung sliding(left-thorax) is ${name}",
+							"noSelections": "~No selective findings obtained"
+						},
+						{
+							"id": "lung-point-sign",
+							"name": "Lung point sign",
+							"type": "single-select",
+							"dataFormat": "Options",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "present",
+									"name": "Present",
+									"valueType": "positive"
+								},
+								{
+									"id": "absent",
+									"name": "Absent",
+									"valueType": "negative"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate",
+									"valueType": "negative"
+								}
+							],
+							"positive": "~${values}(left-thorax) is ${name}",
+							"negative": "~${values}(left-thorax) is ${name}",
+							"noSelections": "~No selective findings obtained"
+						},
+						{
+							"id": "interstitium",
+							"name": "Interstitium",
+							"dataFormat": "Options",
+							"topics": [
+								{
+									"id": "a-lines",
+									"name": "a-lines",
+									"type": "multi-select",
+									"dataFormat": "Options",
+									"columnLayout": 3,
+									"options": [
+										{
+											"id": "present",
+											"name": "Present",
+											"valueType": "positive"
+										},
+										{
+											"id": "absent",
+											"name": "Absent",
+											"valueType": "negative"
+										},
+										{
+											"id": "indeterminate",
+											"name": "Indeterminate",
+											"valueType": "negative"
+										}
+									],
+									"positive": "~a-lines(interstitium) are ${name}",
+									"negative": "~a-lines(interstitium) are ${name}",
+									"noSelections": "~No selective findings obtained"
+								},
+								{
+									"id": "b-lines",
+									"name": "b-lines",
+									"type": "single-select",
+									"dataFormat": "Options",
+									"columnLayout": 3,
+									"options": [
+										{
+											"id": "present",
+											"name": "Present",
+											"valueType": "positive"
+										},
+										{
+											"id": "absent",
+											"name": "Absent",
+											"valueType": "negative"
+										},
+										{
+											"id": "indeterminate",
+											"name": "Indeterminate",
+											"valueType": "negative"
+										}
+									],
+									"positive": "~${values}(interstitium) are ${name}",
+									"negative": "~${values}(interstitium) are ${name}",
+									"noSelections": "~No selective findings obtained"
+								}
+							]
+						},
+						{
+							"id": "anterior-superior-region",
+							"name": "Anterior/ superior region",
+							"type": "single-select",
+							"dataFormat": "Options",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "present",
+									"name": "present (greater than 3 per view)",
+									"valueType": "positive"
+								},
+								{
+									"id": "absent",
+									"name": "Absent",
+									"valueType": "negative"
+								}
+							],
+							"positive": "~${values} is ${name}",
+							"negative": "~${values} is ${name}",
+							"noSelections": "~No selective findings obtained"
+						},
+						{
+							"id": "inferior-lateral-region",
+							"name": "Inferior/ lateral region",
+							"type": "single-select",
+							"dataFormat": "Options",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "present",
+									"name": "present (greater than 3 per view)",
+									"valueType": "positive"
+								},
+								{
+									"id": "absent",
+									"name": "Absent",
+									"valueType": "negative"
+								}
+							],
+							"positive": "~${values} is ${name}",
+							"negative": "~${values} is ${name}",
+							"noSelections": "~No selective findings obtained"
+						},
+						{
+							"id": "pleural-effusion",
+							"name": "pleural effusion",
+							"type": "single-select",
+							"dataFormat": "Options",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "present",
+									"name": "Present",
+									"valueType": "positive"
+								},
+								{
+									"id": "absent",
+									"name": "Absent",
+									"valueType": "negative"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate",
+									"valueType": "negative"
+								}
+							],
+							"positive": "~${values} is ${name}",
+							"negative": "~${values} is ${name}",
+							"noSelections": "~No selective findings obtained",
+							"topics": [
+								{
+									"id": "if-present",
+									"name": "If Present",
+									"type": "single-select",
+									"dataFormat": "Options",
+									"columnLayout": 2,
+									"options": [
+										{
+											"id": "small",
+											"name": "Small",
+											"valueType": "positive"
+										},
+										{
+											"id": "large",
+											"name": "Large",
+											"valueType": "positive"
+										},
+										{
+											"id": "anechoic",
+											"name": "Anechoic",
+											"valueType": "positive"
+										},
+										{
+											"id": "complex",
+											"name": "Complex",
+											"valueType": "positive"
+										}
+									],
+									"positive": "~pleural effusion size is ${name}",
+									"negative": "~pleural effusion size is ${name}",
+									"noSelections": "~No selective findings obtained"
+								}
+							]
+						},
+						{
+							"id": "lung-consolidation",
+							"name": "Lung consolidation",
+							"type": "single-select",
+							"dataFormat": "Options",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "present",
+									"name": "Present",
+									"valueType": "positive"
+								},
+								{
+									"id": "absent",
+									"name": "Absent",
+									"valueType": "negative"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate",
+									"valueType": "negative"
+								}
+							],
+							"positive": "~${values} is ${name}",
+							"negative": "~${values} is ${name}",
+							"noSelections": "~No selective findings obtained"
+						},
+						{
+							"id": "air-bronchograms",
+							"name": "air bronchograms",
+							"type": "single-select",
+							"dataFormat": "Options",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "present",
+									"name": "Present",
+									"valueType": "positive"
+								},
+								{
+									"id": "absent",
+									"name": "Absent",
+									"valueType": "negative"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate",
+									"valueType": "negative"
+								}
+							],
+							"positive": "~${values} is ${name}",
+							"negative": "~${values} is ${name}",
+							"noSelections": "~No selective findings obtained"
+						},
+						{
+							"id": "others",
+							"name": "Other",
+							"type": "text",
+							"dataFormat": "Text",
+							"narration": "~Comments:${values}"
+						}
+					]
+				}
+			],
+			"noSectionFound": "~No Findings Obtained"
+		},
+		{
+			"id": "interpretations",
+			"name": "Interpretations",
+			"title": "~Interpretations Summary:",
+			"sectionNum": 4,
+			"required": true,
+			"topics": [
+				{
+					"id": "standard",
+					"name": "",
+					"type": "multi-select",
+					"dataFormat": "Options",
+					"columnLayout": 1,
+					"options": [
+						{
+							"id": "acute-pulmonary-disease",
+							"name": "No sonographic evidence of acute pulmonary disease",
+							"valueType": "negative"
+						},
+						{
+							"id": "pneumothorax",
+							"name": "Pneumothorax",
+							"topics": [
+								{
+									"id": "pneumothorax-location",
+									"name": "Pneumothorax Location",
+									"type": "single-select",
+									"dataFormat": "Options",
+									"columnLayout": 3,
+									"options": [
+										{
+											"id": "left",
+											"name": "Left",
+											"valueType": "positive"
+										},
+										{
+											"id": "right",
+											"name": "Right",
+											"valueType": "positive"
+										},
+										{
+											"id": "bilateral",
+											"name": "Bilateral",
+											"valueType": "positive"
+										}
+									],
+									"positive": "~${values} is ${name}",
+									"negative": "~${values} is ${name}",
+									"noSelections": "~No selective findings obtained"
+								}
+							]
+						},
+						{
+							"id": "pleuraleffusion",
+							"name": "Pleural Effusion",
+							"dataFormat": "Options",
+							"topics": [
+								{
+									"id": "pleuraleffusion-size",
+									"name": "Pleural Effusion Size",
+									"type": "single-select",
+									"dataFormat": "Options",
+									"columnLayout": 3,
+									"options": [
+										{
+											"id": "left",
+											"name": "Left",
+											"valueType": "positive"
+										},
+										{
+											"id": "right",
+											"name": "Right",
+											"valueType": "positive"
+										},
+										{
+											"id": "bilateral",
+											"name": "Bilateral",
+											"valueType": "positive"
+										}
+									],
+									"positive": "~${values} is ${name}",
+									"negative": "~${values} is ${name}",
+									"noSelections": "~No selective findings obtained"
+								}
+							]
+						},
+						{
+							"id": "alveolar-interstitial-syndrome-focal",
+							"name": "Alveolar interstitial syndrome (focal)",
+							"valueType": "positive"
+						},
+						{
+							"id": "alveolar-interstitial-syndrome-diffuse",
+							"name": "Alveolar interstitial syndrome (diffuse)",
+							"valueType": "positive"
+						},
+						{
+							"id": "lung-consolidation",
+							"name": "Lung Consolidation",
+							"dataFormat": "Options",
+							"topics": [
+								{
+									"id": "lung-consolidation-size",
+									"name": "",
+									"type": "single-select",
+									"dataFormat": "Options",
+									"columnLayout": 3,
+									"options": [
+										{
+											"id": "left",
+											"name": "Left",
+											"valueType": "positive"
+										},
+										{
+											"id": "right",
+											"name": "Right",
+											"valueType": "positive"
+										},
+										{
+											"id": "bilateral",
+											"name": "Bilateral",
+											"valueType": "positive"
+										}
+									],
+									"positive": "~${values} is ${name}",
+									"negative": "~${values} is ${name}",
+									"noSelections": "~No selective findings obtained"
+								}
+							]
+						}
+					],
+					"positive": "~Patient found with ${values}",
+					"negative": "~${name}",
+					"noSelections": "~No selective findings obtained"
+				},
+				{
+					"id": "others",
+					"name": "Other",
+					"type": "text",
+					"dataFormat": "Text",
+					"narration": "~Comments: ${values}"
+				}
+			],
+			"noSectionFound": "~No Interpretations found"
+		}
+	]
+}

@@ -1,0 +1,11 @@
+<div>
+	<tags [tagList]="tagList" [id]="'tags'" [activeTagList]="activeTagList"[studyId]="studyId"  [qaUser]="qaUser"  [assignedUser]="assignedUser"
+        [attendingUser]="attendingUser" [loginUserId]="loginUserId"></tags>
+	<exam-overview [qasign]="qasign" [data]="data.examoverview"  [id]="'examoverview'" (onUpdate)="onChildChange($event)"></exam-overview>
+	<worksheet-section [qasign]="qasign" *ngFor="let section of template.sections" [id]="section.id" [name]="section.name" [required]="section.required" [data]="data[section.id]" [topics]="section.topics" (onUpdate)="onChildChange($event)"></worksheet-section>
+	<exam-approval [sdata]="sdata" [id]="'examapproval'" [studyId]="studyId" [examType]="examType" [selectedExamTypeId]="selectedExamTypeId" (onUpdate)="onChildChange($event)"
+	    [status]="status"></exam-approval>
+	<quality-assurance
+	[hideOn]="'(studyStatusNum < StudyStatusEnum.QAAssigned && (qaEnabled ||attestationEnabled)) || (!qaEnabled)'" [id]="'qualityassurance'"
+	[studyId]="studyId" [qasign]="qasign" [workflowStatus]="workflowStatus"[attendingWorkflowStatus]="attendingWorkflowStatus" [submitOnSignFlag]="submitOnSignFlag"(onUpdate)="onChildChange($event)"></quality-assurance>
+</div>

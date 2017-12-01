@@ -1,0 +1,65 @@
+<div id="{{id}}" class="wrkshtpanelhead panel-heading clearfix">
+    <h4 class="m-y-0 pull-left">Exam Overview</h4>
+    <span class="pull-right"><span>* Required</span></span>
+</div>
+<div id="panel-{{id}}" class="wrkshtpanelbody panel-body fw-15">
+    <div class="row m-y-10">
+        <div class="col-md-12 lh-26">
+                <div class="col-md-6 p-x-0"><label>Type</label></div>
+                <div class="col-md-6 p-x-0">
+                  <div class="dropdown">
+                      <button class="btn btn-default dropdown-toggle"   [disableOn]="'studyStatus == \'Submitted\' ||
+                        studyStatus == \'Signed\' ||
+                        studyStatus == \'QAUnassigned\' ||
+                        studyStatus == \'Attested\' ||
+                        studyStatus == \'SubmittedForAttestation\'||
+                        qaSigned == true || (loggedInUser!==currentUser)'" type="button" data-toggle="dropdown">{{(data.type)?data.type :'Choose Type' }}
+                          <span class="caret"></span></button>
+                      <ul class="dropdown-menu">
+                          <li *ngFor="let type of types" (click)="onChange(type, 'type')"><a href="javascript:void(0)">{{type}}</a></li>
+                      </ul>
+                  </div>
+                </div>
+          </div>
+    </div>
+    <div class="row m-y-10">
+      <div class="col-md-12 lh-26">
+              <div class="col-md-6 p-x-0"><label>Category</label></div>
+              <div class="col-md-6 p-x-0">
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle"   [disableOn]="'studyStatus == \'Submitted\' ||
+                      studyStatus == \'Signed\' ||
+                      studyStatus == \'QAUnassigned\' ||
+                      studyStatus == \'Attested\' ||
+                      studyStatus == \'SubmittedForAttestation\'||
+                      qaSigned == true || (loggedInUser!==currentUser)'" type="button" data-toggle="dropdown">{{(data.category)?data.category :'Choose Category' }}
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                          <li *ngFor="let category of categories" (click)="onChange(category, 'category')"><a href="javascript:void(0)">{{category}}</a></li>
+                    </ul>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="row m-y-10">
+      <div class="col-md-12 lh-26">
+              <div class="col-md-6 p-x-0"><label>Exam</label></div>
+              <div class="col-md-6 p-x-0">
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle"   [disableOn]="'studyStatus == \'Submitted\' ||
+                      studyStatus == \'Signed\' ||
+                      studyStatus == \'QAUnassigned\' ||
+                      studyStatus == \'Attested\' ||
+                      studyStatus == \'SubmittedForAttestation\'||
+                      qaSigned == true || (loggedInUser!==currentUser) '" type="button" data-toggle="dropdown">{{(data.exam)?data.exam :'Choose Exam' }}
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                       <li *ngFor="let examvalue of exam" (click)="onChange(examvalue, 'exam')"><a href="javascript:void(0)">{{examvalue}}</a></li>
+                    </ul>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+<hr class="m-y-0">

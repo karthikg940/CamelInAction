@@ -1,0 +1,39 @@
+
+server:
+    port: 7084
+
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/
+
+liquibase:
+  enabled: true
+  change-log: "classpath:config/liquibase/master.xml"
+
+spring:
+    application:
+        name: auth
+    datasource:
+        dataSourceClassName: com.mysql.jdbc.jdbc2.optional.MysqlDataSource
+        url: jdbc:mysql://${DB_URL:localhost}:${DB_PORT:3306}/${DB_NAME:datax}?autoReconnect=true&useSSL=false
+        databaseName:
+        serverName:
+        username: ${DB_USERNAME:root}
+        password: ${DB_PASSWORD:}
+
+    jpa:
+        database-platform: org.hibernate.dialect.MySQLInnoDBDialect
+        database: MYSQL
+        openInView: true
+        show_sql: true
+        generate-ddl: false
+        hibernate:
+            ddl-auto: validate
+            naming-strategy: org.hibernate.cfg.EJB3NamingStrategy
+        properties:
+            hibernate.cache.use_second_level_cache: false
+            hibernate.cache.use_query_cache: false
+            hibernate.generate_statistics: true
+            hibernate.hbm2ddl.auto: validate
+          

@@ -1,0 +1,20 @@
+{
+	"patientName": "US JPEG",
+	"patientId": "123454321",
+	"studyDate": "20120418",
+	"modality": "US",
+	"studyDescription": "US FETAL SURVEY",
+	"numImages": 22,
+	"studyId": "usjpeg",
+	"seriesList": [
+		{
+			"seriesDescription": "Image #1",
+			"seriesNumber": "1",
+			"instanceList": [
+				{
+					"imageId": "172.25.242.25/wado/?requestType=WADO&studyUID=1.2.276.0.7230010.3.1.2.0.1215.1485502206.642829&seriesUID=1.2.276.0.7230010.3.1.3.0.1215.1485502206.642830&objectUID=1.2.276.0.7230010.3.1.4.0.1215.1485502233.642835"
+				}
+			]
+		}
+	]
+}

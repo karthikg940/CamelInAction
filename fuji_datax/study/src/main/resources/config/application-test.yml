@@ -1,0 +1,51 @@
+
+server:
+    port: 7085
+
+eureka:
+    client:
+        enabled: false
+schema:
+   name:         
+liquibase:
+  enabled: true
+  change-log: "classpath:config/liquibase/master_h2.xml"
+
+
+spring:
+    application:
+        name: studylist
+    datasources:
+     dbvna:
+        dataSourceClassName: org.h2.jdbcx.JdbcDataSource    
+        url: jdbc:h2:mem:datax;MODE=MYSQL;DB_CLOSE_ON_EXIT=FALSE;DB_CLOSE_DELAY=-1;
+        username:
+        password: 
+        driver-class-name: org.h2.Driver
+        platform: h2
+     dbdatax:
+        dataSourceClassName: org.h2.jdbcx.JdbcDataSource    
+        url: jdbc:h2:mem:datax;MODE=MYSQL;DB_CLOSE_ON_EXIT=FALSE;DB_CLOSE_DELAY=-1;
+        username:
+        password: 
+        driver-class-name: org.h2.Driver
+        platform: h2
+ 
+    jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+        database: H2
+        openInView: true
+        show_sql: true
+        generate-ddl: false
+        hibernate:
+            ddl-auto: validate
+            naming-strategy: org.hibernate.cfg.EJB3NamingStrategy
+        properties:
+            hibernate.cache.use_second_level_cache: false
+            hibernate.cache.use_query_cache: false
+            hibernate.generate_statistics: true
+            hibernate.hbm2ddl.auto: validate
+mirthchannel:
+   cancelOrderUrl: "http://172.25.242.125:9099/api/study/cancelorder/"
+   createOrderUrl: "http://172.25.242.125:9098/api/study/createorder/"
+   submitToEmrUrl: "http://172.25.242.125:9097/api/study/submittoemr/"

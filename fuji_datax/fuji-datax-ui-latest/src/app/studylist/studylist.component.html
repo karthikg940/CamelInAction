@@ -1,0 +1,387 @@
+<modal #assignPopup [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Assign study</h4>
+  </modal-header>
+  <modal-body>
+    Please confirm study assignment to self
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="cancelAssign()">Cancel</button>
+    <button type="button" class="btn btn-primary" (click)="confirmAssign('poc')">OK</button>
+  </modal-footer>
+</modal>
+
+<modal #qaassignPopup [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Assign qa study</h4>
+  </modal-header>
+  <modal-body>
+    Please confirm study assignment to self
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="qacancelAssign()">Cancel</button>
+    <button type="button" class="btn btn-primary" (click)="confirmAssign('qa')">OK</button>
+  </modal-footer>
+</modal>
+
+<modal #unassignPopup [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Unassign study</h4>
+  </modal-header>
+  <modal-body>
+    Please confirm to un-assign study
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="cancelUnassign()">Cancel</button>
+    <button type="button" class="btn btn-primary" (click)="confirmUnassign()">OK</button>
+  </modal-footer>
+</modal>
+
+<modal #unAssignStudyWorksheetPopUp [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Un-Assign study</h4>
+  </modal-header>
+  <modal-body>
+    The data saved in the Worksheet will be lost. Do you want to continue?
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="cancelUnAssignStudy()">Cancel</button>
+    <button type="button" class="btn btn-primary" (click)="confirmUnAssignStudy()">OK</button>
+  </modal-footer>
+</modal>
+
+<modal #reassignPopup [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Reassign study</h4>
+  </modal-header>
+  <modal-body>
+    <div class="color">Please choose user for Re-Assigning study</div>
+      <ng-select [allowClear]="true"
+        [items]="items"
+        [disabled]="disabled"
+        (data)="refreshValue($event)"
+        (selected)="selected($event)"
+        (typed)="typed($event)"
+        (removed)="removed($event)">
+      </ng-select>
+    <div [hidden]="userNameExists" class="alert alert-danger alertRequired">Please select a proper Username</div>
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="cancelReassign()">Cancel</button>
+    <button type="button" class="btn btn-primary" (click)="confirmReassign()">Re-Assign</button>
+  </modal-footer>
+</modal>
+
+<modal #assignStudyByAdminPopup [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Assign study</h4>
+  </modal-header>
+  <modal-body>
+    <div class="color">Please choose user for Assigning study</div>
+      <ng-select [allowClear]="true"
+        [items]="userNamesItems"
+        [disabled]="disabled"
+        [active]='assignStudyByAdminPopup.visible?null:""'
+        (data)="refreshValue($event)"
+        (selected)="selected($event)"
+        (typed)="typed($event)"
+        (removed)="removed($event)">
+      </ng-select>
+    <div [hidden]="userNameExists" class="alert alert-danger alertRequired">Please select a proper Username</div>
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="cancelAssignStudyByAdmin()">Cancel</button>
+    <button type="button" class="btn btn-primary" (click)="confirmAssignStudyByAdmin()">Assign</button>
+  </modal-footer>
+</modal>
+
+<modal #assignToast [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Assign study</h4>
+  </modal-header>
+  <modal-body>
+    Study Assigned successfully
+  </modal-body>
+</modal>
+
+<modal #reassignToast [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Reassign study</h4>
+  </modal-header>
+  <modal-body>
+    Study successfully Re-Assigned
+  </modal-body>
+</modal>
+
+<modal #reassignstudytoattendingPopup [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Choose Attending</h4>
+  </modal-header>
+  <modal-body>
+    <div class="color">Select attending doctor for the study</div>
+      <ng-select [allowClear]="true"
+        [items]="userNamesItems"
+        [disabled]="disabled"
+        [active]='reassignstudytoattendingPopup.visible?null:""'
+        (data)="refreshValue($event)"
+        (selected)="selected($event)"
+        (typed)="typed($event)"
+        (removed)="removed($event)">
+      </ng-select>
+    <div [hidden]="userNameExists" class="alert alert-danger alertRequired">Please select a proper Username</div>
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="cancelAssignToAttend()">Cancel</button>
+    <button type="button" class="btn btn-primary" (click)="confirmAssignToAttend()">Ok</button>
+  </modal-footer>
+</modal>
+
+<modal #deletePopup [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Delete Study</h4>
+  </modal-header>
+  <modal-body>
+    Do you really want to delete the selected study?
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="cancelDelete()">No</button>
+    <button type="button" class="btn btn-primary" (click)="confirmDelete()">Yes</button>
+  </modal-footer>
+</modal>
+
+<!-- Study List Page -->
+
+<div class="contentpage m-l-65">
+<div class="m-r-10">
+  <breadcrum title="Study List" secondtitle="Studies" icon="fa-th-list" [defaultDuration]="defaultDuration" (durationChange)="onDurationChange($event);"></breadcrum>
+
+  <!--Advanced Search-->
+  <form novalidate #createAdvancedSearchForm="ngForm" novalidate>
+    <div class="row m-t-15 bg-lightergray p-10">
+      <div class="col-sm-2">
+        <div class="col-sm-12">
+          <input type="text" class="form-control" placeholder="Patient Name" id="patientName" required #patientName="ngModel" name="patientName" [(ngModel)]="searchData.patientName">
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="col-sm-12">
+          <input type="text" class="form-control" placeholder="Performing Physician" id="pocName" #pocName="ngModel" required name="pocName" [(ngModel)]="searchData.pocName">
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="col-sm-12">
+          <select class="form-control" id="searchExamType" name="searchExamType" [ngModel]="searchData.searchExamType?searchData.searchExamType:'ExamType'" [(ngModel)]="searchData.searchExamType" required>
+            <option value="ExamType" disabled>Exam Type</option>
+            <option *ngFor="let item of searchExamtypes" [value]="item.examTypeDesc" >{{item.examTypeDesc}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="col-sm-12">
+          <select class="form-control" id="searchStatus" name="searchStatus" required [ngModel]="searchData.searchStatus?searchData.searchStatus:'Status'" [(ngModel)]="searchData.searchStatus">
+            <option value="Status" disabled>Status</option>
+            <option *ngFor="let item of searchStatuses" [value]="item.name">{{item.name}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <button type="button" class="btn btn-primary" (click)="searchStudies(createAdvancedSearchForm.value)"> Search </button>
+      </div>
+    </div>
+  </form>
+
+  <!--Study Table-->
+  <div class="row m-t-15 m-x-0">
+  <div class="col-xs-12">
+    <table id="tableStudyList" class="display table" width="100%">
+      <thead>
+        <tr >
+          <th class="sorting_disabled"></th>
+          <th>Study</th>
+          <th>Study Type</th>
+          <th>Exam Type</th>
+          <th>Device</th>
+          <th>Patient ID</th>
+          <th>Patient Name</th>
+          <th>Performing Physician</th>
+          <th>QA Reviewer</th>
+          <th>Attending Physician</th>
+          <th>Study Date & Time</th>
+          <th>Tags</th>
+          <th>Study Progress</th>
+          <th>Actions</th>
+          <th></th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  </div>
+
+  <!--Study Table Accordion -->
+
+  <div id="accordion" style="display: none;">
+  <div class="row m-x-0">
+    <div class="col-xs-4 b-r-1-lightergray">
+      <div class="col-xs-2 p-x-0">
+        <div class="row m-x-0">
+          <span class="avatar"><img src="/assets/images/avatar-49.jpg"></span>
+        </div>
+        <div class="row m-x-0 m-t-10">
+          <i class="fa fa-fw fa-folder-o fa-2x"></i><span>Split</span>
+        </div>
+      </div>
+    <div class="col-xs-10">
+      <div class="row m-x-0">
+      <div class="row m-x-0">
+        <div class="col-xs-12 p-x-0">
+          <div class="col-xs-3 p-x-0">
+            <label> Patient: </label>
+          </div>
+          <div class="col-xs-9 p-x-0">
+            <span>
+            {{studyDetail?.patient.firstName}}
+            {{studyDetail?.patient.middleName}}
+            {{studyDetail?.patient.lastName}}</span>
+          </div>
+        </div>
+        <div class="col-xs-12 p-x-0">
+          <div class="col-xs-3 p-x-0">
+            <label> Patient ID:</label>
+          </div>
+          <div class="col-xs-9 p-x-0">
+            <span> {{studyDetail?.patient.id}} </span>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="row m-x-0">
+        <div class="row m-x-0">
+          <div class="col-xs-3 p-x-0">
+            <span>{{studyDetail?.patient.ethnicOrigin}}</span>
+          </div>
+          <div class="col-xs-2 p-x-0">
+            <span>{{studyDetail?.patient.gender}}</span>
+          </div>
+          <div class="col-xs-2 p-x-0">
+            <span>{{studyDetail?.age}} yrs</span>
+          </div>
+          <div class="col-xs-2 p-x-0">
+            <span>{{studyDetail?.weight}}</span>
+          </div>
+          <div class="col-xs-2 p-x-0">
+            <span>{{studyDetail?.height}} cm</span>
+          </div>
+        </div>
+      </div>
+      <div class="row m-x-0">
+        <div class="col-xs-12 p-x-0">
+          <div class="col-xs-2 p-x-0">
+            <label>Indications:</label>
+          </div>
+          <div class="col-xs-10 p-x-0">
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="col-xs-4 b-r-1-lightergray">
+      <div class="row m-x-0">
+        <label>Patient Exam Types</label>
+      </div>
+      <div *ngFor="let item of studyDetail?.examType;let i = index;" class="row m-x-0 m-t-10">
+        <div *ngFor="let items of item">
+          <div class="col-xs-2 p-x-0">
+            <span class="label bg-examtype">
+            <span>{{items?.examtype}}</span>
+            </span>
+          </div>
+          <div class="col-xs-2 p-x-0">
+            <label>Images:</label>
+            <span> {{studyDetail?.Images[0]}}</span>
+          </div>
+          <div class="col-xs-3 p-x-0">
+            <label>Clips:</label>
+            <span> {{studyDetail?.Images[1]}}</span>
+          </div>
+          <div class="col-xs-5 p-x-0">
+            <label>Progress:</label>
+            <span> {{items?.examtypeProgress}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-4">
+    <div class="col-xs-6 p-x-0">
+      <div class="row m-x-0">
+        <div class="col-xs-12 p-x-0">
+          <div class="col-xs-5 p-x-0">
+            <label>POC Doctor:</label>
+          </div>
+          <div class="col-xs-7 p-x-0">
+            <span> {{studyDetail?.requestingphysician.prefix}}
+            {{studyDetail?.requestingphysician.firstName}}
+            {{studyDetail?.requestingphysician.middleName}}
+            {{studyDetail?.requestingphysician.lastName}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="row m-x-0 m-t-10">
+        <div class="col-xs-12 p-x-0">
+          <div class="col-xs-7 p-x-0">
+            <label>Attending Doctor:</label>
+          </div>
+          <div class="col-xs-5 p-x-0">
+            <span> {{studyDetail?.referringphysician.prefix}}
+            {{studyDetail?.referringphysician.firstName}}
+            {{studyDetail?.referringphysician.middleName}}
+            {{studyDetail?.referringphysician.lastName}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="row m-x-0 m-t-10">
+        <div class="col-xs-12 p-x-0">
+          <div class="col-xs-6 p-x-0">
+            <label>Shared Doctor:</label>
+          </div>
+          <div class="col-xs-6 p-x-0">
+            <span> </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-6 p-x-0">
+      <div class="col-xs-8 p-5 b-1-lightergray">
+        <div class="col-xs-7 p-x-0">
+          <div class="row m-x-0">
+            <label>Device</label>
+          </div>
+          <div class="row m-x-0">
+            <span *ngFor="let item of studyDetail?.modality">{{item + ' '}}</span>
+          </div>
+        </div>
+      <div class="col-xs-5 p-x-0">
+        <span class="avatar"><img src="/assets/images/avatar-49.jpg"></span>
+      </div>
+      </div>
+      <div class="col-xs-4 action p-r-0">
+        <div class="dropdown table-dropdown action align-center p-4 b-1-lightgray clearfix lh-26">
+          <a class="va-m pull-left" routerLink="/imageviewer/{{studyDetail?.studyId}}" routerLinkActive="active"><i class="fa fa-fw fa-picture-o m-r-5"></i></a>
+          <button class="btn btn-default dropdown-toggle pull-left" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-right">
+            <li><a href="javascript:void(0)"><i class="fa fa-fw fa-folder-open text-gray-lighter m-r-1"></i> View</a></li>
+            <li><a href="javascript:void(0)"><i class="fa fa-ticket text-gray-lighter fa-fw m-r-1"></i> Add Task</a></li>
+            <li><a href="javascript:void(0)"><i class="fa fa-fw fa-paperclip text-gray-lighter m-r-1"></i> Add Files</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="javascript:void(0)" data-toggle="modal" data-target=".modal-alert-danger"><i class="fa fa-fw fa-trash text-gray-lighter m-r-1"></i> Delete</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  </div>
+</div>
+</div>

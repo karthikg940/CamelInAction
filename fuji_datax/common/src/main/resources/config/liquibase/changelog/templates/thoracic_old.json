@@ -1,0 +1,696 @@
+{
+   "id" : "wrk1",
+   "sections" : [
+      {
+         "id" : "indications",
+         "name" : "Indications for Exam",
+         "required" : true,
+         "topics" : [
+            {
+               "id" : "default",
+               "name" : "",
+               "type" : "multi-select",
+               "columnLayout" : 2,
+               "options" : [
+                  {
+                     "id" : "dyspnea",
+                     "name" : "Dyspnea"
+                  },
+                  {
+                     "id" : "hypotension",
+                     "name" : "Hypotension"
+                  },
+                  {
+                     "id" : "chest pain",
+                     "name" : "Chest pain"
+                  },
+                  {
+                     "id" : "blunt thoracic trauma",
+                     "name" : "Blunt thoracic trauma"
+                  },
+                  {
+                     "id" : "pleurisy",
+                     "name" : "Pleurisy"
+                  },
+                  {
+                     "id" : "penetrating thoracic trauma",
+                     "name" : "Penetrating thoracic trauma"
+                  },
+                  {
+                     "id" : "hypoxia",
+                     "name" : "Hypoxia"
+                  },
+                  {
+                     "id" : "educational",
+                     "name" : "Educational"
+                  }
+               ]
+            },
+            {
+               "id" : "others",
+               "name" : "Other",
+               "type" : "text"
+            }
+         ]
+      },
+      {
+         "id" : "views",
+         "name" : "Views",
+         "required" : true,
+         "topics" : [
+            {
+               "id" : "right-anterior-superior-thorax",
+               "name" : "Right anterior/ superior thorax",
+               "type" : "single-select",
+               "columnLayout" : 3,
+               "options" : [
+                  {
+                     "id" : "adequate",
+                     "name" : "Adequate"
+                  },
+                  {
+                     "id" : "limited",
+                     "name" : "Limited"
+                  },
+                  {
+                     "id" : "not-obtained",
+                     "name" : "Not Obtained"
+                  }
+               ]
+            },
+            {
+               "id" : "right-lateral-inferior-thorax",
+               "name" : "Right lateral/ inferior thorax",
+               "type" : "single-select",
+               "columnLayout" : 3,
+               "options" : [
+                  {
+                     "id" : "adequate",
+                     "name" : "Adequate"
+                  },
+                  {
+                     "id" : "limited",
+                     "name" : "Limited"
+                  },
+                  {
+                     "id" : "not-obtained",
+                     "name" : "Not Obtained"
+                  }
+               ]
+            },
+            {
+               "id" : "left-anterior-superior-thorax",
+               "name" : "Left anterior/ superior thorax",
+               "type" : "single-select",
+               "columnLayout" : 3,
+               "options" : [
+                  {
+                     "id" : "adequate",
+                     "name" : "Adequate"
+                  },
+                  {
+                     "id" : "limited",
+                     "name" : "Limited"
+                  },
+                  {
+                     "id" : "not-obtained",
+                     "name" : "Not Obtained"
+                  }
+               ]
+            },
+            {
+               "id" : "left-lateral-inferior-thorax",
+               "name" : "Left lateral/ inferior thorax",
+               "type" : "single-select",
+               "columnLayout" : 3,
+               "options" : [
+                  {
+                     "id" : "adequate",
+                     "name" : "Adequate"
+                  },
+                  {
+                     "id" : "limited",
+                     "name" : "Limited"
+                  },
+                  {
+                     "id" : "not-obtained",
+                     "name" : "Not Obtained"
+                  }
+               ]
+            },
+            {
+               "id" : "others",
+               "name" : "Other",
+               "type" : "text"
+            }
+         ]
+      },
+      {
+         "id" : "findings",
+         "name" : "Findings",
+         "required" : true,
+         "topics" : [
+            {
+               "id" : "right-thorax",
+               "name" : "Right thorax",
+               "topics" : [
+                  {
+                     "id" : "lung-sliding",
+                     "name" : "Lung sliding",
+                     "type" : "multi-select",
+                     "columnLayout" : 3,
+                     "options" : [
+                        {
+                           "id" : "present",
+                           "name" : "Present"
+                        },
+                        {
+                           "id" : "absent",
+                           "name" : "Absent"
+                        },
+                        {
+                           "id" : "indeterminate",
+                           "name" : "Indeterminate"
+                        }
+                     ]
+                  },
+                  {
+                     "id" : "lung-point-sign",
+                     "name" : "Lung point sign",
+                     "type" : "single-select",
+                     "columnLayout" : 3,
+                     "options" : [
+                        {
+                           "id" : "present",
+                           "name" : "Present"
+                        },
+                        {
+                           "id" : "absent",
+                           "name" : "Absent"
+                        },
+                        {
+                           "id" : "indeterminate",
+                           "name" : "Indeterminate"
+                        }
+                     ]
+                  },
+                  {
+                     "id" : "interstitium",
+                     "name" : "Interstitium",
+                     "topics" : [
+                        {
+                           "id" : "a-lines",
+                           "name" : "a-lines",
+                           "type" : "multi-select",
+                           "columnLayout" : 3,
+                           "options" : [
+                              {
+                                 "id" : "present",
+                                 "name" : "Present"
+                              },
+                              {
+                                 "id" : "absent",
+                                 "name" : "Absent"
+                              },
+                              {
+                                 "id" : "indeterminate",
+                                 "name" : "Indeterminate"
+                              }
+                           ]
+                        },
+                        {
+                           "id" : "b-lines",
+                           "name" : "b-lines",
+                           "type" : "single-select",
+                           "columnLayout" : 3,
+                           "options" : [
+                              {
+                                 "id" : "present",
+                                 "name" : "Present"
+                              },
+                              {
+                                 "id" : "absent",
+                                 "name" : "Absent"
+                              },
+                              {
+                                 "id" : "indeterminate",
+                                 "name" : "Indeterminate"
+                              }
+                           ]
+                        }
+                     ]
+                  },
+                  {
+                     "id" : "anterior-superior-region",
+                     "name" : "Anterior/ superior region",
+                     "type" : "single-select",
+                     "columnLayout" : 3,
+                     "options" : [
+                        {
+                           "id" : "present",
+                           "name" : "present (greater than 3 per view)"
+                        },
+                        {
+                           "id" : "absent",
+                           "name" : "Absent"
+                        }
+                     ]
+                  },
+                  {
+                     "id" : "inferior-lateral-region",
+                     "name" : "Inferior/ lateral region",
+                     "type" : "single-select",
+                     "columnLayout" : 3,
+                     "options" : [
+                        {
+                           "id" : "present",
+                           "name" : "present (greater than 3 per view)"
+                        },
+                        {
+                           "id" : "absent",
+                           "name" : "Absent"
+                        }
+                     ]
+                  },
+                  {
+                     "id" : "pleural-effusion",
+                     "name" : "pleural effusion",
+                     "type" : "single-select",
+                     "columnLayout" : 3,
+                     "options" : [
+                        {
+                           "id" : "present",
+                           "name" : "Present"
+                        },
+                        {
+                           "id" : "absent",
+                           "name" : "Absent"
+                        },
+                        {
+                           "id" : "indeterminate",
+                           "name" : "Indeterminate"
+                        }
+                     ],
+                     "topics" : [
+                        {
+                           "id" : "if-present",
+                           "name" : "If Present",
+                           "type" : "single-select",
+                           "columnLayout" : 2,
+                           "options" : [
+                              {
+                                 "id" : "small",
+                                 "name" : "Small"
+                              },
+                              {
+                                 "id" : "large",
+                                 "name" : "Large"
+                              },
+                              {
+                                 "id" : "anechoic",
+                                 "name" : "Anechoic"
+                              },
+                              {
+                                 "id" : "complex",
+                                 "name" : "Complex"
+                              }
+                           ]
+                        }
+                     ]
+                  },
+                  {
+                     "id" : "lung-consolidation",
+                     "name" : "Lung consolidation",
+                     "type" : "single-select",
+                     "columnLayout" : 3,
+                     "options" : [
+                        {
+                           "id" : "present",
+                           "name" : "Present"
+                        },
+                        {
+                           "id" : "absent",
+                           "name" : "Absent"
+                        },
+                        {
+                           "id" : "indeterminate",
+                           "name" : "Indeterminate"
+                        }
+                     ]
+                  },
+                  {
+                     "id" : "air-bronchograms",
+                     "name" : "air bronchograms",
+                     "type" : "single-select",
+                     "columnLayout" : 3,
+                     "options" : [
+                        {
+                           "id" : "present",
+                           "name" : "Present"
+                        },
+                        {
+                           "id" : "absent",
+                           "name" : "Absent"
+                        },
+                        {
+                           "id" : "indeterminate",
+                           "name" : "Indeterminate"
+                        }
+                     ]
+                  },
+                  {
+                     "id" : "others",
+                     "name" : "Other",
+                     "type" : "text"
+                  }
+               ]
+            },
+            {
+               "id" : "left-thorax",
+               "name" : "Left thorax",
+               "topics" : [
+                  {
+                     "id" : "lung-sliding",
+                     "name" : "Lung sliding",
+                     "type" : "multi-select",
+                     "columnLayout" : 3,
+                     "options" : [
+                        {
+                           "id" : "present",
+                           "name" : "Present"
+                        },
+                        {
+                           "id" : "absent",
+                           "name" : "Absent"
+                        },
+                        {
+                           "id" : "indeterminate",
+                           "name" : "Indeterminate"
+                        }
+                     ]
+                  },
+                  {
+                     "id" : "lung-point-sign",
+                     "name" : "Lung point sign",
+                     "type" : "single-select",
+                     "columnLayout" : 3,
+                     "options" : [
+                        {
+                           "id" : "present",
+                           "name" : "Present"
+                        },
+                        {
+                           "id" : "absent",
+                           "name" : "Absent"
+                        },
+                        {
+                           "id" : "indeterminate",
+                           "name" : "Indeterminate"
+                        }
+                     ]
+                  },
+                  {
+                     "id" : "interstitium",
+                     "name" : "Interstitium",
+                     "topics" : [
+                        {
+                           "id" : "a-lines",
+                           "name" : "a-lines",
+                           "type" : "multi-select",
+                           "columnLayout" : 3,
+                           "options" : [
+                              {
+                                 "id" : "present",
+                                 "name" : "Present"
+                              },
+                              {
+                                 "id" : "absent",
+                                 "name" : "Absent"
+                              },
+                              {
+                                 "id" : "indeterminate",
+                                 "name" : "Indeterminate"
+                              }
+                           ]
+                        },
+                        {
+                           "id" : "b-lines",
+                           "name" : "b-lines",
+                           "type" : "single-select",
+                           "columnLayout" : 3,
+                           "options" : [
+                              {
+                                 "id" : "present",
+                                 "name" : "Present"
+                              },
+                              {
+                                 "id" : "absent",
+                                 "name" : "Absent"
+                              },
+                              {
+                                 "id" : "indeterminate",
+                                 "name" : "Indeterminate"
+                              }
+                           ]
+                        }
+                     ]
+                  },
+                  {
+                     "id" : "anterior-superior-region",
+                     "name" : "Anterior/ superior region",
+                     "type" : "single-select",
+                     "columnLayout" : 3,
+                     "options" : [
+                        {
+                           "id" : "present",
+                           "name" : "present (greater than 3 per view)"
+                        },
+                        {
+                           "id" : "absent",
+                           "name" : "Absent"
+                        }
+                     ]
+                  },
+                  {
+                     "id" : "inferior-lateral-region",
+                     "name" : "Inferior/ lateral region",
+                     "type" : "single-select",
+                     "columnLayout" : 3,
+                     "options" : [
+                        {
+                           "id" : "present",
+                           "name" : "present (greater than 3 per view)"
+                        },
+                        {
+                           "id" : "absent",
+                           "name" : "Absent"
+                        }
+                     ]
+                  },
+                  {
+                     "id" : "pleural-effusion",
+                     "name" : "pleural effusion",
+                     "type" : "single-select",
+                     "columnLayout" : 3,
+                     "options" : [
+                        {
+                           "id" : "present",
+                           "name" : "Present"
+                        },
+                        {
+                           "id" : "absent",
+                           "name" : "Absent"
+                        },
+                        {
+                           "id" : "indeterminate",
+                           "name" : "Indeterminate"
+                        }
+                     ],
+                     "topics" : [
+                        {
+                           "id" : "if-present",
+                           "name" : "If Present",
+                           "type" : "single-select",
+                           "columnLayout" : 2,
+                           "options" : [
+                              {
+                                 "id" : "small",
+                                 "name" : "Small"
+                              },
+                              {
+                                 "id" : "large",
+                                 "name" : "Large"
+                              },
+                              {
+                                 "id" : "anechoic",
+                                 "name" : "Anechoic"
+                              },
+                              {
+                                 "id" : "complex",
+                                 "name" : "Complex"
+                              }
+                           ]
+                        }
+                     ]
+                  },
+                  {
+                     "id" : "lung-consolidation",
+                     "name" : "Lung consolidation",
+                     "type" : "single-select",
+                     "columnLayout" : 3,
+                     "options" : [
+                        {
+                           "id" : "present",
+                           "name" : "Present"
+                        },
+                        {
+                           "id" : "absent",
+                           "name" : "Absent"
+                        },
+                        {
+                           "id" : "indeterminate",
+                           "name" : "Indeterminate"
+                        }
+                     ]
+                  },
+                  {
+                     "id" : "air-bronchograms",
+                     "name" : "air bronchograms",
+                     "type" : "single-select",
+                     "columnLayout" : 3,
+                     "options" : [
+                        {
+                           "id" : "present",
+                           "name" : "Present"
+                        },
+                        {
+                           "id" : "absent",
+                           "name" : "Absent"
+                        },
+                        {
+                           "id" : "indeterminate",
+                           "name" : "Indeterminate"
+                        }
+                     ]
+                  },
+                  {
+                     "id" : "others",
+                     "name" : "Other",
+                     "type" : "text"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "id" : "interpretations",
+         "name" : "Interpretations",
+         "required" : true,
+         "topics" : [
+            {
+               "id" : "standard",
+               "name" : "",
+               "type" : "multi-select",
+               "columnLayout" : 1,
+               "options" : [
+                  {
+                     "id" : "acute-pulmonary-disease",
+                     "name" : "No sonographic evidence of acute pulmonary disease"
+                  },
+                  {
+                     "id" : "pneumothorax",
+                     "name" : "Pneumothorax",
+                     "topics" : [
+                        {
+                           "id" : "pneumothorax-location",
+                           "name" : "",
+                           "type" : "single-select",
+                           "columnLayout" : 3,
+                           "options" : [
+                              {
+                                 "id" : "left",
+                                 "name" : "Left"
+                              },
+                              {
+                                 "id" : "right",
+                                 "name" : "Right"
+                              },
+                              {
+                                 "id" : "bilateral",
+                                 "name" : "Bilateral"
+                              }
+                           ]
+                        }
+                     ]
+                  },
+                  {
+                     "id" : "pleuraleffusion",
+                     "name" : "Pleural Effusion",
+                     "topics" : [
+                        {
+                           "id" : "pericardialeffusion-size",
+                           "name" : "",
+                           "type" : "single-select",
+                           "columnLayout" : 3,
+                           "options" : [
+                              {
+                                 "id" : "left",
+                                 "name" : "Left"
+                              },
+                              {
+                                 "id" : "right",
+                                 "name" : "Right"
+                              },
+                              {
+                                 "id" : "bilateral",
+                                 "name" : "Bilateral"
+                              }
+                           ]
+                        }
+                     ]
+                  },
+                  {
+                     "id" : "alveolar-interstitial-syndrome-focal",
+                     "name" : "Alveolar interstitial syndrome (focal)"
+                  },
+                  {
+                     "id" : "alveolar-interstitial-syndrome-diffuse",
+                     "name" : "Alveolar interstitial syndrome (diffuse)"
+                  },
+                  {
+                     "id" : "lung-consolidation",
+                     "name" : "Lung Consolidation",
+                     "topics" : [
+                        {
+                           "id" : "lung-consolidation-size",
+                           "name" : "",
+                           "type" : "single-select",
+                           "columnLayout" : 3,
+                           "options" : [
+                              {
+                                 "id" : "left",
+                                 "name" : "Left"
+                              },
+                              {
+                                 "id" : "right",
+                                 "name" : "Right"
+                              },
+                              {
+                                 "id" : "bilateral",
+                                 "name" : "Bilateral"
+                              }
+                           ]
+                        }
+                     ]
+                  }
+               ]
+            },
+            {
+               "id" : "others",
+               "name" : "Other",
+               "type" : "text"
+            }
+         ]
+      }
+   ]
+}

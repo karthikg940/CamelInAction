@@ -1,0 +1,16 @@
+
+jar {
+	baseName = 'authentication'
+	version = '0.0.2-SNAPSHOT'
+}
+	
+dependencies {
+	compile project(':common')
+	compile project(':security')
+
+	compile('org.liquibase:liquibase-core')
+	
+	
+	compile group: 'org.springframework.security', name: 'spring-security-ldap', version: '4.2.2.RELEASE'
+}
+

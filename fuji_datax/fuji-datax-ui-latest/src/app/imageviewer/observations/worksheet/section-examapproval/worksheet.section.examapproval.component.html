@@ -1,0 +1,75 @@
+<div id="{{id}}" class="wrkshtpanelhead panel-heading clearfix">
+    <h4 class="m-y-0 pull-left">Exam Approval</h4>
+    <span class="pull-right"><span><i class="fa fa-chevron-down"></i></span></span>
+</div>
+<div id="panel-{{id}}" class="wrkshtpanelbody panel-body fw-15">
+    <div class="row m-b-10">
+        <div class="col-md-12">
+            <label>Signatures</label>
+        </div>
+    </div>
+
+    <!--Performing Physician -->
+    <div class="row m-y-10">
+        <div class="col-md-12 p-x-0">
+            <div class="col-md-3">
+                <label>Performing Physician</label>
+            </div>
+            <div class="col-md-9">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                    <input type="checkbox"
+                    [disableOn]="'((pocUser !== attestedUser && !qaEnabled && (studyStatusNum > StudyStatusEnum.QAUnassigned && studyStatusNum < StudyStatusEnum.Attested)) || studyStatus == \'Submitted\' || (loggedInUser!==currentUser)) ||
+										(qaEnabled && (studyStatusNum > StudyStatusEnum.QAUnassigned && studyStatusNum < StudyStatusEnum.Attested)) ||
+										(!attestationEnabled && !qaEnabled && studyStatusNum > StudyStatusEnum.Signed) ||
+                    ((pocUser !== attestedUser) && (studyStatusNum === StudyStatusEnum.Attested)) ||
+                    (studyStatusNum > StudyStatusEnum.Signed && qaEnabled)'" [ngModel]="sdata.poc.signed" (ngModelChange)="onChange('poc',$event)" aria-label="Checkbox for following text input">
+                    </span>
+                    <input type="text" class="form-control" [ngModel]="sdata.poc.sign" aria-label="Text input with checkbox" readonly>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <span class="pull-right">{{sdata.poc.timestamp| date:'MMM d,y H:mm:ss'}}</span>
+        </div>
+    </div>
+
+    <!-- Attending Physician -->
+    <div [hideOn]="'(!attestationEnabled || studyStatusNum < StudyStatusEnum.SubmittedForAttestation) || ((qaEnabled && attestationEnabled)?(!((qaUser===attestedUser || qaUser!==attestedUser) && qaSigned)) : false)'">
+      <div class="row m-y-10">
+          <div class="col-md-12 p-x-0">
+              <div class="col-md-3">
+                  <label>Attending Physician</label>
+              </div>
+              <div class="col-md-9">
+                  <div class="input-group">
+                      <span class="input-group-addon">
+                        <input type="checkbox" [disableOn]="'studyStatus == \'Submitted\' || (loggedInUser!==currentUser) || (pocUser===attestedUser && !qaEnabled) || (qaUser===attestedUser && qaEnabled && attestationEnabled)'" [ngModel]="sdata.attending.signed" (ngModelChange)="onChange('attending',$event)" aria-label="Checkbox for following text input">
+                      </span>
+                      <input type="text" class="form-control" [ngModel]="sdata.attending.sign"  aria-label="Text input with checkbox" readonly>
+                  </div>
+              </div>
+          </div>
+      </div>
+    <div class="row">
+        <div class="col-md-12">
+           <span class="pull-right">{{sdata.attending.timestamp| date:'MMM d,y H:mm:ss'}}</span>
+        </div>
+    </div>
+</div>
+</div>
+
+<hr class="wrkshtHr m-y-0">
+
+ <div class="row m-y-10"   [hideOn]="'(studyStatusNum > StudyStatusEnum.QAUnassigned)'">
+    <div class="col-md-12">
+      <div class="col-md-12">
+        <div class="pull-left">
+            <button class="btn btn-primary" [disableOn]="'studyStatus == \'Submitted\' || studyStatus == \'Signed\'|| (loggedInUser!==currentUser)'" (click)="onReset()">Reset</button>
+        </div>
+        <span class="pull-right"><button class="btn btn-primary" [disableOn]="'studyStatus == \'Signed\' || studyStatus == \'QAUnassigned\' ||(loggedInUser!==currentUser)'" (click)="onSave()">Save</button></span>
+      </div>
+    </div>
+</div>

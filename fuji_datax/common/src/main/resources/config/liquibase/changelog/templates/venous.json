@@ -1,0 +1,639 @@
+{
+	"id": "wrk1",
+	"sections": [
+		{
+			"id": "indications",
+			"name": "Indications for Exam",
+			"required": true,
+			"topics": [
+				{
+					"id": "default",
+					"name": "",
+					"type": "multi-select",
+					"columnLayout": 2,
+					"options": [
+						{
+							"id": "leg-pain",
+							"name": "Leg Pain",
+							"topics": [
+								{
+									"id": "default",
+									"name": "",
+									"columnLayout": 3,
+									"options": [
+										{
+											"id": "left",
+											"name": "Left"
+										},
+										{
+											"id": "right",
+											"name": "Right"
+										},
+										{
+											"id": "bilateral",
+											"name": "Bilateral"
+										}
+									]
+								}
+							]
+						},
+						{
+							"id": "leg-swelling",
+							"name": "Leg Swelling",
+							"topics": [
+								{
+									"id": "default",
+									"name": "",
+									"columnLayout": 3,
+									"options": [
+										{
+											"id": "left",
+											"name": "Left"
+										},
+										{
+											"id": "right",
+											"name": "Right"
+										},
+										{
+											"id": "bilateral",
+											"name": "Bilateral"
+										}
+									]
+								}
+							]
+						},
+						{
+							"id": "leg-erythema",
+							"name": "Leg erythema",
+							"topics": [
+								{
+									"id": "default",
+									"name": "",
+									"columnLayout": 3,
+									"options": [
+										{
+											"id": "left",
+											"name": "Left"
+										},
+										{
+											"id": "right",
+											"name": "Right"
+										},
+										{
+											"id": "bilateral",
+											"name": "Bilateral"
+										}
+									]
+								}
+							]
+						},
+						{
+							"id": "dyspnea",
+							"name": "Dyspnea"
+						},
+						{
+							"id": "tachypnea",
+							"name": "Tachypnea"
+						},
+						{
+							"id": "pleurisy",
+							"name": "Pleurisy"
+						},
+						{
+							"id": "educational",
+							"name": "Educational"
+						}
+					]
+				},
+				{
+					"id": "others",
+					"name": "Other",
+					"type": "text"
+				}
+			]
+		},
+		{
+			"id": "views",
+			"name": "Views",
+			"required": true,
+			"topics": [
+				{
+					"id": "right-saphenofemoral-junction",
+					"name": "Right saphenofemoral junction",
+					"type": "single-select",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "adequate",
+							"name": "Adequate"
+						},
+						{
+							"id": "limited",
+							"name": "Limited"
+						},
+						{
+							"id": "not-obtained",
+							"name": "Not Obtained"
+						}
+					]
+				},
+				{
+					"id": "right-common-femoral-vein",
+					"name": "Right common femoral vein",
+					"type": "single-select",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "adequate",
+							"name": "Adequate"
+						},
+						{
+							"id": "limited",
+							"name": "Limited"
+						},
+						{
+							"id": "not-obtained",
+							"name": "Not Obtained"
+						}
+					]
+				},
+				{
+					"id": "right-femoral-vein",
+					"name": "Right femoral vein",
+					"type": "single-select",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "adequate",
+							"name": "Adequate"
+						},
+						{
+							"id": "limited",
+							"name": "Limited"
+						},
+						{
+							"id": "not-obtained",
+							"name": "Not Obtained"
+						}
+					]
+				},
+				{
+					"id": "right-popliteal-vein",
+					"name": "Right popliteal vein",
+					"type": "single-select",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "adequate",
+							"name": "Adequate"
+						},
+						{
+							"id": "limited",
+							"name": "Limited"
+						},
+						{
+							"id": "not-obtained",
+							"name": "Not Obtained"
+						}
+					]
+				},
+				{
+					"id": "right-popliteal-trifurcation",
+					"name": "Right popliteal trifurcation",
+					"type": "single-select",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "adequate",
+							"name": "Adequate"
+						},
+						{
+							"id": "limited",
+							"name": "Limited"
+						},
+						{
+							"id": "not-obtained",
+							"name": "Not Obtained"
+						}
+					]
+				},
+				{
+					"id": "left-saphenofemoral-junction",
+					"name": "Left saphenofemoral junction",
+					"type": "single-select",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "adequate",
+							"name": "Adequate"
+						},
+						{
+							"id": "limited",
+							"name": "Limited"
+						},
+						{
+							"id": "not-obtained",
+							"name": "Not Obtained"
+						}
+					]
+				},
+				{
+					"id": "left-common-femoral-vein",
+					"name": "Left common femoral vein",
+					"type": "single-select",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "adequate",
+							"name": "Adequate"
+						},
+						{
+							"id": "limited",
+							"name": "Limited"
+						},
+						{
+							"id": "not-obtained",
+							"name": "Not Obtained"
+						}
+					]
+				},
+				{
+					"id": "left-femoral-vein",
+					"name": "Left femoral vein",
+					"type": "single-select",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "adequate",
+							"name": "Adequate"
+						},
+						{
+							"id": "limited",
+							"name": "Limited"
+						},
+						{
+							"id": "not-obtained",
+							"name": "Not Obtained"
+						}
+					]
+				},
+				{
+					"id": "left-popliteal-vein",
+					"name": "Left popliteal vein",
+					"type": "single-select",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "adequate",
+							"name": "Adequate"
+						},
+						{
+							"id": "limited",
+							"name": "Limited"
+						},
+						{
+							"id": "not-obtained",
+							"name": "Not Obtained"
+						}
+					]
+				},
+				{
+					"id": "left-popliteal-trifurcation",
+					"name": "Left popliteal trifurcation",
+					"type": "single-select",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "adequate",
+							"name": "Adequate"
+						},
+						{
+							"id": "limited",
+							"name": "Limited"
+						},
+						{
+							"id": "not-obtained",
+							"name": "Not Obtained"
+						}
+					]
+				},
+				{
+					"id": "others",
+					"name": "Other",
+					"type": "text"
+				}
+			]
+		},
+		{
+			"id": "findings",
+			"name": "Findings",
+			"required": true,
+			"topics": [
+				{
+					"id": "right-leg",
+					"name": "Right leg:",
+					"topics": [
+						{
+							"id": "saphenofemoral-junction",
+							"name": "Saphenofemoral junction",
+							"type": "single-select",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "compressible",
+									"name": "Compressible"
+								},
+								{
+									"id": "not-compressible",
+									"name": "NOT compressible"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate"
+								}
+							]
+						},
+						{
+							"id": "common-femoral-vein",
+							"name": "Common femoral vein",
+							"type": "single-select",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "compressible",
+									"name": "Compressible"
+								},
+								{
+									"id": "not-compressible",
+									"name": "NOT compressible"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate"
+								}
+							]
+						},
+						{
+							"id": "femoral-vein",
+							"name": "Femoral vein",
+							"type": "single-select",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "compressible",
+									"name": "Compressible"
+								},
+								{
+									"id": "not-compressible",
+									"name": "NOT compressible"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate"
+								}
+							]
+						},
+						{
+							"id": "popliteal-vein:",
+							"name": "Popliteal vein",
+							"type": "single-select",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "compressible",
+									"name": "Compressible"
+								},
+								{
+									"id": "not-compressible",
+									"name": "NOT compressible"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate"
+								}
+							]
+						},
+						{
+							"id": "popliteal-trifurcation:",
+							"name": "Popliteal trifurcation",
+							"type": "single-select",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "present",
+									"name": "Present"
+								},
+								{
+									"id": "absent",
+									"name": "Absent"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate"
+								}
+							]
+						},
+						{
+							"id": "others",
+							"name": "Other",
+							"type": "text"
+						}
+					]
+				},
+				{
+					"id": "left-leg",
+					"name": "Left leg",
+					"topics": [
+						{
+							"id": "saphenofemoral-junction",
+							"name": "Saphenofemoral junction",
+							"type": "single-select",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "compressible",
+									"name": "Compressible"
+								},
+								{
+									"id": "not-compressible",
+									"name": "NOT compressible"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate"
+								}
+							]
+						},
+						{
+							"id": "common-femoral-vein",
+							"name": "Common femoral vein",
+							"type": "single-select",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "compressible",
+									"name": "Compressible"
+								},
+								{
+									"id": "not-compressible",
+									"name": "NOT compressible"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate"
+								}
+							]
+						},
+						{
+							"id": "femoral-vein",
+							"name": "Femoral vein",
+							"type": "single-select",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "compressible",
+									"name": "Compressible"
+								},
+								{
+									"id": "not-compressible",
+									"name": "NOT compressible"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate"
+								}
+							]
+						},
+						{
+							"id": "popliteal-vein:",
+							"name": "Popliteal vein",
+							"type": "single-select",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "compressible",
+									"name": "Compressible"
+								},
+								{
+									"id": "not-compressible",
+									"name": "NOT compressible"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate"
+								}
+							]
+						},
+						{
+							"id": "popliteal-trifurcation",
+							"name": "Popliteal trifurcation",
+							"type": "single-select",
+							"columnLayout": 3,
+							"options": [
+								{
+									"id": "present",
+									"name": "Present"
+								},
+								{
+									"id": "absent",
+									"name": "Absent"
+								},
+								{
+									"id": "indeterminate",
+									"name": "Indeterminate"
+								}
+							]
+						},
+						{
+							"id": "others",
+							"name": "Other",
+							"type": "text"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "interpretations",
+			"name": "Interpretations",
+			"required": true,
+			"topics": [
+				{
+					"id": "standard",
+					"name": "",
+					"type": "multi-select",
+					"columnLayout": 1,
+					"options": [
+						{
+							"id": "vein-thrombosis",
+							"name": "no sonographic evidence of deep vein thrombosis"
+						},
+						{
+							"id": "dvt-present",
+							"name": "DVT present",
+							"topics": [
+								{
+									"id": "dvt-present-location",
+									"name": "Location(s)",
+									"type": "multi-select",
+									"columnLayout": 2,
+									"options": [
+										{
+											"id": "r-saphenofemoral-junction",
+											"name": "R saphenofemoral junction"
+										},
+										{
+											"id": "r-saphenofemoral-junction",
+											"name": "L saphenofemoral junction"
+										},
+										{
+											"id": "r-cfv",
+											"name": "R CFV"
+										},
+										{
+											"id": "l-cfv",
+											"name": "L CFV"
+										},
+										{
+											"id": "r-fv",
+											"name": "R FV"
+										},
+										{
+											"id": "l-fv",
+											"name": "L FV"
+										},
+										{
+											"id": "r-popliteal",
+											"name": "R popliteal"
+										},
+										{
+											"id": "l-popliteal",
+											"name": "L popliteal"
+										},
+										{
+											"id": "r-popliteal-trifurcation",
+											"name": "R popliteal trifurcation"
+										},
+										{
+											"id": "l-popliteal-trifurcation",
+											"name": "L popliteal trifurcation"
+										}
+									]
+								}
+							]
+						},
+						{
+							"id": "indeterminate-for-dvt",
+							"name": "Indeterminate for DVT"
+						}
+					]
+				},
+				{
+					"id": "others",
+					"name": "Other",
+					"type": "text"
+				}
+			]
+		}
+	]
+}

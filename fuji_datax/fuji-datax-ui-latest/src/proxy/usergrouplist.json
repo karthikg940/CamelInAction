@@ -1,0 +1,25 @@
+{
+   "results": [
+    {
+      "userGroupId": 1,
+      "groupName": "UserGroup1",
+      "description": "UserGroupDescription1"
+    },
+    {
+      "userGroupId": 2,
+      "groupName": "UserGroup2",
+      "description": "UserGroupDescription2"
+    },
+ {
+      "userGroupId": 6,
+      "groupName": "UserGroup3",
+      "description": "UserGroupDescription3"
+    },
+    
+    {
+      "userGroupId": 8,
+      "groupName": "UserGroup4",
+      "description": "UserGroupDescription4"
+    }
+  ] 
+} 

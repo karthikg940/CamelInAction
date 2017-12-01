@@ -1,0 +1,11 @@
+{% extends "UserLogin/base" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+    <h4> Dear DataX User,</h4>
+    <p>Welcome to DataX. This is the default template</p><br>
+
+{% endblock %}
+
+{% block footer %}Regards,<br></br>DataX{% endblock %}

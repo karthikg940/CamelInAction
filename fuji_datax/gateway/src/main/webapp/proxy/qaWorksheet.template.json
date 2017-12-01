@@ -1,0 +1,66 @@
+{
+  "result": {
+    "id": 3001,
+    "name": "Cardiac QA",
+    "content": {
+      "id": "qawrk1",
+      "topic": [
+        {
+          "columnLayout": 1,
+          "id" : "default",
+          "name" : "OneDropDown",
+          "required" : "true",
+          "options" :[
+              "Grade Scale 1",
+              "Grade Scale 2",
+              "Grade Scale 3"
+          ],
+          "type": "dropdown-accordion"
+        },
+        {
+          "columnLayout": 1,
+          "id" : "qaDropdown",
+          "name" : "TwoDropDown",
+          "required" : "true",
+          "options" :[
+            {
+              "id" : "Image Quality",
+              "value" : [
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+
+            },
+            {
+              "id" : "Accurace Of Interpretation",
+              "value" : [
+                "TN",
+                "TP",
+                "FN",
+                "FP"
+              ]
+            },
+            {
+              "id" : "Interpretation Gold Standard",
+              "value" : [
+                "TN",
+                "TP",
+                "FN",
+                "FP"
+              ]
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "others",
+          "name": "Others",
+          "type": "text"
+        }
+      ]
+    }
+  }
+}

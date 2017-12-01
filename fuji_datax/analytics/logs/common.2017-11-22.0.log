@@ -1,0 +1,118 @@
+2017-11-22 17:48:53,615 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property 
+2017-11-22 17:48:53,975 [main] INFO  c.f.d.a.AnalyticsApplication - The following profiles are active: prod 
+2017-11-22 17:48:57,079 [main] WARN  o.s.c.a.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'. 
+2017-11-22 17:49:00,341 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd 
+2017-11-22 17:49:00,341 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd is liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-22 17:49:00,341 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-22 17:49:00,467 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd 
+2017-11-22 17:49:00,467 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd is liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-22 17:49:00,467 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-22 17:49:00,608 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd 
+2017-11-22 17:49:00,608 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd is liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-22 17:49:00,608 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-22 17:49:00,795 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd 
+2017-11-22 17:49:00,795 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd is liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-22 17:49:00,795 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-22 17:49:51,303 [main] WARN  c.n.c.s.URLConfigurationSource - No URLs will be polled as dynamic configuration sources. 
+2017-11-22 17:49:51,319 [main] WARN  c.n.c.s.URLConfigurationSource - No URLs will be polled as dynamic configuration sources. 
+2017-11-22 17:49:56,114 [main] INFO  c.s.j.spi.service.ServiceFinder - Running in a non-OSGi environment 
+2017-11-22 17:49:56,115 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface com.sun.jersey.client.proxy.ViewProxyProvider 
+2017-11-22 17:49:56,131 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface com.sun.jersey.spi.inject.InjectableProvider 
+2017-11-22 17:49:56,146 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.SAXParserContextProvider 
+2017-11-22 17:49:56,146 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.XMLStreamReaderContextProvider 
+2017-11-22 17:49:56,146 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.DocumentBuilderFactoryProvider 
+2017-11-22 17:49:56,146 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.xml.TransformerFactoryProvider 
+2017-11-22 17:49:56,255 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface javax.ws.rs.ext.MessageBodyReader 
+2017-11-22 17:49:56,271 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.StringProvider 
+2017-11-22 17:49:56,271 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ByteArrayProvider 
+2017-11-22 17:49:56,271 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FileProvider 
+2017-11-22 17:49:56,271 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.InputStreamProvider 
+2017-11-22 17:49:56,271 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DataSourceProvider 
+2017-11-22 17:49:56,271 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.RenderedImageProvider 
+2017-11-22 17:49:56,271 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider 
+2017-11-22 17:49:56,271 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormProvider 
+2017-11-22 17:49:56,271 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider 
+2017-11-22 17:49:56,271 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App 
+2017-11-22 17:49:56,271 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text 
+2017-11-22 17:49:56,271 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General 
+2017-11-22 17:49:56,271 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App 
+2017-11-22 17:49:56,271 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text 
+2017-11-22 17:49:56,271 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General 
+2017-11-22 17:49:56,271 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App 
+2017-11-22 17:49:56,271 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text 
+2017-11-22 17:49:56,271 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General 
+2017-11-22 17:49:56,271 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ReaderProvider 
+2017-11-22 17:49:56,271 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DocumentProvider 
+2017-11-22 17:49:56,271 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$StreamSourceReader 
+2017-11-22 17:49:56,271 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$SAXSourceReader 
+2017-11-22 17:49:56,271 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$DOMSourceReader 
+2017-11-22 17:49:56,271 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$App 
+2017-11-22 17:49:56,271 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$Text 
+2017-11-22 17:49:56,271 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$General 
+2017-11-22 17:49:56,271 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.EntityHolderReader 
+2017-11-22 17:49:56,505 [main] INFO  c.s.j.c.s.component.ProviderFactory - A dependent class, javax/mail/MessagingException, of the component class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider is not found. The component is ignored. 
+2017-11-22 17:49:56,583 [main] INFO  c.s.j.c.s.c.ProviderServices - Searching for providers that implement: interface javax.ws.rs.ext.MessageBodyWriter 
+2017-11-22 17:49:56,583 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.StringProvider 
+2017-11-22 17:49:56,583 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ByteArrayProvider 
+2017-11-22 17:49:56,583 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FileProvider 
+2017-11-22 17:49:56,583 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.InputStreamProvider 
+2017-11-22 17:49:56,583 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DataSourceProvider 
+2017-11-22 17:49:56,583 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.RenderedImageProvider 
+2017-11-22 17:49:56,583 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider 
+2017-11-22 17:49:56,583 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormProvider 
+2017-11-22 17:49:56,583 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider 
+2017-11-22 17:49:56,583 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$App 
+2017-11-22 17:49:56,583 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$Text 
+2017-11-22 17:49:56,583 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General 
+2017-11-22 17:49:56,583 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$App 
+2017-11-22 17:49:56,583 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$Text 
+2017-11-22 17:49:56,583 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General 
+2017-11-22 17:49:56,583 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$App 
+2017-11-22 17:49:56,583 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$Text 
+2017-11-22 17:49:56,583 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General 
+2017-11-22 17:49:56,583 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.ReaderProvider 
+2017-11-22 17:49:56,583 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.DocumentProvider 
+2017-11-22 17:49:56,583 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.StreamingOutputProvider 
+2017-11-22 17:49:56,583 [main] INFO  c.s.j.c.s.c.ProviderServices -     Provider found: class com.sun.jersey.core.impl.provider.entity.SourceProvider$SourceWriter 
+2017-11-22 17:49:56,583 [main] INFO  c.s.j.c.s.component.ProviderFactory - A dependent class, javax/mail/MessagingException, of the component class com.sun.jersey.core.impl.provider.entity.MimeMultipartProvider is not found. The component is ignored. 
+2017-11-22 17:49:59,378 [main] INFO  c.f.d.a.AnalyticsApplication - Started AnalyticsApplication in 67.448 seconds (JVM running for 68.727) 
+2017-11-22 19:52:07,611 [http-nio-7092-exec-1] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-22 19:52:16,606 [http-nio-7092-exec-1] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-22 19:52:16,815 [http-nio-7092-exec-1] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-22 19:52:19,197 [http-nio-7092-exec-1] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-22 19:52:56,747 [http-nio-7092-exec-2] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-22 19:52:56,779 [http-nio-7092-exec-2] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-22 19:53:03,520 [http-nio-7092-exec-2] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-22 19:53:03,520 [http-nio-7092-exec-2] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-22 19:53:47,539 [http-nio-7092-exec-4] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-22 19:53:47,540 [http-nio-7092-exec-4] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-22 19:53:47,541 [http-nio-7092-exec-4] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-22 19:53:47,542 [http-nio-7092-exec-4] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-22 19:57:18,892 [http-nio-7092-exec-6] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-22 19:57:18,914 [http-nio-7092-exec-6] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-22 19:57:18,916 [http-nio-7092-exec-6] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-22 19:57:18,945 [http-nio-7092-exec-6] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-22 19:57:41,025 [http-nio-7092-exec-7] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-22 19:57:41,028 [http-nio-7092-exec-7] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-22 19:57:41,041 [http-nio-7092-exec-7] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-22 19:57:41,043 [http-nio-7092-exec-7] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-22 19:57:44,049 [http-nio-7092-exec-8] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-22 19:57:44,118 [http-nio-7092-exec-8] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-22 19:57:44,123 [http-nio-7092-exec-8] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-22 19:57:44,190 [http-nio-7092-exec-8] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-22 19:57:46,610 [http-nio-7092-exec-9] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-22 19:57:46,611 [http-nio-7092-exec-9] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-22 19:57:46,642 [http-nio-7092-exec-9] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-22 19:57:46,689 [http-nio-7092-exec-9] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-22 19:58:11,020 [http-nio-7092-exec-10] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-22 19:58:11,076 [http-nio-7092-exec-10] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-22 19:58:11,079 [http-nio-7092-exec-10] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-22 19:58:11,124 [http-nio-7092-exec-10] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-22 19:58:21,104 [http-nio-7092-exec-1] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-22 19:58:21,152 [http-nio-7092-exec-1] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-22 19:58:21,200 [http-nio-7092-exec-1] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-22 19:58:21,203 [http-nio-7092-exec-1] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 
+2017-11-22 19:58:33,976 [http-nio-7092-exec-2] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular userId for attestation purpose 
+2017-11-22 19:58:33,977 [http-nio-7092-exec-2] DEBUG c.f.d.a.service.DashboardService - Fetches all the studies ir-respective of the signed in user 
+2017-11-22 19:58:33,977 [http-nio-7092-exec-2] DEBUG c.f.d.a.service.DashboardService - Fetches the studies assigned to the particular user for qualityAssurance purpose 
+2017-11-22 19:58:33,977 [http-nio-7092-exec-2] DEBUG c.f.d.a.w.r.DashBoardResource - Data for studies have been fetched and it is going to transformer 

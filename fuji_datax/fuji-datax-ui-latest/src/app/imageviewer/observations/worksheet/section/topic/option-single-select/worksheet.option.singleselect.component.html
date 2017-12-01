@@ -1,0 +1,16 @@
+<div *ngFor="let option of options;" class="col-md-{{12/columnLayout}} input group pull-left p-x-0">
+    <div class="col-md-2 p-x-0">
+        <input type="radio" name="{{id}}" value="{{option.id}}"   [disableOn]="'studyStatus == \'Submitted\' ||
+          studyStatus == \'Signed\' ||
+          studyStatus == \'QAUnassigned\' ||
+          studyStatus == \'Attested\' ||
+          studyStatus == \'SubmittedForAttestation\'||
+          qaSigned == true || (loggedInUser!==currentUser)'"  [ngModel]="data[id]" (ngModelChange)="onChange($event)" >
+    </div>
+    <div class="col-md-10 p-x-0">
+        <span><span class="label-fw-13">{{option.name}}</span></span>
+    </div>
+    <div class="col-md-12 p-x-0">
+        <worksheet-topic  *ngFor="let subtopic of option.topics" [id]="subtopic.id" [name]="subtopic.name" [type]="subtopic.type" [data]="data[subtopic.id]" [topics]="subtopic.topics" [columnLayout]="subtopic.columnLayout" [options]="subtopic.options" (onUpdate)="onChildChange($event)"></worksheet-topic>
+    </div>
+</div>

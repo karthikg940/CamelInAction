@@ -1,0 +1,70 @@
+[
+  {
+      "studyId": 76000000010020,
+      "studyNo": "iViz Study 2",
+      "deleted": "Y",
+      "studyType": "",
+      "date": "Feb 21,2017 17:57:23",
+      "patient": {
+        "id": "Id123",
+        "mrnno": "Id123",
+        "prefix": "",
+        "firstName": "1",
+        "middleName": "",
+        "lastName": "Test"
+      },
+      "modality": [
+        "US"
+      ],
+      "examType": [
+       [
+         {
+           "id": "",
+           "examtype": ""
+         }
+       ]
+     ],
+      "tags": [
+        ""
+      ],
+      "requestingphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "referringphysician": {
+        "id": "",
+        "prefix": "",
+        "firstName": "",
+        "middleName": "",
+        "lastName": ""
+      },
+      "status": [
+        "Submitted"
+      ],
+      "assignedUser": {
+        "id": 1001,
+        "prefix": "Dr.",
+        "firstName": "John",
+        "middleName": "",
+        "lastName": "Williams"
+      },
+      "studyUid": "1.2.276.0.7230010.3.1.2.0.1209.1483961695.257413",
+      "qaUser": {
+        "id": 1001,
+        "prefix": "Dr.",
+        "firstName": "Cris",
+        "middleName": "",
+        "lastName": "Renella"
+      },
+      "attendingUser": {
+        "id": 1001,
+        "prefix": "Dr.",
+        "firstName": "Cris",
+        "middleName": "",
+        "lastName": "Renella"
+      }
+    }
+]

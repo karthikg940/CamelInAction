@@ -1,0 +1,34 @@
+
+/*Breadcrumb*/
+ .ranges li{
+    background: none;
+    border:0px;
+    color:#4274b9;
+}
+.ranges li:hover, .ranges li.active, .ranges li:focus{
+    background-color: #4274b9;
+    border:0px;
+    color:#fff;
+}
+.applyBtn, .cancelBtn{
+    background: none;
+    border: 1px solid #ccc;
+    color: #333;
+}
+.applyBtn:hover, .applyBtn:focus, .applyBtn:active, .cancelBtn:hover, .cancelBtn:focus{
+    background-color: #4274b9;
+    border:1px solid #ccc;
+    color:#fff;
+}
+.updateDefaultTimePeriod{
+	float: right;
+	height: 3.445rem;
+	border-radius: 5px 0 0 5px;
+	margin: 10px 0;
+ } 
+.cus-input {
+    border-radius: 0px;
+}
+ 
+/*Breadcrumb Ends*/
+

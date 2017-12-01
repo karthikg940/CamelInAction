@@ -1,0 +1,40 @@
+{
+	"studyList": [
+		{
+			"patientName": "MISTER^CT",
+			"patientId": "2178309",
+			"studyDate": "20010105",
+			"modality": "CT",
+			"studyDescription": "CHEST",
+			"numImages": 111,
+			"studyId": "ctstudy"
+		},
+		{
+			"patientName": "MISTER^CR",
+			"patientId": "9227465",
+			"studyDate": "20010109",
+			"modality": "CR",
+			"studyDescription": "pelvis",
+			"numImages": 2,
+			"studyId": "crstudy"
+		},
+		{
+			"patientName": "Dermatology",
+			"patientId": "922746522",
+			"studyDate": "20010109",
+			"modality": "DERM",
+			"studyDescription": "Skin Rash",
+			"numImages": 2,
+			"studyId": "dermatology"
+		},
+		{
+			"patientName": "US JPEG",
+			"patientId": "123454321",
+			"studyDate": "20120418",
+			"modality": "US",
+			"studyDescription": "US FETAL SURVEY",
+			"numImages": 22,
+			"studyId": "usjpeg"
+		}
+	]
+}

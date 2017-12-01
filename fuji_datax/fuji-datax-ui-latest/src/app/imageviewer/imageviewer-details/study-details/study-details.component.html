@@ -1,0 +1,270 @@
+<div class=" bg-white">
+  <div class="row clearfix m-x-0 p-10">
+    <div class="row m-x-0">
+      <h3 class="m-t-0">Study Details</h3>
+    </div>
+    <div class="row m-x-0">
+      <div class="col-xs-12 col-md-9 p-x-0">
+        <div class="tab-viewer col-xs-12 p-x-0">
+          <div class="row m-x-0">
+            <div class="col-xs-3 p-x-0">
+              <label>Patient: </label>
+            </div>
+            <div class="col-xs-9 p-x-0">
+              <span>
+                {{patientDetails?.patient?.firstName}}
+                {{patientDetails?.patient?.middleName}}
+                {{patientDetails?.patient?.lastName}}
+              </span>
+            </div>
+          </div>
+          <div class="row m-x-0">
+            <div class="col-xs-3 p-x-0">
+              <label>Patient ID: </label>
+            </div>
+            <div class="col-xs-9 p-x-0">
+              <span>{{patientDetails?.patient?.id}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="m-y-0">
+  <div class="row m-x-0 p-10">
+    <div class="row m-x-0">
+      <div class="row m-x-0 b-b-1-lightgray">
+        <h4 class="m-t-0">Exams Details</h4>
+      </div>
+    </div>
+    <div class="row m-x-0 m-t-10">
+      <div class="row m-x-0">
+        <div class="col-xs-2 pull-left">
+          <i class="fa fa-fw fa-folder-o fa-3x pull-left"></i>
+        </div>
+        <div class="col-xs-4 fw-15 m-t-10 p-x-0">
+          <span class="m-l-20">{{patientDetails?.studyNo}}</span>
+        </div>
+        <div class="col-xs-6 m-t-10">
+          <label>Study Progress:</label>
+          <div class="row m-x-0"
+            *ngIf="patientDetails && patientDetails?.status == 'New'">
+            <div class="progress">
+              <div class="progress-bar bg-New" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+            </div>
+          </div>
+
+          <div class="row m-x-0"
+            *ngIf="patientDetails && patientDetails?.status == 'Assigned'">
+            <div class="progress">
+              <div class="progress-bar bg-New" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Assigned" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+            </div>
+          </div>
+
+          <div class="row m-x-0"
+            *ngIf="patientDetails && patientDetails?.status == 'Pending'">
+            <div class="progress">
+              <div class="progress-bar bg-New" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Assigned" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Pending" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+            </div>
+          </div>
+
+          <div class="row m-x-0"
+            *ngIf="patientDetails && patientDetails?.status == 'Signed'">
+            <div class="progress">
+              <div class="progress-bar bg-New" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Assigned" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Pending" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Signed" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+            </div>
+          </div>
+
+          <div class="row m-x-0"
+            *ngIf="patientDetails && patientDetails?.status == 'QAUnassigned'">
+            <div class="progress">
+              <div class="progress-bar bg-New" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Assigned" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Pending" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Signed" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Qaunassigned" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+            </div>
+          </div>
+
+          <div class="row m-x-0"
+            *ngIf="patientDetails && patientDetails?.status == 'SubmittedForAttestation'">
+            <div class="progress">
+              <div class="progress-bar bg-New" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Assigned" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Pending" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Signed" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Submitted-for-Attestation" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+            </div>
+          </div>
+
+          <div class="row m-x-0"
+            *ngIf="patientDetails && patientDetails?.status == 'Attested'">
+            <div class="progress">
+              <div class="progress-bar bg-New" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Assigned" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Pending" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Signed" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Submitted-for-Attestation" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Attested" role="progressbar"
+              style="width:14.2%" title="{{patientDetails?.status}}"></div>
+            </div>
+          </div>
+
+          <div class="row m-x-0"
+            *ngIf="patientDetails && patientDetails?.status == 'QAAssigned'">
+            <div class="progress">
+              <div class="progress-bar bg-New" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Assigned" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Pending" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Signed" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Qaassigned" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+            </div>
+          </div>
+
+          <div class="row m-x-0"
+            *ngIf="patientDetails && patientDetails?.status == 'QAInProgress'">
+            <div class="progress">
+              <div class="progress-bar bg-New" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Assigned" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Pending" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Signed" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Qaassigned" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Qainprogress" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+            </div>
+          </div>
+
+          <div class="row m-x-0"
+            *ngIf="patientDetails && patientDetails?.status == 'Submitted'">
+            <div class="progress">
+              <div class="progress-bar bg-New" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Assigned" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Pending" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Signed" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Qaassigned" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Qainprogress" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+              <div class="progress-bar bg-Submitted" role="progressbar"
+              style="width: 14.2%" title="{{patientDetails?.status}}"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="row m-x-0">
+        <div class="col-xs-7">
+          <label>Study Created Date and Time:</label>
+        </div>
+        <div class="col-xs-5">
+          <span>{{patientDetails?.date| date:'MMM d,y H:mm:ss'}}</span>
+        </div>
+      </div>
+    </div>
+    <div class="row m-x-0 m-t-10 scroll-335 custom-scrollbar">
+      <div *ngFor="let item of patientDetails?.examType;let i = index;">
+        <div *ngFor="let items of item">
+          <div class="row m-x-0 m-b-10">
+            <div class="col-xs-6 col-md-3">
+              <div class="row m-x-0"><label>Study Type</label></div>
+              <div class="row m-x-0"><span class="label color-white bg-gray b-1-gray">{{patientDetails?.studyType}}</span></div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+              <div class="row m-x-0"><label>Exam Type</label></div>
+              <div class="row m-x-0"><span class="label bg-examtype"><span>{{items?.examtype}}</span></span>  </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+              <div class="row m-x-0"><label>Images</label></div>
+              <div class="row m-x-0"><span><span>{{patientDetails?.Images}}</span></span>  </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+              <div class="row m-x-0"><label>Clips</label></div>
+              <div class="row m-x-0"><span><span></span></span>  </div>
+            </div>
+          </div>
+        <div class="row m-x-0">
+        <div class="col-xs-12 col-md-6">
+        <div class="row m-x-0"><label>Tag</label></div>
+        <div class="row m-x-0">
+        <span class="label color-white bg-warning b-1-warning tagscss" *ngFor="let tag of patientDetails?.tags">{{tag}}</span>
+        </div>
+        </div>
+        </div>
+        </div>
+      </div>
+      <div class="row m-x-0 m-t-10">
+        <div class="col-xs-12 col-md-7 p-x-0">
+          <div class="row m-x-0">
+            <div class="col-xs-7"><label>POC Doctor:</label></div>
+            <div class="col-xs-5 p-x-0">
+              <span>{{patientDetails?.assignedUser[0]?.prefix}}
+                    {{patientDetails?.assignedUser[0]?.firstName}}
+                    {{patientDetails?.assignedUser[0]?.middleName}}
+                    {{patientDetails?.assignedUser[0]?.lastName}}
+              </span>
+            </div>
+          </div>
+          <div class="row m-x-0">
+            <div class="col-xs-7"><label>Department:</label></div>
+            <div class="col-xs-5 p-x-0"><span>{{patientDetails?.department}}</span></div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-5 p-x-0 p-5 b-1-lightgray">
+          <div class="col-xs-7 p-x-0">
+            <div class="col-xs-12 p-x-0">
+              <label>Device</label>
+            </div>
+            <div class="col-xs-12 p-x-0">
+              <span>{{patientDetails?.modality}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

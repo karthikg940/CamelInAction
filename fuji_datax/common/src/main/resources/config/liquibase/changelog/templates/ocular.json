@@ -1,0 +1,316 @@
+{
+  "id": "wrk1",
+  "sections": [
+    {
+      "id": "indications",
+      "name": "Indications for Exam",
+      "required": true,
+      "topics": [
+        {
+          "id" : "default",
+          "name": "",
+          "type": "multi-select",
+          "columnLayout": 2,
+          "options": [
+            {"id":"eye-pain", "name": "Eye pain"},
+            {"id":"head-injury", "name": "Head Injury"},
+            {"id":"eye-orbital-trauma", "name": "Eye/Orbital trauma"},
+            {"id":"suspected-foreign-body", "name": "Suspected foreign body"},
+            {"id":"vision-change", "name": "vision change"},
+            {"id":"head-ache", "name": "headache"},
+            {"id":"visual-loss", "name": "Visual loss"},
+            {"id":"educational", "name": "Educational"}
+          ]
+        },
+        {
+          "id" : "others",
+          "name": "Other",
+          "type": "text"
+        }
+      ]
+    },
+
+    {
+      "id": "views",
+      "name": "Views",
+      "required": true,
+      "topics": [
+        {
+          "id" : "right-eye-transverse",
+          "name": "Right eye transverse",
+          "type": "single-select",
+          "columnLayout": 3,
+          "options": [
+            {"id":"adequate", "name": "Adequate"},
+            {"id":"limited", "name": "Limited"},
+            {"id":"not-obtained", "name": "Not Obtained"}
+          ]
+        },
+        {
+          "id" : "right-eye-longitudinal",
+          "name": "Right eye longitudinal",
+          "type": "single-select",
+          "columnLayout": 3,
+          "options": [
+            {"id":"adequate", "name": "Adequate"},
+            {"id":"limited", "name": "Limited"},
+            {"id":"not-obtained", "name": "Not Obtained"}
+          ]
+        },
+        {
+          "id" : "left-eye-transverse",
+          "name": "Left eye transverse",
+          "type": "single-select",
+          "columnLayout": 3,
+          "options": [
+            {"id":"adequate", "name": "Adequate"},
+            {"id":"limited", "name": "Limited"},
+            {"id":"not-obtained", "name": "Not Obtained"}
+          ]
+        },
+        {
+          "id" : "left-eye-longitudinal",
+          "name": "Left eye longitudinal",
+          "type": "single-select",
+          "columnLayout": 3,
+          "options": [
+            {"id":"adequate", "name": "Adequate"},
+            {"id":"limited", "name": "Limited"},
+            {"id":"not-obtained", "name": "Not Obtained"}
+          ]
+        },
+       
+        {
+          "id" : "others",
+          "name": "Other",
+          "type": "text"
+        }
+      ]
+    },
+
+    {
+      "id": "findings",
+      "name": "Findings",
+      "required": true,
+      "topics": [
+        {
+          "id" : "right-eye",
+          "name": "Right eye",
+          "topics":[
+            {
+              "id" : "retinal-contour",
+              "name": "Retinal contour",
+              "type": "single-select",
+              "columnLayout": 3,
+              "options": [
+                {"id":"normal", "name": "Normal"},
+                {"id":"abnormal-detached", "name": "Abnormal/ detached"},
+                {"id":"indeterminate", "name": "Indeterminate"}
+              ]
+            },
+            {
+              "id" : "evidence-of-tamponade",
+              "name": "Lens",
+              "type": "single-select",
+              "columnLayout": 3,
+              "options": [
+                {"id":"normally-located", "name": "Normally located"},
+                {"id":"dislodged", "name": "Dislodged"},
+                {"id":"indeterminate", "name": "Indeterminate"}
+              ]
+            },
+            {
+              "id" : "vitreous-body",
+              "name": "Vitreous body",
+              "type": "single-select",
+              "columnLayout": 3,
+              "options": [
+                {"id":"anechoic", "name": "Anechoic"},
+                {"id":"hyperechoic-density", "name": "Hyperechoic density"},
+                {"id":"indeterminate", "name": "Indeterminate"}
+              ]
+            },
+            {
+              "id" : "optic-nerve-sheath",
+              "name": "Optic nerve sheath",
+              "type": "single-select",
+              "columnLayout": 2,
+              "options": [
+                {"id":"enlarged", "name": "Enlarged"},
+                {"id":"normal", "name": "Normal"},
+                {"id":"indeterminate", "name": "Indeterminate"}
+              ]
+            },
+             {
+              "id" : "onsd",
+              "name": "ONSD",
+               "type": "text-number"
+            },
+             {
+          "id" : "others",
+          "name": "Other",
+          "type": "text"
+        }
+            
+          ]
+        },
+        {
+          "id" : "left-eye",
+          "name": "Left eye",
+          "topics":[
+            {
+              "id" : "retinal-contour",
+              "name": "Retinal contour",
+              "type": "single-select",
+              "columnLayout": 3,
+              "options": [
+                {"id":"normal", "name": "Normal"},
+                {"id":"abnormal-detached", "name": "Abnormal/ detached"},
+                {"id":"indeterminate", "name": "Indeterminate"}
+              ]
+            },
+            {
+              "id" : "evidence-of-tamponade",
+              "name": "Lens",
+              "type": "single-select",
+              "columnLayout": 3,
+              "options": [
+                {"id":"normally-located", "name": "Normally located"},
+                {"id":"dislodged", "name": "Dislodged"},
+                {"id":"indeterminate", "name": "Indeterminate"}
+              ]
+            },
+            {
+              "id" : "vitreous-body",
+              "name": "Vitreous body",
+              "type": "single-select",
+              "columnLayout": 3,
+              "options": [
+                {"id":"anechoic", "name": "Anechoic"},
+                {"id":"hyperechoic-density", "name": "Hyperechoic density"},
+                {"id":"indeterminate", "name": "Indeterminate"}
+              ]
+            },
+            {
+              "id" : "optic-nerve-sheath",
+              "name": "Optic nerve sheath",
+              "type": "single-select",
+              "columnLayout": 3,
+              "options": [
+                {"id":"enlarged", "name": "Enlarged"},
+                {"id":"normal", "name": "Normal"},
+                {"id":"indeterminate", "name": "Indeterminate", "topics": [
+                  {
+                      "id" : "onsd",
+             		 "name": "ONSD",
+               		"type": "text-number"
+                  }
+                ]}
+              ]
+            },
+            
+             {
+          "id" : "others",
+          "name": "Other",
+          "type": "text"
+        }
+            
+          ]
+        }
+      ]
+    },
+    {
+      "id": "interpretations",
+      "name": "Interpretations",
+      "required": true,
+      "topics": [
+        {
+          "id" : "standard",
+          "name": "",
+          "type": "multi-select",
+          "columnLayout": 1,
+          "options": [
+            { "id":"no-acute-abnormalities-identified", "name": "No acute abnormalities identified" ,"topics": [{
+                "id": "no-acute-abnormalities-identified-size",
+                "name":"",
+                "type": "single-select",
+                "columnLayout": 3,
+                "options": [
+                  {"id":"left", "name": "Left"},
+                  {"id":"right", "name": "Right"},
+                  {"id":"bilateral", "name": "Bilateral"}
+                ]}
+              ]},
+            { "id":"retinal-detachment", "name": "Retinal Detachment" ,"topics": [{
+                "id": "retinal-detachment-size",
+                "name":"",
+                "type": "single-select",
+                "columnLayout": 3,
+                "options": [
+                  {"id":"left", "name": "Left"},
+                  {"id":"right", "name": "Right"},
+                  {"id":"bilateral", "name": "Bilateral"}
+                ]}
+              ]},
+            {"id":"lens-dislocation", "name": "Lens dislocation" ,
+
+              "topics": [{
+                "id": "lens-dislocation-size",
+               "name":"",
+                "type": "single-select",
+                "columnLayout": 3,
+                "options": [
+                  {"id":"left", "name": "Left"},
+                  {"id":"right", "name": "Right"},
+                  {"id":"bilateral", "name": "Bilateral"}
+                ]}
+              ]
+            },
+            {"id":"vitreous-hemorrhage", "name": "Vitreous Hemorrhage" ,
+
+              "topics": [{
+                "id": "vitreous-hemorrhage-option",
+                "name":"",
+                "type": "single-select",
+                "columnLayout": 3,
+                "options": [
+                  {"id":"left", "name": "Left"},
+                  {"id":"right", "name": "Right"},
+                  {"id":"bilateral", "name": "Bilateral"}
+                ]}
+              ]
+            },
+
+            {"id":"intraocular-foreign-body", "name": "Intraocular Foreign body","topics": [{
+                "id": "intraocular-foreign-body-size",
+               "name":"",
+                "type": "single-select",
+                "columnLayout": 3,
+                "options": [
+                  {"id":"left", "name": "Left"},
+                  {"id":"right", "name": "Right"},
+                  {"id":"bilateral", "name": "Bilateral"}
+                ]}
+              ]},
+               {"id":"increased-onsd", "name": "Increased ONSD","topics": [{
+                "id": "increased-onsd-size",
+               "name":"",
+                "type": "single-select",
+                "columnLayout": 3,
+                "options": [
+                  {"id":"left", "name": "Left"},
+                  {"id":"right", "name": "Right"},
+                  {"id":"bilateral", "name": "Bilateral"}
+                ]}
+              ]}
+          ]
+        },
+        {
+          "id" : "others",
+          "name": "Other",
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}

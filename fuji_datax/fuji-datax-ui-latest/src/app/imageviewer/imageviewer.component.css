@@ -1,0 +1,183 @@
+/*Image Viewer Right Menu*/
+.img-vie-right-menu{
+    border:0px !important;
+    background-color: #4274B9 !important;
+    color:#fff !important;
+}
+.p-imgview{
+    padding: 0px 26px 15px 15px !important;
+}
+.p-patientdet{
+     padding: 0px 50px 0px 0px !important;
+}
+hr{
+    border-top: 1px solid #dedede;
+}
+.details-tab.active a, .details-tab.active a:hover, .details-tab.active a:focus, .details-tab a:hover, .details-tab a:focus{
+    background-color: #fff !important;
+    border: 1px solid #fff !important;
+    color: #4274B9 !important;
+    border-radius: 0px;
+}
+
+/*Image Viewer Study Details Tab*/
+.scroll-335 {
+    max-height: 335px;
+    overflow-y: auto;
+}
+.custom-scrollbar {
+    position: relative;
+    background-color: #fff;
+}
+
+/*Media Queries*/
+/*Tablet*/
+@media screen and (max-width: 979px) and (min-width: 768px){
+.btn-toolbar.pull-right, .btn-group.pull-right{
+    float:left !important;
+}
+.tab-viewer{
+    margin-top:10px;
+}
+label{
+    margin-bottom: 0px;
+}
+}
+
+/*Mobile*/
+@media screen and (max-width: 767px) and (min-width: 320px){
+label{
+    margin-bottom: 0px;
+}
+.btn-toolbar.pull-right, .btn-group.pull-right{
+    float:left !important;
+}
+.tab-viewer{
+    margin-top:10px;
+}
+}
+
+
+/*Procedural Worksheet*/
+
+.worksheet{
+    height: 700px;
+    position : absolute;
+    top:122px;
+    left:65px;
+    width:0%;
+    /*transition: all .5s ease-in;
+    z-index:-2;*/
+    /*background-color: #fff;*/
+    display : none;
+}
+.worksheet.active{
+    left:65px !important;
+    z-index:1 !important;
+    width:304px;
+    display:block !important;
+}
+.label-fw-13{
+    font-size:13px;
+}
+
+/*Scroll Bar*/
+.scroll-400{
+    max-height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.custom-scrollbar {
+    position: relative;
+    background-color: #fff;
+}
+::-webkit-scrollbar
+{
+ width: 8px;
+}
+::-webkit-scrollbar-track
+{
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+ border-radius:10px;
+}
+::-webkit-scrollbar-thumb
+{
+ background-color: #c1c1c1;
+ border-radius:10px;
+}
+::-moz-scrollbar
+{
+ width: 8px;
+}
+::-moz-scrollbar-track
+{
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+ border-radius:10px;
+}
+::-moz-scrollbar-thumb
+{
+ background-color: #c1c1c1;
+ border-radius:10px;
+}
+
+/*Other Text Box*/
+.wrksht-text{
+    padding:5px;
+}
+.txtNumber{
+    width:40px;
+    padding:5px;
+}
+
+/*Choose Worksheet Dropdown*/
+.ddWorksheet .dropdown-menu{
+    top: 32px;
+    right: 122px;
+}
+.ddWorksheet .btn-default:hover, .ddWorksheet .btn-default:focus,.open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover {
+    background-color: #fff;
+}
+.worksheetActive{
+    font-size:15px;
+}
+
+/*Worksheet Accordion*/
+.wrkshtpanelhead{
+    background-color: #4274B9 !important;
+    color:white !important;
+}
+.qawrkshtpanelhead{
+    background-color: #149447 !important;
+    color:white !important;
+}
+.wrkshtpanelbody{
+    display:none;
+}
+
+/*Demographics*/
+.observations-details-tab a{
+    background-color: #4274B9 !important;
+    border: 2px solid #4274B9 !important;
+    color: #fff !important;
+    font-weight:bold;
+}
+.observations-details-tab.active a, .observations-details-tab.active a:hover, .observations-details-tab.active a:focus, .observations-details-tab a:hover, .observations-details-tab a:focus{
+    background-color: #fff !important;
+    border: 2px solid #4274B9 !important;
+    color: #4274B9 !important;
+    border-bottom-color: #fff !important;
+    font-weight:bold;
+}
+
+/*hr*/
+.wrkshtHr {
+    border-top: 1px solid #dedede;
+}
+
+
+/*Study Tab Tag*/
+.tagscss{
+	margin-top:5px;
+	margin-right:5px;
+	display:inline-block;
+}

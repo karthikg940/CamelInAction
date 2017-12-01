@@ -1,0 +1,123 @@
+<modal #roleAddedPopup [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Add Role</h4>
+  </modal-header>
+  <modal-body>
+    New Role created successfully
+  </modal-body>
+</modal>
+
+<modal #roleUpdatePopup [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Update Role</h4>
+  </modal-header>
+  <modal-body>
+    Role changes saved successfully
+  </modal-body>
+</modal>
+
+<!--New Role Creation-->
+
+<div class="contentpage m-l-65">
+<div class="m-r-10">
+  <!-- Breadcrumbs -->
+  <div class="row m-x-0 bg-ssblue">
+    <div class="col-xs-12 col-sm-6 p-l-15">
+      <div class="pull-left color-white">
+        <h2 class="m-y-10">Roles</h2>
+      </div>
+      <ol class="breadcrumb bg-ssblue pull-left fw-15 m-b-0 m-t-10 p-l-15">
+        <li><i class="fa fa-lg fa-user-circle color-white"></i></li>
+        <li class="color-white"><a routerLink="/rolelist" class="color-white">Roles List</a></li>
+        <li *ngIf="formState == 'Add'" class="color-white">New Role</li>
+        <li *ngIf="formState == 'Modify'" class="color-white">View or Modify Role</li>
+        <li *ngIf="formState == 'Clone'" class="color-white">Clone Role</li>
+      </ol>
+    </div>
+  </div>
+  <!-- Breadcrumbs Ends -->
+
+  <div class="row m-t-15 m-x-0">
+  <div class="col-xs-12">
+    <form novalidate #createRoleForm="ngForm" novalidate>
+    <div class="col-md-offset-2 col-md-8 b-1-lightgray bg-white">
+      <div class="row m-x-0">
+        <div class="col-xs-12">
+          <h3 *ngIf="formState == 'Add'">New Role</h3>
+          <h3 *ngIf="formState == 'Modify'">View or Modify Role</h3>
+          <h3 *ngIf="formState == 'Clone'">Clone Role</h3>
+        </div>
+      </div>
+      <div class="row m-x-0 m-t-5">
+        <div class="col-sm-offset-2 col-md-offset-2 col-xs-12 col-sm-8 p-10"></div>
+      </div>
+    <div class="row m-x-0 m-t-5">
+      <div class="col-sm-offset-2 col-md-offset-2 col-xs-12 col-sm-8 p-10">
+        <div class="col-xs-12 p-x-0">
+          <div class="col-xs-12 form-group">
+            <div class="col-xs-6 col-md-4">
+              <label>Role Name <span class="color-red">*</span></label>
+            </div>
+            <div class="col-xs-6 col-md-6">
+              <input type="text" class="form-control" id="roleName" required [(ngModel)]="roleData.roleName" (keypress)="validateAlpha($event);" (focus)="removeRoleNameError()" name="roleName" #roleName="ngModel" maxlength="50" (blur)="formState == 'Modify'?true:getRoleName(roleName.value)"
+              [readonly] = "formState == 'Modify'?true:false" required>
+              <div [hidden]="roleNameExceeds || (!createRoleForm.submitted)" class="alert alert-danger alertRequired">Role Name can be maximum of 50 characters
+              </div>
+              <div [hidden]="(roleName.valid || (!createRoleForm.submitted))|| roleNameExceeds == false" class="alert alert-danger alertRequired">Please provide Role name
+              </div>
+              <div [hidden]="roleNameValid" class="alert alert-danger alertRequired">Special characters not allowed
+              </div>
+              <div [hidden]="!roleNameExists || !roleName.valid || roleNameExceeds == false" class="alert alert-danger">
+              Role name already exists in system. Please provide a different Role name
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 p-x-0">
+          <div class="col-xs-12 form-group">
+            <div class="col-xs-6 col-md-4">
+              <label>Role Description <span class="color-red">*</span></label>
+            </div>
+            <div class="col-xs-6 col-md-6">
+              <textarea class="form-control" id="description" required [(ngModel)]="roleData.description" name="description" #description="ngModel" maxlength="255" required></textarea>
+              <div [hidden]="description.valid || (!createRoleForm.submitted)" class="alert alert-danger alertRequired">Please provide Role Description
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 p-x-0">
+          <div class="col-xs-12 form-group">
+            <div class="col-xs-6 col-md-4">
+              <label>Privileges Association<span class="color-red">*</span></label>
+            </div>
+            <div class="col-xs-6 col-md-6">
+              <ng-select [items]="permissionsList" [active]="roleData.permission" id="permissions" name="permissions" [multiple]="true" (data)="refreshValue($event)" (selected)="selectedPermissions($event)" (removed)="removed($event)" ngDefaultControl></ng-select>
+              <div [hidden]="permissionExists" class="alert alert-danger alertRequired">Please choose atleast one Privilege
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 p-x-0">
+          <div class="col-xs-12 form-group">
+            <div class="col-xs-6 col-md-4">
+              <label>Org Level </label>
+            </div>
+            <div class="col-xs-6 col-md-6">
+              <ng-select [items]="organizationsList" [active]="roleData.organization" id="organizations" name="organizations" [multiple]="true" (data)="refreshOrgValue($event)" (selected)="selectedOrganization($event)" (removed)="removedOrg($event)" ngDefaultControl></ng-select>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 m-b-10 p-x-0">
+        <div class="col-xs-offset-4 col-md-offset-4">
+          <button type="button" id="cancel" class="btn btn-primary m-l-10" (click)="cancelPopup(createRoleForm.value)">Cancel</button>
+          <button type="submit" id="save" class="btn btn-primary" (click)="formState == 'Clone'?duplicateRoleNameCheck(createRoleForm.value,createRoleForm.valid):doSave(createRoleForm.value,createRoleForm.valid)">Save</button>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    </form>
+  </div>
+  </div>
+</div>
+</div>

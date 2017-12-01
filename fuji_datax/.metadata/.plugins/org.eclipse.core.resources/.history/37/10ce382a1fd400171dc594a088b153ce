@@ -1,0 +1,26 @@
+<div class="row m-x-0 bg-ssblue">
+  <div class="col-xs-12 col-sm-6 p-l-15">
+    <div class="pull-left color-white">
+      <h2 class="m-y-10">{{title}}</h2>
+    </div>
+    <ol class="breadcrumb bg-ssblue pull-left fw-15 m-b-0 m-t-10 p-l-15">
+      <li> <i class="fa {{icon}} fa-fw color-white"></i></li>
+      <li><a  class="color-white" href="javascript:void(0)">{{secondtitle}}</a></li>
+    </ol>
+  </div>
+  <div class="col-xs-12 col-sm-6 p-r-20">
+    <div id="reportrange" class="daterange pull-right m-y-10">
+      <div class="input-group">
+        <input type="text" class="form-control" readonly>
+        <span class="input-group-btn">
+        <button class="btn btn-secondary" type="button">
+        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+        </button>
+        <button (click)="updatePreference()" class="updateDefaultTimePeriod" alt="Set As Default">Set As Default</button>
+        </span>
+         
+      </div>
+    </div> 
+   
+  </div>
+</div>

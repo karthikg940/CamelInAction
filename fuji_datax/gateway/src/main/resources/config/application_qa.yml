@@ -1,0 +1,35 @@
+
+server:
+    port: 8080
+
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/
+
+zuul:
+    ignoredServices: '*'
+    routes:
+      
+        statistics: 
+            path: /api/statistics/**
+            serviceId: analytics
+            stripPrefix: false		
+        study: 
+            path: /api/study/**
+            serviceId: study
+            stripPrefix: false
+
+hystrix: 
+    command.default.execution.isolation.strategy: THREAD
+    command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
+    command.default.execution.timeout.enabled: false
+    command.default.fallback.enabled: false
+    threadpool.default.coreSize: 20
+
+spring:
+    application:
+        name: gateway
+auth:
+    secret:
+        joanshephard

@@ -1,0 +1,52 @@
+
+<div class="col-md-{{12/qaColumnLayout}} input group pull-left p-x-0 m-b-10">
+  <div class="col-md-6">
+      <label class="label-fw-13">Image Quality</label>{{qaOptions.qualityid}}
+  </div>
+  <div class="col-md-6">
+    <div class="dropdown align-center">
+        <button class="btn btn-default dropdown-toggle" [disableOn]="'studyStatus == \'Attested\' ||
+        studyStatus == \'SubmittedForAttestation\'||
+        studyStatus == \'Submitted\' ||
+        qaSigned == true ||  (loggedInUser!==currentUser)'" type="button" data-toggle="dropdown">{{(qaData.quality)?qaData.quality :'Choose' }}
+            <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li *ngFor="let quality of qaOptions[0].value" (click)="onQAChange(quality, 'quality')"><a href="javascript:void(0)" class="label-fw-13">{{quality}}</a></li>
+        </ul>
+    </div>
+  </div>
+</div>
+<div class="col-md-{{12/qaColumnLayout}} input group pull-left p-x-0 m-b-10">
+  <div class="col-md-6">
+      <label class="label-fw-13">Interpretation of Images</label>
+  </div>
+  <div class="col-md-6">
+    <div class="dropdown align-center">
+        <button class="btn btn-default dropdown-toggle" [disableOn]="'studyStatus == \'Attested\' ||
+        studyStatus == \'SubmittedForAttestation\'||
+        studyStatus == \'Submitted\' ||
+        qaSigned == true ||  (loggedInUser!==currentUser)'" type="button" data-toggle="dropdown">{{(qaData.accuracy)?qaData.accuracy :'Choose' }}
+            <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li *ngFor="let accuracy of qaOptions[1].value" (click)="onQAChange(accuracy, 'accuracy')"><a href="javascript:void(0)" class="label-fw-13">{{accuracy}}</a></li>
+        </ul>
+    </div>
+  </div>
+</div>
+<div class="col-md-{{12/qaColumnLayout}} input group pull-left p-x-0 m-b-10">
+  <div class="col-md-6">
+      <label class="label-fw-13">Gold Standard Interpretation </label>
+  </div>
+  <div class="col-md-6">
+    <div class="dropdown align-center">
+        <button class="btn btn-default dropdown-toggle" [disableOn]="'studyStatus == \'Attested\' ||
+        studyStatus == \'SubmittedForAttestation\'||
+        studyStatus == \'Submitted\' ||
+        qaSigned == true || (loggedInUser!==currentUser) '" type="button" data-toggle="dropdown">{{(qaData.standard)?qaData.standard :'Choose' }}
+            <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+            <li *ngFor="let standard of qaOptions[2].value" (click)="onQAChange(standard, 'standard')"><a href="javascript:void(0)" class="label-fw-13">{{standard}}</a></li>
+        </ul>
+    </div>
+  </div>
+</div>

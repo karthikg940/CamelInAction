@@ -1,0 +1,45 @@
+<modal #confirmDelete [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Delete user group</h4>
+  </modal-header>
+  <modal-body>
+     Do you want to delete the UserGroup?
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-primary" (click)="cancelDelete()">No</button>
+    <button type="button" class="btn btn-default" (click)="confirmDeleteGroup()">Yes</button>
+  </modal-footer>
+</modal>
+
+<div class="contentpage m-l-65">
+<div class="m-r-10">
+  <!-- Breadcrumbs -->
+  <div class="row m-x-0 bg-ssblue">
+    <div class="col-xs-12 col-sm-6 p-l-15">
+      <div class="pull-left color-white">
+        <h2 class="m-y-10">User Group</h2>
+      </div>
+      <ol class="breadcrumb bg-ssblue pull-left fw-15 m-b-0 m-t-10 p-l-15">
+        <li><i class="fa fa-lg fa-users color-white"></i></li>
+        <li class="color-white"><a routerLink="/usergrouplist" class="color-white">User Groups</a></li>
+      </ol>
+    </div>
+  </div>
+  <!-- Breadcrumbs Ends -->
+
+  <!-- User Group List Page -->
+  <div class="row m-t-15 m-x-0">
+    <div class="col-xs-12">
+      <table id="tableUserGroupList" class="display table" width="80%">
+        <thead>
+          <tr>
+            <th width="30%">User Group Name</th>
+            <th width="65%">User Group Description</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+</div>
+</div>

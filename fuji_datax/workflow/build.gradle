@@ -1,0 +1,11 @@
+
+jar {
+	baseName = 'workflow'
+	version = '0.0.2-SNAPSHOT'
+}
+
+dependencies {
+	compile project(':common')
+	compile project(':security')
+	
+}

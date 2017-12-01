@@ -1,0 +1,1 @@
+include 'common','security','gateway','eureka','study','vnasync','auth','worksheet','auditlog','configuration','workflow','notification','analytics'

@@ -1,0 +1,340 @@
+2017-11-17 18:58:23,078 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property 
+2017-11-17 18:58:24,253 [main] INFO  c.f.d.vnasync.VnaSyncApplication - The following profiles are active: prod 
+2017-11-17 18:58:26,498 [main] WARN  o.s.c.a.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'. 
+2017-11-17 18:58:26,753 [main] WARN  o.s.c.a.ConfigurationClassEnhancer - @Bean method ScopeConfiguration.stepScope is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details. 
+2017-11-17 18:58:26,755 [main] WARN  o.s.c.a.ConfigurationClassEnhancer - @Bean method ScopeConfiguration.jobScope is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details. 
+2017-11-17 18:58:28,793 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-17 18:58:29,148 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-17 18:58:29,175 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-17 18:58:29,179 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-17 18:58:29,214 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-17 18:58:29,219 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-17 18:58:29,225 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-17 18:58:29,269 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-17 18:58:29,274 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-17 18:58:29,286 [main] WARN  o.a.t.jdbc.pool.PooledConnection - Not loading a JDBC driver as driverClassName property is null. 
+2017-11-17 18:58:59,137 [main] WARN  c.n.c.s.URLConfigurationSource - No URLs will be polled as dynamic configuration sources. 
+2017-11-17 18:58:59,143 [main] WARN  c.n.c.s.URLConfigurationSource - No URLs will be polled as dynamic configuration sources. 
+2017-11-17 18:58:59,642 [main] INFO  c.f.d.vnasync.VnaSyncApplication - Started VnaSyncApplication in 39.237 seconds (JVM running for 40.656) 
+2017-11-17 19:00:00,085 [pool-3-thread-1] INFO  c.f.d.v.config.VnaSyncConfiguration - Batch :  null       null 
+2017-11-17 19:00:00,135 [pool-3-thread-1] INFO  c.f.d.v.config.VnaSyncConfiguration - Job Started at : Fri Nov 17 19:00:00 IST 2017 
+2017-11-17 19:00:02,103 [pool-3-thread-1] DEBUG c.m.s.j.internals.SQLServerDriver - Property : serverName Value:172.25.242.25 
+2017-11-17 19:00:02,103 [pool-3-thread-1] DEBUG c.m.s.j.internals.SQLServerDriver - Property : portNumber Value:1433 
+2017-11-17 19:00:02,427 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:1 created by (SQLServerDriver:3) 
+2017-11-17 19:00:02,430 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:1 This attempt server name: 172.25.242.25 port: 1433 InstanceName: null 
+2017-11-17 19:00:02,430 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:1 This attempt endtime: 1510925403628 
+2017-11-17 19:00:02,431 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:1 This attempt No: 0 
+2017-11-17 19:00:02,431 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:1 Connecting with server: 172.25.242.25 port: 1433 Timeout slice: 1197 Timeout Full: 15 
+2017-11-17 19:00:02,496 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:1 Server returned major version:11 
+2017-11-17 19:00:05,529 [pool-3-thread-1] DEBUG c.m.s.j.internals.SQLServerDriver - Property : serverName Value:172.25.242.25 
+2017-11-17 19:00:05,529 [pool-3-thread-1] DEBUG c.m.s.j.internals.SQLServerDriver - Property : portNumber Value:1433 
+2017-11-17 19:00:05,529 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:2 created by (SQLServerDriver:4) 
+2017-11-17 19:00:05,530 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:2 This attempt server name: 172.25.242.25 port: 1433 InstanceName: null 
+2017-11-17 19:00:05,530 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:2 This attempt endtime: 1510925406730 
+2017-11-17 19:00:05,530 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:2 This attempt No: 0 
+2017-11-17 19:00:05,530 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:2 Connecting with server: 172.25.242.25 port: 1433 Timeout slice: 1200 Timeout Full: 15 
+2017-11-17 19:00:05,532 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:2 Server returned major version:11 
+2017-11-17 19:00:05,554 [pool-3-thread-1] DEBUG c.m.s.j.internals.SQLServerDriver - Property : serverName Value:172.25.242.25 
+2017-11-17 19:00:05,554 [pool-3-thread-1] DEBUG c.m.s.j.internals.SQLServerDriver - Property : portNumber Value:1433 
+2017-11-17 19:00:05,554 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:3 created by (SQLServerDriver:5) 
+2017-11-17 19:00:05,555 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:3 This attempt server name: 172.25.242.25 port: 1433 InstanceName: null 
+2017-11-17 19:00:05,555 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:3 This attempt endtime: 1510925406755 
+2017-11-17 19:00:05,555 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:3 This attempt No: 0 
+2017-11-17 19:00:05,555 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:3 Connecting with server: 172.25.242.25 port: 1433 Timeout slice: 1200 Timeout Full: 15 
+2017-11-17 19:00:05,557 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:3 Server returned major version:11 
+2017-11-17 19:00:05,567 [pool-3-thread-1] DEBUG c.m.s.j.internals.SQLServerDriver - Property : serverName Value:172.25.242.25 
+2017-11-17 19:00:05,567 [pool-3-thread-1] DEBUG c.m.s.j.internals.SQLServerDriver - Property : portNumber Value:1433 
+2017-11-17 19:00:05,567 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:4 created by (SQLServerDriver:6) 
+2017-11-17 19:00:05,567 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:4 This attempt server name: 172.25.242.25 port: 1433 InstanceName: null 
+2017-11-17 19:00:05,567 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:4 This attempt endtime: 1510925406767 
+2017-11-17 19:00:05,567 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:4 This attempt No: 0 
+2017-11-17 19:00:05,567 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:4 Connecting with server: 172.25.242.25 port: 1433 Timeout slice: 1200 Timeout Full: 15 
+2017-11-17 19:00:05,569 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:4 Server returned major version:11 
+2017-11-17 19:00:05,578 [pool-3-thread-1] DEBUG c.m.s.j.internals.SQLServerDriver - Property : serverName Value:172.25.242.25 
+2017-11-17 19:00:05,578 [pool-3-thread-1] DEBUG c.m.s.j.internals.SQLServerDriver - Property : portNumber Value:1433 
+2017-11-17 19:00:05,578 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:5 created by (SQLServerDriver:7) 
+2017-11-17 19:00:05,578 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:5 This attempt server name: 172.25.242.25 port: 1433 InstanceName: null 
+2017-11-17 19:00:05,578 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:5 This attempt endtime: 1510925406778 
+2017-11-17 19:00:05,578 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:5 This attempt No: 0 
+2017-11-17 19:00:05,578 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:5 Connecting with server: 172.25.242.25 port: 1433 Timeout slice: 1200 Timeout Full: 15 
+2017-11-17 19:00:05,580 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:5 Server returned major version:11 
+2017-11-17 19:00:05,589 [pool-3-thread-1] DEBUG c.m.s.j.internals.SQLServerDriver - Property : serverName Value:172.25.242.25 
+2017-11-17 19:00:05,589 [pool-3-thread-1] DEBUG c.m.s.j.internals.SQLServerDriver - Property : portNumber Value:1433 
+2017-11-17 19:00:05,589 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:6 created by (SQLServerDriver:8) 
+2017-11-17 19:00:05,589 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:6 This attempt server name: 172.25.242.25 port: 1433 InstanceName: null 
+2017-11-17 19:00:05,589 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:6 This attempt endtime: 1510925406789 
+2017-11-17 19:00:05,589 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:6 This attempt No: 0 
+2017-11-17 19:00:05,589 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:6 Connecting with server: 172.25.242.25 port: 1433 Timeout slice: 1200 Timeout Full: 15 
+2017-11-17 19:00:05,591 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:6 Server returned major version:11 
+2017-11-17 19:00:05,599 [pool-3-thread-1] DEBUG c.m.s.j.internals.SQLServerDriver - Property : serverName Value:172.25.242.25 
+2017-11-17 19:00:05,599 [pool-3-thread-1] DEBUG c.m.s.j.internals.SQLServerDriver - Property : portNumber Value:1433 
+2017-11-17 19:00:05,599 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:7 created by (SQLServerDriver:9) 
+2017-11-17 19:00:05,599 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:7 This attempt server name: 172.25.242.25 port: 1433 InstanceName: null 
+2017-11-17 19:00:05,599 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:7 This attempt endtime: 1510925406799 
+2017-11-17 19:00:05,599 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:7 This attempt No: 0 
+2017-11-17 19:00:05,599 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:7 Connecting with server: 172.25.242.25 port: 1433 Timeout slice: 1200 Timeout Full: 15 
+2017-11-17 19:00:05,600 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:7 Server returned major version:11 
+2017-11-17 19:00:05,607 [pool-3-thread-1] DEBUG c.m.s.j.internals.SQLServerDriver - Property : serverName Value:172.25.242.25 
+2017-11-17 19:00:05,607 [pool-3-thread-1] DEBUG c.m.s.j.internals.SQLServerDriver - Property : portNumber Value:1433 
+2017-11-17 19:00:05,608 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:8 created by (SQLServerDriver:10) 
+2017-11-17 19:00:05,608 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:8 This attempt server name: 172.25.242.25 port: 1433 InstanceName: null 
+2017-11-17 19:00:05,608 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:8 This attempt endtime: 1510925406808 
+2017-11-17 19:00:05,608 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:8 This attempt No: 0 
+2017-11-17 19:00:05,608 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:8 Connecting with server: 172.25.242.25 port: 1433 Timeout slice: 1200 Timeout Full: 15 
+2017-11-17 19:00:05,609 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:8 Server returned major version:11 
+2017-11-17 19:00:05,616 [pool-3-thread-1] DEBUG c.m.s.j.internals.SQLServerDriver - Property : serverName Value:172.25.242.25 
+2017-11-17 19:00:05,617 [pool-3-thread-1] DEBUG c.m.s.j.internals.SQLServerDriver - Property : portNumber Value:1433 
+2017-11-17 19:00:05,617 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:9 created by (SQLServerDriver:11) 
+2017-11-17 19:00:05,617 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:9 This attempt server name: 172.25.242.25 port: 1433 InstanceName: null 
+2017-11-17 19:00:05,617 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:9 This attempt endtime: 1510925406817 
+2017-11-17 19:00:05,617 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:9 This attempt No: 0 
+2017-11-17 19:00:05,617 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:9 Connecting with server: 172.25.242.25 port: 1433 Timeout slice: 1200 Timeout Full: 15 
+2017-11-17 19:00:05,618 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:9 Server returned major version:11 
+2017-11-17 19:00:05,625 [pool-3-thread-1] DEBUG c.m.s.j.internals.SQLServerDriver - Property : serverName Value:172.25.242.25 
+2017-11-17 19:00:05,625 [pool-3-thread-1] DEBUG c.m.s.j.internals.SQLServerDriver - Property : portNumber Value:1433 
+2017-11-17 19:00:05,625 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:10 created by (SQLServerDriver:12) 
+2017-11-17 19:00:05,625 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:10 This attempt server name: 172.25.242.25 port: 1433 InstanceName: null 
+2017-11-17 19:00:05,625 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:10 This attempt endtime: 1510925406825 
+2017-11-17 19:00:05,625 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:10 This attempt No: 0 
+2017-11-17 19:00:05,626 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:10 Connecting with server: 172.25.242.25 port: 1433 Timeout slice: 1200 Timeout Full: 15 
+2017-11-17 19:00:05,627 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerConnection - ConnectionID:10 Server returned major version:11 
+2017-11-17 19:00:05,643 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerPreparedStatement:1 created by (ConnectionID:10) 
+2017-11-17 19:00:05,717 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerPreparedStatement:1: calling sp_prepexec: PreparedHandle:0, SQL:SELECT ORG_PK, NAME,DESCRIPTION,IS_PMO,IS_STMO,ID_TYPE,PREFIX,PARENT_ORG_FK FROM EVERCORE.dbo.CFG_ORG_T 
+2017-11-17 19:00:06,053 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:1 created by (SQLServerPreparedStatement:1) 
+2017-11-17 19:00:07,535 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerPreparedStatement:2 created by (ConnectionID:10) 
+2017-11-17 19:00:07,536 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerPreparedStatement:2: calling sp_prepexec: PreparedHandle:0, SQL:SELECT PATIENT_PK,BIRTH_DATE,FIRST_NAME,MIDDLE_NAME,LAST_NAME,PREFIX,SUFFIX,GENDER,ETHNIC_ORIGIN,MPI_ID FROM EVERCORE.dbo.PATIENT_T 
+2017-11-17 19:00:07,717 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:2 created by (SQLServerPreparedStatement:2) 
+2017-11-17 19:00:11,743 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerPreparedStatement:3 created by (ConnectionID:10) 
+2017-11-17 19:00:11,744 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerPreparedStatement:3: calling sp_prepexec: PreparedHandle:0, SQL:SELECT PATIENT_ID_PK,PATIENT_FK,ID_TYPE,ISSUER,MEDICAL_ID,CREATED_DATE_TIME,CALC_LC_MEDICAL_ID FROM EVERCORE.dbo.PATIENT_ID_T 
+2017-11-17 19:00:11,854 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:3 created by (SQLServerPreparedStatement:3) 
+2017-11-17 19:00:18,368 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerPreparedStatement:4 created by (ConnectionID:10) 
+2017-11-17 19:00:18,369 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerPreparedStatement:4: calling sp_prepexec: PreparedHandle:0, SQL:SELECT PERSON_PK, FIRST_NAME,MIDDLE_NAME,LAST_NAME,PREFIX,SUFFIX FROM EVERCORE.dbo.PERSON_T 
+2017-11-17 19:00:18,483 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:4 created by (SQLServerPreparedStatement:4) 
+2017-11-17 19:00:19,652 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerPreparedStatement:5 created by (ConnectionID:10) 
+2017-11-17 19:00:19,652 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerPreparedStatement:5: calling sp_prepexec: PreparedHandle:0, SQL:SELECT PATIENT_WORKLIST_PK,ENCOUNTER_NUMBER_TYPE,ENCOUNTER_NUMBER,PATIENT_FK,ORG_FK FROM EVERCORE.dbo.PATIENT_WORKLIST_T 
+2017-11-17 19:00:19,781 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:5 created by (SQLServerPreparedStatement:5) 
+2017-11-17 19:00:19,983 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerPreparedStatement:6 created by (ConnectionID:10) 
+2017-11-17 19:00:19,983 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerPreparedStatement:6: calling sp_prepexec: PreparedHandle:0, SQL:SELECT STUDY_PK, PATIENT_FK,STUDY_ID,DESCRIPTION,CREATED_DATE_TIME,SCHEDULED_DATE_TIME,PERFORMED_DATE_TIME,COMPLETED_DATE_TIME,STUDY_UID,REFERRING_PHYSICIAN_FK,REQUESTING_PHYSICIAN_FK,PATIENT_AGE,PATIENT_HEIGHT,PATIENT_WEIGHT,INTERNAL_VALIDATION_STATUS,ARCHIVE_STATUS,LAST_ACCESSED_DATE_TIME,STMO FROM EVERCORE.dbo.STUDY_T 
+2017-11-17 19:00:20,076 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:6 created by (SQLServerPreparedStatement:6) 
+2017-11-17 19:00:20,304 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:7 created by (ConnectionID:9) 
+2017-11-17 19:00:20,304 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:7 Executing (not server cursor) select B.BAG_PK, L.DIRECTORY_NAME,ST.STORAGE_LOCATION_PK FROM EVERCORE.dbo.BAG_T B JOIN EVERCORE.dbo.LOCATION_T L ON B.BAG_PK=L.BAG_FK JOIN EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST ON ST.NAME = L.STORAGE_LOCATION_ULN JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.STUDY_FK = B.STUDY_FK WHERE B.STUDY_FK = 76000000000001 AND ST.NAME = L.STORAGE_LOCATION_ULN AND B.STORAGE_GROUP_TYPE IN (1,4) ORDER BY B.LAST_UPDATED_DATE_TIME DESC 
+2017-11-17 19:00:20,679 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:7 created by (SQLServerStatement:7) 
+2017-11-17 19:00:20,914 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:8 created by (ConnectionID:9) 
+2017-11-17 19:00:20,914 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:8 Executing (not server cursor) select B.BAG_PK, L.DIRECTORY_NAME,ST.STORAGE_LOCATION_PK FROM EVERCORE.dbo.BAG_T B JOIN EVERCORE.dbo.LOCATION_T L ON B.BAG_PK=L.BAG_FK JOIN EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST ON ST.NAME = L.STORAGE_LOCATION_ULN JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.STUDY_FK = B.STUDY_FK WHERE B.STUDY_FK = 76000000000009 AND ST.NAME = L.STORAGE_LOCATION_ULN AND B.STORAGE_GROUP_TYPE IN (1,4) ORDER BY B.LAST_UPDATED_DATE_TIME DESC 
+2017-11-17 19:00:20,935 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:8 created by (SQLServerStatement:8) 
+2017-11-17 19:00:20,936 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:1 created by (SQLServerResultSet:8) 
+2017-11-17 19:00:20,939 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:9 created by (ConnectionID:9) 
+2017-11-17 19:00:20,939 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:9 Executing (not server cursor) select distinct L.LOCAL_DIRECTORY FROM EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST JOIN EVERCORE.dbo.CFG_LOCATION_CLUSTER_T L ON L.STORAGE_LOCATION_FK =76000004 
+2017-11-17 19:00:20,997 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:9 created by (SQLServerStatement:9) 
+2017-11-17 19:00:20,997 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:2 created by (SQLServerResultSet:9) 
+2017-11-17 19:00:21,000 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:10 created by (ConnectionID:9) 
+2017-11-17 19:00:21,000 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:10 Executing (not server cursor) select SOP.FILE_NAME,SER.EQUIPMENT_ID from EVERCORE.dbo.SERIES_T SER JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.SERIES_FK = SER.SERIES_PK WHERE SER.STUDY_FK = 76000000000009 AND SER.MODALITY='US' ORDER BY SER.SERIES_DATE_TIME ASC 
+2017-11-17 19:00:21,130 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:10 created by (SQLServerStatement:10) 
+2017-11-17 19:00:21,130 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:3 created by (SQLServerResultSet:10) 
+2017-11-17 19:00:21,894 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:11 created by (ConnectionID:9) 
+2017-11-17 19:00:21,894 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:11 Executing (not server cursor) select B.BAG_PK, L.DIRECTORY_NAME,ST.STORAGE_LOCATION_PK FROM EVERCORE.dbo.BAG_T B JOIN EVERCORE.dbo.LOCATION_T L ON B.BAG_PK=L.BAG_FK JOIN EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST ON ST.NAME = L.STORAGE_LOCATION_ULN JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.STUDY_FK = B.STUDY_FK WHERE B.STUDY_FK = 76000000010016 AND ST.NAME = L.STORAGE_LOCATION_ULN AND B.STORAGE_GROUP_TYPE IN (1,4) ORDER BY B.LAST_UPDATED_DATE_TIME DESC 
+2017-11-17 19:00:22,097 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:11 created by (SQLServerStatement:11) 
+2017-11-17 19:00:22,097 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:4 created by (SQLServerResultSet:11) 
+2017-11-17 19:00:22,098 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:12 created by (ConnectionID:9) 
+2017-11-17 19:00:22,098 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:12 Executing (not server cursor) select distinct L.LOCAL_DIRECTORY FROM EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST JOIN EVERCORE.dbo.CFG_LOCATION_CLUSTER_T L ON L.STORAGE_LOCATION_FK =76000004 
+2017-11-17 19:00:22,173 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:12 created by (SQLServerStatement:12) 
+2017-11-17 19:00:22,174 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:5 created by (SQLServerResultSet:12) 
+2017-11-17 19:00:22,174 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:13 created by (ConnectionID:9) 
+2017-11-17 19:00:22,174 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:13 Executing (not server cursor) select SOP.FILE_NAME,SER.EQUIPMENT_ID from EVERCORE.dbo.SERIES_T SER JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.SERIES_FK = SER.SERIES_PK WHERE SER.STUDY_FK = 76000000010016 AND SER.MODALITY='US' ORDER BY SER.SERIES_DATE_TIME ASC 
+2017-11-17 19:00:22,179 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:13 created by (SQLServerStatement:13) 
+2017-11-17 19:00:22,179 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:6 created by (SQLServerResultSet:13) 
+2017-11-17 19:00:23,000 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:14 created by (ConnectionID:9) 
+2017-11-17 19:00:23,001 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:14 Executing (not server cursor) select B.BAG_PK, L.DIRECTORY_NAME,ST.STORAGE_LOCATION_PK FROM EVERCORE.dbo.BAG_T B JOIN EVERCORE.dbo.LOCATION_T L ON B.BAG_PK=L.BAG_FK JOIN EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST ON ST.NAME = L.STORAGE_LOCATION_ULN JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.STUDY_FK = B.STUDY_FK WHERE B.STUDY_FK = 76000000010019 AND ST.NAME = L.STORAGE_LOCATION_ULN AND B.STORAGE_GROUP_TYPE IN (1,4) ORDER BY B.LAST_UPDATED_DATE_TIME DESC 
+2017-11-17 19:00:23,008 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:14 created by (SQLServerStatement:14) 
+2017-11-17 19:00:24,231 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:15 created by (ConnectionID:9) 
+2017-11-17 19:00:24,232 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:15 Executing (not server cursor) select B.BAG_PK, L.DIRECTORY_NAME,ST.STORAGE_LOCATION_PK FROM EVERCORE.dbo.BAG_T B JOIN EVERCORE.dbo.LOCATION_T L ON B.BAG_PK=L.BAG_FK JOIN EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST ON ST.NAME = L.STORAGE_LOCATION_ULN JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.STUDY_FK = B.STUDY_FK WHERE B.STUDY_FK = 76000000010031 AND ST.NAME = L.STORAGE_LOCATION_ULN AND B.STORAGE_GROUP_TYPE IN (1,4) ORDER BY B.LAST_UPDATED_DATE_TIME DESC 
+2017-11-17 19:00:24,240 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:15 created by (SQLServerStatement:15) 
+2017-11-17 19:00:24,240 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:7 created by (SQLServerResultSet:15) 
+2017-11-17 19:00:24,240 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:16 created by (ConnectionID:9) 
+2017-11-17 19:00:24,241 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:16 Executing (not server cursor) select distinct L.LOCAL_DIRECTORY FROM EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST JOIN EVERCORE.dbo.CFG_LOCATION_CLUSTER_T L ON L.STORAGE_LOCATION_FK =76000004 
+2017-11-17 19:00:24,245 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:16 created by (SQLServerStatement:16) 
+2017-11-17 19:00:24,245 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:8 created by (SQLServerResultSet:16) 
+2017-11-17 19:00:24,245 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:17 created by (ConnectionID:9) 
+2017-11-17 19:00:24,246 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:17 Executing (not server cursor) select SOP.FILE_NAME,SER.EQUIPMENT_ID from EVERCORE.dbo.SERIES_T SER JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.SERIES_FK = SER.SERIES_PK WHERE SER.STUDY_FK = 76000000010031 AND SER.MODALITY='US' ORDER BY SER.SERIES_DATE_TIME ASC 
+2017-11-17 19:00:24,251 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:17 created by (SQLServerStatement:17) 
+2017-11-17 19:00:24,264 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:18 created by (ConnectionID:9) 
+2017-11-17 19:00:24,264 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:18 Executing (not server cursor) select B.BAG_PK, L.DIRECTORY_NAME,ST.STORAGE_LOCATION_PK FROM EVERCORE.dbo.BAG_T B JOIN EVERCORE.dbo.LOCATION_T L ON B.BAG_PK=L.BAG_FK JOIN EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST ON ST.NAME = L.STORAGE_LOCATION_ULN JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.STUDY_FK = B.STUDY_FK WHERE B.STUDY_FK = 76000000010034 AND ST.NAME = L.STORAGE_LOCATION_ULN AND B.STORAGE_GROUP_TYPE IN (1,4) ORDER BY B.LAST_UPDATED_DATE_TIME DESC 
+2017-11-17 19:00:24,270 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:18 created by (SQLServerStatement:18) 
+2017-11-17 19:00:24,270 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:9 created by (SQLServerResultSet:18) 
+2017-11-17 19:00:24,270 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:19 created by (ConnectionID:9) 
+2017-11-17 19:00:24,270 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:19 Executing (not server cursor) select distinct L.LOCAL_DIRECTORY FROM EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST JOIN EVERCORE.dbo.CFG_LOCATION_CLUSTER_T L ON L.STORAGE_LOCATION_FK =76000004 
+2017-11-17 19:00:24,271 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:19 created by (SQLServerStatement:19) 
+2017-11-17 19:00:24,271 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:10 created by (SQLServerResultSet:19) 
+2017-11-17 19:00:24,271 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:20 created by (ConnectionID:9) 
+2017-11-17 19:00:24,272 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:20 Executing (not server cursor) select SOP.FILE_NAME,SER.EQUIPMENT_ID from EVERCORE.dbo.SERIES_T SER JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.SERIES_FK = SER.SERIES_PK WHERE SER.STUDY_FK = 76000000010034 AND SER.MODALITY='US' ORDER BY SER.SERIES_DATE_TIME ASC 
+2017-11-17 19:00:24,275 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:20 created by (SQLServerStatement:20) 
+2017-11-17 19:00:24,283 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:21 created by (ConnectionID:9) 
+2017-11-17 19:00:24,284 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:21 Executing (not server cursor) select B.BAG_PK, L.DIRECTORY_NAME,ST.STORAGE_LOCATION_PK FROM EVERCORE.dbo.BAG_T B JOIN EVERCORE.dbo.LOCATION_T L ON B.BAG_PK=L.BAG_FK JOIN EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST ON ST.NAME = L.STORAGE_LOCATION_ULN JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.STUDY_FK = B.STUDY_FK WHERE B.STUDY_FK = 76000000010036 AND ST.NAME = L.STORAGE_LOCATION_ULN AND B.STORAGE_GROUP_TYPE IN (1,4) ORDER BY B.LAST_UPDATED_DATE_TIME DESC 
+2017-11-17 19:00:24,289 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:21 created by (SQLServerStatement:21) 
+2017-11-17 19:00:24,289 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:11 created by (SQLServerResultSet:21) 
+2017-11-17 19:00:24,289 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:22 created by (ConnectionID:9) 
+2017-11-17 19:00:24,289 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:22 Executing (not server cursor) select distinct L.LOCAL_DIRECTORY FROM EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST JOIN EVERCORE.dbo.CFG_LOCATION_CLUSTER_T L ON L.STORAGE_LOCATION_FK =76000004 
+2017-11-17 19:00:24,290 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:22 created by (SQLServerStatement:22) 
+2017-11-17 19:00:24,290 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:12 created by (SQLServerResultSet:22) 
+2017-11-17 19:00:24,290 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:23 created by (ConnectionID:9) 
+2017-11-17 19:00:24,290 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:23 Executing (not server cursor) select SOP.FILE_NAME,SER.EQUIPMENT_ID from EVERCORE.dbo.SERIES_T SER JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.SERIES_FK = SER.SERIES_PK WHERE SER.STUDY_FK = 76000000010036 AND SER.MODALITY='US' ORDER BY SER.SERIES_DATE_TIME ASC 
+2017-11-17 19:00:24,294 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:23 created by (SQLServerStatement:23) 
+2017-11-17 19:00:24,787 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:24 created by (ConnectionID:9) 
+2017-11-17 19:00:24,788 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:24 Executing (not server cursor) select B.BAG_PK, L.DIRECTORY_NAME,ST.STORAGE_LOCATION_PK FROM EVERCORE.dbo.BAG_T B JOIN EVERCORE.dbo.LOCATION_T L ON B.BAG_PK=L.BAG_FK JOIN EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST ON ST.NAME = L.STORAGE_LOCATION_ULN JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.STUDY_FK = B.STUDY_FK WHERE B.STUDY_FK = 76000000010038 AND ST.NAME = L.STORAGE_LOCATION_ULN AND B.STORAGE_GROUP_TYPE IN (1,4) ORDER BY B.LAST_UPDATED_DATE_TIME DESC 
+2017-11-17 19:00:24,795 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:24 created by (SQLServerStatement:24) 
+2017-11-17 19:00:24,795 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:13 created by (SQLServerResultSet:24) 
+2017-11-17 19:00:24,796 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:25 created by (ConnectionID:9) 
+2017-11-17 19:00:24,796 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:25 Executing (not server cursor) select distinct L.LOCAL_DIRECTORY FROM EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST JOIN EVERCORE.dbo.CFG_LOCATION_CLUSTER_T L ON L.STORAGE_LOCATION_FK =76000004 
+2017-11-17 19:00:24,799 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:25 created by (SQLServerStatement:25) 
+2017-11-17 19:00:24,799 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:14 created by (SQLServerResultSet:25) 
+2017-11-17 19:00:24,799 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:26 created by (ConnectionID:9) 
+2017-11-17 19:00:24,800 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:26 Executing (not server cursor) select SOP.FILE_NAME,SER.EQUIPMENT_ID from EVERCORE.dbo.SERIES_T SER JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.SERIES_FK = SER.SERIES_PK WHERE SER.STUDY_FK = 76000000010038 AND SER.MODALITY='US' ORDER BY SER.SERIES_DATE_TIME ASC 
+2017-11-17 19:00:24,804 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:26 created by (SQLServerStatement:26) 
+2017-11-17 19:00:24,804 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:15 created by (SQLServerResultSet:26) 
+2017-11-17 19:00:25,809 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:27 created by (ConnectionID:9) 
+2017-11-17 19:00:25,810 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:27 Executing (not server cursor) select B.BAG_PK, L.DIRECTORY_NAME,ST.STORAGE_LOCATION_PK FROM EVERCORE.dbo.BAG_T B JOIN EVERCORE.dbo.LOCATION_T L ON B.BAG_PK=L.BAG_FK JOIN EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST ON ST.NAME = L.STORAGE_LOCATION_ULN JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.STUDY_FK = B.STUDY_FK WHERE B.STUDY_FK = 76000000010049 AND ST.NAME = L.STORAGE_LOCATION_ULN AND B.STORAGE_GROUP_TYPE IN (1,4) ORDER BY B.LAST_UPDATED_DATE_TIME DESC 
+2017-11-17 19:00:25,817 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:27 created by (SQLServerStatement:27) 
+2017-11-17 19:00:25,818 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:16 created by (SQLServerResultSet:27) 
+2017-11-17 19:00:25,818 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:28 created by (ConnectionID:9) 
+2017-11-17 19:00:25,818 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:28 Executing (not server cursor) select distinct L.LOCAL_DIRECTORY FROM EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST JOIN EVERCORE.dbo.CFG_LOCATION_CLUSTER_T L ON L.STORAGE_LOCATION_FK =76000004 
+2017-11-17 19:00:25,822 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:28 created by (SQLServerStatement:28) 
+2017-11-17 19:00:25,822 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:17 created by (SQLServerResultSet:28) 
+2017-11-17 19:00:25,822 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:29 created by (ConnectionID:9) 
+2017-11-17 19:00:25,823 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:29 Executing (not server cursor) select SOP.FILE_NAME,SER.EQUIPMENT_ID from EVERCORE.dbo.SERIES_T SER JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.SERIES_FK = SER.SERIES_PK WHERE SER.STUDY_FK = 76000000010049 AND SER.MODALITY='US' ORDER BY SER.SERIES_DATE_TIME ASC 
+2017-11-17 19:00:25,880 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:29 created by (SQLServerStatement:29) 
+2017-11-17 19:00:25,880 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:18 created by (SQLServerResultSet:29) 
+2017-11-17 19:00:26,251 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:30 created by (ConnectionID:9) 
+2017-11-17 19:00:26,251 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:30 Executing (not server cursor) select B.BAG_PK, L.DIRECTORY_NAME,ST.STORAGE_LOCATION_PK FROM EVERCORE.dbo.BAG_T B JOIN EVERCORE.dbo.LOCATION_T L ON B.BAG_PK=L.BAG_FK JOIN EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST ON ST.NAME = L.STORAGE_LOCATION_ULN JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.STUDY_FK = B.STUDY_FK WHERE B.STUDY_FK = 76000000010055 AND ST.NAME = L.STORAGE_LOCATION_ULN AND B.STORAGE_GROUP_TYPE IN (1,4) ORDER BY B.LAST_UPDATED_DATE_TIME DESC 
+2017-11-17 19:00:26,259 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:30 created by (SQLServerStatement:30) 
+2017-11-17 19:00:26,259 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:19 created by (SQLServerResultSet:30) 
+2017-11-17 19:00:26,259 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:31 created by (ConnectionID:9) 
+2017-11-17 19:00:26,259 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:31 Executing (not server cursor) select distinct L.LOCAL_DIRECTORY FROM EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST JOIN EVERCORE.dbo.CFG_LOCATION_CLUSTER_T L ON L.STORAGE_LOCATION_FK =76000004 
+2017-11-17 19:00:26,263 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:31 created by (SQLServerStatement:31) 
+2017-11-17 19:00:26,263 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:20 created by (SQLServerResultSet:31) 
+2017-11-17 19:00:26,263 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:32 created by (ConnectionID:9) 
+2017-11-17 19:00:26,263 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:32 Executing (not server cursor) select SOP.FILE_NAME,SER.EQUIPMENT_ID from EVERCORE.dbo.SERIES_T SER JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.SERIES_FK = SER.SERIES_PK WHERE SER.STUDY_FK = 76000000010055 AND SER.MODALITY='US' ORDER BY SER.SERIES_DATE_TIME ASC 
+2017-11-17 19:00:26,268 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:32 created by (SQLServerStatement:32) 
+2017-11-17 19:00:26,268 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:21 created by (SQLServerResultSet:32) 
+2017-11-17 19:00:27,479 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:33 created by (ConnectionID:9) 
+2017-11-17 19:00:27,479 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:33 Executing (not server cursor) select B.BAG_PK, L.DIRECTORY_NAME,ST.STORAGE_LOCATION_PK FROM EVERCORE.dbo.BAG_T B JOIN EVERCORE.dbo.LOCATION_T L ON B.BAG_PK=L.BAG_FK JOIN EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST ON ST.NAME = L.STORAGE_LOCATION_ULN JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.STUDY_FK = B.STUDY_FK WHERE B.STUDY_FK = 76000000010067 AND ST.NAME = L.STORAGE_LOCATION_ULN AND B.STORAGE_GROUP_TYPE IN (1,4) ORDER BY B.LAST_UPDATED_DATE_TIME DESC 
+2017-11-17 19:00:27,487 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:33 created by (SQLServerStatement:33) 
+2017-11-17 19:00:27,487 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:22 created by (SQLServerResultSet:33) 
+2017-11-17 19:00:27,488 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:34 created by (ConnectionID:9) 
+2017-11-17 19:00:27,488 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:34 Executing (not server cursor) select distinct L.LOCAL_DIRECTORY FROM EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST JOIN EVERCORE.dbo.CFG_LOCATION_CLUSTER_T L ON L.STORAGE_LOCATION_FK =76000004 
+2017-11-17 19:00:27,491 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:34 created by (SQLServerStatement:34) 
+2017-11-17 19:00:27,492 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:23 created by (SQLServerResultSet:34) 
+2017-11-17 19:00:27,492 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:35 created by (ConnectionID:9) 
+2017-11-17 19:00:27,492 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:35 Executing (not server cursor) select SOP.FILE_NAME,SER.EQUIPMENT_ID from EVERCORE.dbo.SERIES_T SER JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.SERIES_FK = SER.SERIES_PK WHERE SER.STUDY_FK = 76000000010067 AND SER.MODALITY='US' ORDER BY SER.SERIES_DATE_TIME ASC 
+2017-11-17 19:00:27,497 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:35 created by (SQLServerStatement:35) 
+2017-11-17 19:00:27,653 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:36 created by (ConnectionID:9) 
+2017-11-17 19:00:27,653 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:36 Executing (not server cursor) select B.BAG_PK, L.DIRECTORY_NAME,ST.STORAGE_LOCATION_PK FROM EVERCORE.dbo.BAG_T B JOIN EVERCORE.dbo.LOCATION_T L ON B.BAG_PK=L.BAG_FK JOIN EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST ON ST.NAME = L.STORAGE_LOCATION_ULN JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.STUDY_FK = B.STUDY_FK WHERE B.STUDY_FK = 76000000010071 AND ST.NAME = L.STORAGE_LOCATION_ULN AND B.STORAGE_GROUP_TYPE IN (1,4) ORDER BY B.LAST_UPDATED_DATE_TIME DESC 
+2017-11-17 19:00:27,659 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:36 created by (SQLServerStatement:36) 
+2017-11-17 19:00:27,659 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:24 created by (SQLServerResultSet:36) 
+2017-11-17 19:00:27,659 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:37 created by (ConnectionID:9) 
+2017-11-17 19:00:27,659 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:37 Executing (not server cursor) select distinct L.LOCAL_DIRECTORY FROM EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST JOIN EVERCORE.dbo.CFG_LOCATION_CLUSTER_T L ON L.STORAGE_LOCATION_FK =76000004 
+2017-11-17 19:00:27,660 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:37 created by (SQLServerStatement:37) 
+2017-11-17 19:00:27,661 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:25 created by (SQLServerResultSet:37) 
+2017-11-17 19:00:27,661 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:38 created by (ConnectionID:9) 
+2017-11-17 19:00:27,661 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:38 Executing (not server cursor) select SOP.FILE_NAME,SER.EQUIPMENT_ID from EVERCORE.dbo.SERIES_T SER JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.SERIES_FK = SER.SERIES_PK WHERE SER.STUDY_FK = 76000000010071 AND SER.MODALITY='US' ORDER BY SER.SERIES_DATE_TIME ASC 
+2017-11-17 19:00:27,665 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:38 created by (SQLServerStatement:38) 
+2017-11-17 19:00:27,665 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:26 created by (SQLServerResultSet:38) 
+2017-11-17 19:00:29,145 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:39 created by (ConnectionID:9) 
+2017-11-17 19:00:29,146 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:39 Executing (not server cursor) select B.BAG_PK, L.DIRECTORY_NAME,ST.STORAGE_LOCATION_PK FROM EVERCORE.dbo.BAG_T B JOIN EVERCORE.dbo.LOCATION_T L ON B.BAG_PK=L.BAG_FK JOIN EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST ON ST.NAME = L.STORAGE_LOCATION_ULN JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.STUDY_FK = B.STUDY_FK WHERE B.STUDY_FK = 76000000010073 AND ST.NAME = L.STORAGE_LOCATION_ULN AND B.STORAGE_GROUP_TYPE IN (1,4) ORDER BY B.LAST_UPDATED_DATE_TIME DESC 
+2017-11-17 19:00:29,154 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:39 created by (SQLServerStatement:39) 
+2017-11-17 19:00:29,154 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:27 created by (SQLServerResultSet:39) 
+2017-11-17 19:00:29,154 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:40 created by (ConnectionID:9) 
+2017-11-17 19:00:29,155 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:40 Executing (not server cursor) select distinct L.LOCAL_DIRECTORY FROM EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST JOIN EVERCORE.dbo.CFG_LOCATION_CLUSTER_T L ON L.STORAGE_LOCATION_FK =76000004 
+2017-11-17 19:00:29,158 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:40 created by (SQLServerStatement:40) 
+2017-11-17 19:00:29,158 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:28 created by (SQLServerResultSet:40) 
+2017-11-17 19:00:29,159 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:41 created by (ConnectionID:9) 
+2017-11-17 19:00:29,159 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:41 Executing (not server cursor) select SOP.FILE_NAME,SER.EQUIPMENT_ID from EVERCORE.dbo.SERIES_T SER JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.SERIES_FK = SER.SERIES_PK WHERE SER.STUDY_FK = 76000000010073 AND SER.MODALITY='US' ORDER BY SER.SERIES_DATE_TIME ASC 
+2017-11-17 19:00:29,163 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:41 created by (SQLServerStatement:41) 
+2017-11-17 19:00:29,163 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:29 created by (SQLServerResultSet:41) 
+2017-11-17 19:00:29,335 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:42 created by (ConnectionID:9) 
+2017-11-17 19:00:29,335 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:42 Executing (not server cursor) select B.BAG_PK, L.DIRECTORY_NAME,ST.STORAGE_LOCATION_PK FROM EVERCORE.dbo.BAG_T B JOIN EVERCORE.dbo.LOCATION_T L ON B.BAG_PK=L.BAG_FK JOIN EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST ON ST.NAME = L.STORAGE_LOCATION_ULN JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.STUDY_FK = B.STUDY_FK WHERE B.STUDY_FK = 76000000010074 AND ST.NAME = L.STORAGE_LOCATION_ULN AND B.STORAGE_GROUP_TYPE IN (1,4) ORDER BY B.LAST_UPDATED_DATE_TIME DESC 
+2017-11-17 19:00:29,343 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:42 created by (SQLServerStatement:42) 
+2017-11-17 19:00:29,343 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:30 created by (SQLServerResultSet:42) 
+2017-11-17 19:00:29,343 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:43 created by (ConnectionID:9) 
+2017-11-17 19:00:29,343 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:43 Executing (not server cursor) select distinct L.LOCAL_DIRECTORY FROM EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST JOIN EVERCORE.dbo.CFG_LOCATION_CLUSTER_T L ON L.STORAGE_LOCATION_FK =76000004 
+2017-11-17 19:00:29,347 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:43 created by (SQLServerStatement:43) 
+2017-11-17 19:00:29,347 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:31 created by (SQLServerResultSet:43) 
+2017-11-17 19:00:29,347 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:44 created by (ConnectionID:9) 
+2017-11-17 19:00:29,347 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:44 Executing (not server cursor) select SOP.FILE_NAME,SER.EQUIPMENT_ID from EVERCORE.dbo.SERIES_T SER JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.SERIES_FK = SER.SERIES_PK WHERE SER.STUDY_FK = 76000000010074 AND SER.MODALITY='US' ORDER BY SER.SERIES_DATE_TIME ASC 
+2017-11-17 19:00:29,352 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:44 created by (SQLServerStatement:44) 
+2017-11-17 19:00:29,355 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:45 created by (ConnectionID:9) 
+2017-11-17 19:00:29,356 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:45 Executing (not server cursor) select B.BAG_PK, L.DIRECTORY_NAME,ST.STORAGE_LOCATION_PK FROM EVERCORE.dbo.BAG_T B JOIN EVERCORE.dbo.LOCATION_T L ON B.BAG_PK=L.BAG_FK JOIN EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST ON ST.NAME = L.STORAGE_LOCATION_ULN JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.STUDY_FK = B.STUDY_FK WHERE B.STUDY_FK = 76000000010075 AND ST.NAME = L.STORAGE_LOCATION_ULN AND B.STORAGE_GROUP_TYPE IN (1,4) ORDER BY B.LAST_UPDATED_DATE_TIME DESC 
+2017-11-17 19:00:29,363 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:45 created by (SQLServerStatement:45) 
+2017-11-17 19:00:29,363 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:32 created by (SQLServerResultSet:45) 
+2017-11-17 19:00:29,364 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:46 created by (ConnectionID:9) 
+2017-11-17 19:00:29,364 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:46 Executing (not server cursor) select distinct L.LOCAL_DIRECTORY FROM EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST JOIN EVERCORE.dbo.CFG_LOCATION_CLUSTER_T L ON L.STORAGE_LOCATION_FK =76000004 
+2017-11-17 19:00:29,368 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:46 created by (SQLServerStatement:46) 
+2017-11-17 19:00:29,368 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:33 created by (SQLServerResultSet:46) 
+2017-11-17 19:00:29,368 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:47 created by (ConnectionID:9) 
+2017-11-17 19:00:29,368 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:47 Executing (not server cursor) select SOP.FILE_NAME,SER.EQUIPMENT_ID from EVERCORE.dbo.SERIES_T SER JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.SERIES_FK = SER.SERIES_PK WHERE SER.STUDY_FK = 76000000010075 AND SER.MODALITY='US' ORDER BY SER.SERIES_DATE_TIME ASC 
+2017-11-17 19:00:29,373 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:47 created by (SQLServerStatement:47) 
+2017-11-17 19:00:30,248 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:48 created by (ConnectionID:9) 
+2017-11-17 19:00:30,248 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:48 Executing (not server cursor) select B.BAG_PK, L.DIRECTORY_NAME,ST.STORAGE_LOCATION_PK FROM EVERCORE.dbo.BAG_T B JOIN EVERCORE.dbo.LOCATION_T L ON B.BAG_PK=L.BAG_FK JOIN EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST ON ST.NAME = L.STORAGE_LOCATION_ULN JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.STUDY_FK = B.STUDY_FK WHERE B.STUDY_FK = 76000000010089 AND ST.NAME = L.STORAGE_LOCATION_ULN AND B.STORAGE_GROUP_TYPE IN (1,4) ORDER BY B.LAST_UPDATED_DATE_TIME DESC 
+2017-11-17 19:00:30,267 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:48 created by (SQLServerStatement:48) 
+2017-11-17 19:00:30,267 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:34 created by (SQLServerResultSet:48) 
+2017-11-17 19:00:30,267 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:49 created by (ConnectionID:9) 
+2017-11-17 19:00:30,267 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:49 Executing (not server cursor) select distinct L.LOCAL_DIRECTORY FROM EVERCORE.dbo.CFG_STORAGE_LOCATION_T ST JOIN EVERCORE.dbo.CFG_LOCATION_CLUSTER_T L ON L.STORAGE_LOCATION_FK =76000004 
+2017-11-17 19:00:30,271 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:49 created by (SQLServerStatement:49) 
+2017-11-17 19:00:30,271 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSetMetaData -  SQLServerResultSetMetaData:35 created by (SQLServerResultSet:49) 
+2017-11-17 19:00:30,272 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:50 created by (ConnectionID:9) 
+2017-11-17 19:00:30,272 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerStatement:50 Executing (not server cursor) select SOP.FILE_NAME,SER.EQUIPMENT_ID from EVERCORE.dbo.SERIES_T SER JOIN EVERCORE.dbo.SOP_INSTANCE_T SOP ON SOP.SERIES_FK = SER.SERIES_PK WHERE SER.STUDY_FK = 76000000010089 AND SER.MODALITY='US' ORDER BY SER.SERIES_DATE_TIME ASC 
+2017-11-17 19:00:30,280 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:50 created by (SQLServerStatement:50) 
+2017-11-17 19:00:30,877 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerPreparedStatement:51 created by (ConnectionID:10) 
+2017-11-17 19:00:30,877 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerPreparedStatement:51: calling sp_prepexec: PreparedHandle:0, SQL:SELECT SERIES_PK,STUDY_FK,SERIES_UID,SERIES_NUMBER,DESCRIPTION,DICOM_MAPPING_FILE,MODALITY,BODY_PART,LATERALITY,CLUSTER_FK,OPERATOR_FK,EQUIPMENT_ULN,EQUIPMENT_ID,ORGANIZATION_ULN,INSTITUTION,DEPARTMENT,STATION_NAME,PERFORMING_PHYSICIAN_FK, SERIES_DATE_TIME,UPDATE_SEQUENCE FROM EVERCORE.dbo.SERIES_T 
+2017-11-17 19:00:30,931 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:51 created by (SQLServerPreparedStatement:51) 
+2017-11-17 19:00:35,616 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerPreparedStatement:52 created by (ConnectionID:10) 
+2017-11-17 19:00:35,616 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerPreparedStatement:52: calling sp_prepexec: PreparedHandle:0, SQL:SELECT SOP_INSTANCE_PK,SERIES_FK,STUDY_FK,SOP_INSTANCE_TYPE,SOP_INSTANCE_UID,SOP_CUID,ACQUIRED_DATE_TIME,FILE_NAME,IMAGE_NUMBER,COMMITTED_INDICATOR,ORIGINAL_SIZE,FRAME_COUNT FROM EVERCORE.dbo.SOP_INSTANCE_T 
+2017-11-17 19:00:35,620 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:52 created by (SQLServerPreparedStatement:52) 
+2017-11-17 19:00:41,749 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerPreparedStatement:53 created by (ConnectionID:10) 
+2017-11-17 19:00:41,749 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerStatement - SQLServerPreparedStatement:53: calling sp_prepexec: PreparedHandle:0, SQL:SELECT ACCESSION_NUMBER,STUDY_FK FROM EVERCORE.dbo.ACCESSION_NUMBER_T 
+2017-11-17 19:00:41,899 [pool-3-thread-1] DEBUG c.m.s.j.i.SQLServerResultSet - SQLServerResultSet:53 created by (SQLServerPreparedStatement:53) 
+2017-11-17 19:00:44,459 [pool-3-thread-1] INFO  c.f.d.v.w.s.JobCompletionNotificationListener - !!! JOB FINISHED! Time to verify the results 
+2017-11-17 19:00:44,463 [pool-3-thread-1] INFO  c.f.d.v.w.s.JobCompletionNotificationListener - Found <null> in the database. 
+2017-11-17 19:00:44,463 [pool-3-thread-1] INFO  c.f.d.v.w.s.JobCompletionNotificationListener - Found <null> in the database. 
+2017-11-17 19:00:44,463 [pool-3-thread-1] INFO  c.f.d.v.w.s.JobCompletionNotificationListener - Found <null> in the database. 
+2017-11-17 19:00:44,463 [pool-3-thread-1] INFO  c.f.d.v.w.s.JobCompletionNotificationListener - Found <null> in the database. 
+2017-11-17 19:00:44,490 [pool-3-thread-1] INFO  c.f.d.v.config.VnaSyncConfiguration - Job finished with status : COMPLETED 
+2017-11-17 19:20:40,843 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property 
+2017-11-17 19:20:41,369 [main] INFO  c.f.d.vnasync.VnaSyncApplication - The following profiles are active: test 
+2017-11-17 19:20:42,838 [main] WARN  o.s.c.a.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'. 
+2017-11-17 19:20:42,987 [main] WARN  o.s.c.a.ConfigurationClassEnhancer - @Bean method ScopeConfiguration.stepScope is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details. 
+2017-11-17 19:20:42,989 [main] WARN  o.s.c.a.ConfigurationClassEnhancer - @Bean method ScopeConfiguration.jobScope is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details. 
+2017-11-17 19:20:45,841 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd 
+2017-11-17 19:20:45,842 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd is liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-17 19:20:45,842 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-17 19:20:45,887 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd 
+2017-11-17 19:20:45,887 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd is liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-17 19:20:45,888 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-17 19:20:45,974 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd 
+2017-11-17 19:20:45,974 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd is liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-17 19:20:45,974 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-17 19:20:46,083 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd 
+2017-11-17 19:20:46,083 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd is liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-17 19:20:46,083 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-17 19:21:00,583 [main] WARN  c.n.c.s.URLConfigurationSource - No URLs will be polled as dynamic configuration sources. 
+2017-11-17 19:21:00,590 [main] WARN  c.n.c.s.URLConfigurationSource - No URLs will be polled as dynamic configuration sources. 
+2017-11-17 19:21:07,046 [main] INFO  c.f.d.vnasync.VnaSyncApplication - Started VnaSyncApplication in 27.386 seconds (JVM running for 28.213) 
+2017-11-17 19:21:54,170 [background-preinit] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Slf4jLoggerProvider found via system property 
+2017-11-17 19:21:54,628 [main] INFO  c.f.d.vnasync.VnaSyncApplication - The following profiles are active: test 
+2017-11-17 19:21:55,858 [main] WARN  o.s.c.a.ConfigurationClassPostProcessor - Cannot enhance @Configuration bean definition 'refreshScope' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'. 
+2017-11-17 19:21:55,991 [main] WARN  o.s.c.a.ConfigurationClassEnhancer - @Bean method ScopeConfiguration.stepScope is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details. 
+2017-11-17 19:21:55,993 [main] WARN  o.s.c.a.ConfigurationClassEnhancer - @Bean method ScopeConfiguration.jobScope is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details. 
+2017-11-17 19:21:58,338 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd 
+2017-11-17 19:21:58,338 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd is liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-17 19:21:58,339 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-17 19:21:58,371 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd 
+2017-11-17 19:21:58,371 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd is liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-17 19:21:58,371 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-17 19:21:58,485 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd 
+2017-11-17 19:21:58,485 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd is liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-17 19:21:58,486 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.1.xsd 
+2017-11-17 19:21:58,566 [main] DEBUG LiquibaseSchemaResolver - Found namespace details class liquibase.parser.core.xml.StandardNamespaceDetails for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd 
+2017-11-17 19:21:58,566 [main] DEBUG LiquibaseSchemaResolver - Local path for http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd is liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-17 19:21:58,566 [main] DEBUG LiquibaseSchemaResolver - Successfully loaded XSD from liquibase/parser/core/xml/dbchangelog-3.5.xsd 
+2017-11-17 19:22:05,440 [main] WARN  c.n.c.s.URLConfigurationSource - No URLs will be polled as dynamic configuration sources. 
+2017-11-17 19:22:05,447 [main] WARN  c.n.c.s.URLConfigurationSource - No URLs will be polled as dynamic configuration sources. 
+2017-11-17 19:22:06,047 [main] INFO  c.f.d.vnasync.VnaSyncApplication - Started VnaSyncApplication in 13.06 seconds (JVM running for 13.87) 

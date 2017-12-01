@@ -1,0 +1,82 @@
+<div class="contentpage m-l-65">
+	<div class="">
+		<!-- Breadcrumbs -->
+		<div class="row m-x-0 bg-ssblue">
+			<div class="col-xs-12 col-sm-6 p-l-15">
+				<div class="pull-left color-white">
+					<h2 class="m-y-10">Worksheet Configuration</h2>
+				</div>
+				<!-- <ol class="breadcrumb bg-ssblue pull-left fw-15 m-b-0 m-t-10 p-l-15">
+					<li><a href="#" class="color-white"><i
+							class="fa fa-lg fa-cog"></i></a></li>
+					<li class="color-white">System Configuration</li>
+					<li class="color-white">Login Security Policy</li>
+				</ol> -->
+			</div>
+		</div>
+		<!-- Breadcrumbs Ends -->
+
+		<!--userpreference Configuration-->
+
+		<div class="row m-t-15 m-x-0">
+			<div class="col-xs-12">
+				<form #werksheetConfigForm="ngForm" >
+					<div class="col-md-offset-2 col-md-8 b-1-lightgray bg-white">
+						<div class="row m-x-0">
+							<div class="col-xs-12">
+								<h3>Worksheet Configuration</h3>
+							</div>
+						</div>
+						<!--<div class="row m-x-0 m-t-5">
+							<div
+								class="col-xs-12 col-sm-12 p-10 bg-lightgray fw-15"> Study Management </div>
+						</div>-->
+						<div class="row m-x-0 m-t-5">
+						
+							<div class="col-xs-12 col-sm-10 p-10">
+							
+								<div class="col-xs-12 p-x-0">
+									<div class="col-xs-12 form-group">
+										<div class="col-xs-8 col-md-8">
+											<label>Aging alert notification</label>
+										</div>
+										<div class="col-xs-2 col-md-2 p-x-0">
+											<input type="text" class="form-control"  
+												id="aginalertnotify" name="aginalertnotify"  
+												maxlength="2"  ngControl="msisdnForm"  required >
+											<div [hidden]="!erruserdndpwd" class="alert alert-danger">
+												Invalid entry</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-12 p-x-0">
+									<div class="col-xs-12 form-group">
+										<div class="col-xs-8 col-md-8">
+											<label>Remainder alert notification</label>
+										</div>
+										<div class="col-xs-2 col-md-2 p-x-0">
+											<input type="text" class="form-control"  
+												id="reminderalertnotify"  name="reminderalertnotify"  
+												maxlength="3" required>
+											<div [hidden]="!erruserdndpwd" class="alert alert-danger">
+												Invalid entry</div>
+										</div>
+									</div>
+								</div>
+								
+								 <div class="col-xs-12 m-b-10 p-x-0">
+									<div class="col-xs-offset-4 col-md-offset-5">
+									<button type="submit" class="btn btn-primary"
+											[disabled]="!werksheetConfigForm.form.valid"
+											(click)="savePolicy(werksheetConfigForm.value,werksheetConfigForm.valid)">Save</button>
+									</div>
+								</div> 
+							</div>
+							
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

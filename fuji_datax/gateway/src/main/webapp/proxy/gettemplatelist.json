@@ -1,0 +1,20 @@
+{
+  "results": [
+    {
+      "id": 7001,
+      "code": "Cardiac"
+    },
+    {
+      "id": 7002,
+      "code": "Thoracic"
+    },
+    {
+      "id": 7003,
+      "code": "Ocular"
+    },
+    {
+      "id": 7004,
+      "code": "QAFlow"
+    }
+  ]
+}

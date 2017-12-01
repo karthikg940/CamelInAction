@@ -1,0 +1,44 @@
+buildscript {
+	ext {
+		springBootVersion = '1.4.7.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'groovy'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+
+group = 'com.ffss.datax.integrationsystem'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter')
+	compile('org.springframework.boot:spring-boot-starter-data-rest')
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.codehaus.groovy:groovy')
+	compile group: 'joda-time', name: 'joda-time'
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('mysql:mysql-connector-java')
+	// https://mvnrepository.com/artifact/ca.uhn.hapi/hapi-base
+	compile group: 'ca.uhn.hapi', name: 'hapi-base', version: '2.3'
+	// https://mvnrepository.com/artifact/ca.uhn.hapi/hapi-structures-v25
+	compile group: 'ca.uhn.hapi', name: 'hapi-structures-v25', version: '2.3'
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+	testRuntime('com.h2database:h2')
+	testCompile('org.liquibase:liquibase-core')
+	
+	
+}

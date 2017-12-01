@@ -1,0 +1,2476 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+	<changeSet author="virtusapolaris" id="1481971618877-1">
+		<createTable tableName="audit_event">
+			<column autoIncrement="true" name="EVENT_PK" type="BIGINT"
+				startWith="1001">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="EVENT_TYPE_FK" type="BIGINT" />
+			<column name="EVENT_PREV_VALUE" type="LONGTEXT" />
+			<column name="EVENT_CURR_VALUE" type="LONGTEXT" />
+			<column name="MICROSERVICE_NAME" type="VARCHAR(75)" />
+			<column name="AUDIT_USERNAME" type="VARCHAR(50)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="audit_event_type">
+			<column autoIncrement="true" name="EVENT_TYPE_PK" type="BIGINT"
+				startWith="2001">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="EVENT_CODE" type="BIGINT" />
+			<column name="EVENT_CODE_DESCRIPTION" type="VARCHAR(200)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="dicom_map">
+			<column autoIncrement="true" name="DICOM_DATAX_MAP_PK" type="BIGINT"
+				startWith="3001">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="ORG_FK" type="BIGINT" />
+			<column name="DICOM_SOURCE_NAME" type="VARCHAR(100)" />
+			<column name="DICOM_SOURCE_VERSION" type="VARCHAR(50)" />
+			<column name="DICOM_ENTITY_NAME" type="VARCHAR(100)" />
+			<column name="DICOM_ATTR_NAME" type="VARCHAR(100)" />
+			<column name="APP_ENTITY_NAME" type="VARCHAR(100)" />
+			<column name="APP_ATTR_NAME" type="VARCHAR(100)" />
+			<column name="APP_UINAME" type="VARCHAR(100)" />
+			<column name="APP_VERSION" type="VARCHAR(50)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="exam_type">
+			<column autoIncrement="true" name="EXAM_TYPE_PK" type="BIGINT"
+				startWith="10001">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="SERIES_FK" type="BIGINT" />
+			<column name="EXAM_TYPE_MAP_FK" type="BIGINT" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="exam_type_mapping">
+			<column autoIncrement="true" name="EXAM_TYPE_MAP_PK" type="BIGINT"
+				startWith="9001">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="EXAM_TYPE_DESC" type="VARCHAR(200)" />
+			<column name="EXAM_TYPE_DETAIL" type="VARCHAR(200)" />
+			<column name="IS_ENABLED" type="VARCHAR(1)" defaultValue="Y" />
+			<column name="IS_DELETED" type="VARCHAR(1)" defaultValue="N" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="exammap_wrksht_tmpl">
+			<column autoIncrement="true" name="EXAM_WRKSHT_TMPL_PK" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="WRKSHT_TEMPLT_FK" type="BIGINT" />
+			<column name="EXAM_TYPE_MAP_FK" type="BIGINT" />
+		</createTable>
+
+		<createTable tableName="exmtyp_device_map">
+			<column autoIncrement="true" name="EXMTYP_DEVICE_MAP_PK" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="DESCRIPTION_IN_DEVICE" type="VARCHAR(200)" />
+			<column name="EXAM_TYPE_MAP_FK" type="BIGINT" />
+			<column name="ALIAS_NAME" type="VARCHAR(100)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="organization">
+			<column name="ORG_PK" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="ORG_NAME" type="VARCHAR(64)" />
+			<column name="DESCRIPTION" type="VARCHAR(250)" />
+			<column name="IS_PMO" type="VARCHAR(1)" />
+			<column name="IS_STMO" type="VARCHAR(1)" />
+			<column name="ID_TYPE" type="VARCHAR(250)" />
+			<column name="PREFIX" type="VARCHAR(4)" />
+			<column name="PARENT_ORG_FK" type="BIGINT" />
+
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="patient">
+			<column name="PATIENT_PK" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="BIRTH_DATE" type="DATE" />
+			<column name="FIRST_NAME" type="VARCHAR(64)" />
+			<column name="MIDDLE_NAME" type="VARCHAR(64)" />
+			<column name="LAST_NAME" type="VARCHAR(64)" />
+			<column name="PREFIX" type="VARCHAR(64)" />
+			<column name="SUFFIX" type="VARCHAR(64)" />
+			<column name="GENDER" type="VARCHAR(16)" />
+			<column name="ETHNIC_ORIGIN" type="VARCHAR(255)" />
+			<column name="MPI_ID" type="VARCHAR(64)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="patient_emr_key">
+			<column name="PATIENT_EMR_KEY_PK" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="PATIENT_ID_FK" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="EMR_KEY" type="VARCHAR(64)">
+				<constraints nullable="false" />
+			</column>
+			<column name="NOTIFICATION_SENT" type="TIMESTAMP" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="patient_identifier">
+			<column name="PATIENT_ID_PK" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="PATIENT_FK" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="ID_TYPE" type="VARCHAR(64)">
+				<constraints nullable="false" />
+			</column>
+			<column name="ISSUER" type="VARCHAR(255)" />
+			<column name="MEDICAL_ID" type="VARCHAR(64)">
+				<constraints nullable="false" />
+			</column>
+			<column name="VNACRTD_DATE_TIME" type="TIMESTAMP">
+			</column>
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="person"> <!-- starts with 3001 -->
+			<column name="PERSON_PK" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="FIRST_NAME" type="VARCHAR(64)" />
+			<column name="MIDDLE_NAME" type="VARCHAR(64)" />
+			<column name="LAST_NAME" type="VARCHAR(64)" />
+			<column name="PREFIX" type="VARCHAR(64)" />
+			<column name="SUFFIX" type="VARCHAR(64)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="person_user_account">
+			<column autoIncrement="true" name="PERSON_USER_ACCOUNT_PK"
+				type="BIGINT" startWith="3001">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="USER_ACCOUNT_FK" type="BIGINT" />
+			<column name="PERSON_FK" type="BIGINT" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="ORG_FK" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="series">
+			<column name="SERIES_PK" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="STUDY_FK" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="SERIES_UID" type="VARCHAR(64)">
+				<constraints nullable="false" />
+			</column>
+			<column name="SERIES_NUMBER" type="VARCHAR(255)" />
+			<column name="DESCRIPTION" type="VARCHAR(255)" />
+			<column name="DICOM_MAPPING_FILE" type="VARCHAR(100)" />
+			<column name="MODALITY" type="VARCHAR(16)">
+				<constraints nullable="false" />
+			</column>
+			<column name="BODY_PART" type="VARCHAR(255)" />
+			<column name="LATERALITY" type="VARCHAR(16)" />
+			<column name="CLUSTER_FK" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="OPERATOR_FK" type="BIGINT" />
+			<column name="EQUIPMENT_ULN" type="VARCHAR(65)" />
+			<column name="EQUIPMENT_ID" type="VARCHAR(16)" />
+			<column name="ORGANIZATION_ULN" type="VARCHAR(65)">
+				<constraints nullable="false" />
+			</column>
+			<column name="INSTITUTION" type="VARCHAR(255)" />
+			<column name="DEPARTMENT" type="VARCHAR(255)" />
+			<column name="STATION_NAME" type="VARCHAR(255)" />
+			<column name="PERFORMING_PHYSICIAN_FK" type="BIGINT" />
+			<column name="SERIES_DATE_TIME" type="TIMESTAMP" />
+			<column name="UPDATE_SEQUENCE" type="INT" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="sop_instance">
+			<column name="SOP_INSTANCE_PK" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="SERIES_FK" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="STUDY_FK" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="SOP_INSTANCE_TYPE" type="INT">
+				<constraints nullable="false" />
+			</column>
+			<column name="SOP_INSTANCE_UID" type="VARCHAR(64)" />
+			<column name="SOP_CUID" type="VARCHAR(64)" />
+			<column name="ACQUIRED_DATE_TIME" type="TIMESTAMP" />
+			<column name="FILE_NAME" type="VARCHAR(33)">
+				<constraints nullable="false" />
+			</column>
+			<column name="IMAGE_NUMBER" type="INT" />
+			<column name="COMMITTED_INDICATOR" type="VARCHAR(1)" />
+			<column name="ORIGINAL_SIZE" type="BIGINT" />
+			<column name="FRAME_COUNT" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="study">
+			<column name="STUDY_PK" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="PATIENT_FK" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="DESCRIPTION" type="VARCHAR(255)" />
+			<column name="VNACRTD_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="SCHEDULED_DATE_TIME" type="TIMESTAMP" />
+			<column name="PERFORMED_DATE_TIME" type="TIMESTAMP" />
+			<column name="COMPLETED_DATE_TIME" type="TIMESTAMP" />
+			<column name="STUDY_UID" type="VARCHAR(64)" />
+			<column name="REFERRING_PHYSICIAN_FK" type="BIGINT" />
+			<column name="REQUESTING_PHYSICIAN_FK" type="BIGINT" />
+			<column name="PATIENT_AGE" type="VARCHAR(4)" />
+			<column name="PATIENT_HEIGHT" type="VARCHAR(20)" />
+			<column name="PATIENT_WEIGHT" type="VARCHAR(20)" />
+			<column name="INTERNAL_VALIDATION_STATUS" type="VARCHAR(1)" />
+			<column name="ARCHIVE_STATUS" type="SMALLINT" />
+			<column name="LAST_ACCESSED_DATE_TIME" type="TIMESTAMP" />
+			<column name="STMO" type="VARCHAR(65)" />
+			<column name="STUDY_TYPE" type="VARCHAR(65)" />
+			<column name="STUDY_ID" type="VARCHAR(255)" />
+			<column name="QA_STATUS" type="INT" />
+			<column name="STUDY_STATUS_LKUP_FK" type="BIGINT" />
+			<column name="ORG_FK" type="BIGINT" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="IS_DELETED" type="VARCHAR(1)" defaultValue="N" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="IS_SHARED" type="VARCHAR(1)" />
+			<column name="QA_ASSIGNED_DATE_TIME" type="TIMESTAMP" />
+			<column name="ATTENDING_ASSIGNED_DATE_TIME" type="TIMESTAMP" />
+			<column name="LAST_STATUS_CHANGED_DATE_TIME" type="TIMESTAMP" />
+			<column name="IS_ALERTED" type="VARCHAR(1)" defaultValue="N" />
+
+		</createTable>
+
+		<createTable tableName="study_status_lkup">
+			<column autoIncrement="true" name="STUDY_STATUS_LKUP_PK" type="BIGINT"
+				startWith="4001">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="STATUS_DESCRIPTION" type="VARCHAR(100)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="WORKFLOW_FK" type="BIGINT">
+				<!-- <constraints nullable="false" /> -->
+			</column>
+			<column name="WORKFLOW_SEQUENCE" type="BIGINT">
+				<!-- <constraints nullable="false" /> -->
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="tag_examtype_map">
+			<column autoIncrement="true" name="TAG_EXAMTYPE_MAP_PK" type="BIGINT"
+				startWith="11001">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="EXAM_TYPE_MAP_FK" type="BIGINT" />
+			<column name="TAG_DESCRIPTION" type="VARCHAR(100)" />
+			<column name="TAG_TYPE" type="VARCHAR(50)" />
+			<column name="EXAM_TYPE_DETAIL" type="VARCHAR(1000)" />
+			<column name="IS_ENABLED" type="VARCHAR(1)" defaultValue="Y" />
+			<column name="IS_DELETED" type="VARCHAR(1)" defaultValue="N" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="tags">
+			<column autoIncrement="true" name="TAGS_PK" type="BIGINT"
+				startWith="12001">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="EXAM_TYPE_FK" type="BIGINT" />
+			<column name="TAG_EXAMTYPE_MAP_FK" type="BIGINT" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="personal_tag">
+			<column autoIncrement="true" name="PERSONAL_TAG_PK" type="BIGINT"
+				startWith="201">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="TAG_NAME" type="VARCHAR(1000)" />
+			<column name="USER_ID" type="BIGINT" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="user_account">
+			<column autoIncrement="true" name="USER_ACCOUNT_PK" type="BIGINT"
+				startWith="1001">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="USER_NAME" type="VARCHAR(75)">
+				<constraints nullable="false" />
+			</column>
+			<column name="FIRST_NAME" type="VARCHAR(50)" />
+			<column name="MIDDLE_NAME" type="VARCHAR(50)" />
+			<column name="LAST_NAME" type="VARCHAR(50)" />
+			<column name="PREFIX" type="VARCHAR(10)" />
+			<column name="BATCHID" type="VARCHAR(50)" />
+			<column name="TITLE" type="VARCHAR(75)" />
+			<column name="PHONE_NO" type="VARCHAR(255)" />
+			<column name="IS_EXTERNAL" type="VARCHAR(1)" />
+			<column name="PASSWORD_HASH" type="VARCHAR(255)" />
+			<column name="EMAIL_ADDRESS" type="VARCHAR(128)" />
+			<column name="LOGIN_ATTEMPT" type="INT" />
+			<column name="IS_ACTIVE" type="VARCHAR(1)" />
+			<column name="PASSWORD_EXPIRE" type="VARCHAR(1)" />
+			<column name="LAST_PWD_CHANGEDATE" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="PWD_EXPIREDATE" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="PROFILE_URL" type="VARCHAR(250)" />
+			<column name="IS_PWD_SYSGEN" type="VARCHAR(1)" />
+			<column name="IS_USER_LOCK" type="VARCHAR(1)" />
+			<column name="IS_USER_DELETED" type="VARCHAR(1)" />
+			<column name="LAST_LOGIN" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="LAST_LOCKED_TIME" type="TIMESTAMP" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="ORG_FK" type="BIGINT">
+			</column>
+		</createTable>
+
+		<createTable tableName="useracc_group_mapping">
+			<column autoIncrement="true" name="USERACC_GROUP_MAPPING_PK"
+				type="BIGINT" startWith="101">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="USER_ACCOUNT_FK" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="USER_GROUP_FK" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="ORG_FK" type="BIGINT">
+			</column>
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+
+
+		<createTable tableName="useracc_role_mapping">
+			<column autoIncrement="true" name="USERACC_ROLE_MAPPING_PK"
+				type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="USER_ACCOUNT_FK" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="USER_ROLE_FK" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="ORG_FK" type="BIGINT" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+
+
+		<createTable tableName="user_group">
+			<column autoIncrement="true" name="USER_GROUP_PK" type="BIGINT"
+				startWith="1001">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="GROUP_NAME" type="VARCHAR(64)" />
+			<column name="DESCRIPTION" type="VARCHAR(255)" />
+			<column name="IS_DELETED" type="VARCHAR(1)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="ORG_FK" type="BIGINT">
+			</column>
+		</createTable>
+
+		<createTable tableName="user_role">
+			<column autoIncrement="true" name="USER_ROLE_PK" type="BIGINT"
+				startWith="5001">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="ROLE_NAME" type="VARCHAR(50)" />
+			<column name="DESCRIPTION" type="VARCHAR(255)" />
+			<column name="ROLE_START_DATE" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="ROLE_END_DATE" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="IS_DELETED" type="VARCHAR(1)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="wksht_status_lkup">
+			<column autoIncrement="true" name="WKSHT_STATUS_LKUP_PK" type="BIGINT"
+				startWith="1001">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="STATUS_DESCRIPTION" type="VARCHAR(100)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="wrksht">
+			<column autoIncrement="true" name="WRKSHT_PK" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="WRKSHT_TEMPLT_FK" type="BIGINT" />
+			<column name="EXAM_TYPE_FK" type="BIGINT" />
+			<column name="STUDY_FK" type="BIGINT" />
+			<column name="EXAM_TYPE_ALIAS" type="VARCHAR(100)" />
+			<column name="EXAM_WKSHT_TYPE" type="VARCHAR(100)" />
+			<column name="WRKSHT_CONTENT" type="LONGTEXT" />
+			<column name="WKSHT_STATUS_LKUP_FK" type="BIGINT" />
+			<column name="USER_FK" type="BIGINT" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="wrksht_templt">
+			<column autoIncrement="true" name="WRKSHT_TEMPLT_PK" type="BIGINT"
+				startWith="7001">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="PARENT_TMPLT_FK" type="BIGINT" />
+			<column name="TEMPLT_NAME" type="VARCHAR(100)" />
+			<column name="TEMPLT_CONTENT" type="LONGTEXT" />
+			<column name="IS_MODIFY" type="VARCHAR(1)" />
+			<column name="TYPE" type="VARCHAR(100)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="signature">
+			<column autoIncrement="true" name="SIGN_PK" type="BIGINT"
+				startWith="17001">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="WRKSHT_FK" type="BIGINT" />
+			<column name="SIGNED_NAME" type="VARCHAR(100)" />
+			<column name="WKSHT_STATUS_CURRENT" type="VARCHAR(255)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="POC_DATE" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="study_examtype_map">
+			<column autoIncrement="true" name="STUDY_EXAMTYPE_MAP_PK"
+				type="BIGINT" startWith="3001">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="EXAM_TYPE_REL_FK" type="BIGINT" />
+			<column name="EXAM_TYPE_MAP_FK" type="BIGINT" />
+			<column name="TYPE" type="VARCHAR(100)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+
+
+		<addColumn tableName="audit_event">
+			<column name="ENTITY_NAME" type="VARCHAR(250)" />
+			<column name="ENTITY_ID" type="BIGINT" />
+		</addColumn>
+
+
+
+		<createTable tableName="study_owner_assignment">
+			<column autoIncrement="true" name="STUDY_USER_ASSIGNMENT_PK"
+				type="BIGINT" startWith="3001">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="STUDY_FK" type="BIGINT" />
+
+			<column name="STUDY_TYPE" type="VARCHAR(100)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="WORKFLOW_FK" type="BIGINT">
+				<!-- <constraints nullable="false" /> -->
+			</column>
+			<column name="WORKFLOW_SEQUENCE" type="BIGINT">
+				<!-- <constraints nullable="false" /> -->
+			</column>
+
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+
+
+		<createTable tableName="workflow_stages">
+			<column autoIncrement="true" name="WORKFLOW_PK" type="BIGINT"
+				startWith="9001">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="WORKFLOW_DESC" type="VARCHAR(250)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+
+
+		<createTable tableName="org_config_settings">
+			<column autoIncrement="true" name="CONFIG_PK" type="BIGINT"
+				startWith="9001">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="ORG_FK" type="BIGINT" />
+			<column name="is_enabled" type="VARCHAR(1)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+
+
+		<createTable tableName="collaboration_study_user">
+			<column autoIncrement="true" name="COLL_STUDY_USER_PK" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="STUDY_FK" type="BIGINT" />
+			<column name="USER_FK" type="BIGINT" />
+			<column name="COLLABORATION_MODE" type="VARCHAR(20)" />
+			<column name="INITIATED_USER" type="VARCHAR(100)" />
+		</createTable>
+
+
+
+		<createTable tableName="study_user_workflow_progress">
+			<column autoIncrement="true" name="WORKFLOW_PROGRESS_ID_PK"
+				type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="STUDY_FK" type="BIGINT" />
+			<column name="USER_FK" type="BIGINT" />
+			<column name="WORKFLOW_ID_FK" type="BIGINT" />
+			<column name="WORKFLOW_SEQUENCE" type="BIGINT" />
+			<column name="WORKFLOW_TYPE" type="VARCHAR(50)" />
+			<column name="IS_FLAG" type="VARCHAR(1)" />
+		</createTable>
+
+
+
+		<createTable tableName="batch_process">
+			<column autoIncrement="true" name="BATCH_PROCESS_ID_PK" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="BATCH_START_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="BATCH_END_TIME" type="TIMESTAMP" />
+			<column name="STATUS" type="VARCHAR(50)" />
+			<column name="IS_RUNNING" type="VARCHAR(1)" />
+		</createTable>
+
+
+		<createTable tableName="study_event_workflow_map">
+			<column autoIncrement="true" name="STUDY_EVENT_WORKFLOW_MAP_PK"
+				type="BIGINT" startWith="100">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="EVENT_TYPE" type="VARCHAR(50)" />
+			<column name="CURRENT_STATUS" type="VARCHAR(50)" />
+			<column name="NEXT_STATUS" type="VARCHAR(50)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+
+
+		<createTable tableName="cpt_code">
+			<column autoIncrement="true" name="CPT_CODE_PK" type="BIGINT"
+				startWith="1000">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="CPT_CODE" type="VARCHAR(30)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<!--ldap configuration table -->
+
+		<createTable tableName="ldap_config">
+			<column autoIncrement="true" name="LDAP_CONFIG_PK" type="BIGINT"
+				startWith="5001">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="ORG_FK" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="DIRECTORY_TYPE" type="VARCHAR(20)" />
+			<column name="REMOTE_DOMAIN" type="VARCHAR(50)" />
+			<column name="REMOTE_SERVER" type="VARCHAR(50)" />
+			<column name="ACCESS_GROUP" type="VARCHAR(50)" />
+			<column name="SEARCH_ROOT" type="VARCHAR(250)" />
+			<column name="LDAP_PORT" type="BIGINT" />
+			<column name="USER_DN" type="VARCHAR(250)" />
+			<column name="MANAGE_DN" type="VARCHAR(250)" />
+			<column name="MANAGE_PASSWORD" type="VARCHAR(50)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<!--Email configuration table -->
+
+		<createTable tableName="email_config">
+			<column autoIncrement="true" name="EMAIL_CONFIG_PK" type="BIGINT"
+				startWith="10001">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="ORG_FK" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="IS_SSL" type="BOOLEAN" />
+			<column name="IS_AUTH" type="BOOLEAN" />
+			<column name="IS_ENABLE" type="BOOLEAN" />
+			<column name="AUTH_USER" type="VARCHAR(50)" />
+			<column name="AUTH_USER_PASSWORD" type="VARCHAR(50)" />
+			<column name="PORT" type="INTEGER" />
+			<column name="SERVER" type="VARCHAR(100)" />
+			<column name="DEFAULT_EMAIL" type="VARCHAR(100)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<!--preference tables -->
+
+		<createTable tableName="preference_master">
+			<column name="MASTER_PK" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="NAME" type="VARCHAR(100)" />
+			<column name="DESCRIPTION" type="VARCHAR(200)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="preference">
+			<column autoIncrement="true" name="TRANSACTION_PK" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="MASTER_FK" type="BIGINT" />
+			<column name="ORG_FK" type="BIGINT" />
+			<column name="FLAG" type="VARCHAR(100)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="exam_type_cpt_code">
+			<column autoIncrement="true" name="EXAM_TYPE_CPT_PK" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="EXAM_TYPE_MAP_FK" type="BIGINT" />
+			<column name="CPT_CODE_FK" type="BIGINT" />
+			<column name="IS_MANDATORY" type="VARCHAR(1)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+
+		<!-- Tables to hold Accession No. & Encounter No. -->
+
+		<createTable tableName="patient_worklist">
+			<column name="PATIENT_WORKLIST_PK" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="PATIENT_FK" type="BIGINT" />
+			<column name="ORG_FK" type="BIGINT" />
+			<column name="ENCOUNTER_NUMBER_TYPE" type="BIGINT" />
+			<column name="ENCOUNTER_NUMBER" type="VARCHAR(20)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="accession_number">
+			<column name="ACCESSION_PK" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="STUDY_FK" type="BIGINT" />
+			<column name="ACCESSION_NUMBER" type="VARCHAR(16)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+
+		<!-- TASK ENGINE STARTS -->
+
+
+
+
+		<!-- master for event -->
+
+		<createTable tableName="event_workflow">
+			<column autoIncrement="true" name="EVENT_WORKFLOW_PK" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="EVENT_NAME" type="VARCHAR(250)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<!-- master for type (study|wrkshet|signature) -->
+
+		<createTable tableName="type_config">
+			<column autoIncrement="true" name="TYPE_PK" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="TYPE_NAME" type="VARCHAR(100)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="task_role">
+			<column autoIncrement="true" name="TASK_ROLE_PK" type="BIGINT"
+				startWith="20">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="TASK_ROLE_NAME" type="VARCHAR(100)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="task_role_config">
+			<column autoIncrement="true" name="TASK_ROLE_CONFIG_PK" type="BIGINT"
+				startWith="30">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="TASK_ROLE_FK" type="BIGINT" />
+			<column name="WORKFLOW_CONFIG_FK" type="BIGINT" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+
+
+		<!-- taskEngine -->
+
+		<createTable tableName="workflow_task">
+			<column autoIncrement="true" name="TASK_PK" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="TYPE_FK" type="BIGINT" />
+			<column name="WORKFLOW_CONFIG_FK" type="BIGINT">
+				<constraints nullable="true" />
+			</column>
+			<column name="CURRENT_STATUS" type="VARCHAR(100)" />
+			<column name="ASSIGNED_USER" type="BIGINT">
+				<constraints nullable="true" />
+			</column>
+			<column name="TRIGGERING_USER" type="BIGINT">
+				<constraints nullable="true" />
+			</column>
+			<column name="ASSIGNED_DATE" type="TIMESTAMP" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+
+		<createTable tableName="task_assigned_user	">
+			<column autoIncrement="true" name="TASK_ASSIGNED_USER_PK"
+				type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="TASK_FK" type="BIGINT" />
+			<column name="FLAG" type="VARCHAR(1)" />
+			<column name="STATUS" type="VARCHAR(100)" /> <!-- what user_FK will be given -->
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="workflow_config">
+			<column autoIncrement="true" name="WORKFLOW_CONFIG_PK" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="TYPE_FK" type="BIGINT" />
+			<column name="EVENT_WORKFLOW_FK" type="BIGINT" />
+			<column name="CURRENT_STATUS" type="VARCHAR(100)" />
+			<column name="NEXT_STATUS" type="VARCHAR(100)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="study_task_map">
+			<column autoIncrement="true" name="STUDY_TASK_MAP_PK" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="STUDY_FK" type="BIGINT" />
+			<column name="TASK_FK" type="BIGINT" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="user_task_stage">
+			<column autoIncrement="true" name="USER_TASK_STAGE_PK" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="TASK_FK" type="BIGINT" />
+			<column name="USER_FK" type="BIGINT" />
+			<column name="TASK_ROLE_CONFIG_FK" type="BIGINT" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+
+
+		<!-- TASK ENGINE ENDS -->
+
+
+		<createTable tableName="login_password_config">
+			<column autoIncrement="true" name="LOGIN_PASSWORD_CONFIG_PK"
+				type="BIGINT" startWith="4001">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="ORG_FK" type="BIGINT" />
+			<column name="PASSWORD_MIN_LENGTH" type="VARCHAR(50)" />
+			<column name="SYS_GEN_PWD_EXPIRY" type="VARCHAR(50)" />
+			<column name="USER_DEFINED_PWD_EXPIRY" type="VARCHAR(50)" />
+			<column name="HISTORY_PWD_REUSE_RSTRCTN" type="VARCHAR(50)"
+				defaultValue="5" />
+			<column name="ACC_LOCK_THRSHLD" type="VARCHAR(50)" />
+			<column name="IS_UPPERCASE" type="BIT(1)" />
+			<column name="IS_LOWERCASE" type="BIT(1)" />
+			<column name="IS_NUMBER" type="BIT(1)" />
+			<column name="IS_SPL_CHAR" type="BIT(1)" />
+			<column name="INACTIVE_PERIOD_TMP_LOCK" type="VARCHAR(50)" />
+			<column name="PASSWORD_VALIDATION" type="VARCHAR(100)" />
+			<column name="COMMENTS" type="VARCHAR(100)" />
+			<column name="IS_DEFAULT" type="VARCHAR(1)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+
+
+
+		<createTable tableName="login_policy_config">
+			<column name="LOGIN_POLICY_CONFIG_PK" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="LOGIN_ATTRIBUTES" type="VARCHAR(100)" />
+			<column name="ATTRIBUTE_VALUE" type="VARCHAR(100)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+
+	<changeSet id="20172003100800" author="bharath">
+		<addPrimaryKey columnNames="LOGIN_POLICY_CONFIG_PK"
+			constraintName="PRIMARY_LOGIN_POLICY" tableName="login_policy_config" />
+
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-28">
+		<addPrimaryKey columnNames="ORG_PK" constraintName="ORG_PRIMARY"
+			tableName="organization" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-29">
+		<addPrimaryKey columnNames="PATIENT_PK" constraintName="PATIENT_PRIMARY"
+			tableName="patient" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-30">
+		<addPrimaryKey columnNames="PATIENT_EMR_KEY_PK"
+			constraintName="EMR_PRIMARY" tableName="patient_emr_key" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-31">
+		<addPrimaryKey columnNames="PATIENT_ID_PK"
+			constraintName="PAT_ID_PRIMARY" tableName="patient_identifier" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-32">
+		<addPrimaryKey columnNames="PERSON_PK" constraintName="PERSON_PRIMARY"
+			tableName="person" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-33">
+		<addPrimaryKey columnNames="SERIES_PK" constraintName="SERIES_PRIMARY"
+			tableName="series" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-34">
+		<addPrimaryKey columnNames="SOP_INSTANCE_PK"
+			constraintName="SOP_PRIMARY" tableName="sop_instance" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-35">
+		<addPrimaryKey columnNames="STUDY_PK" constraintName="STUDY_PRIMARY"
+			tableName="study" />
+	</changeSet>
+	<!-- <changeSet author="amritak (generated)" id="20161912184900-1"> <addPrimaryKey 
+		columnNames="SIGN_PK" constraintName="SIGN_PRIMARY" tableName="signature"/> 
+		</changeSet> -->
+	<changeSet author="amritak (generated)" id="1481971618877-36">
+		<addUniqueConstraint columnNames="USER_NAME"
+			constraintName="USER_NAME" tableName="user_account" />
+	</changeSet>
+	<!-- <changeSet author="amritak (generated)" id="1481971618877-37"> <addUniqueConstraint 
+		columnNames="USER_NAME" constraintName="USER_NAME_2" tableName="user_account"/> 
+		</changeSet> -->
+	<changeSet author="amritak (generated)" id="1481971618877-38">
+		<createIndex indexName="fk_AUDEVENT_EVENTTYPE" tableName="audit_event">
+			<column name="EVENT_TYPE_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-39">
+		<createIndex indexName="fk_DATAXMAP_ORG" tableName="dicom_map">
+			<column name="ORG_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-40">
+		<createIndex indexName="fk_EXAMTMPLT_EXAM" tableName="exammap_wrksht_tmpl">
+			<column name="EXAM_TYPE_MAP_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-41">
+		<createIndex indexName="fk_EXAMTMPLT_WRKSHTEMPL"
+			tableName="exammap_wrksht_tmpl">
+			<column name="WRKSHT_TEMPLT_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-42">
+		<createIndex indexName="fk_EXAMTYPEDEV_EXAMTYPMAP"
+			tableName="exmtyp_device_map">
+			<column name="EXAM_TYPE_MAP_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-43">
+		<createIndex indexName="fk_EXAMTYPE_EXAMTYPMAP" tableName="exam_type">
+			<column name="EXAM_TYPE_MAP_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-44">
+		<createIndex indexName="fk_EXAMTYPE_STUDY" tableName="exam_type">
+			<column name="SERIES_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-45">
+		<createIndex indexName="fk_PATIENT_EMR_PATIENT" tableName="patient_emr_key">
+			<column name="PATIENT_ID_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-46">
+		<createIndex indexName="fk_PATIENT_ID_PATIENT" tableName="patient_identifier">
+			<column name="PATIENT_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-47">
+		<createIndex indexName="fk_PERSONROLE_USERACCOUNT"
+			tableName="person_user_account">
+			<column name="USER_ACCOUNT_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-48">
+		<createIndex indexName="fk_PERSONUSER_PERSON" tableName="person_user_account">
+			<column name="PERSON_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-49">
+		<createIndex indexName="fk_SERIES_PERSON1" tableName="series">
+			<column name="OPERATOR_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-50">
+		<createIndex indexName="fk_SERIES_PERSON3" tableName="series">
+			<column name="PERFORMING_PHYSICIAN_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-51">
+		<createIndex indexName="fk_SERIES_STUDY" tableName="series">
+			<column name="STUDY_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-52">
+		<createIndex indexName="fk_SOPINSTANCE_STUDY" tableName="sop_instance">
+			<column name="STUDY_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-53">
+		<createIndex indexName="fk_SOP_SERIES" tableName="sop_instance">
+			<column name="SERIES_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-54">
+		<createIndex indexName="fk_STUDY_CREATE" tableName="study">
+			<column name="CREATED_DATE_TIME" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-55">
+		<createIndex indexName="fk_STUDY_PATIENT" tableName="study">
+			<column name="PATIENT_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-56">
+		<createIndex indexName="fk_STUDY_PERSON1" tableName="study">
+			<column name="REFERRING_PHYSICIAN_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-57">
+		<createIndex indexName="fk_STUDY_PERSON2" tableName="study">
+			<column name="REQUESTING_PHYSICIAN_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-58">
+		<createIndex indexName="fk_STUDY_STATUSLKUP" tableName="study">
+			<column name="STUDY_STATUS_LKUP_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-59">
+		<createIndex indexName="fk_TAG_EXAMTYPE" tableName="tag_examtype_map">
+			<column name="EXAM_TYPE_MAP_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-60">
+		<createIndex indexName="fk_TAG_EXAMTYPEMAPT" tableName="tags">
+			<column name="TAG_EXAMTYPE_MAP_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-61">
+		<createIndex indexName="fk_TAG_EXAMTYPET" tableName="tags">
+			<column name="EXAM_TYPE_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-62">
+		<createIndex indexName="fk_TMPLT_PARENTTEMPL" tableName="wrksht_templt">
+			<column name="PARENT_TMPLT_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-63">
+		<createIndex indexName="fk_USERACCOUNTGROUP_USERACCT"
+			tableName="useracc_group_mapping">
+			<column name="USER_ACCOUNT_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-64">
+		<createIndex indexName="fk_USERACCOUNTGROUP_USERGROUP"
+			tableName="useracc_group_mapping">
+			<column name="USER_GROUP_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-65">
+		<createIndex indexName="fk_USERACCTROLE_ORG" tableName="useracc_role_mapping">
+			<column name="ORG_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-66">
+		<createIndex indexName="fk_USERACCTROLE_USERACCT"
+			tableName="useracc_role_mapping">
+			<column name="USER_ACCOUNT_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-67">
+		<createIndex indexName="fk_USERACCTROLE_USERROLE"
+			tableName="useracc_role_mapping">
+			<column name="USER_ROLE_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-68">
+		<createIndex indexName="fk_WKSHT_USER" tableName="wrksht">
+			<column name="USER_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-69">
+		<createIndex indexName="fk_WKSHT_WKSHTSTATS" tableName="wrksht">
+			<column name="WKSHT_STATUS_LKUP_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-70">
+		<createIndex indexName="fk_WRKSHT_EXAM" tableName="wrksht">
+			<column name="EXAM_TYPE_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-71">
+		<createIndex indexName="fk_WRKSHT_TMPLT" tableName="wrksht">
+			<column name="WRKSHT_TEMPLT_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="amritak (generated)" id="20161912185100-1">
+		<createIndex indexName="fk_SIGNATURE_WRKSHT" tableName="signature">
+			<column name="WRKSHT_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="SOORYAR (generated)" id="1487142200004-52">
+		<createIndex indexName="collaboration_study_user_STUDY_FK"
+			tableName="collaboration_study_user">
+			<column name="STUDY_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="SOORYAR (generated)" id="1487142200004-56">
+		<createIndex indexName="collaboration_study_user_USER_FK"
+			tableName="collaboration_study_user">
+			<column name="USER_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="SOORYAR (generated)" id="1487142200004-55">
+		<createIndex indexName="study_user_workflow_progress_STUDY_FK"
+			tableName="study_user_workflow_progress">
+			<column name="STUDY_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="SOORYAR (generated)" id="1487142200004-57">
+		<createIndex indexName="study_user_workflow_progress_USER_FK"
+			tableName="study_user_workflow_progress">
+			<column name="USER_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="SOORYAR (generated)" id="1487142200004-58">
+		<createIndex indexName="WORKFLOW_ID_FK" tableName="study_user_workflow_progress">
+			<column name="WORKFLOW_ID_FK" />
+		</createIndex>
+	</changeSet>
+	<changeSet id="20172903101700" author="">
+		<addForeignKeyConstraint baseColumnNames="ORG_FK"
+			baseTableName="login_password_config" constraintName="FK_ORG_LOGIN_POLICY"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="ORG_PK"
+			referencedTableName="organization" />
+	</changeSet>
+
+	<changeSet author="amritak (generated)" id="1481971618877-72">
+		<addForeignKeyConstraint baseColumnNames="EVENT_TYPE_FK"
+			baseTableName="audit_event" constraintName="fk_AUDEVENT_EVENTTYPE"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="EVENT_TYPE_PK"
+			referencedTableName="audit_event_type" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-73">
+		<addForeignKeyConstraint baseColumnNames="ORG_FK"
+			baseTableName="dicom_map" constraintName="fk_DATAXMAP_ORG"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="ORG_PK"
+			referencedTableName="organization" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-74">
+		<addForeignKeyConstraint baseColumnNames="EXAM_TYPE_MAP_FK"
+			baseTableName="exammap_wrksht_tmpl" constraintName="fk_EXAMTMPLT_EXAM"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="EXAM_TYPE_MAP_PK"
+			referencedTableName="exam_type_mapping" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-75">
+		<addForeignKeyConstraint baseColumnNames="WRKSHT_TEMPLT_FK"
+			baseTableName="exammap_wrksht_tmpl" constraintName="fk_EXAMTMPLT_WRKSHTEMPL"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="WRKSHT_TEMPLT_PK"
+			referencedTableName="wrksht_templt" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-76">
+		<addForeignKeyConstraint baseColumnNames="EXAM_TYPE_MAP_FK"
+			baseTableName="exmtyp_device_map" constraintName="fk_EXAMTYPEDEV_EXAMTYPE"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="EXAM_TYPE_MAP_PK"
+			referencedTableName="exam_type_mapping" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-77">
+		<addForeignKeyConstraint baseColumnNames="EXAM_TYPE_MAP_FK"
+			baseTableName="exam_type" constraintName="fk_EXAMTYPE_EXAMTYPMAP"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="EXAM_TYPE_MAP_PK"
+			referencedTableName="exam_type_mapping" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-78">
+		<addForeignKeyConstraint baseColumnNames="SERIES_FK"
+			baseTableName="exam_type" constraintName="fk_EXAMTYPE_STUDY"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="SERIES_PK"
+			referencedTableName="series" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-79">
+		<addForeignKeyConstraint baseColumnNames="PATIENT_ID_FK"
+			baseTableName="patient_emr_key" constraintName="fk_PATIENT_EMR_PATIENT"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="PATIENT_ID_PK"
+			referencedTableName="patient_identifier" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-80">
+		<addForeignKeyConstraint baseColumnNames="PATIENT_FK"
+			baseTableName="patient_identifier" constraintName="fk_PATIENT_ID_PATIENT"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="PATIENT_PK"
+			referencedTableName="patient" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-81">
+		<addForeignKeyConstraint baseColumnNames="USER_ACCOUNT_FK"
+			baseTableName="person_user_account" constraintName="fk_PERSONROLE_USERACCOUNT"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="USER_ACCOUNT_PK"
+			referencedTableName="user_account" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-82">
+		<addForeignKeyConstraint baseColumnNames="PERSON_FK"
+			baseTableName="person_user_account" constraintName="fk_PERSONUSER_PERSON"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="PERSON_PK"
+			referencedTableName="person" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-83">
+		<addForeignKeyConstraint baseColumnNames="OPERATOR_FK"
+			baseTableName="series" constraintName="fk_SERIES_PERSON1" deferrable="false"
+			initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION"
+			referencedColumnNames="PERSON_PK" referencedTableName="person" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-84">
+		<addForeignKeyConstraint baseColumnNames="PERFORMING_PHYSICIAN_FK"
+			baseTableName="series" constraintName="fk_SERIES_PERSON3" deferrable="false"
+			initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION"
+			referencedColumnNames="PERSON_PK" referencedTableName="person" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-85">
+		<addForeignKeyConstraint baseColumnNames="STUDY_FK"
+			baseTableName="series" constraintName="fk_SERIES_STUDY" deferrable="false"
+			initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION"
+			referencedColumnNames="STUDY_PK" referencedTableName="study" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-86">
+		<addForeignKeyConstraint baseColumnNames="STUDY_FK"
+			baseTableName="sop_instance" constraintName="fk_SOPINSTANCE_STUDY"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="STUDY_PK"
+			referencedTableName="study" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-87">
+		<addForeignKeyConstraint baseColumnNames="SERIES_FK"
+			baseTableName="sop_instance" constraintName="fk_SOP_SERIES"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="SERIES_PK"
+			referencedTableName="series" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-88">
+		<addForeignKeyConstraint baseColumnNames="PATIENT_FK"
+			baseTableName="study" constraintName="fk_STUDY_PATIENT" deferrable="false"
+			initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION"
+			referencedColumnNames="PATIENT_PK" referencedTableName="patient" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-89">
+		<addForeignKeyConstraint baseColumnNames="REFERRING_PHYSICIAN_FK"
+			baseTableName="study" constraintName="fk_STUDY_PERSON1" deferrable="false"
+			initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION"
+			referencedColumnNames="PERSON_PK" referencedTableName="person" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-90">
+		<addForeignKeyConstraint baseColumnNames="REQUESTING_PHYSICIAN_FK"
+			baseTableName="study" constraintName="fk_STUDY_PERSON2" deferrable="false"
+			initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION"
+			referencedColumnNames="PERSON_PK" referencedTableName="person" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-91">
+		<addForeignKeyConstraint baseColumnNames="STUDY_STATUS_LKUP_FK"
+			baseTableName="study" constraintName="fk_STUDY_STATUSLKUP"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="STUDY_STATUS_LKUP_PK"
+			referencedTableName="study_status_lkup" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-92">
+		<addForeignKeyConstraint baseColumnNames="EXAM_TYPE_MAP_FK"
+			baseTableName="tag_examtype_map" constraintName="fk_TAG_EXAMTYPE"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="EXAM_TYPE_MAP_PK"
+			referencedTableName="exam_type_mapping" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-93">
+		<addForeignKeyConstraint baseColumnNames="TAG_EXAMTYPE_MAP_FK"
+			baseTableName="tags" constraintName="fk_TAG_EXAMTYPEMAPT" deferrable="false"
+			initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION"
+			referencedColumnNames="TAG_EXAMTYPE_MAP_PK" referencedTableName="tag_examtype_map" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="20161912185500-3">
+		<addForeignKeyConstraint baseColumnNames="WRKSHT_FK"
+			baseTableName="signature" constraintName="fk_SIGNATURE_WRKSHT"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="WRKSHT_PK"
+			referencedTableName="wrksht" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-94">
+		<addForeignKeyConstraint baseColumnNames="EXAM_TYPE_FK"
+			baseTableName="tags" constraintName="fk_TAG_EXAMTYPET" deferrable="false"
+			initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION"
+			referencedColumnNames="EXAM_TYPE_PK" referencedTableName="exam_type" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-95">
+		<addForeignKeyConstraint baseColumnNames="PARENT_TMPLT_FK"
+			baseTableName="wrksht_templt" constraintName="fk_TMPLT_PARENTTEMPL"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="WRKSHT_TEMPLT_PK"
+			referencedTableName="wrksht_templt" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-96">
+		<addForeignKeyConstraint baseColumnNames="USER_GROUP_FK"
+			baseTableName="useracc_group_mapping" constraintName="fk_USERACCOUNTGROUP_USERGROUP"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="USER_GROUP_PK"
+			referencedTableName="user_group" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-97">
+		<addForeignKeyConstraint baseColumnNames="USER_ACCOUNT_FK"
+			baseTableName="useracc_group_mapping" constraintName="fk_USERACCOUNTTGROUP_USERACCT"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="USER_ACCOUNT_PK"
+			referencedTableName="user_account" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-98">
+		<addForeignKeyConstraint baseColumnNames="USER_ACCOUNT_FK"
+			baseTableName="useracc_role_mapping" constraintName="fk_USERACCTROLE_USERACCT"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="USER_ACCOUNT_PK"
+			referencedTableName="user_account" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-99">
+		<addForeignKeyConstraint baseColumnNames="USER_ROLE_FK"
+			baseTableName="useracc_role_mapping" constraintName="fk_USERACCTROLE_USERROLE"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="USER_ROLE_PK"
+			referencedTableName="user_role" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-100">
+		<addForeignKeyConstraint baseColumnNames="ORG_FK"
+			baseTableName="useracc_role_mapping" constraintName="fk_USERROLEACCT_ORG"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="ORG_PK"
+			referencedTableName="organization" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-101">
+		<addForeignKeyConstraint baseColumnNames="USER_FK"
+			baseTableName="wrksht" constraintName="fk_WKSHT_USER" deferrable="false"
+			initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION"
+			referencedColumnNames="USER_ACCOUNT_PK" referencedTableName="user_account" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-102">
+		<addForeignKeyConstraint baseColumnNames="WKSHT_STATUS_LKUP_FK"
+			baseTableName="wrksht" constraintName="fk_WKSHT_WKSHTSTATS"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="WKSHT_STATUS_LKUP_PK"
+			referencedTableName="wksht_status_lkup" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-103">
+		<addForeignKeyConstraint baseColumnNames="EXAM_TYPE_FK"
+			baseTableName="wrksht" constraintName="fk_WRKSHT_EXAM" deferrable="false"
+			initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION"
+			referencedColumnNames="EXAM_TYPE_PK" referencedTableName="exam_type" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="1481971618877-104">
+		<addForeignKeyConstraint baseColumnNames="WRKSHT_TEMPLT_FK"
+			baseTableName="wrksht" constraintName="fk_WRKSHT_TMPLT" deferrable="false"
+			initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION"
+			referencedColumnNames="WRKSHT_TEMPLT_PK" referencedTableName="wrksht_templt" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="20171801033500">
+		<addForeignKeyConstraint baseColumnNames="STUDY_FK"
+			baseTableName="wrksht" constraintName="fk_WRKSHT_STUDY" deferrable="false"
+			initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION"
+			referencedColumnNames="STUDY_PK" referencedTableName="study" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="20171801033500-1">
+		<addForeignKeyConstraint baseColumnNames="EXAM_TYPE_REL_FK"
+			baseTableName="study_examtype_map" constraintName="fk_EXAMTYPEMAP_STUDY"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="STUDY_PK"
+			referencedTableName="study" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="20171801033500-2">
+		<addForeignKeyConstraint baseColumnNames="EXAM_TYPE_MAP_FK"
+			baseTableName="study_examtype_map" constraintName="fk_EXAMTYPEMAPFK_STUDY"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="EXAM_TYPE_MAP_PK"
+			referencedTableName="exam_type_mapping" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="763247236-1">
+		<addForeignKeyConstraint baseColumnNames="STUDY_FK"
+			baseTableName="study_owner_assignment" constraintName="fk__STUDY"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="STUDY_PK"
+			referencedTableName="study" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="20170902050300">
+		<addForeignKeyConstraint baseColumnNames="WORKFLOW_FK"
+			baseTableName="study_owner_assignment" constraintName="fk_worflow_studyuser"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="WORKFLOW_PK"
+			referencedTableName="workflow_stages" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="20170902050700">
+		<addForeignKeyConstraint baseColumnNames="ORG_FK"
+			baseTableName="user_account" constraintName="fk_user_org" deferrable="false"
+			initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION"
+			referencedColumnNames="ORG_PK" referencedTableName="organization" />
+	</changeSet>
+
+	<changeSet author="amritak (generated)" id="20170902051600">
+		<addForeignKeyConstraint baseColumnNames="WORKFLOW_FK"
+			baseTableName="study_status_lkup" constraintName="fk_worflow_studystatus"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="WORKFLOW_PK"
+			referencedTableName="workflow_stages" />
+	</changeSet>
+
+	<changeSet author="amritak (generated)" id="20170902051300">
+		<addForeignKeyConstraint baseColumnNames="ORG_FK"
+			baseTableName="user_group" constraintName="fk_usergroup_org"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="ORG_PK"
+			referencedTableName="organization" />
+	</changeSet>
+	<changeSet author="amritak (generated)" id="20170902181900">
+		<addForeignKeyConstraint baseColumnNames="ORG_FK"
+			baseTableName="org_config_settings" constraintName="fk_config_org"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="ORG_PK"
+			referencedTableName="organization" />
+	</changeSet>
+	<changeSet author="SOORYAR (generated)" id="1487142200004-96">
+		<addForeignKeyConstraint baseColumnNames="STUDY_FK"
+			baseTableName="collaboration_study_user" constraintName="collaboration_study_user_ibfk_1"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="STUDY_PK"
+			referencedTableName="study" />
+	</changeSet>
+	<changeSet author="SOORYAR (generated)" id="1487142200004-97">
+		<addForeignKeyConstraint baseColumnNames="USER_FK"
+			baseTableName="collaboration_study_user" constraintName="collaboration_study_user_ibfk_2"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="USER_ACCOUNT_PK"
+			referencedTableName="user_account" />
+	</changeSet>
+	<changeSet author="SOORYAR (generated)" id="1487142200004-139">
+		<addForeignKeyConstraint baseColumnNames="USER_FK"
+			baseTableName="study_user_workflow_progress" constraintName="study_user_workflow_progress_ibfk_2"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="USER_ACCOUNT_PK"
+			referencedTableName="user_account" />
+	</changeSet>
+	<changeSet author="SOORYAR (generated)" id="1487142200004-138">
+		<addForeignKeyConstraint baseColumnNames="STUDY_FK"
+			baseTableName="study_user_workflow_progress" constraintName="study_user_workflow_progress_ibfk_1"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="STUDY_PK"
+			referencedTableName="study" />
+	</changeSet>
+	<changeSet author="SOORYAR (generated)" id="1487142200004-140">
+		<addForeignKeyConstraint baseColumnNames="WORKFLOW_ID_FK"
+			baseTableName="study_user_workflow_progress" constraintName="study_user_workflow_progress_ibfk_3"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="WORKFLOW_PK"
+			referencedTableName="workflow_stages" />
+	</changeSet>
+
+	<changeSet author="amritak" id="20172402151700">
+		<addForeignKeyConstraint baseColumnNames="MASTER_FK"
+			baseTableName="preference" constraintName="fk_TRANSACTION"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="MASTER_PK"
+			referencedTableName="preference_master" />
+	</changeSet>
+	<changeSet author="amritak" id="20172402151700-1">
+		<addForeignKeyConstraint baseColumnNames="ORG_FK"
+			baseTableName="preference" constraintName="fk_ORG_PREFERENCE"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="ORG_PK"
+			referencedTableName="organization" />
+	</changeSet>
+	<changeSet author="SOORYAR (generated)" id="1487142200004-1403564">
+		<addForeignKeyConstraint baseColumnNames="EXAM_TYPE_MAP_FK"
+			baseTableName="exam_type_cpt_code" constraintName="exam_type_cpt_fk1"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="EXAM_TYPE_MAP_PK"
+			referencedTableName="exam_type_mapping" />
+	</changeSet>
+	<changeSet author="SOORYAR (generated)" id="1487142200004-14066545">
+		<addForeignKeyConstraint baseColumnNames="CPT_CODE_FK"
+			baseTableName="exam_type_cpt_code" constraintName="exam_type_cpt_fk2"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="CPT_CODE_PK"
+			referencedTableName="cpt_code" />
+	</changeSet>
+	<changeSet author="askar" id="201702281942-1">
+		<addForeignKeyConstraint baseColumnNames="PATIENT_FK"
+			baseTableName="patient_worklist" constraintName="fk_PATIENT_WRK_LST"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="PATIENT_PK"
+			referencedTableName="patient" />
+	</changeSet>
+	<changeSet author="askar" id="201702281942-2">
+		<addForeignKeyConstraint baseColumnNames="ORG_FK"
+			baseTableName="patient_worklist" constraintName="fk_ORG_WRK_LST"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="ORG_PK"
+			referencedTableName="organization" />
+	</changeSet>
+	<changeSet author="askar" id="201702281942-4">
+		<addForeignKeyConstraint baseColumnNames="STUDY_FK"
+			baseTableName="accession_number" constraintName="fk_ACCESSION"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="STUDY_PK"
+			referencedTableName="study" />
+	</changeSet>
+	<changeSet author="ayesha (generated)" id="2017032411420-12">
+		<addForeignKeyConstraint baseColumnNames="ORG_FK"
+			baseTableName="ldap_config" constraintName="fk_LDAPCONFIG_ORG"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="ORG_PK"
+			referencedTableName="organization" />
+	</changeSet>
+	<changeSet author="kushani (generated)" id="201706011353-1">
+		<addForeignKeyConstraint baseColumnNames="ORG_FK"
+			baseTableName="email_config" constraintName="fk_EMAILCONFIG_ORG"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="ORG_PK"
+			referencedTableName="organization" />
+	</changeSet>
+
+	<!-- -->
+
+	<changeSet author="virtusa (generated)" id="2017032811420-04">
+		<createTable tableName="notification_alert">
+			<column autoIncrement="true" name="id" type="BIGINT">
+				<constraints nullable="false" primaryKey="true" />
+			</column>
+			<column name="org_id" type="BIGINT" />
+			<column name="channel_id" type="BIGINT" />
+			<column name="datax_receiver" type="BIGINT" />
+			<column name="message" type="VARCHAR(1000)" />
+			<column name="status" type="VARCHAR(15)" />
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+
+	<changeSet author="upamal" id="2017033011420-02">
+		<createTable tableName="notification">
+			<column autoIncrement="true" name="id" type="BIGINT">
+				<constraints nullable="false" primaryKey="true" />
+			</column>
+			<column name="org_id" type="BIGINT" />
+			<column name="channel_id" type="INT" />
+			<column name="notification" type="LONGTEXT" />
+			<column name="status" type="VARCHAR(15)" />
+			<column name="error_count" type="INT" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+
+	<changeSet author="divyara (generated)" id="2017032811421-58">
+		<createTable tableName="notification_events_info">
+			<column autoIncrement="true" name="NOTIFICATION_EVENTS_PK"
+				type="BIGINT" startWith="100">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="ORG_ID" type="BIGINT" />
+			<column name="EVENT_CODE" type="VARCHAR(100)" />
+			<column name="EVENT_TYPE" type="VARCHAR(50)" />
+			<column name="EVENT_DETAILS" type="LONGTEXT" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+
+	<!-- user grps,roles and permissions -->
+
+	<changeSet author="venky (generated)" id="20170329060000-01">
+		<createTable tableName="permission">
+			<column autoIncrement="true" name="PERMISSION_PK" type="BIGINT"
+				startWith="6001">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="PERMISSION_NAME" type="VARCHAR(50)" />
+			<column name="DESCRIPTION" type="VARCHAR(200)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="capability">
+			<column autoIncrement="true" name="CAPABILITY_PK" type="BIGINT"
+				startWith="7001">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="PERMISSION_FK" type="BIGINT">
+			</column>
+			<column name="CAPABILITY_NAME" type="VARCHAR(100)" />
+			<column name="DESCRIPTION" type="VARCHAR(200)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="capability_resource_mapping">
+			<column autoIncrement="true" name="CAPABILITY_RESOURCE_MAPPING_PK"
+				type="BIGINT" startWith="8001">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="RESOURCE" type="VARCHAR(50)" />
+			<column name="END_POINT" type="VARCHAR(200)" />
+			<column name="CAPABILITY_FK" type="BIGINT(20)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="useracc_permission_mapping">
+			<column autoIncrement="true" name="USERACC_PERMISSION_PK"
+				type="BIGINT" startWith="101">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="PERMISSION_FK" type="BIGINT">
+			</column>
+			<column name="USER_ACCOUNT_FK" type="BIGINT" />
+
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="role_permission_mapping">
+			<column autoIncrement="true" name="ROLE_PERMISSION_MAPPING_PK"
+				type="BIGINT" startWith="101">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="PERMISSION_FK" type="BIGINT">
+			</column>
+			<column name="USER_ROLE_FK" type="BIGINT" />
+
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="group_permission_mapping">
+			<column autoIncrement="true" name="GROUP_PERMISSION_MAPPING_PK"
+				type="BIGINT" startWith="101">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="PERMISSION_FK" type="BIGINT">
+			</column>
+			<column name="USER_GROUP_FK" type="BIGINT" />
+
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<createTable tableName="group_role_mapping">
+			<column autoIncrement="true" name="GROUP_ROLE_MAPPING_PK"
+				type="BIGINT" startWith="101">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="USER_ROLE_FK" type="BIGINT">
+			</column>
+			<column name="USER_GROUP_FK" type="BIGINT" />
+
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+
+	<changeSet id="20172903173999" author="bharath">
+		<createTable tableName="system_configuration">
+			<column name="SYSTEM_CONFIGURATION_PK" type="BIGINT"
+				startWith="10001" autoIncrement="true">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="SYSTEM_CONFIGURATION_NAME" type="VARCHAR(200)" />
+			<column name="DESCRIPTION" type="VARCHAR(250)" />
+			<column name="SYSTEM_CONFIGURATION_VALUE" type="VARCHAR(1)" />
+			<column name="ORG_FK" type="BIGINT" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet id="2017110519380000" author="bharath">
+		<createTable tableName="study_tag_map">
+			<column name="STUDY_TAG_MAP_PK" type="BIGINT" startWith="10001"
+				autoIncrement="true">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="TAG_EXAMTYPE_MAP_FK" type="BIGINT" />
+			<column name="STUDY_FK" type="BIGINT" />
+			<column name="TAG_TYPE" type="VARCHAR(10)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+
+	<changeSet author="venky (generated)" id="20170329060000-02">
+		<addForeignKeyConstraint baseColumnNames="PERMISSION_FK"
+			baseTableName="capability" constraintName="fk_PERMISSION_CAPABILITY"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="PERMISSION_PK"
+			referencedTableName="permission" />
+	</changeSet>
+
+	<changeSet author="venky (generated)" id="20170329060000-03">
+		<addForeignKeyConstraint baseColumnNames="PERMISSION_FK"
+			baseTableName="useracc_permission_mapping" constraintName="fk_USER_PERMISSION_MAP"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="PERMISSION_PK"
+			referencedTableName="permission" />
+	</changeSet>
+
+	<changeSet author="venky (generated)" id="20170329060000-04">
+		<addForeignKeyConstraint baseColumnNames="USER_ACCOUNT_FK"
+			baseTableName="useracc_permission_mapping" constraintName="fk_PERMISSION_USER_MAP"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="USER_ACCOUNT_PK"
+			referencedTableName="user_account" />
+	</changeSet>
+
+	<changeSet author="venky (generated)" id="20170329060000-05">
+		<addForeignKeyConstraint baseColumnNames="PERMISSION_FK"
+			baseTableName="role_permission_mapping" constraintName="fk_ROLE_PERMISSION"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO 
+		ACTION" referencedColumnNames="PERMISSION_PK"
+			referencedTableName="permission" />
+	</changeSet>
+	<changeSet author="venky (generated)" id="20170329060000-06">
+		<addForeignKeyConstraint baseColumnNames="USER_ROLE_FK"
+			baseTableName="role_permission_mapping" constraintName="fk_PERMISSION_ROLE"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="USER_ROLE_PK"
+			referencedTableName="user_role" />
+	</changeSet>
+
+	<changeSet author="venky (generated)" id="20170329060000-07">
+		<addForeignKeyConstraint baseColumnNames="PERMISSION_FK"
+			baseTableName="group_permission_mapping" constraintName="fk_GRP_PERMISSION"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="PERMISSION_PK"
+			referencedTableName="permission" />
+	</changeSet>
+
+	<changeSet author="venky (generated)" id="20170329060000-08">
+		<addForeignKeyConstraint baseColumnNames="USER_GROUP_FK"
+			baseTableName="group_permission_mapping" constraintName="fk_PERMISSION_GRP_MAP"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="USER_GROUP_PK"
+			referencedTableName="user_group" />
+	</changeSet>
+
+	<changeSet author="venky (generated)" id="20170329060000-09">
+		<addForeignKeyConstraint baseColumnNames="USER_ROLE_FK"
+			baseTableName="group_role_mapping" constraintName="fk_GRP_ROLE_MAP"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="USER_ROLE_PK"
+			referencedTableName="user_role" />
+	</changeSet>
+
+	<changeSet author="venky (generated)" id="20170329060000-10">
+		<addForeignKeyConstraint baseColumnNames="USER_GROUP_FK"
+			baseTableName="group_role_mapping" constraintName="fk_ROLE_GRP_MAP"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="USER_GROUP_PK"
+			referencedTableName="user_group" />
+	</changeSet>
+
+	<changeSet id="20172903101799" author="bharath">
+		<addForeignKeyConstraint baseColumnNames="ORG_FK"
+			baseTableName="system_configuration" constraintName="FK_ORG_SYSTEM_CONFIG"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="ORG_PK"
+			referencedTableName="organization" />
+	</changeSet>
+	<!-- <changeSet id="2017090516220000" author="bharath"> <addForeignKeyConstraint 
+		baseColumnNames="PARENT_ORG_FK" baseTableName="organization" constraintName="FK_PARENT_ORG" 
+		deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO 
+		ACTION" referencedColumnNames="ORG_PK" referencedTableName="organization" 
+		/> </changeSet> -->
+	<!-- <changeSet id="2017090516220000" author="bharath"> <addForeignKeyConstraint 
+		baseColumnNames="ORG_FK" baseTableName="study" constraintName="FK_STUSYPARENT_ORG" 
+		deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO 
+		ACTION" referencedColumnNames="ORG_PK" referencedTableName="organization" 
+		/> </changeSet> -->
+	<changeSet author="venky (generated)" id="2017033116000000-01">
+		<addForeignKeyConstraint baseColumnNames="CAPABILITY_FK"
+			baseTableName="capability_resource_mapping" constraintName="fk_CAPABILITYRESOURCE_MAP"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="CAPABILITY_PK"
+			referencedTableName="capability" />
+	</changeSet>
+	<changeSet author="kushani (generated)" id="2017033011020-06">
+		<createTable tableName="template_info">
+			<column autoIncrement="true" name="temp_id" type="BIGINT">
+				<constraints nullable="false" primaryKey="true" />
+			</column>
+			<column name="org_id" type="BIGINT" />
+			<column name="temp_name" type="VARCHAR(20)" />
+			<column name="temp_type" type="VARCHAR(20)" />
+			<column name="description" type="VARCHAR(100)" />
+			<column name="subject" type="VARCHAR(100)" />
+			<column name="path" type="VARCHAR(100)" />
+		</createTable>
+	</changeSet>
+
+	<changeSet id="20170515060000-01" author="virtusapolaris">
+		<createTable tableName="org_role_mapping">
+			<column autoIncrement="true" name="ORG_ROLE_MAPPING_PK" type="BIGINT"
+				startWith="101">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="USER_ROLE_FK" type="BIGINT">
+			</column>
+			<column name="ORG_FK" type="BIGINT" />
+
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet id="20170515060000-02" author="virtusapolaris">
+		<addForeignKeyConstraint baseColumnNames="USER_ROLE_FK"
+			baseTableName="org_role_mapping" constraintName="fk_ORG_ROLE_MAP"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="USER_ROLE_PK"
+			referencedTableName="user_role" />
+	</changeSet>
+	<changeSet id="20170515060000-03" author="virtusapolaris">
+		<addForeignKeyConstraint baseColumnNames="ORG_FK"
+			baseTableName="org_role_mapping" constraintName="fk_ROLE_ORG_MAP"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="ORG_PK"
+			referencedTableName="organization" />
+	</changeSet>
+	<changeSet id="2017230511410001" author="virtusapolaris">
+		<createTable tableName="useracc_org_mapping">
+			<column autoIncrement="true" name="USER_ORG_MAPPING_PK" type="BIGINT"
+				startWith="1001">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="USER_ORG_FK" type="BIGINT">
+			</column>
+			<column name="USER_ACCOUNT_FK" type="BIGINT" />
+
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet id="2017230511430002" author="virtusapolaris">
+		<addForeignKeyConstraint baseColumnNames="USER_ACCOUNT_FK"
+			baseTableName="useracc_org_mapping" constraintName="fk_USER_ORG_MAP"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="USER_ACCOUNT_PK"
+			referencedTableName="user_account" />
+	</changeSet>
+	<changeSet id="2017230511430003" author="virtusapolaris">
+		<addForeignKeyConstraint baseColumnNames="USER_ORG_FK"
+			baseTableName="useracc_org_mapping" constraintName="fk_ORG_USER_MAP"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="ORG_PK"
+			referencedTableName="organization" />
+	</changeSet>
+	<changeSet id="2017250518310001" author="virtusapolaris">
+		<createTable tableName="group_org_mapping">
+			<column autoIncrement="true" name="GROUP_ORG_MAPPING_PK" type="BIGINT"
+				startWith="1001">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="USER_GROUP_FK" type="BIGINT">
+			</column>
+			<column name="GROUP_ORG_FK" type="BIGINT" />
+
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet id="2017250518310002" author="virtusapolaris">
+		<addForeignKeyConstraint baseColumnNames="USER_GROUP_FK"
+			baseTableName="group_org_mapping" constraintName="fk_GROUP_ORG_MAP"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="USER_GROUP_PK"
+			referencedTableName="user_group" />
+	</changeSet>
+	<changeSet id="2017250518310003" author="virtusapolaris">
+		<addForeignKeyConstraint baseColumnNames="GROUP_ORG_FK"
+			baseTableName="group_org_mapping" constraintName="fk_ORG_GROUP_MAP"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="ORG_PK"
+			referencedTableName="organization" />
+	</changeSet>
+
+		
+	<changeSet author="virtusapolaris" id="20171009200000-1">
+		<createTable tableName="password_history">
+			<column autoIncrement="true" name="PASSWORD_HISTORY_PK" type="BIGINT"
+				startWith="1001">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="USER_ACCOUNT_FK" type="BIGINT" />
+			<column name="PASSWORD_HASH" type="VARCHAR(255)" />
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+		<addForeignKeyConstraint baseColumnNames="USER_ACCOUNT_FK"
+			baseTableName="password_history" constraintName="fk_PWD_HISTORY_USER"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="USER_ACCOUNT_PK"
+			referencedTableName="user_account" />
+	</changeSet>
+	
+	<changeSet id="20171011110000-1" author="virtusapolaris">
+		<createTable tableName="configuration">
+			<column autoIncrement="true" name="CONFIGURATION_PK" type="BIGINT"
+				startWith="1">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="THRESHOLD_TIME_LIMIT" type="BIGINT">
+			</column>
+			<column name="ORG_FK" type="BIGINT" />
+
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+
+		<addForeignKeyConstraint baseColumnNames="ORG_FK"
+			baseTableName="configuration" constraintName="fk_ORG_CONFIG_MAP"
+			deferrable="false" initiallyDeferred="false" onDelete="NO ACTION"
+			onUpdate="NO ACTION" referencedColumnNames="ORG_PK"
+			referencedTableName="organization" />
+	</changeSet>
+	
+	<changeSet id="20171109102001" author="virtusa">
+	
+		<renameTable newTableName="default_workflow" oldTableName="preference_master"/>
+		<renameTable newTableName="custom_workflow" oldTableName="preference"/>
+		<renameTable newTableName="org_preference" oldTableName="configuration"/>
+	
+		<createTable tableName="preference_type">
+	  		<column name="PREFERENCE_TYPE_ID" type="BIGINT" startWith="1" autoIncrement="true">
+	  			<constraints primaryKey="true"/>
+	  		</column>
+	  		<column name="NAME" type="VARCHAR(255)"/>
+	  		<column name="CREATED_BY" type="BIGINT" defaultValue="-1"/>
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT"  defaultValue="-1"/>
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+	  	</createTable>
+	  	
+	  	
+	  	<createTable tableName="preference_value">
+			<column autoIncrement="true" name="PREFERENCE_VALUE_ID" type="BIGINT" startWith="1">
+				<constraints primaryKey="true"/>
+			</column>
+			<column name="PREFERENCE_TYPE_ID" type="BIGINT"/>
+			<column name="DISPLAY_VALUE" type="VARCHAR(50)"/>
+			<column name="CREATED_BY" type="BIGINT" defaultValue="-1"/>
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" defaultValue="-1"/>
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+		
+		<addForeignKeyConstraint baseColumnNames="PREFERENCE_TYPE_ID"
+			baseTableName="preference_value" constraintName="fk_preference_value"
+			referencedColumnNames="PREFERENCE_TYPE_ID" referencedTableName="preference_type" />
+		
+	  	
+		<createTable tableName="system_preference">
+			<column autoIncrement="true" name="ID" type="BIGINT" startWith="1">
+				<constraints primaryKey="true"/>
+			</column>
+			<column name="SYSTEM_PREFERENCE_ID" type="BIGINT"/>
+			<column name="PREFERENCE_TYPE_ID" type="BIGINT"/>
+			<column name="PREFERENCE_VALUE_ID" type="BIGINT"/>
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>		
+		</createTable>
+		
+		<addForeignKeyConstraint baseColumnNames="PREFERENCE_TYPE_ID"
+			baseTableName="system_preference" constraintName="fk_preference_value_system_preference"
+			referencedColumnNames="PREFERENCE_TYPE_ID" referencedTableName="preference_type" />
+			
+		<addForeignKeyConstraint baseColumnNames="PREFERENCE_VALUE_ID"
+			baseTableName="system_preference" constraintName="fk_preference_type_system_preference"
+			referencedColumnNames="PREFERENCE_VALUE_ID" referencedTableName="preference_value" />
+	
+		<createTable tableName="user_preference">
+			<column autoIncrement="true" name="ID" type="BIGINT" startWith="1">
+				<constraints primaryKey="true"/>
+			</column>
+			<column name="USER_ID" type="BIGINT"/>
+			<column name="PREFERENCE_TYPE_ID" type="BIGINT"/>
+			<column name="PREFERENCE_VALUE_ID" type="BIGINT"/>
+			<column name="CREATED_BY" type="BIGINT" />
+			<column name="CREATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>
+			<column name="UPDATED_BY" type="BIGINT" />
+			<column name="UPDATED_DATE_TIME" type="TIMESTAMP">
+				<constraints nullable="false" />
+			</column>		
+			
+		</createTable>
+		<addForeignKeyConstraint baseColumnNames="PREFERENCE_TYPE_ID"
+			baseTableName="user_preference" constraintName="fk_preference_value_user_preference"
+			referencedColumnNames="PREFERENCE_TYPE_ID" referencedTableName="preference_type" />
+			
+		<addForeignKeyConstraint baseColumnNames="PREFERENCE_VALUE_ID"
+			baseTableName="user_preference" constraintName="fk_preference_type_user_preference"
+			referencedColumnNames="PREFERENCE_VALUE_ID" referencedTableName="preference_value" />
+	  	
+	  	
+	  </changeSet>
+	  
+	  
+	
+</databaseChangeLog>

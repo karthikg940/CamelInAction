@@ -1,0 +1,180 @@
+<modal #saveLdapConfigPopup [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Ldap Configuration</h4>
+  </modal-header>
+  <modal-body>
+    Configured successfully
+  </modal-body>
+</modal>
+
+<modal #testConnPopup [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Test Connection</h4>
+  </modal-header>
+  <modal-body>
+    Test connection succeeded
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-primary" (click)="successOk()">Ok</button>
+  </modal-footer>
+</modal>
+
+<modal #testConnFailPopup [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Test Connection</h4>
+  </modal-header>
+  <modal-body>
+    Test connection failed
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-primary" (click)="failTestOk()">Ok</button>
+  </modal-footer>
+</modal>
+
+<!-- LDAP Configuration -->
+
+<div class="contentpage m-l-65">
+  <div class="">
+    <!-- Breadcrumbs -->
+    <div class="row m-x-0 bg-ssblue">
+      <div class="col-xs-12 col-sm-6 p-l-15">
+        <div class="pull-left color-white">
+          <h2 class="m-y-10">Adminstrator</h2>
+        </div>
+        <ol class="breadcrumb bg-ssblue pull-left fw-15 m-b-0 m-t-10 p-l-15">
+          <li>
+            <a href="#" class="color-white">
+              <i class="fa fa-lg fa-cog"></i>
+            </a>
+          </li>
+          <li class="color-white">System Configuration</li>
+          <li class="color-white">LDAP/AD</li>
+        </ol>
+      </div>
+    </div>
+    <!-- Breadcrumbs Ends -->
+
+    <div class="row m-t-15 m-x-0">
+      <div class="col-xs-12">
+        <form novalidate #createldapConfigForm="ngForm" novalidate>
+          <div class="col-md-offset-2 col-md-8 b-1-lightgray bg-white">
+            <div class="row m-x-0">
+              <div class="col-xs-12">
+                <h3>LDAP/AD Configuration</h3>
+              </div>
+            </div>
+            <div class="row m-x-0 m-t-5">
+              <div class="col-sm-offset-2 col-md-offset-2 col-xs-12 col-sm-8 p-10">
+              </div>
+            </div>
+            <div class="row m-x-0 m-t-5">
+              <div class="col-sm-offset-2 col-md-offset-2 col-xs-12 col-sm-8 p-10">
+                <div class="col-xs-12 p-x-0">
+                  <div class="col-xs-12 form-group">
+                    <div class="col-xs-6 col-md-4">
+                      <label>Type</label>
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+
+                      <select class="form-control" id="directoryType" required [(ngModel)]="ldapData.directoryType" name="directoryType" #directoryType="ngModel" (change)="onChange($event)">
+                                  <option *ngFor="let item of selectOption" [value]="item.value" [disabled]="item.value=='Choose DirectoryType'">{{item.value}}</option>
+                                  </select>
+                      <div [hidden]="typeExists" class="alert alert-danger alertRequired">Type required</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 p-x-0">
+                  <div class="col-xs-12 form-group">
+                    <div class="col-xs-6 col-md-4">
+                      <label>Remote Server</label>
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                      <input type="text" class="form-control" id="remoteServer" required [(ngModel)]="ldapData.remoteServer" name="remoteServer" #remoteServer="ngModel" (keypress)="chengesInForm($event)" (keydown)="chengesInForm($event)">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 p-x-0">
+                  <div class="col-xs-12 form-group">
+                    <div class="col-xs-6 col-md-4">
+                      <label>Access Groups</label>
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                      <input type="text" class="form-control" id="accessGroup" required [(ngModel)]="ldapData.accessGroup" name="accessGroup" #accessGroup="ngModel">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 p-x-0">
+                  <div class="col-xs-12 form-group">
+                    <div class="col-xs-6 col-md-4">
+                      <label>Search Root</label>
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                      <input type="text" class="form-control" id="searchRoot" required [(ngModel)]="ldapData.searchRoot" name="searchRoot" #searchRoot="ngModel">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 p-x-0">
+                  <div class="col-xs-12 form-group">
+                    <div class="col-xs-6 col-md-4">
+                      <label>LDAP Port</label>
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                      <input type="text" class="form-control" (keypress)="validateNum($event);" id="ldapPort" [(ngModel)]="ldapData.ldapPort" name="ldapPort" #ldapPort="ngModel" (keypress)="chengesInForm($event)" (keydown)="chengesInForm($event)">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 p-x-0">
+                  <div class="col-xs-12 form-group">
+                    <div class="col-xs-6 col-md-4">
+                      <label>User Dn</label>
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                      <input type="text" class="form-control" id="userDn" required [(ngModel)]="ldapData.userDn" name="userDn" #userDn="ngModel">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 p-x-0">
+                  <div class="col-xs-12 form-group">
+                    <div class="col-xs-6 col-md-4">
+                      <label>Manager DN</label>
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                      <input type="text" class="form-control" id="manageDn" required [(ngModel)]="ldapData.manageDn" name="manageDn" #manageDn="ngModel">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 p-x-0">
+                  <div class="col-xs-12 form-group">
+                    <div class="col-xs-6 col-md-4">
+                      <label>Manager Password</label>
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                      <input type="text" class="form-control" id="managePassword" required [(ngModel)]="ldapData.managePassword" name="managePassword" #managePassword="ngModel">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 p-x-0">
+                  <div class="col-xs-12 form-group">
+                    <div class="col-xs-6 col-md-4">
+                      <label>IT Admin User Name</label>
+                    </div>
+                    <div class="col-xs-6 col-md-6">
+                      <input type="text" class="form-control" id="itAdminUserName" required [(ngModel)]="ldapData.itAdminUserName" name="itAdminUserName" #itAdminUserName="ngModel" (keypress)="chengesInForm($event)" (keydown)="chengesInForm($event)">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 m-b-10 p-x-0">
+                  <div class="col-xs-offset-3 col-md-offset-4">
+                    <button class="btn btn-primary" (click)="doValidateConn(createldapConfigForm.value)">Test Connection</button>
+                    <button class="btn btn-primary" (click)="cancelPopup()">Reset</button>
+                    <button class="btn btn-primary" [disabled]="saveTest" (click)="doSave(createldapConfigForm.value)">Save</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

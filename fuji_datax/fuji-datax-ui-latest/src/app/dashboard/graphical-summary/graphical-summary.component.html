@@ -1,0 +1,39 @@
+<div class="col-xs-12 col-sm-6 col-md-3 p-0">
+<div class="panel panel-default">
+  <!-- Header -->
+  <div class="panel-heading clearfix">
+    <div class="row">
+      <div class="col-xs-12 align-center fw-18"><span>{{data.type | uppercase}}</span></div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="panel-body align-center">
+    <h4 class="align-center" *ngIf="selectedDuration.label!='Custom Range'">{{selectedDuration.label}}</h4>
+    <h4 class="align-center" *ngIf="selectedDuration.label=='Custom Range'">{{selectedDuration.start.format('MMM DD,YYYY')}} to {{selectedDuration.end.format('MMM DD,YYYY')}}</h4>
+    <h1 class="align-center">{{data.total}}</h1>
+    <canvas baseChart class="chart"
+    [data]="data.value"
+    [labels]="data.status"
+    [colors]="colors"
+    [legend]="false"
+    [chartType]="'doughnut'"
+    (chartClick)="chartClicked($event)"></canvas>
+    <div class="legends row m-x-0 align-left">
+      <div *ngIf="data.total != 0">
+        <div class="col-md-6 p-x-0" *ngFor="let status of data.status; let i=index">
+          <div class="col-md-12 p-x-0" >
+            <span class="legend-badge badge bg-{{status}}">{{data.value[i]}}</span>
+            <span>{{status}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="panel-footer bg-ssblue align-center clearfix">
+    <a routerLink="/studylist" [queryParams]="{ id: data.id, start:selectedDuration.start, end:selectedDuration.end, label: selectedDuration.label}" routerLinkActive="active" class="fw-18 color-white">Go To {{data.type}} <i class="m-l-5 fa fa-angle-right"></i></a>
+  </div>
+</div>
+</div>

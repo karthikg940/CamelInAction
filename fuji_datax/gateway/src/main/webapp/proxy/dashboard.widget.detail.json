@@ -1,0 +1,60 @@
+{
+  "result": {
+    "id": "qastudies",
+    "examtype": [
+      "Cardiac",
+      "Thoracic"
+    ],
+    "series": [
+        {
+        "status": "New",
+        "data": [
+          1,
+          1
+        ]
+      },
+        {
+        "status": "Assigned",
+        "data": [
+          1,
+          1
+        ]
+      },
+        {
+        "status": "In-Progress",
+        "data": [
+          1,
+          1
+        ]
+      },
+        {
+        "status": "QA-Assigned",
+        "data": [
+          1,
+          1
+        ]
+      },
+      {
+        "status": "QA-UnAssigned",
+        "data": [
+          1,
+          1
+        ]
+      },
+    {
+        "status": "QA-InProgress",
+        "data": [
+          1,
+          1
+        ]
+      },
+            {
+        "status": "Submitted-to-EMR",
+        "data": [
+          1,
+          1
+        ]
+      }
+    ]
+  }
+}

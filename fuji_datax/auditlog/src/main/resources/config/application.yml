@@ -1,0 +1,45 @@
+
+server:
+    port: 7091
+
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/
+            
+liquibase:
+  enabled: false
+  
+spring:
+    application:
+        name: auditlog
+    datasource:
+        dataSourceClassName: com.mysql.jdbc.jdbc2.optional.MysqlDataSource
+        url: jdbc:mysql://${DB_URL:localhost}:${DB_PORT:3306}/${DB_NAME:datax}
+        databaseName:
+        serverName:
+        username: ${DB_USERNAME:root}
+        password: ${DB_PASSWORD:}
+
+    jpa:
+        database-platform: org.hibernate.dialect.MySQLInnoDBDialect
+        database: MYSQL
+        openInView: true
+        show_sql: true
+        generate-ddl: false
+        hibernate:
+            ddl-auto: validate
+            naming-strategy: org.hibernate.cfg.EJB3NamingStrategy
+        properties:
+            hibernate.cache.use_second_level_cache: false
+            hibernate.cache.use_query_cache: false
+            hibernate.generate_statistics: true
+            hibernate.hbm2ddl.auto: validate
+     
+hystrix: 
+    command.default.execution.isolation.strategy: THREAD
+    command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
+    command.default.execution.timeout.enabled: false
+    command.default.fallback.enabled: false
+    threadpool.default.coreSize: 20
+     

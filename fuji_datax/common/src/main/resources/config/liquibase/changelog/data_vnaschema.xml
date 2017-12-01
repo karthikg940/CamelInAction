@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+	<changeSet author="virtusapolaris" id="20092017165600">
+		<sql dbms="h2" endDelimiter=";" >
+
+
+			CREATE TABLE ACCESSION_NUMBER_T(
+			STUDY_FK bigint ,
+			ACCESSION_NUMBER varchar(16) ,
+			ID_TYPE varchar(64) ,
+			CREATED_DATE_TIME TIMESTAMP 
+			);
+
+			CREATE TABLE CFG_ORG_T(
+			ORG_PK int ,
+			NAME varchar(64) ,
+			DESCRIPTION varchar(250) ,
+			PARENT_ORG_FK int ,
+			USE_VALIDATION_TRANSLATION bit ,
+			IGNORE__INCOMING_MATCHING bit ,
+			IS_PMO bit ,
+			IS_STMO bit ,
+			MERGE_SR bit ,
+			ID_TYPE varchar(250) ,
+			PREFIX varchar(4) ,
+			PRIMARY KEY(ORG_PK)
+			);
+
+			CREATE TABLE PATIENT_ID_T(
+			PATIENT_ID_PK bigint ,
+			PATIENT_FK bigint ,
+			ID_TYPE varchar(64) ,
+			ISSUER varchar(255) ,
+			MEDICAL_ID varchar(64) ,
+			CREATED_DATE_TIME TIMESTAMP ,
+			CALC_LC_MEDICAL_ID varchar(64),
+			PRIMARY KEY(PATIENT_ID_PK)
+			);
+
+			CREATE TABLE PATIENT_T(
+			PATIENT_PK bigint,
+			BIRTH_DATE TIMESTAMP ,
+			FIRST_NAME varchar(64) ,
+			MIDDLE_NAME varchar(64) ,
+			LAST_NAME varchar(64) ,
+			PREFIX varchar(64) ,
+			SUFFIX varchar(64) ,
+			GENDER varchar(16) ,
+			ETHNIC_ORIGIN varchar(255) ,
+			MPI_ID varchar(64) ,
+			PRIMARY KEY(PATIENT_PK)
+			);
+
+
+			CREATE TABLE PATIENT_WORKLIST_T(
+			PATIENT_WORKLIST_PK bigint,
+			PATIENT_FK bigint ,
+			ORG_FK bigint ,
+			WORK_DATE_TIME TIMESTAMP ,
+			WORK_DESCRIPTION varchar(255) ,
+			ENCOUNTER_NUMBER_TYPE smallint ,
+			ENCOUNTER_NUMBER varchar(20) ,
+			STATUS smallint ,
+			CREATED_DATE_TIME TIMESTAMP ,
+			LAST_UPDATED_DATE_TIME TIMESTAMP ,
+			PRIMARY KEY(PATIENT_WORKLIST_PK)
+			);
+
+
+			CREATE TABLE PERSON_T(
+			PERSON_PK bigint ,
+			FIRST_NAME varchar(64) ,
+			MIDDLE_NAME varchar(64) ,
+			LAST_NAME varchar(64) ,
+			PREFIX varchar(64) ,
+			SUFFIX varchar(64) ,
+			PRIMARY KEY(PERSON_PK)
+			);
+
+
+
+			CREATE TABLE SERIES_T(
+			SERIES_PK bigint ,
+			STUDY_FK bigint ,
+			SERIES_UID varchar(64) ,
+			SERIES_NUMBER varchar(255) ,
+			DESCRIPTION varchar(255) ,
+			DICOM_MAPPING_FILE varchar(100) ,
+			MODALITY varchar(16) ,
+			BODY_PART varchar(255) ,
+			LATERALITY varchar(16) ,
+			CLUSTER_FK bigint ,
+			OPERATOR_FK bigint ,
+			EQUIPMENT_ULN varchar(65) ,
+			EQUIPMENT_ID varchar(16) ,
+			ORGANIZATION_ULN varchar(65) ,
+			INSTITUTION varchar(255) ,
+			DEPARTMENT varchar(255) ,
+			STATION_NAME varchar(255) ,
+			PERFORMING_PHYSICIAN_FK bigint ,
+			SERIES_DATE_TIME TIMESTAMP ,
+			UPDATE_SEQUENCE int ,
+			PRIMARY KEY(SERIES_PK)
+			);
+
+			CREATE TABLE SOP_INSTANCE_T(
+			SOP_INSTANCE_PK bigint,
+			SERIES_FK bigint ,
+			STUDY_FK bigint ,
+			SOP_INSTANCE_TYPE int ,
+			SOP_INSTANCE_UID varchar(64) ,
+			SOP_CUID varchar(64) ,
+			ACQUIRED_DATE_TIME TIMESTAMP ,
+			FILE_NAME varchar(33) ,
+			IMAGE_NUMBER int ,
+			COMMITTED_INDICATOR varchar(1) ,
+			ORIGINAL_SIZE bigint ,
+			FRAME_COUNT int ,
+			PRIMARY KEY(SOP_INSTANCE_PK)
+			);
+
+
+		CREATE TABLE STUDY_T(
+			STUDY_PK bigint ,
+			PATIENT_FK bigint ,
+			STUDY_ID varchar(255) ,
+			DESCRIPTION varchar(255) ,
+			CREATED_DATE_TIME TIMESTAMP ,
+			SCHEDULED_DATE_TIME TIMESTAMP ,
+			PERFORMED_DATE_TIME TIMESTAMP ,
+			COMPLETED_DATE_TIME TIMESTAMP ,
+			STUDY_UID varchar(64) ,
+			REFERRING_PHYSICIAN_FK bigint ,
+			REQUESTING_PHYSICIAN_FK bigint ,
+			PATIENT_AGE varchar(4) ,
+			PATIENT_HEIGHT varchar(20) ,
+			PATIENT_WEIGHT varchar(20) ,
+			INTERNAL_VALIDATION_STATUS varchar(1) ,
+			ARCHIVE_STATUS smallint ,
+			LAST_ACCESSED_DATE_TIME TIMESTAMP ,
+			STMO varchar(65) ,
+			PRIMARY KEY(STUDY_PK)
+			);
+			
+			CREATE TABLE LOCATION_T(
+			LOCATION_PK bigint ,
+			BAG_FK bigint ,
+			STORAGE_LOCATION_ULN varchar(255) ,
+			DIRECTORY_NAME varchar(255) ,
+			CONTAINER_IDENTIFIER TIMESTAMP ,
+			CREATED_DATE_TIME TIMESTAMP ,
+			LAST_UPDATED_DATE_TIME TIMESTAMP ,
+			PRIMARY KEY(LOCATION_PK)
+			);
+			
+			CREATE TABLE BAG_T(
+    		BAG_PK bigint ,
+    		STUDY_FK bigint ,
+		    STORAGE_GROUP_ULN varchar(65) ,
+		    STORAGE_POOL_ULN varchar(65) ,
+		    STORAGE_GROUP_TYPE smallint ,
+		    VERSION_NUMBER int ,
+		    TOTAL_KB bigint ,
+		    LAST_UPDATED_DATE_TIME TIMESTAMP ,
+		    CREATED_DATE_TIME TIMESTAMP,
+			);
+			
+			CREATE TABLE CFG_LOCATION_CLUSTER_T(
+			LOCATION_CLUSTER_PK bigint,
+			STORAGE_LOCATION_FK bigint,
+			LOCAL_DIRECTORY varchar(65)
+			);
+			
+			CREATE TABLE CFG_STORAGE_LOCATION_T(
+			STORAGE_LOCATION_PK BIGINT,
+			NAME varchar(65)
+			);
+			
+			CREATE TABLE ORDER_T(
+			ORDER_PK SMALLINT,
+			PATIENT_FK BIGINT,
+			STUDY_FK BIGINT,
+			ACCESSION_NUMBER VARCHAR(255),
+			ID_TYPE VARCHAR(255),
+			CONTROL_CODE VARCHAR(255),
+			STUDY_UID VARCHAR(255),			
+			EXAM_ID_DESCRIPTION VARCHAR (255),
+			ORDER_ID VARCHAR(255),
+			ORDER_GROUP BIGINT,
+			REPORT_STATUS VARCHAR(255),
+			OBSERVATION_DATE TIMESTAMP,
+			PATIENT_ACCOUNT_NUMBER VARCHAR(255),
+			NOTIFICATION_STATUS SMALLINT,
+			NOTIFICATION_DATE_TIME TIMESTAMP,
+			CREATED_DATE_TIME TIMESTAMP,
+			STMO VARCHAR(255)
+			);
+			
+			
+      insert into STUDY_T values(76001,76000000000001,'STUDY_ID_1001','Cardiac','2016-09-12T06:15:07.100','2016-09-12T06:15:07.100','2016-09-12T06:15:07.100',
+'2016-09-12T06:15:07.100','1.2.840.114302.2886735114.259.1437101350134.10002',1001,1002,'21','180','78','0',0,'2016-09-12T06:15:07.100',
+'ivizuln');	
+
+insert into BAG_T values(77001,76001,'dicom_online_policy_uln','dicom_online_pool_uln',1,3,1,'2017-01-28 13:18:04.097','2017-01-28 13:18:04.097');
+
+insert into LOCATION_T values(78001,77001,'dicom_online_location_uln','20170128\30905892','2017-01-28 13:18:04.097','2017-01-28 13:18:04.097','2017-01-28 13:18:04.097');
+		
+		
+	insert into STUDY_T values(76002,76000000000001,'STUDY_ID_1001','','2016-09-12T06:15:07.100','2016-09-12T06:15:07.100','2016-09-12T06:15:07.100',
+'2016-09-12T06:15:07.100','1.2.840.114302.2886735114.259.1437101350134.10002',1001,1002,'21','180','78','0',0,'2016-09-12T06:15:07.100',
+'ivizuln');	
+
+insert into BAG_T values(77002,76002,'dicom_online_policy_uln','dicom_online_pool_uln',1,3,1,'2017-01-28 13:18:04.097','2017-01-28 13:18:04.097');
+
+insert into LOCATION_T values(78002,77002,'dicom_online_location_uln','20170128/30905892','2017-01-28 13:18:04.097','2017-01-28 13:18:04.097','2017-01-28 13:18:04.097');
+
+insert into SERIES_T values(7800001,76002,'SERIES_UID_101','SERIES_NUMBER_101','','','US','HEART','',100,1001,'dataxivizuln','philips','ivizuln',
+'U.Z.K.U.Leuven','','philips',1001,'2016-10-18 13:04:27',1002);
+
+insert into SOP_INSTANCE_T values(790021L,7800001,76002,2,'SOP_INSTACE_UID','0','2016-09-12T06:15:07.100','4fca5aec',1,'Y',1,1);
+
+insert into CFG_STORAGE_LOCATION_T values(7001,'dicom_online_location_uln');
+
+insert into CFG_LOCATION_CLUSTER_T values(10001,7001,'E:\pools40\iViz\DICOM');
+
+insert into ORDER_T values(1,6000000000101,76000000000101,'10000000025','','','','9001^Cardiac','1000001',1,'','2016-09-12T06:15:07.100','',1,'2016-09-12T06:15:07.100','2016-09-12T06:15:07.100','Clinical');
+<!-- insert into ORDER_T values(2,6000000000101,76000000000102,10000000098,'95114^cardiac','Clinical'); --> <!-- patient id mismatch -->
+insert into ORDER_T values(3,6000000000103,76000000000103,'10000000098','','','','9001^Cardiac','1000001',1,'','2016-09-12T06:15:07.100','',1,'2016-09-12T06:15:07.100','2016-09-12T06:15:07.100','Clinical'); <!-- exam type mismatch -->
+insert into ORDER_T values(5,6000000000103,76000000000106,'10000000088','','','','12345^RT Ankle','1000001',1,'','2016-09-12T06:15:07.100','',1,'2016-09-12T06:15:07.100','2016-09-12T06:15:07.100','MRI'); <!-- dept/stmo mismatch -->
+<!-- insert into ORDER_T values(4,6000000000103,76000000000105,10000000098,'95114^cardiac','Clinical'); --> <!-- accession number mismatch -->
+
+insert into ORDER_T values(6,6000000000107,76000000000107,'10000000097','','','','9001^Cardiac','1000001',1,'','2016-09-12T06:15:07.100','',1,'2016-09-12T06:15:07.100','2016-09-12T06:15:07.100','Clinical'); <!-- MRN no mismatch -->
+<!-- insert into ORDER_T values(5,6000000000103,76000000000103,10000000098,'95114^cardiac','clinical'); --> <!-- visit mismatch -->
+
+		</sql>
+
+	</changeSet>
+</databaseChangeLog>

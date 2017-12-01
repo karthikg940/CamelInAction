@@ -1,0 +1,9 @@
+{  
+   "orgId":1,
+   "notification":
+   {  
+      "from":1001,
+      "to":[ 1002, 1003 ],
+      "message":"You have been allocated to perform a test on patient."
+   }
+}

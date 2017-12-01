@@ -1,0 +1,13 @@
+
+jar {
+	baseName = 'security'
+	version = '0.0.2-SNAPSHOT'
+}
+
+bootRepackage {
+	enabled = false
+}
+
+dependencies {
+	compile group: 'io.jsonwebtoken', name: 'jjwt', version:'0.6.0'
+}

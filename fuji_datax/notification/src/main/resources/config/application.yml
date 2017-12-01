@@ -1,0 +1,67 @@
+
+server:
+    port: 7078
+
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/
+                      
+liquibase:
+    enabled: false
+
+spring:
+    application:
+        name: notification
+    datasource:
+        dataSourceClassName: com.mysql.jdbc.jdbc2.optional.MysqlDataSource
+        url: jdbc:mysql://${DB_URL:localhost}:${DB_PORT:3306}/${DB_NAME:datax}
+        databaseName:
+        serverName:
+        username: ${DB_USERNAME:root}
+        password: ${DB_PASSWORD:}
+
+    jpa:
+        database-platform: org.hibernate.dialect.MySQLInnoDBDialect
+        database: MYSQL
+        openInView: true
+        show_sql: true
+        generate-ddl: false
+        hibernate:
+            ddl-auto: validate
+            naming-strategy: org.hibernate.cfg.EJB3NamingStrategy
+        properties:
+            hibernate.cache.use_second_level_cache: false
+            hibernate.cache.use_query_cache: false
+            hibernate.generate_statistics: true
+            hibernate.hbm2ddl.auto: validate
+    mail:
+        host: 0.0.0.0
+        port: 25
+        username:
+        password:
+        protocol: smtp
+        properties:
+            mail:
+                smtp:
+                    tls: false
+                    auth: false
+                    ssl: false
+                    trust: '*'       
+notification:
+    threadpoolTask:
+        corePoolSize: 10
+        maxPoolSize:  20
+        queueCapacity:  200
+        sleepInterval:  2000
+    threadpoolReq:
+        corePoolSize: 2
+        maxPoolSize:  3
+        queueCapacity:  200
+        sleepInterval:  2000  
+    maxErrorCount:  10
+    default:
+      mail:
+        from: DataX Workflow Mailer<DoNotReply@TBD.com>
+    baseUrl: http://localhost:8080/
+            

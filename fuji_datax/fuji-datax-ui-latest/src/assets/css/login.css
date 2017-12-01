@@ -1,0 +1,124 @@
+*{
+  margin:0;
+  padding:0;
+}
+body{
+  /* font-family:-apple-system,"Helvetica Neue",Helvetica,"Segoe UI",Arial,sans-serif;*/
+  font-family:arial;
+  color:#989898;
+}
+.nopadding{
+  padding-left:0px;
+  padding-right:0px;
+}
+.wrapper{
+  overflow-x:hidden;
+}
+.logpag_bg{
+  background: url(../images/background_login.png) center center/cover no-repeat fixed;
+}
+.log_bg{
+  margin:10% auto 0;
+  display:table;
+  background:#fff;
+  width:20%;
+  border:1px solid #ccc;
+  border-radius:5px;
+}
+.logo_bg{
+  float:left;
+  clear:left;
+  width:100%;
+}
+.logo_brdr{
+  border-bottom:1px dotted #999;
+  width:85%;
+  margin:10px auto 0px;
+}
+.logo{
+  background:url(../images/blue_logo.png) center no-repeat;
+  width:200px;
+  height:40px;
+  margin:7% auto;
+}
+.dat_titl{
+  color:#00539c;
+  font-size:20px;
+  text-align:center;
+  margin:5px auto;
+  font-weight:bold;
+}
+.login_form{
+  float:left;
+  clear:left;
+  margin-top:10px;
+  width:100%;
+  padding-bottom:10px;
+}
+.logi_titl{
+  color:#000;
+  font-size:15px;
+  text-align:center;
+  margin:5px auto 10px;
+  font-weight:bold;
+}
+.tp-space{
+  margin-top:10px;
+}
+.chk_info{
+  font-size:13px;
+  color:#000;
+}
+.log_btn{
+  width:100%;
+  border:none;
+  background:#00aeef;
+  text-align:center;
+  color:#fff;
+  font-size:15px;
+  font-weight:bold;
+  padding:5px;
+  border-radius:3px;
+}
+.pag_links{
+  margin-top:30px;
+}
+.pag_links a{
+  color:#000;
+  font-size:12px;
+  text-decoration:none;
+}
+.cpy_info{
+  color:#666;
+  font-size:13px;
+  text-align:center;
+  padding-top:5px;
+}
+
+@media screen and (max-width:980px){
+  /*.logpag_bg{
+    background:#a8ad9f url(../images/background_login.png) fixed top/contain no-repeat;
+  }*/
+  .log_bg{
+    width:35%;
+    margin-top:6%;
+  }
+}
+@media screen and (max-width:1050px){
+  .log_bg{
+    width:35%;
+    margin-top:6%;
+  }
+}
+@media screen and (max-width:820px){
+  .log_bg{
+    width:40%;
+    margin-top:2%;
+  }
+}
+@media screen and (max-width:480px){
+  .log_bg{
+    width:70%;
+    margin-top:3%;
+  }
+}

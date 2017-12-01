@@ -1,0 +1,52 @@
+{
+  "result":[
+  {
+    "id": 1,
+    "orgId": 1,
+    "channel_id": 2,
+    "datax_user": "1001",
+    "message": "You have been allocated to perform a test on patient.",
+    "status": "UNREAD",
+    "created_by": "1002",
+    "updated_by": null,
+    "createdDateTime": 1494828772000,
+    "updatedDateTime": 1494828772000
+  },
+  {
+    "id": 3,
+    "orgId": 1,
+    "channel_id": 2,
+    "datax_user": "1001",
+    "message": "You have been allocated to perform a test on patient.",
+    "status": "READ",
+    "created_by": "1002",
+    "updated_by": null,
+    "createdDateTime": 1494828965000,
+    "updatedDateTime": 1494828965000
+  },
+  {
+    "id": 10,
+    "orgId": 1,
+    "channel_id": 2,
+    "datax_user": "1001",
+    "message": "You have been allocated to perform a test on patient.",
+    "status": "UNREAD",
+    "created_by": "1002",
+    "updated_by": null,
+    "createdDateTime": 1494828772000,
+    "updatedDateTime": 1494828772000
+  },
+  {
+    "id": 5,
+    "orgId": 1,
+    "channel_id": 2,
+    "datax_user": "1001",
+    "message": "You have been allocated to perform a test on patient.",
+    "status": "READ",
+    "created_by": "1002",
+    "updated_by": null,
+    "createdDateTime": 1494828965000,
+    "updatedDateTime": 1494828965000
+  }
+]
+}

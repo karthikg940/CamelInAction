@@ -1,0 +1,16 @@
+
+jar {
+	baseName = 'studylist'
+	version = '0.0.2-SNAPSHOT'
+}
+
+dependencies {
+	compile project(':common')
+	compile project(':security')
+	compile group: 'org.codehaus.groovy', name: 'groovy-templates', version: '2.0.0'
+	//	compile group: 'com.netflix.governator', name: 'governator-archaius', version: '1.17.0'
+	//		compile group: 'com.netflix.zuul', name: 'zuul-netflix', version: '0.5.0'
+	//	compile group: 'org.springframework.cloud', name: 'spring-cloud-netflix-core', version: '1.0.0.RELEASE'
+	//	compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-zuul', version: '1.0.0.RELEASE'
+
+}

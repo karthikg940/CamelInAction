@@ -1,0 +1,322 @@
+{
+  "id": "wrk1",
+  "sections": [
+    {
+      "id": "indications",
+      "name": "Indications for Exam",
+      "required": true,
+      "topics": [
+        {
+          "id" : "default",
+          "name": "",
+          "type": "multi-select",
+          "columnLayout": 2,
+          "options": [
+            {"id":"cardiac-arrest", "name": "Cardiac Arrest"},
+            {"id":"chest-wall-injury", "name": "Chest Wall Injury"},
+            {"id":"hypotension", "name": "Hypotension"},
+            {"id":"hypertension", "name": "Hypertension"},
+            {"id":"dyspnea", "name": "Dyspnea"},
+            {"id":"shock", "name": "Shock"},
+            {"id":"syncope", "name": "Syncope"},
+            {"id":"chest-pain", "name": "Chest Pain"},
+            {"id":"tachypnea", "name": "Tachypnea"},
+            {"id":"shortness-of-breath", "name": "Shortness of breath"},
+            {"id":"fever", "name": "Fever"},
+             {"id":"tachycardia", "name": "Tachycardia"},
+             {"id":"palpitations", "name": "Palpitations"},
+              {"id":"educational", "name": "Educational"}
+          ]
+        },
+        {
+          "id" : "others",
+          "name": "Other",
+          "type": "text"
+        }
+      ]
+    },
+
+    {
+      "id": "views",
+      "name": "Views",
+      "required": true,
+      "topics": [
+        {
+          "id" : "subxiphoid-4-chamber",
+          "name": "Subxiphoid(4 Chamber)",
+          "type": "single-select",
+          "columnLayout": 3,
+          "options": [
+            {"id":"adequate", "name": "Adequate"},
+            {"id":"limited", "name": "Limited"},
+            {"id":"not-obtained", "name": "Not Obtained"}
+          ]
+        },
+        {
+          "id" : "parasternal-long-axis",
+          "name": "Parasternal Long Axis",
+          "type": "single-select",
+          "columnLayout": 3,
+          "options": [
+            {"id":"adequate", "name": "Adequate"},
+            {"id":"limited", "name": "Limited"},
+            {"id":"not-obtained", "name": "Not Obtained"}
+          ]
+        },
+        {
+          "id" : "parasternal-short-axis",
+          "name": "Parasternal Short Axis",
+          "type": "single-select",
+          "columnLayout": 3,
+          "options": [
+            {"id":"adequate", "name": "Adequate"},
+            {"id":"limited", "name": "Limited"},
+            {"id":"not-obtained", "name": "Not Obtained"}
+          ]
+        },
+        {
+          "id" : "subxiphoid-long-axis-ivc-view",
+          "name": "Subxiphoid(Long Axis, IVC View)",
+          "type": "single-select",
+          "columnLayout": 3,
+          "options": [
+            {"id":"adequate", "name": "Adequate"},
+            {"id":"limited", "name": "Limited"},
+            {"id":"not-obtained", "name": "Not Obtained"}
+          ]
+        },
+        {
+          "id" : "apical-four-chamber",
+          "name": "Apical Four-Chamber",
+          "type": "single-select",
+          "columnLayout": 3,
+          "options": [
+            {"id":"adequate", "name": "Adequate"},
+            {"id":"limited", "name": "Limited"},
+            {"id":"not-obtained", "name": "Not Obtained"}
+          ]
+        },
+        {
+          "id" : "others",
+          "name": "Other",
+          "type": "text"
+        }
+      ]
+    },
+
+    {
+      "id": "findings",
+      "name": "Findings",
+      "required": true,
+      "topics": [
+        {
+          "id" : "pericardial-effusion",
+          "name": "Pericardial Effusion",
+          "type": "single-select",
+          "columnLayout": 3,
+          "options": [
+            {"id":"present", "name": "Present"},
+            {"id":"absent", "name": "Absent"},
+            {"id":"indeterminate-size", "name": "Indeterminate Size"}
+          ],
+          "topics":[
+            {
+              "id" : "if-present",
+              "name": "If Present",
+              "type": "single-select",
+              "columnLayout": 2,
+              "options": [
+                {"id":"small", "name": "Small"},
+                {"id":"moderate", "name": "Moderate"},
+                {"id":"large", "name": "Large"},
+                {"id":"present-size-not-specified", "name": "Present Size Not Specified"}
+              ]
+            },
+            {
+              "id" : "evidence-of-tamponade",
+              "name": "Evidence Of Tamponade",
+              "type": "single-select",
+              "columnLayout": 2,
+              "options": [
+                {"id":"ivc-plethoric", "name": "IVC plethoric"},
+                {"id":"r-ventricular-collapse", "name": "R ventricular collapse"},
+                {"id":"r-atrial-collapse", "name": "R atrial collapse"},
+                {"id":"excessive-mitral-inflow-variation", "name": "Excessive mitral inflow variation"}
+              ]
+            }
+          ]
+        },
+        {
+          "id" : "global-ventricular-function",
+          "name": "Global Ventricular Function",
+          "type": "single-select",
+          "columnLayout": 2,
+          "options": [
+            {"id":"hyperdynamic", "name": "Hyperdynamic"},
+            {"id":"normal", "name": "Normal"},
+            {"id":"reduced", "name": "Reduced"},
+            {"id":"severely-reduced", "name": "Severely Reduced"},
+            {"id":"asystole", "name": "Asystole"},
+            {"id":"indeterminate", "name": "Indeterminate"}
+          ]
+        },
+        {
+          "id" : "right-ventricular-size",
+          "name": "Right Ventricular Size",
+          "type": "single-select",
+          "columnLayout": 3,
+          "options": [
+            {"id":"normal", "name": "Normal"},
+            {"id":"dilated", "name": "Dilated"},
+            {"id":"indeterminate", "name": "Indeterminate"}
+          ],
+          "topics":[
+            {
+              "id" : "signs-of-rv-strian",
+              "name": "Signs Of RV Strain",
+              "type": "multi-select",
+              "columnLayout": 1,
+              "options": [
+                {"id":"rv-hypokinesis", "name": "RV Hypokinesis"},
+                {"id":"paradoxical-septal-motion", "name": "Paradoxical Septal Motion"},
+                {"id":"mcconnells-sign", "name": "McConnell's Sign"},
+                {"id":"tricuspid-regurgitation", "name": "Tricuspid Regurgitation", "topics": [
+                  {
+                    "id": "max-velocity",
+                    "name": "Max Velocity(m/s)",
+                    "type": "text-number"
+                  }
+                ]},
+                {"id":"rv-hypertrophy", "name": "RV Hypertrophy"}
+              ]
+            }
+          ]
+        },
+        {
+          "id" : "thoracic-aorta",
+          "name": "Thoracic Aorta",
+          "type": "single-select",
+          "columnLayout": 3,
+          "options": [
+            {"id":"present", "name": "Present"},
+            {"id":"absent", "name": "Absent"},
+            {"id":"indeterminate", "name": "Indeterminate"}
+          ],
+          "topics":[
+            {
+              "id": "aortic-root",
+              "name": "Aortic Root(mm)",
+              "type": "text-number"
+            },
+            {
+              "id": "thoracic-aorta-diameter",
+              "name": "Thoracic Aorta Diameter(mm)",
+              "type": "text-number"
+            }
+          ]
+        },
+        {
+          "id" : "ivc",
+          "name": "IVC",
+          "type": "single-select",
+          "columnLayout": 2,
+          "options": [
+            {"id":"normal", "name": "Normal"},
+            {"id":"dilated", "name": "Dilated"},
+            {"id":"collapsed", "name": "Collapsed"},
+            {"id":"indeterminate", "name": "Indeterminate"}
+          ],
+          "topics":[
+            {
+              "id": "maximum-diameter",
+              "name": "Maximum Diameter(mm)",
+              "type": "text-number"
+            },
+            {
+              "id": "minimum-diameter",
+              "name": "Minimum Diameter(mm)",
+              "type": "text-number"
+            },
+            {
+              "id": "collapse",
+              "name": "Collapse",
+              "type": "single-select",
+              "columnLayout": 2,
+              "options": [
+                {"id":"gt-50", "name": "> 50%"},
+                {"id":"lt-50", "name": "< 50%"}
+              ]
+            }
+          ]
+        },
+        {
+          "id" : "others",
+          "name": "Other",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "interpretations",
+      "name": "Interpretations",
+      "required": true,
+      "topics": [
+        {
+          "id" : "standard",
+          "name": "",
+          "type": "multi-select",
+          "columnLayout": 1,
+          "options": [
+            { "id":"cardiac-dysfunction", "name": "No sonographic evidence of significant cardiac dysfunction" },
+            { "id":"pericardial-effusion", "name": "No sonographic evidence of significant pericardial effusion" },
+            {"id":"pericardialeffusion", "name": "Pericardial Effusion:" ,
+
+              "topics": [{
+                "id": "pericardialeffusion-size",
+                "name":"",
+                "type": "single-select",
+                "columnLayout": 2,
+                "options": [
+                  {"id":"small", "name": "Small"},
+                  {"id":"moderate", "name": "Moderate"},
+                  {"id":"large", "name": "Large"},
+                  {"id":"present-size-not-specified", "name": "Present Size Not Specified"}
+                ]}
+              ]
+            },
+            {"id":"global-ventricular-function", "name": "Global Ventricular Function" ,
+
+              "topics": [{
+                "id": "global-ventricular-option",
+                "name":"",
+                "type": "single-select",
+                "columnLayout": 2,
+                "options": [
+                  {"id":"hyperdynamic", "name": "Hyperdynamic"},
+                  {"id":"normal", "name": "Normal"},
+                  {"id":"reduced", "name": "Reduced"},
+                  {"id":"severely-reduced", "name": "Severely Reduced"}
+
+                ]}
+              ]
+            },
+
+            {"id":"cardiac-standstill", "name": "No cardiac activity/ Cardiac standstill"},
+            {"id":"size-dilation", "name": "No sonographic evidence of RV size dilation"},
+            {"id":"rv-dilation", "name": "RV dilation"},
+            {"id":"volume-depletion", "name": "No sonographic evidence of volume depletion"},
+            {"id":"depletion", "name": "Sonographic findings suggestive of volume depletion"},
+            {"id":"dilatedIVC", "name": "Dilated IVC"},
+            {"id":"aortic-root", "name": "No evidence of sonographic aortic root dilation"},
+            {"id":"dilated-aortic-root", "name": "Dilated Aortic Root"}
+          ]
+        },
+        {
+          "id" : "others",
+          "name": "Other",
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}

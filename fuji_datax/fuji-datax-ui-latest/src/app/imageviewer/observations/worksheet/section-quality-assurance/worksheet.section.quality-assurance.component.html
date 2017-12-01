@@ -1,0 +1,104 @@
+<modal #submitToEMR [keyboard]="false" [backdrop]="false">
+    <modal-header [show-close]="false">
+        <h4 class="modal-title">SubmitToEMR</h4>
+    </modal-header>
+    <modal-body>
+    Study successfully submitted to EMR
+    </modal-body>
+</modal>
+
+<modal #submitForAttestationToast [keyboard]="false" [backdrop]="false">
+    <modal-header [show-close]="false">
+        <h4 class="modal-title">Submit for Attestation</h4>
+    </modal-header>
+    <modal-body>
+    Study successfully submitted for Attestation
+    </modal-body>
+</modal>
+
+<modal #newQaAssociationWrksht [keyboard]="false" [backdrop]="'static'">
+    <modal-header [show-close]="false">
+        <h4 class="modal-title">Associate worksheet</h4>
+    </modal-header>
+    <modal-body>
+     Please confirm to associate worksheet to study
+    </modal-body>
+    <modal-footer>
+        <button type="button" class="btn btn-default" (click)="confirmQaAssociation()">Ok</button>
+        <button type="button" class="btn btn-primary" (click)="cancelQaAssociation()">Cancel</button>
+    </modal-footer>
+</modal>
+
+<modal #associateQaWorksheetPopup [keyboard]="false" [backdrop]="'static'">
+    <modal-header [show-close]="false">
+        <h4 class="modal-title">Replace worksheet</h4>
+    </modal-header>
+    <modal-body>
+     The current worksheet data will be lost. Do you want to replace the worksheet?
+    </modal-body>
+    <modal-footer>
+        <button type="button" class="btn btn-default" (click)="confirmQaAssociation()">Yes</button>
+        <button type="button" class="btn btn-primary" (click)="cancelQaAssociation()">No</button>
+    </modal-footer>
+</modal>
+
+<div id="{{id}}" class="qawrkshtpanelhead panel-heading clearfix">
+  <h4 class="m-y-0 pull-left">Quality Assurance</h4>
+  <span class="pull-right"><span><i class="fa fa-chevron-down"></i></span></span>
+</div>
+<div id="panel-{{id}}" class="wrkshtpanelbody panel-body fw-15">
+  <div class="row">
+    <div class="ddWorksheet dropdown m-t-10 col-md-12">
+      <button class="btn btn-default dropdown-toggle" [disableOn]="'studyStatus == \'Attested\' ||
+      studyStatus == \'SubmittedForAttestation\'||
+      studyStatus == \'Submitted\' ||
+      qaSigned == true ||  (loggedInUser!==currentUser)'"  type="button" data-toggle="dropdown">{{(qaSelectedTemplateName)?qaSelectedTemplateName :'Choose Worksheet' }}
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li *ngFor="let qaWorksheet of qaWorksheets" (click)="onQaWorksheetSelection(qaWorksheet.id, qaWorksheet.name); onQaDropDownSelection(qaWorksheet.name)" ><a href="javascript:void(0)">{{qaWorksheet.name}}</a></li>
+      </ul>
+    </div>
+  </div>
+  <hr class="m-y-10 p-x-0">
+  <div  *ngIf="qaTemplate" class="row m-t-10">
+    <worksheet-qa-topic *ngFor="let qatopic of qaTemplate.topic" [qasign]="qasign" [id]="id" [qaId]="qatopic.id" [qaName]="qatopic.name" [qaType]="qatopic.type" [qaColumnLayout]="qatopic.columnLayout" [qaOptions]="qatopic.options" [qaRequired]="qatopic.required" [qaData]="qaData" (onQAUpdate)="onQAChildChange($event)" (onUpdate)="onChildChange($event)"></worksheet-qa-topic>
+    <div class="col-md-12 m-t-10">
+      <div class="row m-b-10">
+        <div class="col-md-12">
+          <label>Signatures</label>
+        </div>
+      </div>
+      <div class="row m-y-10">
+        <div class="col-md-12 p-x-0">
+          <div class="col-md-3">
+            <label>QA</label>
+          </div>
+          <div class="col-md-9">
+            <div class="input-group">
+              <span class="input-group-addon">
+              <input type="checkbox" aria-label="Checkbox for following text input" [disableOn]="'studyStatus == \'SubmittedForAttestation\'||
+              studyStatus == \'Submitted\' || (loggedInUser!==currentUser) || (attestedUser!==qaUser && studyStatusNum===StudyStatusEnum.Attested)'" [ngModel]="sqaData.qa.signed" (ngModelChange)="onChange('qa',$event)">
+              </span>
+              <input type="text" class="form-control" [ngModel]="sqaData.qa.sign" aria-label="Text input with checkbox" readonly>
+            </div>
+        </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <span class="pull-right">{{sqaData.qa.timestamp| date:'MMM d,y H:mm:ss'}}</span>
+        </div>
+      </div>
+      <div class="row m-y-10">
+        <div class="col-md-12">
+          <div class="col-md-12">
+            <span class="pull-right"><button class="btn btn-primary" [disableOn]="'studyStatus == \'Attested\' ||
+            studyStatus == \'SubmittedForAttestation\'||
+            studyStatus == \'Submitted\' ||
+            qaSigned == true ||  (loggedInUser!==currentUser)'" (click)="onSave()">Save</button></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

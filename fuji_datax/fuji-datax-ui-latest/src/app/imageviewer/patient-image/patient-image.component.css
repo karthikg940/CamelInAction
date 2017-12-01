@@ -1,0 +1,41 @@
+.thumbnailSelector {
+    width: 106px;
+    float: left;
+    margin-left: 0px;
+    height: 100%;
+    padding-top:30px;
+}
+.viewport {
+	top:0px;
+    left:0px;
+    position: inherit;    
+}
+
+.viewportWrapper {
+	width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #777;
+}
+.viewer {
+	width: calc(98% - 106px);
+	height:600px;
+    float: left;
+    box-sizing: border-box;
+}
+.csthumbnail {
+    color: white;
+    background-color:black;
+    width:100px;
+    height:100px;
+    border: 0px;
+    padding: 0px;
+}
+
+.image-actions {
+  color: #ffffff;
+  background-color: #424242;
+  border-color: #424242;
+}
+.thumbnails.list-group{
+	padding-left:18px
+}

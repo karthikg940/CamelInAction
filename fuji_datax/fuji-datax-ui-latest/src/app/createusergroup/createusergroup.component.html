@@ -1,0 +1,164 @@
+<modal #userGroupAddedPopup [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Add User Group</h4>
+  </modal-header>
+  <modal-body>
+    New User Group created successfully
+  </modal-body>
+</modal>
+
+<modal #userGroupupdatePopup [keyboard]="false" [backdrop]="false">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Update User Group</h4>
+  </modal-header>
+  <modal-body>
+    User Group changes saved successfully
+  </modal-body>
+</modal>
+
+<modal #cancelUsergroupPopup [keyboard]="false" [backdrop]="'static'">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Cancel user group</h4>
+  </modal-header>
+  <modal-body>
+    Please Confirm Cancellation
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="cancelUsergroup()">No</button>
+    <button type="button" class="btn btn-primary" (click)="confirmUsergroupCancel()">Yes</button>
+  </modal-footer>
+</modal>
+
+<modal #userGroupModifyPopup [keyboard]="false" [backdrop]="'static'">
+  <modal-header [show-close]="false">
+    <h4 class="modal-title">Cancel update usergroup details</h4>
+  </modal-header>
+  <modal-body>
+    There may be unsaved data. Please confirm to save changes before navigating
+  </modal-body>
+  <modal-footer>
+    <button type="button" class="btn btn-default" (click)="cancelchanges()">No</button>
+    <button type="button" class="btn btn-primary" (click)="updatechanges()">Yes</button>
+  </modal-footer>
+</modal>
+
+<!-- User Group Creation Page -->
+
+<div class="contentpage m-l-65">
+<div class="m-r-10">
+  <!-- Breadcrumbs -->
+  <div class="row m-x-0 bg-ssblue">
+  <div class="col-xs-12 col-sm-6 p-l-15">
+  <div class="pull-left color-white">
+  <h2 class="m-y-10">User Group</h2>
+  </div>
+  <ol class="breadcrumb bg-ssblue pull-left fw-15 m-b-0 m-t-10 p-l-15">
+  <li>
+  <i class="fa fa-lg fa-users color-white"></i>
+  </li>
+  <li class="color-white"><a routerLink="/usergrouplist" class="color-white">User Groups</a></li>
+  <li *ngIf="formState == 'Add'" class="color-white">New User Group Creation</li>
+  <li *ngIf="formState == 'Modify'" class="color-white">View or Modify User Group</li>
+  </ol>
+  </div>
+  </div>
+  <!-- Breadcrumbs Ends -->
+
+  <div class="row m-t-15 m-x-0">
+  <div class="col-xs-12">
+    <form novalidate  #createUserGroupForm="ngForm" novalidate>
+    <div class="col-md-offset-2 col-md-8 b-1-lightgray bg-white">
+      <div class="row m-x-0">
+        <div class="col-xs-12">
+          <h3 *ngIf="formState == 'Add'">New User Group</h3>
+          <h3 *ngIf="formState == 'Modify'">View or Modify User Group</h3>
+        </div>
+      </div>
+      <div class="row m-x-0 m-t-5">
+      <div class="col-sm-offset-2 col-md-offset-2 col-xs-12 col-sm-8 p-10">
+        <div class="col-xs-12 p-x-0">
+          <div class="col-xs-12 form-group">
+            <div class="col-xs-6 col-md-4">
+              <label>User Group Name<span class="color-red">*</span></label>
+            </div>
+            <div class="col-xs-6 col-md-6">
+              <input type="text" class="form-control" id="groupName" required [(ngModel)]="userGroup.groupName" (keypress)="validateAlpha($event);" (focus)="removeGroupNameError()" name="groupName" #groupName="ngModel" maxlength="50" (blur) = "formState == 'Modify'?true:getUserGroupName(groupName.value)" [readonly] = "formState == 'Modify'?true:false" required>
+              <div [hidden]="groupName.valid || (!createUserGroupForm.submitted)" class="alert alert-danger alertRequired">Please provide User Group name
+              </div>
+              <div [hidden]="groupNamenotValid" class="alert alert-danger alertRequired">Special characters not allowed
+              </div>
+              <div [hidden]="!groupNameExists || !groupName.valid" class="alert alert-danger">User Group name already exists in system. Please provide a different User Group name
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 p-x-0">
+          <div class="col-xs-12 form-group">
+            <div class="col-xs-6 col-md-4">
+              <label>User Group Description<span class="color-red">*</span></label>
+            </div>
+            <div class="col-xs-6 col-md-6">
+              <textarea class="form-control" id="description" required [(ngModel)]="userGroup.description" name="description" #description="ngModel" maxlength="255" required></textarea>
+              <div [hidden]="description.valid || (!createUserGroupForm.submitted)" class="alert alert-danger alertRequired">Please provide User Group Description
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 p-x-0">
+          <div class="col-xs-12 form-group">
+            <div class="col-xs-6 col-md-4">
+              <label>User List</label>
+            </div>
+            <div class="col-xs-6 col-md-6">
+              <ng-select [items]="items" [active]="userGroup.users" id="users" name="users"
+              [multiple]="true"
+              (data)="refreshValue($event)"
+              (selected)="selected($event)"
+              (removed)="removed($event)" ngDefaultControl></ng-select>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 p-x-0">
+          <div class="col-xs-12 form-group">
+            <div class="col-xs-6 col-md-4">
+              <label>Roles</label>
+            </div>
+            <div class="col-xs-6 col-md-6 clearfix">
+              <ng-select id="roles" name="roles" [items]="userRoleList" [active]="userGroup.roles"   [multiple]="true" (data)="refreshRole($event)"></ng-select>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 p-x-0">
+          <div class="col-xs-12 form-group">
+            <div class="col-xs-6 col-md-4">
+              <label>Privileges</label>
+            </div>
+            <div class="col-xs-6 col-md-6 clearfix">
+              <ng-select id="privileges" name="privileges" [items]="permissionList" [active]="userGroup.permissions" [multiple]="true" (data)="refreshPermission($event)"></ng-select>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 p-x-0">
+          <div class="col-xs-12 form-group">
+            <div class="col-xs-6 col-md-4">
+              <label>Org Level</label>
+            </div>
+            <div class="col-xs-6 col-md-6 clearfix">
+              <ng-select id="organizations" name="organizations"  [items]="organizationList" [active]="userGroup.userOrg"[multiple]="true" (data)="refreshOrgValue($event)"></ng-select>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 m-b-10 p-x-0">
+          <div class="col-xs-offset-4 col-md-offset-4">
+            <button type="button" id="cancel" class="btn btn-primary" (click)="cancelPopup(createUserGroupForm.value)">Cancel</button>
+            <button type="submit" id="save" class="btn btn-primary" (click)="doSave(createUserGroupForm.value,createUserGroupForm.valid,false)">Save</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    </form>
+  </div>
+  </div>
+</div>
+</div>

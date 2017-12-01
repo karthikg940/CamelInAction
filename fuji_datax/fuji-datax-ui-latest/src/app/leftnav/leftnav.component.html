@@ -1,0 +1,254 @@
+<div class="row"  >
+<!-- Start Left Nav -->
+  <div>
+    <nav class="left-nav sidebar bg-black hidden-xs">
+      <ul class="exp-leftnav">
+        <li class="parentmenu popup" data-icon="1">
+          <a class="color-white p-15">
+            <i class="fa fa-pie-chart fa-lg active"></i>
+            <span class="fw-15 p-l-10 parentli">Dashboard</span>
+          </a>
+          <div>
+            <ul class="submenu">
+              <li class="">
+                <a routerLink="/dashboard" routerLinkActive="active" class="color-white p-15">
+                  <span class="fw-15 active">My Tasks</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="parentmenu popup" data-icon="2">
+          <a class="color-white p-15">
+            <i class="fa fa-th-list fa-lg"></i>
+            <span class="fw-15 p-l-10 parentli">StudyList</span>
+          </a>
+          <div>
+            <ul class="submenu">
+            <li class="">
+              <a routerLink="/studylist" [queryParams]="{ id: 'mystudies', start:'', end:'', label: 'Past 24Hrs'}" routerLinkActive="active" class="color-white">
+                <span class="fw-15 active">My Studies</span>
+              </a>
+            </li>
+            <li class="">
+              <a routerLink="/studylist" [queryParams]="{ id: 'myattestation', start:'', end:'', label: 'Past 24Hrs'}" routerLinkActive="active" class="color-white">
+                <span class="fw-15 active">My Attestation</span>
+              </a>
+            </li>
+            </ul>
+          </div>
+        </li>
+        <li class="parentmenu popup" data-icon="3">
+          <a class="color-white p-15">
+            <i class="fa fa-lg fa-user-circle"></i>
+            <span class="fw-15 p-l-10 parentli">Admin</span>
+          </a>
+          <div>
+            <ul class="submenu">
+              <li class="">
+                <a routerLink="/userlist" routerLinkActive="active" class="color-white p-15">
+                  <span class="fw-15 active">User Profile</span>
+                </a>
+              </li>
+              <li class="">
+                <a routerLink="/usergrouplist" routerLinkActive="active" class="color-white p-15">
+                  <span class="fw-15 active">User Group</span>
+                </a>
+              </li>
+			  <li class="">
+                <a routerLink="/worksheetconfig" routerLinkActive="active" class="color-white p-15">
+                  <span class="fw-15 active">Worksheet Config</span>
+                </a>
+              </li>
+              <li class="">
+                <a routerLink="/examtypelist" routerLinkActive="active" class="color-white p-15">
+                  <span class="fw-15 active">Exam Type</span>
+                </a>
+              </li>
+              <li class="">
+                <a routerLink="/rolelist" routerLinkActive="active" class="color-white p-15">
+                  <span class="fw-15 active">Roles</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="parentmenu popup" data-icon="4">
+          <a class="color-white p-15">
+            <i class="fa fa-cog fa-lg"></i>
+            <span class="fw-15 p-l-10 parentli">Settings</span>
+          </a>
+          <div>
+            <ul class="submenu">
+              <li class="{{ldapConfigEnabled?'hide':'show'}}">
+                <a routerLink="/passwordconfig" routerLinkActive="active" class="color-white p-15">
+                  <span class="fw-15 active">Password Configuration</span>
+                </a>
+              </li>
+              <li class="">
+                <a routerLink="/ldapconfig" routerLinkActive="active" class="color-white p-15">
+                  <span class="fw-15 active">LDAP Configuration</span>
+                </a>
+              </li>
+              <li class="">
+                <a routerLink="/smtpconfig" routerLinkActive="active" class="color-white p-15">
+                  <span class="fw-15 active">SMTP Configuration</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+<!-- End Left Nav -->
+
+<!--POP UOP MENU-->
+<div class="popover-menu icon1 hidden-xs">
+  <ul>
+    <li class="p-15">
+      <a routerLink="/dashboard" routerLinkActive="active" class="color-white">
+        <span class="fw-15 active">My Tasks</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="popover-menu icon2 hidden-xs">
+  <ul>
+    <li class="p-15">
+      <a routerLink="/studylist"[queryParams]="{ id: 'mystudies', start:'', end:'', label: 'Past 24Hrs'}"  routerLinkActive="active" class="color-white">
+        <span class="fw-15 active">My Studies</span>
+      </a>
+    </li>
+    <li class="p-15">
+      <a routerLink="/studylist" [queryParams]="{ id: 'myattestation', start:'', end:'', label: 'Past 24Hrs'}" routerLinkActive="active" class="color-white">
+        <span class="fw-15 active">My Attestation</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="popover-menu icon3 hidden-xs">
+  <ul>
+    <li class="p-15">
+      <a routerLink="/userlist" routerLinkActive="active" class="color-white p-15">
+        <span class="fw-15 active">User Profile</span>
+      </a>
+    </li>
+    <li class="p-15">
+      <a routerLink="/usergrouplist" routerLinkActive="active" class="color-white p-15">
+        <span class="fw-15 active">User Group</span>
+      </a>
+    </li>
+	<li class="p-15">
+	<a routerLink="/worksheetconfig" routerLinkActive="active" class="color-white p-15">
+                  <span class="fw-15 active">Worksheet Config</span>
+                </a>
+	</li>
+    <li class="p-15">
+      <a routerLink="/examtypelist" routerLinkActive="active" class="color-white p-15">
+        <span class="fw-15 active">Exam Type</span>
+      </a>
+    </li>
+    <li class="p-15">
+      <a routerLink="/rolelist" routerLinkActive="active" class="color-white p-15">
+        <span class="fw-15 active">Roles</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="popover-menu icon4 hidden-xs">
+  <ul>
+    <li class="p-15 {{ldapConfigEnabled?'hide':'show'}}">
+      <a routerLink="/passwordconfig" routerLinkActive="active" class="color-white">
+        <span class="fw-15 active">Password Configuration</span>
+      </a>
+    </li>
+    <li class="p-15">
+      <a routerLink="/ldapconfig" routerLinkActive="active" class="color-white">
+        <span class="fw-15 active">LDAP Configuration</span>
+      </a>
+    </li>
+    <li class="p-15">
+      <a routerLink="/smtpconfig" routerLinkActive="active" class="color-white">
+        <span class="fw-15 active">SMTP Configuration</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<!--POP UOP MENU Ends-->
+
+<!-- Mobile Sidemenu -->
+<div id="mob_sidemenu">
+  <nav class="left-nav sidebar afix_top bg-black clearfix">
+    <div class="col-xs-12 sidebar-logo">
+      <img class="logo-default" src="/assets/images/logo.png" alt="Logo" />
+      <div class="pull-right"><i class="fa fa-close mob_close"></i></div>
+    </div>
+    <div class="side_menu col-xs-12 p-x-0 pull-left">
+      <ul>
+        <li class="active" id="dash_toggle">
+          <a routerLink="/dashboard" routerLinkActive="active" title="Dashboards">
+            <i class="fa fa-pie-chart fa-lg fa-fw"></i><span class="nav-label">Dashboard</span>
+          </a>
+        </li>
+        <ul class="dash_submenu">
+          <li class="">
+            <a routerLink="/dashboard" routerLinkActive="active"><span class="nav-label">My Tasks</span></a>
+          </li>
+        </ul>
+        <li>
+          <a routerLink="/studylist" routerLinkActive="active" title="Study List">
+            <i class="fa fa-lg fa-th-list fa-fw"></i><span class="nav-label">StudyList</span>
+          </a>
+        </li>
+        <ul class="dash_submenu">
+          <li class="">
+          <a class="nav-label" routerLink="/studylist" [queryParams]="{ id: 'myattestation', start:'', end:'', label: 'Past 24Hrs'}" routerLinkActive="active" class="color-white">
+            <span class="nav-label">My Attestation</span>
+          </a>
+          </li>
+        </ul>
+        <li>
+          <a routerLink="/studylist" routerLinkActive="active" title="Study List">
+            <i class="fa fa-user-circle fa-fw fa-lg"></i>
+            <span class="nav-label">Admin</span>
+          </a>
+        </li>
+        <ul class="dash_submenu">
+          <li class="">
+            <a routerLink="/userlist" title="Layouts"><span class="nav-label">User Profile</span></a>
+          </li>
+          <li>
+            <a routerLink="/usergrouplist" title="Layouts"><span class="nav-label">User Group</span></a>
+          </li>
+		   <li>
+		    <a routerLink="/worksheetconfig" title="Layouts"><span class="nav-label">Worksheet Config</span></a>
+          </li>
+          <li>
+            <a routerLink="/examtypelist" title="Layouts"><span class="nav-label">Exam Type</span></a>
+          </li>
+          <li class="">
+            <a routerLink="/rolelist" title="Layouts"><span class="nav-label">Roles</span></a>
+          </li>
+        </ul>
+        <li>
+          <a title="Settings">
+            <i class="fa fa-cog fa-lg fa-fw"></i><span class="nav-label">Settings</span>
+          </a>
+        </li>
+        <ul class="dash_submenu">
+          <li class="{{ldapConfigEnabled?'hide':'show'}}">
+            <a routerLink="/passwordconfig" routerLinkActive="active"><span class="nav-label">Password Configuration</span></a>
+          </li>
+          <li class="">
+            <a routerLink="/ldapconfig" routerLinkActive="active"><span class="nav-label">LDAP Configuration</span></a>
+          </li>
+          <li class="">
+            <a routerLink="/smtpconfig" routerLinkActive="active"><span class="nav-label">SMTP Configuration</span></a>
+          </li>
+        </ul>
+      </ul>
+    </div>
+  </nav>
+</div>
+<!-- Mobile Sidemenu end-->

@@ -1,0 +1,53 @@
+
+server:
+    port: 9091
+
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/
+
+liquibase:
+  enabled: true
+  change-log: "classpath:config/liquibase/master_h2.xml"
+
+schema:
+   name:  
+vna:
+   directory: src/main/resources/Z
+file:
+   handlerConfig: 
+
+spring:
+    application:
+        name: vnasync
+    datasources:
+     dbvna:
+        dataSourceClassName: org.h2.jdbcx.JdbcDataSource    
+        url: jdbc:h2:mem:datax;MODE=MYSQL;DB_CLOSE_ON_EXIT=FALSE;DB_CLOSE_DELAY=-1;
+        username:
+        password: 
+        driver-class-name: org.h2.Driver
+        platform: h2
+     dbdatax:
+        dataSourceClassName: org.h2.jdbcx.JdbcDataSource    
+        url: jdbc:h2:mem:datax;MODE=MYSQL;DB_CLOSE_ON_EXIT=FALSE;DB_CLOSE_DELAY=-1;
+        username:
+        password: 
+        driver-class-name: org.h2.Driver
+        platform: h2
+ 
+    jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+        database: H2
+        openInView: true
+        show_sql: true
+        generate-ddl: false
+        hibernate:
+            ddl-auto: validate
+            naming-strategy: org.hibernate.cfg.EJB3NamingStrategy
+        properties:
+            hibernate.cache.use_second_level_cache: false
+            hibernate.cache.use_query_cache: false
+            hibernate.generate_statistics: true
+            hibernate.hbm2ddl.auto: validate

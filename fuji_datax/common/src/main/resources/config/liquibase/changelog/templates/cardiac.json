@@ -1,0 +1,750 @@
+{
+	"id": "wrk1",
+	"sections": [
+		{
+			"id": "indications",
+			"name": "Indications for Exam",
+			"title": "Indications Summary:",
+			"sectionNum": 1,
+			"required": true,
+			"topics": [
+				{
+					"id": "default",
+					"name": "",
+					"type": "multi-select",
+					"dataFormat": "Options",
+					"columnLayout": 2,
+					"options": [
+						{
+							"id": "cardiac-arrest",
+							"name": "Cardiac Arrest",
+							"valueType": "positive"
+						},
+						{
+							"id": "chest-wall-injury",
+							"name": "Chest Wall Injury",
+							"valueType": "positive"
+						},
+						{
+							"id": "hypotension",
+							"name": "Hypotension",
+							"valueType": "positive"
+						},
+						{
+							"id": "hypertension",
+							"name": "Hypertension",
+							"valueType": "positive"
+						},
+						{
+							"id": "dyspnea",
+							"name": "Dyspnea",
+							"valueType": "positive"
+						},
+						{
+							"id": "shock",
+							"name": "Shock",
+							"valueType": "positive"
+						},
+						{
+							"id": "syncope",
+							"name": "Syncope",
+							"valueType": "positive"
+						},
+						{
+							"id": "chest-pain",
+							"name": "Chest Pain",
+							"valueType": "positive"
+						},
+						{
+							"id": "tachypnea",
+							"name": "Tachypnea",
+							"valueType": "positive"
+						},
+						{
+							"id": "shortness-of-breath",
+							"name": "Shortness of breath",
+							"valueType": "positive"
+						},
+						{
+							"id": "fever",
+							"name": "Fever",
+							"valueType": "positive"
+						},
+						{
+							"id": "tachycardia",
+							"name": "Tachycardia",
+							"valueType": "positive"
+						},
+						{
+							"id": "palpitations",
+							"name": "Palpitations",
+							"valueType": "positive"
+						},
+						{
+							"id": "educational",
+							"name": "Educational",
+							"valueType": "positive"
+						}
+					],
+					"positive": "~Patient shows indications of ${values}",
+					"negative": "",
+					"noSelection": "~No selective indications found"
+				},
+				{
+					"id": "others",
+					"name": "Other",
+					"dataFormat": "Text",
+					"type": "text",
+					"narration": "~Comments: ${values}"
+				}
+			],
+			"noSectionFound": "~No Indications Found"
+		},
+		{
+			"id": "views",
+			"name": "Views",
+			"title": "~Views Summary:",
+			"required": true,
+			"sectionNum": 2,
+			"topics": [
+				{
+					"id": "subxiphoid-4-chamber",
+					"name": "Subxiphoid(4 Chamber)",
+					"type": "single-select",
+					"dataFormat": "Options",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "adequate",
+							"name": "Adequate",
+							"valueType": "positive"
+						},
+						{
+							"id": "limited",
+							"name": "Limited",
+							"valueType": "positive"
+						},
+						{
+							"id": "not-obtained",
+							"name": "Not Obtained",
+							"valueType": "negative"
+						}
+					],
+					"positive": "~${name} views of ${values} is obtained",
+					"negative": "~Views not obtained for ${values}",
+					"noSelections": "~No selective views are found"
+				},
+				{
+					"id": "parasternal-long-axis",
+					"name": "Parasternal Long Axis",
+					"type": "single-select",
+					"dataFormat": "Options",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "adequate",
+							"name": "Adequate",
+							"valueType": "positive"
+						},
+						{
+							"id": "limited",
+							"name": "Limited",
+							"valueType": "positive"
+						},
+						{
+							"id": "not-obtained",
+							"name": "Not Obtained",
+							"valueType": "negative"
+						}
+					],
+					"positive": "~${name} views of ${values} is obtained",
+					"negative": "~Views not obtained for ${values}",
+					"noSelections": "~No selective views are found"
+				},
+				{
+					"id": "parasternal-short-axis",
+					"name": "Parasternal Short Axis",
+					"type": "single-select",
+					"dataFormat": "Options",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "adequate",
+							"name": "Adequate",
+							"valueType": "positive"
+						},
+						{
+							"id": "limited",
+							"name": "Limited",
+							"valueType": "positive"
+						},
+						{
+							"id": "not-obtained",
+							"name": "Not Obtained",
+							"valueType": "negative"
+						}
+					],
+					"positive": "~${name} views of ${values} is obtained",
+					"negative": "~Views not obtained for ${values}",
+					"noSelections": "~No selective views are found"
+				},
+				{
+					"id": "subxiphoid-long-axis-ivc-view",
+					"name": "Subxiphoid(Long Axis, IVC View)",
+					"type": "single-select",
+					"dataFormat": "Options",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "adequate",
+							"name": "Adequate",
+							"valueType": "positive"
+						},
+						{
+							"id": "limited",
+							"name": "Limited",
+							"valueType": "positive"
+						},
+						{
+							"id": "not-obtained",
+							"name": "Not Obtained",
+							"valueType": "negative"
+						}
+					],
+					"positive": "~${name} views of ${values} is obtained",
+					"negative": "~Views not obtained for ${values}",
+					"noSelections": "~No selective views are found"
+				},
+				{
+					"id": "apical-four-chamber",
+					"name": "Apical Four-Chamber",
+					"type": "single-select",
+					"dataFormat": "Options",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "adequate",
+							"name": "Adequate",
+							"valueType": "positive"
+						},
+						{
+							"id": "limited",
+							"name": "Limited",
+							"valueType": "positive"
+						},
+						{
+							"id": "not-obtained",
+							"name": "Not Obtained",
+							"valueType": "negative"
+						}
+					],
+					"positive": "~${name} views of ${values} is obtained",
+					"negative": "~Views not obtained for ${values}",
+					"noSelections": "~No selective views are found"
+				},
+				{
+					"id": "others",
+					"name": "Other",
+					"dataFormat": "Text",
+					"type": "text",
+					"narration": "~Comments: ${values}"
+				}
+			],
+			"noSectionFound": "~No Views obtained"
+		},
+		{
+			"id": "findings",
+			"name": "Findings",
+			"title": "~Findings Summary:",
+			"sectionNum": 3,
+			"required": true,
+			"topics": [
+				{
+					"id": "pericardial-effusion",
+					"name": "Pericardial Effusion",
+					"type": "single-select",
+					"dataFormat": "Options",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "present",
+							"name": "Present",
+							"valueType": "positive"
+						},
+						{
+							"id": "absent",
+							"name": "Absent",
+							"valueType": "negative"
+						},
+						{
+							"id": "indeterminate-size",
+							"name": "Indeterminate Size",
+							"valueType": "negative"
+						}
+					],
+					"positive": "~${values} is ${name}",
+					"negative": "~${values} is ${name}",
+					"noSelections": "~No selective findings obtained",
+					"topics": [
+						{
+							"id": "if-present",
+							"name": "If Present",
+							"type": "single-select",
+							"dataFormat": "Options",
+							"columnLayout": 2,
+							"options": [
+								{
+									"id": "small",
+									"name": "Small",
+									"valueType": "positive"
+								},
+								{
+									"id": "moderate",
+									"name": "Moderate",
+									"valueType": "positive"
+								},
+								{
+									"id": "large",
+									"name": "Large",
+									"valueType": "positive"
+								},
+								{
+									"id": "present-size-not-specified",
+									"name": "Present Size Not Specified",
+									"valueType": "negative"
+								}
+							],
+							"positive": " and the Size is ${name}",
+							"negative": " and the Size is ${name}",
+							"noSelections": "~No selective findings obtained"
+						},
+						{
+							"id": "evidence-of-tamponade",
+							"name": "Evidence Of Tamponade",
+							"type": "single-select",
+							"dataFormat": "Options",
+							"columnLayout": 2,
+							"options": [
+								{
+									"id": "ivc-plethoric",
+									"name": "IVC plethoric",
+									"valueType": "positive"
+								},
+								{
+									"id": "r-ventricular-collapse",
+									"name": "R ventricular collapse",
+									"valueType": "positive"
+								},
+								{
+									"id": "r-atrial-collapse",
+									"name": "R atrial collapse",
+									"valueType": "positive"
+								},
+								{
+									"id": "excessive-mitral-inflow-variation",
+									"name": "Excessive mitral inflow variation",
+									"valueType": "positive"
+								}
+							],
+							"positive": "~${values}:${name}",
+							"negative": "",
+							"noSelections": "~No selective findings obtained"
+						}
+					]
+				},
+				{
+					"id": "global-ventricular-function",
+					"name": "Global Ventricular Function",
+					"type": "single-select",
+					"dataFormat": "Options",
+					"columnLayout": 2,
+					"options": [
+						{
+							"id": "hyperdynamic",
+							"name": "Hyperdynamic",
+							"valueType": "positive"
+						},
+						{
+							"id": "normal",
+							"name": "Normal",
+							"valueType": "positive"
+						},
+						{
+							"id": "reduced",
+							"name": "Reduced",
+							"valueType": "positive"
+						},
+						{
+							"id": "severely-reduced",
+							"name": "Severely Reduced",
+							"valueType": "positive"
+						},
+						{
+							"id": "asystole",
+							"name": "Asystole",
+							"valueType": "positive"
+						},
+						{
+							"id": "indeterminate",
+							"name": "Indeterminate",
+							"valueType": "negative"
+						}
+					],
+					"positive": "~${values} is ${name}",
+					"negative": "~${values} is ${name}",
+					"noSelections": "~No selective findings obtained"
+				},
+				{
+					"id": "right-ventricular-size",
+					"name": "Right Ventricular Size",
+					"type": "single-select",
+					"dataFormat": "Options",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "normal",
+							"name": "Normal",
+							"valueType": "positive"
+						},
+						{
+							"id": "dilated",
+							"name": "Dilated",
+							"valueType": "positive"
+						},
+						{
+							"id": "indeterminate",
+							"name": "Indeterminate",
+							"valueType": "negative"
+						}
+					],
+					"positive": "~${values} is ${name}",
+					"negative": "~${values} is ${name}",
+					"topics": [
+						{
+							"id": "signs-of-rv-strian",
+							"name": "Signs Of RV Strain",
+							"type": "multi-select",
+							"dataFormat": "Options",
+							"columnLayout": 1,
+							"options": [
+								{
+									"id": "rv-hypokinesis",
+									"name": "RV Hypokinesis",
+									"valueType": "positive"
+								},
+								{
+									"id": "paradoxical-septal-motion",
+									"name": "Paradoxical Septal Motion",
+									"valueType": "positive"
+								},
+								{
+									"id": "mcconnells-sign",
+									"name": "McConnells Sign",
+									"valueType": "positive"
+								},
+								{
+									"id": "tricuspid-regurgitation",
+									"name": "Tricuspid Regurgitation",
+									"valueType": "positive",
+									"topics": [
+										{
+											"id": "max-velocity",
+											"name": "Max Velocity",
+											"type": "text-number",
+											"dataFormat": "Text",
+											"narration": "~Signs of RV Strain :Tricuspid Regurgitation - ${name} is ${values}(m/s)"
+										}
+									]
+								},
+								{
+									"id": "rv-hypertrophy",
+									"name": "RV Hypertrophy",
+									"valueType": "positive"
+								}
+							],
+							"positive": "~Signs of RV Strain : ${values}",
+							"negative": "",
+							"noSelections": "~No selective findings obtained"
+						}
+					]
+				},
+				{
+					"id": "thoracic-aorta",
+					"name": "Thoracic Aorta",
+					"type": "single-select",
+					"dataFormat": "Options",
+					"columnLayout": 3,
+					"options": [
+						{
+							"id": "present",
+							"name": "Present",
+							"valueType": "positive"
+						},
+						{
+							"id": "absent",
+							"name": "Absent",
+							"valueType": "negative"
+						},
+						{
+							"id": "indeterminate",
+							"name": "Indeterminate",
+							"valueType": "negative"
+						}
+					],
+					"positive": "~${values} is ${name}",
+					"negative": "~${values} is ${name}",
+					"noSelections": "~No selective findings obtained",
+					"topics": [
+						{
+							"id": "aortic-root",
+							"name": "Aortic Root(mm)",
+							"type": "text-number",
+							"dataFormat": "Text",
+							"narration": "~Size of Aortic Root is ${values}mm"
+						},
+						{
+							"id": "thoracic-aorta-diameter",
+							"name": "Thoracic Aorta Diameter(mm)",
+							"dataFormat": "Text",
+							"type": "text-number",
+							"narration": "~Size of Thoracic Aorta Diameter is ${values}mm"
+						}
+					]
+				},
+				{
+					"id": "ivc",
+					"name": "IVC",
+					"type": "single-select",
+					"dataFormat": "Options",
+					"columnLayout": 2,
+					"options": [
+						{
+							"id": "normal",
+							"name": "Normal",
+							"valueType": "positive"
+						},
+						{
+							"id": "dilated",
+							"name": "Dilated",
+							"valueType": "positive"
+						},
+						{
+							"id": "collapsed",
+							"name": "Collapsed",
+							"valueType": "positive"
+						},
+						{
+							"id": "indeterminate",
+							"name": "Indeterminate",
+							"valueType": "negative"
+						}
+					],
+					"positive": "~${values} is ${name}",
+					"negative": "~${values} is ${name}",
+					"noSelections": "~No selective findings obtained",
+					"topics": [
+						{
+							"id": "maximum-diameter",
+							"name": "Maximum Diameter(mm)",
+							"dataFormat": "Text",
+							"type": "text-number",
+							"narration": "~Maximum Diameter Size is ${values}mm"
+						},
+						{
+							"id": "minimum-diameter",
+							"name": "Minimum Diameter(mm)",
+							"dataFormat": "Text",
+							"type": "text-number",
+							"narration": "~Minimum Diameter Size is ${values}mm"
+						},
+						{
+							"id": "collapse",
+							"name": "Collapse",
+							"type": "single-select",
+							"dataFormat": "Options",
+							"columnLayout": 2,
+							"options": [
+								{
+									"id": "gt-50",
+									"name": "> 50%",
+									"valueType": "positive"
+								},
+								{
+									"id": "lt-50",
+									"name": "< 50%",
+									"valueType": "negative"
+								}
+							],
+							"positive": "~${values} is greater than 50%",
+							"negative": "~${values} is  lesser than 50%",
+							"noSelections": "~No selective findings obtained"
+						}
+					]
+				},
+				{
+					"id": "others",
+					"name": "Other",
+					"dataFormat": "Text",
+					"type": "text",
+					"narration": "~Comments:${values}"
+				}
+			],
+			"noSectionFound": "~No Findings obtained"
+		},
+		{
+			"id": "interpretations",
+			"name": "Interpretations",
+			"title": "~Interpretations Summary:",
+			"sectionNum": 4,
+			"required": true,
+			"topics": [
+				{
+					"id": "standard",
+					"name": "",
+					"type": "multi-select",
+					"dataFormat": "Options",
+					"columnLayout": 1,
+					"options": [
+						{
+							"id": "cardiac-dysfunction",
+							"name": "No sonographic evidence of significant cardiac dysfunction",
+							"valueType": "negative"
+						},
+						{
+							"id": "pericardial-effusion",
+							"name": "No sonographic evidence of significant pericardial effusion",
+							"valueType": "negative"
+						},
+						{
+							"id": "pericardialeffusion",
+							"name": "Pericardial Effusion:",
+							"valueType": "positive",
+							"topics": [
+								{
+									"id": "pericardialeffusion-size",
+									"name": "",
+									"type": "single-select",
+									"dataFormat": "Options",
+									"columnLayout": 2,
+									"options": [
+										{
+											"id": "small",
+											"name": "Small",
+											"valueType": "positive"
+										},
+										{
+											"id": "moderate",
+											"name": "Moderate",
+											"valueType": "positive"
+										},
+										{
+											"id": "large",
+											"name": "Large",
+											"valueType": "positive"
+										},
+										{
+											"id": "present-size-not-specified",
+											"name": "Present Size Not Specified",
+											"valueType": "negative"
+										}
+									],
+									"positive": "~Size of Pericardial Effusion is ${name}",
+									"negative": ""
+								}
+							]
+						},
+						{
+							"id": "global-ventricular-function",
+							"name": "Global Ventricular Function",
+							"valueType": "positive",
+							"topics": [
+								{
+									"id": "global-ventricular-option",
+									"name": "",
+									"type": "single-select",
+									"dataFormat": "Options",
+									"columnLayout": 2,
+									"options": [
+										{
+											"id": "hyperdynamic",
+											"name": "Hyperdynamic",
+											"valueType": "positive"
+										},
+										{
+											"id": "normal",
+											"name": "Normal",
+											"valueType": "positive"
+										},
+										{
+											"id": "reduced",
+											"name": "Reduced",
+											"valueType": "positive"
+										},
+										{
+											"id": "severely-reduced",
+											"name": "Severely Reduced",
+											"valueType": "positive"
+										}
+									],
+									"positive": "~${values} is ${name}",
+									"negative": ""
+								}
+							]
+						},
+						{
+							"id": "cardiac-standstill",
+							"name": "No cardiac activity/Cardiac standstill",
+							"valueType": "negative"
+						},
+						{
+							"id": "size-dilation",
+							"name": "No sonographic evidence of RV size dilation",
+							"valueType": "negative"
+						},
+						{
+							"id": "rv-dilation",
+							"name": "RV dilation",
+							"valueType": "positive"
+						},
+						{
+							"id": "volume-depletion",
+							"name": "No sonographic evidence of volume depletion",
+							"valueType": "negative"
+						},
+						{
+							"id": "depletion",
+							"name": "Sonographic findings suggestive of volume depletion",
+							"valueType": "positive"
+						},
+						{
+							"id": "dilatedIVC",
+							"name": "Dilated IVC",
+							"valueType": "positive"
+						},
+						{
+							"id": "aortic-root",
+							"name": "No evidence of sonographic aortic root dilation",
+							"valueType": "negative"
+						},
+						{
+							"id": "dilated-aortic-root",
+							"name": "Dilated Aortic Root",
+							"valueType": "positive"
+						}
+					],
+					"positive": "~The patient found with ${values}",
+					"negative": "~${name}",
+					"noSelections": "~No selective interpretations are found"
+				},
+				{
+					"id": "others",
+					"name": "Other",
+					"dataFormat": "Text",
+					"type": "text",
+					"narration": "~Comments: ${values}"
+				}
+			],
+			"noSectionFound": "~No Interpretations found"
+		}
+	]
+}

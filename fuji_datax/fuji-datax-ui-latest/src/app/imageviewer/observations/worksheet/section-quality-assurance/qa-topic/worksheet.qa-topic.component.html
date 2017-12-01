@@ -1,0 +1,6 @@
+<div class="row m-y-10">
+  <div class="col-md-12 m-t-10">
+      <option-dropdown  *ngIf="qaType == 'dropdown'" [qasign]="qasign" [disableQAWorksheet]="disableQAWorksheet" [id]="id" [qaId]="qaId" [qaData]="qaData" [qaColumnLayout]="qaColumnLayout" [qaOptions]="qaOptions" (onQAUpdate)="onQAChildChange($event)"></option-dropdown>
+      <option-qa-text *ngIf="qaType == 'text'" [qasign]="qasign" [disableQAWorksheet]="disableQAWorksheet" [id]="id" [qaId]="qaId" [qaData]="qaData.qaValue" [qaLabel]="qaName" (onQAUpdate)="onQAChildChange($event)"></option-qa-text>
+  </div>
+</div>

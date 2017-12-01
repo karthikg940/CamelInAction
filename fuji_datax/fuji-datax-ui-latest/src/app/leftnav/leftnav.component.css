@@ -1,0 +1,142 @@
+
+/*Left Nav*/
+.sidebar img{
+    width:15px;
+    height: 15px;
+}
+.left-nav{
+    height:100%;
+}
+.sidebar{
+    left:0;
+    width: 50px;
+    position: fixed;
+    z-index:1;
+    margin-top:55px;
+}
+/*.sidebar li a:hover{
+    background-color:#4e4e4e;
+    color:#333;
+}
+.sidebar .active{
+     background-color:#4e4e4e;
+    color:#333;
+    box-shadow: 4px 0 0 0 #00539c inset;
+}*/
+.parentmenu{
+    position: relative;
+}
+.exp-leftnav li a:hover, .exp-leftnav li a:focus, .exp-leftnav li a.active, .popover-menu li:hover, .popover-menu li:focus, .popover-menu li.active{
+    background-color:#4e4e4e;
+    color:#fff;
+    box-shadow: 3px 0 0 0 #4274b9 inset;
+}
+.popover-menu{
+    position: fixed;
+    left: 50px;
+    z-index: 999;
+    background: #000;
+    display: none;
+}
+.icon1{
+  top: 55px;
+}
+.icon2{
+  top: 102px;
+}
+.icon3{
+  top: 150px;
+}
+.icon4{
+  top: 198px;
+}
+.parentli, .submenu{
+    z-index: -1;
+    display:none;
+}
+.slim{
+    z-index: 3;
+    display:block;
+}
+.exp-leftnav li a{
+    width: 100%;
+    padding: 15px 25px 15px 20px;
+    position: relative;
+    display: block;
+}
+.user-submenu-mobile li{
+    float: none !important;
+}
+.userDropDownMobileOptions{
+    color:#fff;
+    display: none;
+}
+.userDropDownMobileOptions a{
+    color:#fff;
+}
+
+/*Left Nav Ends*/
+
+/*Mobile Sidemenu */
+#mob_sidemenu{display:none;}
+.afix_top{
+    top:0;
+    width:250px;
+}
+.sidebar img{
+    width:67%;
+    height: 30px;
+}
+.sidebar-logo{
+    float:left;
+    clear:left;
+    border-bottom:1px solid #999;
+    padding-bottom:10px;
+    margin-top:21px;
+}
+.mob_close{
+    font-size:23px !important;
+    margin-top:10px;
+}
+.side_menu ul{
+    list-style:none;
+    margin:0;
+    padding:0px;
+}
+.side_menu ul li{
+    float:left;
+    clear:left;
+    padding:20px 10px;
+}
+.side_menu ul li a{
+    color:#ccc;
+}
+.side_menu ul li:hover,.side_menu ul li:focus,.side_menu ul li.active{
+    display:block;
+    width:100%;
+    background-color:#4e4e4e;
+    color:#333;
+}
+.side_menu ul li a i{
+    margin-right:12px;
+}
+ul.dash_submenu{
+    display:none;
+    float:left;
+    clear:left;
+    width:100%;
+}
+ul.dash_submenu li.active{
+    box-shadow:none;
+    background:#666;
+    padding:9px 0px 8px 47px;
+}
+ul.dash_submenu li.active a{color:#fff;}
+ul.dash_submenu li{
+    padding:9px 0px 8px 47px;
+    border-bottom:1px dotted;
+    float:left;
+    clear:left;
+    width:100%;
+}
+/*Mobile Sidemenu Ends*/

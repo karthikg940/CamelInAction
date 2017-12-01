@@ -1,0 +1,24 @@
+{
+  "results": [
+    {
+      "userId": 1001,
+      "userStatus" : "N",
+      "title": "title1",
+      "firstName": "John",
+      "lastName": "Williams",
+      "userName": "johnw",
+      "phoneNo": "123456789",
+      "email": "john.williams@sonosite.com"
+    },
+    {
+      "userId": 1002,
+      "userStatus" : "Y",
+      "title": "title1",
+      "firstName": "Cris",
+      "lastName": "Renella",
+      "userName": "crisren",
+      "phoneNo": "123456789",
+      "email": "cris.renella@sonosite.com"
+    }
+  ]
+}

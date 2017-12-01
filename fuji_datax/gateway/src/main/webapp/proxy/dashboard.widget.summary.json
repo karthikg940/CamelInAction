@@ -1,0 +1,59 @@
+{
+  "results": [
+    {
+      "id": "mystudies",
+      "type": "My Studies",
+      "total": 6,
+      "status": [
+        "Assigned",
+        "In-Progress",
+        "Signed"
+      ],
+      "value": [
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "id": "allstudies",
+      "type": "All Studies",
+      "total": 16,
+      "status": [
+        "New",
+        "Assigned",
+        "In-Progress",
+        "Signed",
+        "QA-Assigned",
+        "QA-InProgress",
+        "QA-UnAssigned",
+        "Submitted-to-EMR"
+      ],
+      "value": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "id": "qastudies",
+      "type": "My QA Reviews",
+      "total": 6,
+      "status": [
+        "My-QA-Reviews",
+        "My-QA-InProgress",
+        "Submitted-to-EMR"
+      ],
+      "value": [
+        2,
+        2,
+        2
+      ]
+    }
+  ]
+}

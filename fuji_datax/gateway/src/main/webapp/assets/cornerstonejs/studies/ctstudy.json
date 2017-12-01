@@ -1,0 +1,20 @@
+{
+	"patientName": "MISTER^CT",
+	"patientId": "2178309",
+	"studyDate": "20010105",
+	"modality": "CT",
+	"studyDescription": "CHEST",
+	"numImages": 111,
+	"studyId": "ctstudy",
+	"seriesList": [
+		{
+			"seriesDescription": "HELICAL CHEST",
+			"seriesNumber": "2",
+			"instanceList": [
+				{
+					"imageId": "172.25.242.25/wado/?requestType=WADO&studyUID=1.2.276.0.7230010.3.1.2.0.1201.1493896280.258453&seriesUID=1.2.276.0.7230010.3.1.3.0.1201.1493896281.258454&objectUID=1.2.276.0.7230010.3.1.4.0.1201.1493896281.258455"
+				}
+			]
+		}
+	]
+}
